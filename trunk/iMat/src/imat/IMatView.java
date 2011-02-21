@@ -41,25 +41,121 @@ public class IMatView extends FrameView {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        topNavigationPanel = new javax.swing.JPanel();
+        bottomContentsPanel = new javax.swing.JPanel();
+        navigationSearchPanel = new javax.swing.JPanel();
+        shoppingListPanel = new javax.swing.JPanel();
+        actionPanel = new javax.swing.JPanel();
+        centerStagePanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
+
+        topNavigationPanel.setName("topNavigationPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout topNavigationPanelLayout = new org.jdesktop.layout.GroupLayout(topNavigationPanel);
+        topNavigationPanel.setLayout(topNavigationPanelLayout);
+        topNavigationPanelLayout.setHorizontalGroup(
+            topNavigationPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 1129, Short.MAX_VALUE)
+        );
+        topNavigationPanelLayout.setVerticalGroup(
+            topNavigationPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 61, Short.MAX_VALUE)
+        );
+
+        bottomContentsPanel.setName("bottomContentsPanel"); // NOI18N
+
+        navigationSearchPanel.setName("navigationSearchPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout navigationSearchPanelLayout = new org.jdesktop.layout.GroupLayout(navigationSearchPanel);
+        navigationSearchPanel.setLayout(navigationSearchPanelLayout);
+        navigationSearchPanelLayout.setHorizontalGroup(
+            navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 1129, Short.MAX_VALUE)
+        );
+        navigationSearchPanelLayout.setVerticalGroup(
+            navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 42, Short.MAX_VALUE)
+        );
+
+        shoppingListPanel.setName("shoppingListPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout shoppingListPanelLayout = new org.jdesktop.layout.GroupLayout(shoppingListPanel);
+        shoppingListPanel.setLayout(shoppingListPanelLayout);
+        shoppingListPanelLayout.setHorizontalGroup(
+            shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 222, Short.MAX_VALUE)
+        );
+        shoppingListPanelLayout.setVerticalGroup(
+            shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 566, Short.MAX_VALUE)
+        );
+
+        actionPanel.setName("actionPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout actionPanelLayout = new org.jdesktop.layout.GroupLayout(actionPanel);
+        actionPanel.setLayout(actionPanelLayout);
+        actionPanelLayout.setHorizontalGroup(
+            actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 217, Short.MAX_VALUE)
+        );
+        actionPanelLayout.setVerticalGroup(
+            actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 566, Short.MAX_VALUE)
+        );
+
+        centerStagePanel.setName("centerStagePanel"); // NOI18N
+        centerStagePanel.setLayout(new java.awt.CardLayout());
+
+        org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
+        bottomContentsPanel.setLayout(bottomContentsPanelLayout);
+        bottomContentsPanelLayout.setHorizontalGroup(
+            bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(navigationSearchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, bottomContentsPanelLayout.createSequentialGroup()
+                .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(centerStagePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(actionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+        );
+        bottomContentsPanelLayout.setVerticalGroup(
+            bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(bottomContentsPanelLayout.createSequentialGroup()
+                .add(navigationSearchPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(centerStagePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+                    .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
 
         org.jdesktop.layout.GroupLayout mainPanelLayout = new org.jdesktop.layout.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 400, Short.MAX_VALUE)
+            .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 300, Short.MAX_VALUE)
+            .add(mainPanelLayout.createSequentialGroup()
+                .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setComponent(mainPanel);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel actionPanel;
+    private javax.swing.JPanel bottomContentsPanel;
+    private javax.swing.JPanel centerStagePanel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel navigationSearchPanel;
+    private javax.swing.JPanel shoppingListPanel;
+    private javax.swing.JPanel topNavigationPanel;
     // End of variables declaration//GEN-END:variables
 
     private JDialog aboutBox;

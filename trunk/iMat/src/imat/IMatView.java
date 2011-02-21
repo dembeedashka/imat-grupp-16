@@ -15,6 +15,7 @@ import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import se.chalmers.ait.dat215.project.Customer;
 
 /**
  * The application's main frame.

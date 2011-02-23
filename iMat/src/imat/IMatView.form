@@ -33,31 +33,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="189" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="867" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="1129" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="61" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
-                <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
-              </Properties>
-            </Component>
-          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="bottomContentsPanel">
           <Properties>
@@ -71,7 +55,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="shoppingListPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="centerStagePanel" pref="678" max="32767" attributes="0"/>
+                      <Component id="framePanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="actionPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -83,7 +67,7 @@
                       <Component id="navigationSearchPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="centerStagePanel" pref="554" max="32767" attributes="0"/>
+                          <Component id="framePanel" max="32767" attributes="0"/>
                           <Component id="shoppingListPanel" max="32767" attributes="0"/>
                           <Component id="actionPanel" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -146,12 +130,41 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Container class="javax.swing.JPanel" name="centerStagePanel">
+            <Container class="javax.swing.JPanel" name="framePanel">
               <Properties>
-                <Property name="name" type="java.lang.String" value="centerStagePanel" noResource="true"/>
+                <Property name="background" type="java.awt.Color" resourceKey="framePanel.background"/>
+                <Property name="name" type="java.lang.String" value="framePanel" noResource="true"/>
               </Properties>
 
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="centerStagePanel" pref="658" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="centerStagePanel" pref="532" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="centerStagePanel">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="centerStagePanel" noResource="true"/>
+                  </Properties>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+                </Container>
+              </SubComponents>
             </Container>
           </SubComponents>
         </Container>

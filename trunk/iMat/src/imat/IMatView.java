@@ -62,9 +62,9 @@ public class IMatView extends FrameView {
         topNavigationPanelLayout.setHorizontalGroup(
             topNavigationPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(topNavigationPanelLayout.createSequentialGroup()
-                .add(366, 366, 366)
+                .add(189, 189, 189)
                 .add(jButton1)
-                .addContainerGap(690, Short.MAX_VALUE))
+                .addContainerGap(867, Short.MAX_VALUE))
         );
         topNavigationPanelLayout.setVerticalGroup(
             topNavigationPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)

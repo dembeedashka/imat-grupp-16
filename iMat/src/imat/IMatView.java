@@ -4,6 +4,8 @@
 
 package imat;
 
+import java.awt.CardLayout;
+import java.awt.Color;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
@@ -91,21 +93,6 @@ public class IMatView extends FrameView {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
-        foodNavPanel = new javax.swing.JPanel();
-        foodNavPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        foodNavPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jScrollBar2 = new javax.swing.JScrollBar();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         cashRegisterPanel = new javax.swing.JPanel();
         cashRegisterPanel1 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -154,6 +141,11 @@ public class IMatView extends FrameView {
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
         homeButton.setName("homeButton"); // NOI18N
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtonActionPerformed(evt);
+            }
+        });
 
         fruitButton.setIcon(resourceMap.getIcon("fruitButton.icon")); // NOI18N
         fruitButton.setText(resourceMap.getString("fruitButton.text")); // NOI18N
@@ -395,161 +387,11 @@ public class IMatView extends FrameView {
 
         centerStagePanel.add(userInfoPanel, "card3");
 
-        foodNavPanel.setName("foodNavPanel"); // NOI18N
-        foodNavPanel.setLayout(new java.awt.CardLayout());
-
-        foodNavPanel1.setName("foodNavPanel1"); // NOI18N
-        foodNavPanel1.setLayout(new java.awt.CardLayout());
-
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel2.setName("jPanel2"); // NOI18N
-
-        jLabel1.setBackground(resourceMap.getColor("jLabel1.background")); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel1.setName("jLabel1"); // NOI18N
-
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setName("jTextArea1"); // NOI18N
-        jScrollPane1.setViewportView(jTextArea1);
-
-        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(10, 10, 10)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 643, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        foodNavPanel1.add(jPanel2, "card2");
-
-        foodNavPanel2.setName("foodNavPanel2"); // NOI18N
-        foodNavPanel2.setOpaque(false);
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.setName("jPanel3"); // NOI18N
-
-        jLabel2.setBackground(resourceMap.getColor("jLabel2.background")); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel2.setName("jLabel2"); // NOI18N
-
-        jScrollPane2.setName("jScrollPane2"); // NOI18N
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setName("jTextArea2"); // NOI18N
-        jScrollPane2.setViewportView(jTextArea2);
-
-        org.jdesktop.layout.GroupLayout jPanel3Layout = new org.jdesktop.layout.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel3Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 120, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jScrollPane2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        jScrollBar2.setName("jScrollBar2"); // NOI18N
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setName("jPanel1"); // NOI18N
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText(resourceMap.getString("jLabel3.text")); // NOI18N
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel3.setName("jLabel3"); // NOI18N
-
-        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
-        jButton1.setName("jButton1"); // NOI18N
-
-        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 551, Short.MAX_VALUE)
-                .add(jButton1)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(jButton1)
-                    .add(jLabel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        org.jdesktop.layout.GroupLayout foodNavPanel2Layout = new org.jdesktop.layout.GroupLayout(foodNavPanel2);
-        foodNavPanel2.setLayout(foodNavPanel2Layout);
-        foodNavPanel2Layout.setHorizontalGroup(
-            foodNavPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(foodNavPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(foodNavPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jPanel3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollBar2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        foodNavPanel2Layout.setVerticalGroup(
-            foodNavPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(foodNavPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(foodNavPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollBar2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 762, Short.MAX_VALUE)
-                    .add(foodNavPanel2Layout.createSequentialGroup()
-                        .add(jPanel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(11, 11, 11))
-        );
-
-        foodNavPanel1.add(foodNavPanel2, "card7");
-
-        foodNavPanel.add(foodNavPanel1, "card2");
-
-        centerStagePanel.add(foodNavPanel, "card4");
-
         cashRegisterPanel.setName("jPanel4"); // NOI18N
         cashRegisterPanel.setLayout(new java.awt.CardLayout());
 
         cashRegisterPanel1.setName("cashRegisterPanel1"); // NOI18N
+        cashRegisterPanel1.setVerifyInputWhenFocusTarget(false);
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel10.setName("jPanel10"); // NOI18N
@@ -893,6 +735,14 @@ public class IMatView extends FrameView {
         setComponent(mainPanel);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
+        // TODO add your handling code here:
+        navigationSearchPanel.setBackground(Color.WHITE);
+        framePanel.setBackground(Color.WHITE);
+        CardLayout layout = (CardLayout)centerStagePanel.getLayout();
+        layout.show(centerStagePanel, "card4");
+    }//GEN-LAST:event_homeButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
     private javax.swing.JPanel bottomContentsPanel;
@@ -903,13 +753,9 @@ public class IMatView extends FrameView {
     private javax.swing.JButton drinkButton;
     private javax.swing.JButton dryButton;
     private javax.swing.JButton favButton;
-    private javax.swing.JPanel foodNavPanel;
-    private javax.swing.JPanel foodNavPanel1;
-    private javax.swing.JPanel foodNavPanel2;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
     private javax.swing.JButton homeButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -919,7 +765,6 @@ public class IMatView extends FrameView {
     private javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox jComboBox5;
     private javax.swing.JComboBox jComboBox6;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -930,7 +775,6 @@ public class IMatView extends FrameView {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -938,7 +782,6 @@ public class IMatView extends FrameView {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -951,24 +794,16 @@ public class IMatView extends FrameView {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JScrollBar jScrollBar2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;

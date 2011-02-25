@@ -57,6 +57,10 @@ public class IMatView extends FrameView {
         actionPanel = new javax.swing.JPanel();
         framePanel = new javax.swing.JPanel();
         centerStagePanel = new javax.swing.JPanel();
+        startPagePanel = new javax.swing.JPanel();
+        mainStartPagePanel = new javax.swing.JPanel();
+        helpSectionPanel = new javax.swing.JPanel();
+        mainHelpSectionPanel = new javax.swing.JPanel();
         userInfoPanel = new javax.swing.JPanel();
         cashRegisterPanel = new javax.swing.JPanel();
         cashRegisterPanel1 = new javax.swing.JPanel();
@@ -229,6 +233,46 @@ public class IMatView extends FrameView {
 
         centerStagePanel.setName("centerStagePanel"); // NOI18N
         centerStagePanel.setLayout(new java.awt.CardLayout());
+
+        startPagePanel.setName("startPagePanel"); // NOI18N
+        startPagePanel.setLayout(new java.awt.CardLayout());
+
+        mainStartPagePanel.setName("mainStartPagePanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout mainStartPagePanelLayout = new org.jdesktop.layout.GroupLayout(mainStartPagePanel);
+        mainStartPagePanel.setLayout(mainStartPagePanelLayout);
+        mainStartPagePanelLayout.setHorizontalGroup(
+            mainStartPagePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 885, Short.MAX_VALUE)
+        );
+        mainStartPagePanelLayout.setVerticalGroup(
+            mainStartPagePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 806, Short.MAX_VALUE)
+        );
+
+        startPagePanel.add(mainStartPagePanel, "card2");
+
+        centerStagePanel.add(startPagePanel, "card2");
+
+        helpSectionPanel.setName("helpSectionPanel"); // NOI18N
+        helpSectionPanel.setLayout(new java.awt.CardLayout());
+
+        mainHelpSectionPanel.setName("mainHelpSectionPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout mainHelpSectionPanelLayout = new org.jdesktop.layout.GroupLayout(mainHelpSectionPanel);
+        mainHelpSectionPanel.setLayout(mainHelpSectionPanelLayout);
+        mainHelpSectionPanelLayout.setHorizontalGroup(
+            mainHelpSectionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 885, Short.MAX_VALUE)
+        );
+        mainHelpSectionPanelLayout.setVerticalGroup(
+            mainHelpSectionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 806, Short.MAX_VALUE)
+        );
+
+        helpSectionPanel.add(mainHelpSectionPanel, "card2");
+
+        centerStagePanel.add(helpSectionPanel, "card2");
 
         userInfoPanel.setName("userInfoPanel"); // NOI18N
         userInfoPanel.setLayout(new java.awt.CardLayout());
@@ -704,18 +748,22 @@ public class IMatView extends FrameView {
     private javax.swing.JButton favButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
+    private javax.swing.JPanel helpSectionPanel;
     private javax.swing.JButton homeButton;
     private javax.swing.JButton jButton4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JPanel mainEditShoppingListPanel;
+    private javax.swing.JPanel mainHelpSectionPanel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel mainPurchaseHistoryPanel;
     private javax.swing.JPanel mainShoppingBasketPanel;
+    private javax.swing.JPanel mainStartPagePanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;
     private javax.swing.JPanel purchaseHistoryPanel;
     private javax.swing.JPanel shoppingBasketPanel;
     private javax.swing.JPanel shoppingListPanel;
+    private javax.swing.JPanel startPagePanel;
     private javax.swing.JPanel topNavigationPanel;
     private javax.swing.JPanel userInfoPanel;
     // End of variables declaration//GEN-END:variables

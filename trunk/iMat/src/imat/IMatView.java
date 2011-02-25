@@ -102,42 +102,7 @@ public class IMatView extends FrameView {
         jButton3 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         cashRegisterPanel = new javax.swing.JPanel();
-        cashRegisterPanel1 = new javax.swing.JPanel();
-        cashInfoCardPanel = new javax.swing.JPanel();
-        cashPicLabel = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        cashTextPane = new javax.swing.JTextPane();
-        cashBasketNLabel = new javax.swing.JLabel();
-        cashBasketPanel = new javax.swing.JPanel();
-        cashUserInfoLabel = new javax.swing.JLabel();
-        cashUserInfoPanel = new javax.swing.JPanel();
-        cashFNameLabel = new javax.swing.JLabel();
-        cashFNameTF = new javax.swing.JTextField();
-        cashLNameLabel = new javax.swing.JLabel();
-        cashLNameTF = new javax.swing.JTextField();
-        cashStAddressLabel = new javax.swing.JLabel();
-        cashStAddressTF = new javax.swing.JTextField();
-        cashPlaceLabel = new javax.swing.JLabel();
-        cashPlaceTF = new javax.swing.JTextField();
-        cashPNumberLabel = new javax.swing.JLabel();
-        cashPNumberTF = new javax.swing.JTextField();
-        cashPCodeLabel = new javax.swing.JLabel();
-        cashPcodeTF = new javax.swing.JTextField();
-        cashPhoneNumberLabel = new javax.swing.JLabel();
-        cashPhoneNumberTF = new javax.swing.JTextField();
-        cashDeliveryDateLabel = new javax.swing.JLabel();
-        cashDay = new javax.swing.JComboBox();
-        cashSlash = new javax.swing.JLabel();
-        cashMonth = new javax.swing.JComboBox();
-        cashDivide = new javax.swing.JLabel();
-        cashYear = new javax.swing.JComboBox();
-        cashSecurityNumberTF = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        cashPaymentLabel = new javax.swing.JLabel();
-        cashPaymentPanel = new javax.swing.JPanel();
-        cashInvoiceRButton = new javax.swing.JRadioButton();
-        cashDebitCardRButton = new javax.swing.JRadioButton();
-        cashDebitCardPanel = new javax.swing.JPanel();
+        cashRegister1 = new imat.cashRegister();
         helpSectionPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
@@ -173,6 +138,11 @@ public class IMatView extends FrameView {
         meatButton.setBorderPainted(false);
         meatButton.setContentAreaFilled(false);
         meatButton.setName("meatButton"); // NOI18N
+        meatButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                meatButtonActionPerformed(evt);
+            }
+        });
 
         diaryButton.setIcon(resourceMap.getIcon("diaryButton.icon")); // NOI18N
         diaryButton.setText(resourceMap.getString("diaryButton.text")); // NOI18N
@@ -301,7 +271,7 @@ public class IMatView extends FrameView {
         );
         mainStartPagePanelLayout.setVerticalGroup(
             mainStartPagePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 918, Short.MAX_VALUE)
+            .add(0, 940, Short.MAX_VALUE)
         );
 
         startPagePanel.add(mainStartPagePanel, "card2");
@@ -316,17 +286,11 @@ public class IMatView extends FrameView {
         matMallPanel.setLayout(matMallPanelLayout);
         matMallPanelLayout.setHorizontalGroup(
             matMallPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(matMallPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(matMall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+            .add(matMall1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 885, Short.MAX_VALUE)
         );
         matMallPanelLayout.setVerticalGroup(
             matMallPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(matMallPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(matMall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+            .add(matMall1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(matMallPanel, "card2");
@@ -447,322 +411,22 @@ public class IMatView extends FrameView {
         centerStagePanel.add(userInfoPanel, "card3");
 
         cashRegisterPanel.setName("jPanel4"); // NOI18N
-        cashRegisterPanel.setLayout(new java.awt.CardLayout());
+        cashRegisterPanel.setPreferredSize(new java.awt.Dimension(795, 940));
 
-        cashRegisterPanel1.setName("cashRegisterPanel1"); // NOI18N
-        cashRegisterPanel1.setVerifyInputWhenFocusTarget(false);
+        cashRegister1.setName("cashRegister1"); // NOI18N
 
-        cashInfoCardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cashInfoCardPanel.setName("cashInfoCardPanel"); // NOI18N
-
-        cashPicLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cashPicLabel.setText(resourceMap.getString("cashPicLabel.text")); // NOI18N
-        cashPicLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cashPicLabel.setName("cashPicLabel"); // NOI18N
-
-        jScrollPane6.setName("jScrollPane6"); // NOI18N
-
-        cashTextPane.setName("cashTextPane"); // NOI18N
-        jScrollPane6.setViewportView(cashTextPane);
-
-        org.jdesktop.layout.GroupLayout cashInfoCardPanelLayout = new org.jdesktop.layout.GroupLayout(cashInfoCardPanel);
-        cashInfoCardPanel.setLayout(cashInfoCardPanelLayout);
-        cashInfoCardPanelLayout.setHorizontalGroup(
-            cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashInfoCardPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashPicLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 723, Short.MAX_VALUE)
-                .addContainerGap())
+        org.jdesktop.layout.GroupLayout cashRegisterPanelLayout = new org.jdesktop.layout.GroupLayout(cashRegisterPanel);
+        cashRegisterPanel.setLayout(cashRegisterPanelLayout);
+        cashRegisterPanelLayout.setHorizontalGroup(
+            cashRegisterPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashRegisterPanelLayout.createSequentialGroup()
+                .add(cashRegister1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        cashInfoCardPanelLayout.setVerticalGroup(
-            cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashInfoCardPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
-                    .add(cashPicLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+        cashRegisterPanelLayout.setVerticalGroup(
+            cashRegisterPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashRegister1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 940, Short.MAX_VALUE)
         );
-
-        cashBasketNLabel.setText(resourceMap.getString("cashBasketNLabel.text")); // NOI18N
-        cashBasketNLabel.setName("cashBasketNLabel"); // NOI18N
-
-        cashBasketPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cashBasketPanel.setName("cashBasketPanel"); // NOI18N
-
-        org.jdesktop.layout.GroupLayout cashBasketPanelLayout = new org.jdesktop.layout.GroupLayout(cashBasketPanel);
-        cashBasketPanel.setLayout(cashBasketPanelLayout);
-        cashBasketPanelLayout.setHorizontalGroup(
-            cashBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 863, Short.MAX_VALUE)
-        );
-        cashBasketPanelLayout.setVerticalGroup(
-            cashBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 176, Short.MAX_VALUE)
-        );
-
-        cashUserInfoLabel.setText(resourceMap.getString("cashUserInfoLabel.text")); // NOI18N
-        cashUserInfoLabel.setName("cashUserInfoLabel"); // NOI18N
-
-        cashUserInfoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cashUserInfoPanel.setName("cashUserInfoPanel"); // NOI18N
-
-        cashFNameLabel.setText(resourceMap.getString("cashFNameLabel.text")); // NOI18N
-        cashFNameLabel.setName("cashFNameLabel"); // NOI18N
-
-        cashFNameTF.setText(resourceMap.getString("cashFNameTF.text")); // NOI18N
-        cashFNameTF.setName("cashFNameTF"); // NOI18N
-
-        cashLNameLabel.setText(resourceMap.getString("cashLNameLabel.text")); // NOI18N
-        cashLNameLabel.setName("cashLNameLabel"); // NOI18N
-
-        cashLNameTF.setText(resourceMap.getString("cashLNameTF.text")); // NOI18N
-        cashLNameTF.setName("cashLNameTF"); // NOI18N
-
-        cashStAddressLabel.setText(resourceMap.getString("cashStAddressLabel.text")); // NOI18N
-        cashStAddressLabel.setName("cashStAddressLabel"); // NOI18N
-
-        cashStAddressTF.setText(resourceMap.getString("cashStAddressTF.text")); // NOI18N
-        cashStAddressTF.setName("cashStAddressTF"); // NOI18N
-
-        cashPlaceLabel.setText(resourceMap.getString("cashPlaceLabel.text")); // NOI18N
-        cashPlaceLabel.setName("cashPlaceLabel"); // NOI18N
-
-        cashPlaceTF.setText(resourceMap.getString("cashPlaceTF.text")); // NOI18N
-        cashPlaceTF.setName("cashPlaceTF"); // NOI18N
-
-        cashPNumberLabel.setText(resourceMap.getString("cashPNumberLabel.text")); // NOI18N
-        cashPNumberLabel.setName("cashPNumberLabel"); // NOI18N
-
-        cashPNumberTF.setText(resourceMap.getString("cashPNumberTF.text")); // NOI18N
-        cashPNumberTF.setName("cashPNumberTF"); // NOI18N
-
-        cashPCodeLabel.setText(resourceMap.getString("cashPCodeLabel.text")); // NOI18N
-        cashPCodeLabel.setName("cashPCodeLabel"); // NOI18N
-
-        cashPcodeTF.setText(resourceMap.getString("cashPcodeTF.text")); // NOI18N
-        cashPcodeTF.setName("cashPcodeTF"); // NOI18N
-
-        cashPhoneNumberLabel.setText(resourceMap.getString("cashPhoneNumberLabel.text")); // NOI18N
-        cashPhoneNumberLabel.setName("cashPhoneNumberLabel"); // NOI18N
-
-        cashPhoneNumberTF.setText(resourceMap.getString("cashPhoneNumberTF.text")); // NOI18N
-        cashPhoneNumberTF.setName("cashPhoneNumberTF"); // NOI18N
-
-        cashDeliveryDateLabel.setText(resourceMap.getString("cashDeliveryDateLabel.text")); // NOI18N
-        cashDeliveryDateLabel.setName("cashDeliveryDateLabel"); // NOI18N
-
-        cashDay.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cashDay.setName("cashDay"); // NOI18N
-
-        cashSlash.setText(resourceMap.getString("cashSlash.text")); // NOI18N
-        cashSlash.setName("cashSlash"); // NOI18N
-
-        cashMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cashMonth.setName("cashMonth"); // NOI18N
-
-        cashDivide.setText(resourceMap.getString("cashDivide.text")); // NOI18N
-        cashDivide.setName("cashDivide"); // NOI18N
-
-        cashYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cashYear.setName("cashYear"); // NOI18N
-
-        cashSecurityNumberTF.setText(resourceMap.getString("cashSecurityNumberTF.text")); // NOI18N
-        cashSecurityNumberTF.setName("cashSecurityNumberTF"); // NOI18N
-
-        org.jdesktop.layout.GroupLayout cashUserInfoPanelLayout = new org.jdesktop.layout.GroupLayout(cashUserInfoPanel);
-        cashUserInfoPanel.setLayout(cashUserInfoPanelLayout);
-        cashUserInfoPanelLayout.setHorizontalGroup(
-            cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashUserInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashFNameLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(cashLNameLabel)
-                    .add(cashPNumberLabel)
-                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashLNameTF)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashFNameTF, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
-                    .add(cashPhoneNumberLabel)
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                            .add(cashPNumberTF)
-                            .add(cashPhoneNumberTF, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashSecurityNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 48, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(258, 258, 258)
-                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashDay, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashSlash)
-                        .add(4, 4, 4)
-                        .add(cashMonth, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashDivide)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(cashPlaceLabel)
-                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashStAddressLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPCodeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashStAddressTF)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPcodeTF)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPlaceTF)
-                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashDeliveryDateLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(229, Short.MAX_VALUE))
-        );
-        cashUserInfoPanelLayout.setVerticalGroup(
-            cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashUserInfoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashStAddressLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashStAddressTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(cashPCodeLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashPcodeTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashFNameLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashFNameTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(cashLNameLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashLNameTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashPlaceLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashPlaceTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashPNumberLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(cashPNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(cashSecurityNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashPhoneNumberLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashPhoneNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(cashUserInfoPanelLayout.createSequentialGroup()
-                        .add(cashDeliveryDateLabel)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(cashDay, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(cashSlash)
-                            .add(cashMonth, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(cashDivide)
-                            .add(cashYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
-        jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
-        jButton4.setName("jButton4"); // NOI18N
-
-        cashPaymentLabel.setText(resourceMap.getString("cashPaymentLabel.text")); // NOI18N
-        cashPaymentLabel.setName("cashPaymentLabel"); // NOI18N
-
-        cashPaymentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        cashPaymentPanel.setName("cashPaymentPanel"); // NOI18N
-
-        cashInvoiceRButton.setText(resourceMap.getString("cashInvoiceRButton.text")); // NOI18N
-        cashInvoiceRButton.setName("cashInvoiceRButton"); // NOI18N
-
-        cashDebitCardRButton.setText(resourceMap.getString("cashDebitCardRButton.text")); // NOI18N
-        cashDebitCardRButton.setName("cashDebitCardRButton"); // NOI18N
-
-        cashDebitCardPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cashDebitCardPanel.setName("cashDebitCardPanel"); // NOI18N
-
-        org.jdesktop.layout.GroupLayout cashDebitCardPanelLayout = new org.jdesktop.layout.GroupLayout(cashDebitCardPanel);
-        cashDebitCardPanel.setLayout(cashDebitCardPanelLayout);
-        cashDebitCardPanelLayout.setHorizontalGroup(
-            cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 841, Short.MAX_VALUE)
-        );
-        cashDebitCardPanelLayout.setVerticalGroup(
-            cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 119, Short.MAX_VALUE)
-        );
-
-        org.jdesktop.layout.GroupLayout cashPaymentPanelLayout = new org.jdesktop.layout.GroupLayout(cashPaymentPanel);
-        cashPaymentPanel.setLayout(cashPaymentPanelLayout);
-        cashPaymentPanelLayout.setHorizontalGroup(
-            cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashPaymentPanelLayout.createSequentialGroup()
-                .add(cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashPaymentPanelLayout.createSequentialGroup()
-                        .add(225, 225, 225)
-                        .add(cashInvoiceRButton)
-                        .add(35, 35, 35)
-                        .add(cashDebitCardRButton))
-                    .add(cashPaymentPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .add(cashDebitCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        cashPaymentPanelLayout.setVerticalGroup(
-            cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashPaymentPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(cashInvoiceRButton)
-                    .add(cashDebitCardRButton))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashDebitCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        org.jdesktop.layout.GroupLayout cashRegisterPanel1Layout = new org.jdesktop.layout.GroupLayout(cashRegisterPanel1);
-        cashRegisterPanel1.setLayout(cashRegisterPanel1Layout);
-        cashRegisterPanel1Layout.setHorizontalGroup(
-            cashRegisterPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashRegisterPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashRegisterPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(cashPaymentPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(cashUserInfoPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(cashBasketPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(cashInfoCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(cashUserInfoLabel)
-                    .add(cashPaymentLabel)
-                    .add(cashBasketNLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 143, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-        cashRegisterPanel1Layout.setVerticalGroup(
-            cashRegisterPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cashRegisterPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .add(cashInfoCardPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashBasketNLabel)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashBasketPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashUserInfoLabel)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashUserInfoPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jButton4)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashPaymentLabel)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(cashPaymentPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        cashRegisterPanel.add(cashRegisterPanel1, "card2");
 
         centerStagePanel.add(cashRegisterPanel, "card4");
 
@@ -776,7 +440,7 @@ public class IMatView extends FrameView {
         );
         helpSectionPanelLayout.setVerticalGroup(
             helpSectionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 918, Short.MAX_VALUE)
+            .add(0, 940, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(helpSectionPanel, "card6");
@@ -793,7 +457,7 @@ public class IMatView extends FrameView {
             framePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(framePanelLayout.createSequentialGroup()
                 .add(centerStagePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
@@ -849,50 +513,31 @@ public class IMatView extends FrameView {
     }//GEN-LAST:event_homeButtonActionPerformed
 
     private void fruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitButtonActionPerformed
+        navigationSearchPanel.setBackground(Color.GREEN);
+        framePanel.setBackground(Color.GREEN);
         CardLayout layout = (CardLayout)centerStagePanel.getLayout();
         layout.show(centerStagePanel, "card2");
+        matMall1.getHeaderText().setText("Välkommen!" + "\n" + "Detta är frukt & grönt sektionen!" );
 
-        // TODO add your handling code here:
+
+
+
+        // TODO add you+ handling code here:
     }//GEN-LAST:event_fruitButtonActionPerformed
+
+    private void meatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meatButtonActionPerformed
+        navigationSearchPanel.setBackground(Color.RED);
+        framePanel.setBackground(Color.RED);
+        CardLayout layout = (CardLayout)centerStagePanel.getLayout();
+        layout.show(centerStagePanel, "card2");
+        matMall1.getHeaderText().setText("Välkommen!" + "\n" + "Detta är kött & fisk sektionen!");
+    }//GEN-LAST:event_meatButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
     private javax.swing.JPanel bottomContentsPanel;
-    private javax.swing.JLabel cashBasketNLabel;
-    private javax.swing.JPanel cashBasketPanel;
-    private javax.swing.JComboBox cashDay;
-    private javax.swing.JPanel cashDebitCardPanel;
-    private javax.swing.JRadioButton cashDebitCardRButton;
-    private javax.swing.JLabel cashDeliveryDateLabel;
-    private javax.swing.JLabel cashDivide;
-    private javax.swing.JLabel cashFNameLabel;
-    private javax.swing.JTextField cashFNameTF;
-    private javax.swing.JPanel cashInfoCardPanel;
-    private javax.swing.JRadioButton cashInvoiceRButton;
-    private javax.swing.JLabel cashLNameLabel;
-    private javax.swing.JTextField cashLNameTF;
-    private javax.swing.JComboBox cashMonth;
-    private javax.swing.JLabel cashPCodeLabel;
-    private javax.swing.JLabel cashPNumberLabel;
-    private javax.swing.JTextField cashPNumberTF;
-    private javax.swing.JLabel cashPaymentLabel;
-    private javax.swing.JPanel cashPaymentPanel;
-    private javax.swing.JTextField cashPcodeTF;
-    private javax.swing.JLabel cashPhoneNumberLabel;
-    private javax.swing.JTextField cashPhoneNumberTF;
-    private javax.swing.JLabel cashPicLabel;
-    private javax.swing.JLabel cashPlaceLabel;
-    private javax.swing.JTextField cashPlaceTF;
+    private imat.cashRegister cashRegister1;
     private javax.swing.JPanel cashRegisterPanel;
-    private javax.swing.JPanel cashRegisterPanel1;
-    private javax.swing.JTextField cashSecurityNumberTF;
-    private javax.swing.JLabel cashSlash;
-    private javax.swing.JLabel cashStAddressLabel;
-    private javax.swing.JTextField cashStAddressTF;
-    private javax.swing.JTextPane cashTextPane;
-    private javax.swing.JLabel cashUserInfoLabel;
-    private javax.swing.JPanel cashUserInfoPanel;
-    private javax.swing.JComboBox cashYear;
     private javax.swing.JPanel centerStagePanel;
     private javax.swing.JButton diaryButton;
     private javax.swing.JButton drinkButton;
@@ -904,7 +549,6 @@ public class IMatView extends FrameView {
     private javax.swing.JButton homeButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
@@ -926,7 +570,6 @@ public class IMatView extends FrameView {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;

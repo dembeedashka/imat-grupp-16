@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7">
   <NonVisualComponents>
@@ -10,14 +10,14 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="topNavigationPanel" alignment="0" pref="1293" max="32767" attributes="0"/>
+              <Component id="topNavigationPanel" alignment="0" pref="1295" max="32767" attributes="0"/>
               <Component id="bottomContentsPanel" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="topNavigationPanel" min="-2" max="-2" attributes="0"/>
+                  <Component id="topNavigationPanel" min="-2" pref="82" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="bottomContentsPanel" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -154,7 +154,7 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="shoppingListPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="framePanel" min="-2" max="-2" attributes="0"/>
+                      <Component id="framePanel" min="-2" pref="805" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="actionPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -190,7 +190,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1293" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1295" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -213,7 +213,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1094" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1095" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -261,7 +261,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="centerStagePanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="239" max="32767" attributes="0"/>
+                          <EmptySpace pref="167" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -708,14 +708,14 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jPanel12" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel27" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
-                                          <Component id="jPanel10" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jButton4" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
-                                          <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cashBasketPanel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cashInfoCardPanel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cashBasketNLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                          <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -725,35 +725,35 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashInfoCardPanel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashBasketNLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashBasketPanel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashUserInfoLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashUserInfoPanel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel12" max="32767" attributes="0"/>
+                                      <Component id="cashPaymentPanel" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel10">
+                            <Container class="javax.swing.JPanel" name="cashInfoCardPanel">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                     <LineBorder/>
                                   </Border>
                                 </Property>
-                                <Property name="name" type="java.lang.String" value="jPanel10" noResource="true"/>
+                                <Property name="name" type="java.lang.String" value="cashInfoCardPanel" noResource="true"/>
                               </Properties>
 
                               <Layout>
@@ -761,9 +761,9 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel26" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="cashPicLabel" min="-2" pref="110" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane6" pref="633" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane6" pref="717" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -774,7 +774,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jScrollPane6" alignment="0" pref="185" max="32767" attributes="0"/>
-                                              <Component id="jLabel26" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                                              <Component id="cashPicLabel" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -782,16 +782,16 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel26">
+                                <Component class="javax.swing.JLabel" name="cashPicLabel">
                                   <Properties>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel26.text"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPicLabel.text"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
                                       </Border>
                                     </Property>
-                                    <Property name="name" type="java.lang.String" value="jLabel26" noResource="true"/>
+                                    <Property name="name" type="java.lang.String" value="cashPicLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
                                 <Container class="javax.swing.JScrollPane" name="jScrollPane6">
@@ -804,35 +804,35 @@
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTextPane" name="jTextPane1">
+                                    <Component class="javax.swing.JTextPane" name="cashTextPane">
                                       <Properties>
-                                        <Property name="name" type="java.lang.String" value="jTextPane1" noResource="true"/>
+                                        <Property name="name" type="java.lang.String" value="cashTextPane" noResource="true"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
                               </SubComponents>
                             </Container>
-                            <Component class="javax.swing.JLabel" name="jLabel27">
+                            <Component class="javax.swing.JLabel" name="cashBasketNLabel">
                               <Properties>
-                                <Property name="text" type="java.lang.String" resourceKey="jLabel27.text"/>
-                                <Property name="name" type="java.lang.String" value="jLabel27" noResource="true"/>
+                                <Property name="text" type="java.lang.String" resourceKey="cashBasketNLabel.text"/>
+                                <Property name="name" type="java.lang.String" value="cashBasketNLabel" noResource="true"/>
                               </Properties>
                             </Component>
-                            <Container class="javax.swing.JPanel" name="jPanel9">
+                            <Container class="javax.swing.JPanel" name="cashBasketPanel">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                     <LineBorder/>
                                   </Border>
                                 </Property>
-                                <Property name="name" type="java.lang.String" value="jPanel9" noResource="true"/>
+                                <Property name="name" type="java.lang.String" value="cashBasketPanel" noResource="true"/>
                               </Properties>
 
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="863" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
@@ -842,20 +842,20 @@
                                 </DimensionLayout>
                               </Layout>
                             </Container>
-                            <Component class="javax.swing.JLabel" name="jLabel28">
+                            <Component class="javax.swing.JLabel" name="cashUserInfoLabel">
                               <Properties>
-                                <Property name="text" type="java.lang.String" resourceKey="jLabel28.text"/>
-                                <Property name="name" type="java.lang.String" value="jLabel28" noResource="true"/>
+                                <Property name="text" type="java.lang.String" resourceKey="cashUserInfoLabel.text"/>
+                                <Property name="name" type="java.lang.String" value="cashUserInfoLabel" noResource="true"/>
                               </Properties>
                             </Component>
-                            <Container class="javax.swing.JPanel" name="jPanel11">
+                            <Container class="javax.swing.JPanel" name="cashUserInfoPanel">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                     <LineBorder/>
                                   </Border>
                                 </Property>
-                                <Property name="name" type="java.lang.String" value="jPanel11" noResource="true"/>
+                                <Property name="name" type="java.lang.String" value="cashUserInfoPanel" noResource="true"/>
                               </Properties>
 
                               <Layout>
@@ -864,37 +864,49 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel29" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                              <Component id="jTextField13" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField17" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cashFNameLabel" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                              <Component id="cashLNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cashPNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="cashLNameTF" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashFNameTF" alignment="0" pref="124" max="32767" attributes="1"/>
+                                              </Group>
+                                              <Component id="cashPhoneNumberLabel" alignment="0" min="-2" max="-2" attributes="1"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="cashPNumberTF" alignment="1" max="32767" attributes="1"/>
+                                                      <Component id="cashPhoneNumberTF" alignment="1" pref="120" max="32767" attributes="1"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="cashSecurityNumberTF" min="-2" pref="48" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashDay" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashSlash" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox5" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashMonth" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashDivide" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jComboBox6" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashYear" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel31" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                                              <Component id="jTextField15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField18" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField16" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cashPlaceLabel" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="cashStAddressLabel" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashPCodeLabel" alignment="0" max="32767" attributes="1"/>
+                                              </Group>
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="cashStAddressTF" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashPcodeTF" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace pref="147" max="32767" attributes="0"/>
+                                          <EmptySpace pref="86" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -904,53 +916,56 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashStAddressLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField15" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashStAddressTF" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashPCodeLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField18" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashPcodeTF" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashFNameLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField13" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashFNameTF" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashLNameLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField14" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashLNameTF" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashPlaceLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField16" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <Component id="cashPlaceTF" min="-2" pref="27" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
-                                                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField17" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField19" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cashPNumberLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashPNumberTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashSecurityNumberTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="cashPhoneNumberLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="cashPhoneNumberTF" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="cashDeliveryDateLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="cashDay" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashSlash" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashMonth" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashDivide" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cashYear" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -960,97 +975,97 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel29">
+                                <Component class="javax.swing.JLabel" name="cashFNameLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel29.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel29" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashFNameLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashFNameLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField13">
+                                <Component class="javax.swing.JTextField" name="cashFNameTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField13.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField13" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashFNameTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashFNameTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel30">
+                                <Component class="javax.swing.JLabel" name="cashLNameLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel30.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel30" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashLNameLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashLNameLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField14">
+                                <Component class="javax.swing.JTextField" name="cashLNameTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField14.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField14" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashLNameTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashLNameTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel31">
+                                <Component class="javax.swing.JLabel" name="cashStAddressLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel31.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel31" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashStAddressLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashStAddressLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField15">
+                                <Component class="javax.swing.JTextField" name="cashStAddressTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField15.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField15" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashStAddressTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashStAddressTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel32">
+                                <Component class="javax.swing.JLabel" name="cashPlaceLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel32.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel32" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPlaceLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPlaceLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField16">
+                                <Component class="javax.swing.JTextField" name="cashPlaceTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField16.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField16" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPlaceTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPlaceTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel33">
+                                <Component class="javax.swing.JLabel" name="cashPNumberLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel33.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel33" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPNumberLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPNumberLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField17">
+                                <Component class="javax.swing.JTextField" name="cashPNumberTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField17.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField17" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPNumberTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPNumberTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel34">
+                                <Component class="javax.swing.JLabel" name="cashPCodeLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel34.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel34" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPCodeLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPCodeLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField18">
+                                <Component class="javax.swing.JTextField" name="cashPcodeTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField18.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField18" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPcodeTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPcodeTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel35">
+                                <Component class="javax.swing.JLabel" name="cashPhoneNumberLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel35.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel35" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPhoneNumberLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPhoneNumberLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField19">
+                                <Component class="javax.swing.JTextField" name="cashPhoneNumberTF">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jTextField19.text"/>
-                                    <Property name="name" type="java.lang.String" value="jTextField19" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashPhoneNumberTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashPhoneNumberTF" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel36">
+                                <Component class="javax.swing.JLabel" name="cashDeliveryDateLabel">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel36.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel36" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashDeliveryDateLabel.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashDeliveryDateLabel" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox4">
+                                <Component class="javax.swing.JComboBox" name="cashDay">
                                   <Properties>
                                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                       <StringArray count="4">
@@ -1060,35 +1075,16 @@
                                         <StringItem index="3" value="Item 4"/>
                                       </StringArray>
                                     </Property>
-                                    <Property name="name" type="java.lang.String" value="jComboBox4" noResource="true"/>
+                                    <Property name="name" type="java.lang.String" value="cashDay" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel37">
+                                <Component class="javax.swing.JLabel" name="cashSlash">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel37.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel37" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashSlash.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashSlash" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox5">
-                                  <Properties>
-                                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                      <StringArray count="4">
-                                        <StringItem index="0" value="Item 1"/>
-                                        <StringItem index="1" value="Item 2"/>
-                                        <StringItem index="2" value="Item 3"/>
-                                        <StringItem index="3" value="Item 4"/>
-                                      </StringArray>
-                                    </Property>
-                                    <Property name="name" type="java.lang.String" value="jComboBox5" noResource="true"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel38">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jLabel38.text"/>
-                                    <Property name="name" type="java.lang.String" value="jLabel38" noResource="true"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox6">
+                                <Component class="javax.swing.JComboBox" name="cashMonth">
                                   <Properties>
                                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                       <StringArray count="4">
@@ -1098,7 +1094,32 @@
                                         <StringItem index="3" value="Item 4"/>
                                       </StringArray>
                                     </Property>
-                                    <Property name="name" type="java.lang.String" value="jComboBox6" noResource="true"/>
+                                    <Property name="name" type="java.lang.String" value="cashMonth" noResource="true"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="cashDivide">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashDivide.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashDivide" noResource="true"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JComboBox" name="cashYear">
+                                  <Properties>
+                                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                      <StringArray count="4">
+                                        <StringItem index="0" value="Item 1"/>
+                                        <StringItem index="1" value="Item 2"/>
+                                        <StringItem index="2" value="Item 3"/>
+                                        <StringItem index="3" value="Item 4"/>
+                                      </StringArray>
+                                    </Property>
+                                    <Property name="name" type="java.lang.String" value="cashYear" noResource="true"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JTextField" name="cashSecurityNumberTF">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashSecurityNumberTF.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashSecurityNumberTF" noResource="true"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
@@ -1109,31 +1130,39 @@
                                 <Property name="name" type="java.lang.String" value="jButton4" noResource="true"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel39">
+                            <Component class="javax.swing.JLabel" name="cashPaymentLabel">
                               <Properties>
-                                <Property name="text" type="java.lang.String" resourceKey="jLabel39.text"/>
-                                <Property name="name" type="java.lang.String" value="jLabel39" noResource="true"/>
+                                <Property name="text" type="java.lang.String" resourceKey="cashPaymentLabel.text"/>
+                                <Property name="name" type="java.lang.String" value="cashPaymentLabel" noResource="true"/>
                               </Properties>
                             </Component>
-                            <Container class="javax.swing.JPanel" name="jPanel12">
+                            <Container class="javax.swing.JPanel" name="cashPaymentPanel">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                     <LineBorder/>
                                   </Border>
                                 </Property>
-                                <Property name="name" type="java.lang.String" value="jPanel12" noResource="true"/>
+                                <Property name="name" type="java.lang.String" value="cashPaymentPanel" noResource="true"/>
                               </Properties>
 
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="341" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                                                  <Component id="cashInvoiceRButton" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                                  <Component id="cashDebitCardRButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -1142,27 +1171,52 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cashInvoiceRButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cashDebitCardRButton" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                                <Component class="javax.swing.JRadioButton" name="cashInvoiceRButton">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jRadioButton3.text"/>
-                                    <Property name="name" type="java.lang.String" value="jRadioButton3" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashInvoiceRButton.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashInvoiceRButton" noResource="true"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                                <Component class="javax.swing.JRadioButton" name="cashDebitCardRButton">
                                   <Properties>
-                                    <Property name="text" type="java.lang.String" resourceKey="jRadioButton4.text"/>
-                                    <Property name="name" type="java.lang.String" value="jRadioButton4" noResource="true"/>
+                                    <Property name="text" type="java.lang.String" resourceKey="cashDebitCardRButton.text"/>
+                                    <Property name="name" type="java.lang.String" value="cashDebitCardRButton" noResource="true"/>
                                   </Properties>
                                 </Component>
+                                <Container class="javax.swing.JPanel" name="cashDebitCardPanel">
+                                  <Properties>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                        <EmptyBorder/>
+                                      </Border>
+                                    </Property>
+                                    <Property name="name" type="java.lang.String" value="cashDebitCardPanel" noResource="true"/>
+                                  </Properties>
+
+                                  <Layout>
+                                    <DimensionLayout dim="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <EmptySpace min="0" pref="837" max="32767" attributes="0"/>
+                                      </Group>
+                                    </DimensionLayout>
+                                    <DimensionLayout dim="1">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <EmptySpace min="0" pref="119" max="32767" attributes="0"/>
+                                      </Group>
+                                    </DimensionLayout>
+                                  </Layout>
+                                </Container>
                               </SubComponents>
                             </Container>
                           </SubComponents>

@@ -92,7 +92,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="110" max="-2" attributes="0"/>
+                      <Component id="headerIcon" min="-2" pref="110" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="633" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -105,7 +105,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                          <Component id="headerIcon" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -113,16 +113,16 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="headerIcon">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" resourceKey="jLabel1.text"/>
+                <Property name="text" type="java.lang.String" resourceKey="headerIcon.text"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder/>
                   </Border>
                 </Property>
-                <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="headerIcon" noResource="true"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -135,10 +135,10 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextPane" name="jTextPane1">
+                <Component class="javax.swing.JTextPane" name="headerText">
                   <Properties>
-                    <Property name="text" type="java.lang.String" resourceKey="jTextPane1.text"/>
-                    <Property name="name" type="java.lang.String" value="jTextPane1" noResource="true"/>
+                    <Property name="text" type="java.lang.String" resourceKey="headerText.text"/>
+                    <Property name="name" type="java.lang.String" value="headerText" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>

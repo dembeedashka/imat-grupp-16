@@ -95,39 +95,41 @@ public class IMatView extends FrameView {
         jLabel17 = new javax.swing.JLabel();
         cashRegisterPanel = new javax.swing.JPanel();
         cashRegisterPanel1 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
+        cashInfoCardPanel = new javax.swing.JPanel();
+        cashPicLabel = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jLabel27 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel29 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jLabel32 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jLabel35 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox();
-        jLabel37 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox();
-        jLabel38 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox();
+        cashTextPane = new javax.swing.JTextPane();
+        cashBasketNLabel = new javax.swing.JLabel();
+        cashBasketPanel = new javax.swing.JPanel();
+        cashUserInfoLabel = new javax.swing.JLabel();
+        cashUserInfoPanel = new javax.swing.JPanel();
+        cashFNameLabel = new javax.swing.JLabel();
+        cashFNameTF = new javax.swing.JTextField();
+        cashLNameLabel = new javax.swing.JLabel();
+        cashLNameTF = new javax.swing.JTextField();
+        cashStAddressLabel = new javax.swing.JLabel();
+        cashStAddressTF = new javax.swing.JTextField();
+        cashPlaceLabel = new javax.swing.JLabel();
+        cashPlaceTF = new javax.swing.JTextField();
+        cashPNumberLabel = new javax.swing.JLabel();
+        cashPNumberTF = new javax.swing.JTextField();
+        cashPCodeLabel = new javax.swing.JLabel();
+        cashPcodeTF = new javax.swing.JTextField();
+        cashPhoneNumberLabel = new javax.swing.JLabel();
+        cashPhoneNumberTF = new javax.swing.JTextField();
+        cashDeliveryDateLabel = new javax.swing.JLabel();
+        cashDay = new javax.swing.JComboBox();
+        cashSlash = new javax.swing.JLabel();
+        cashMonth = new javax.swing.JComboBox();
+        cashDivide = new javax.swing.JLabel();
+        cashYear = new javax.swing.JComboBox();
+        cashSecurityNumberTF = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jLabel39 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        cashPaymentLabel = new javax.swing.JLabel();
+        cashPaymentPanel = new javax.swing.JPanel();
+        cashInvoiceRButton = new javax.swing.JRadioButton();
+        cashDebitCardRButton = new javax.swing.JRadioButton();
+        cashDebitCardPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
 
@@ -231,7 +233,7 @@ public class IMatView extends FrameView {
         navigationSearchPanel.setLayout(navigationSearchPanelLayout);
         navigationSearchPanelLayout.setHorizontalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1293, Short.MAX_VALUE)
+            .add(0, 1295, Short.MAX_VALUE)
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -248,7 +250,7 @@ public class IMatView extends FrameView {
         );
         shoppingListPanelLayout.setVerticalGroup(
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1094, Short.MAX_VALUE)
+            .add(0, 1095, Short.MAX_VALUE)
         );
 
         actionPanel.setName("actionPanel"); // NOI18N
@@ -393,242 +395,275 @@ public class IMatView extends FrameView {
         cashRegisterPanel1.setName("cashRegisterPanel1"); // NOI18N
         cashRegisterPanel1.setVerifyInputWhenFocusTarget(false);
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel10.setName("jPanel10"); // NOI18N
+        cashInfoCardPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cashInfoCardPanel.setName("cashInfoCardPanel"); // NOI18N
 
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText(resourceMap.getString("jLabel26.text")); // NOI18N
-        jLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel26.setName("jLabel26"); // NOI18N
+        cashPicLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cashPicLabel.setText(resourceMap.getString("cashPicLabel.text")); // NOI18N
+        cashPicLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cashPicLabel.setName("cashPicLabel"); // NOI18N
 
         jScrollPane6.setName("jScrollPane6"); // NOI18N
 
-        jTextPane1.setName("jTextPane1"); // NOI18N
-        jScrollPane6.setViewportView(jTextPane1);
+        cashTextPane.setName("cashTextPane"); // NOI18N
+        jScrollPane6.setViewportView(cashTextPane);
 
-        org.jdesktop.layout.GroupLayout jPanel10Layout = new org.jdesktop.layout.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel10Layout.createSequentialGroup()
+        org.jdesktop.layout.GroupLayout cashInfoCardPanelLayout = new org.jdesktop.layout.GroupLayout(cashInfoCardPanel);
+        cashInfoCardPanel.setLayout(cashInfoCardPanelLayout);
+        cashInfoCardPanelLayout.setHorizontalGroup(
+            cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashInfoCardPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel26, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cashPicLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
+                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel10Layout.createSequentialGroup()
+        cashInfoCardPanelLayout.setVerticalGroup(
+            cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashInfoCardPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel10Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(cashInfoCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
-                    .add(jLabel26, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cashPicLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 99, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jLabel27.setText(resourceMap.getString("jLabel27.text")); // NOI18N
-        jLabel27.setName("jLabel27"); // NOI18N
+        cashBasketNLabel.setText(resourceMap.getString("cashBasketNLabel.text")); // NOI18N
+        cashBasketNLabel.setName("cashBasketNLabel"); // NOI18N
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel9.setName("jPanel9"); // NOI18N
+        cashBasketPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cashBasketPanel.setName("cashBasketPanel"); // NOI18N
 
-        org.jdesktop.layout.GroupLayout jPanel9Layout = new org.jdesktop.layout.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 773, Short.MAX_VALUE)
+        org.jdesktop.layout.GroupLayout cashBasketPanelLayout = new org.jdesktop.layout.GroupLayout(cashBasketPanel);
+        cashBasketPanel.setLayout(cashBasketPanelLayout);
+        cashBasketPanelLayout.setHorizontalGroup(
+            cashBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 863, Short.MAX_VALUE)
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+        cashBasketPanelLayout.setVerticalGroup(
+            cashBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(0, 176, Short.MAX_VALUE)
         );
 
-        jLabel28.setText(resourceMap.getString("jLabel28.text")); // NOI18N
-        jLabel28.setName("jLabel28"); // NOI18N
+        cashUserInfoLabel.setText(resourceMap.getString("cashUserInfoLabel.text")); // NOI18N
+        cashUserInfoLabel.setName("cashUserInfoLabel"); // NOI18N
 
-        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel11.setName("jPanel11"); // NOI18N
+        cashUserInfoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cashUserInfoPanel.setName("cashUserInfoPanel"); // NOI18N
 
-        jLabel29.setText(resourceMap.getString("jLabel29.text")); // NOI18N
-        jLabel29.setName("jLabel29"); // NOI18N
+        cashFNameLabel.setText(resourceMap.getString("cashFNameLabel.text")); // NOI18N
+        cashFNameLabel.setName("cashFNameLabel"); // NOI18N
 
-        jTextField13.setText(resourceMap.getString("jTextField13.text")); // NOI18N
-        jTextField13.setName("jTextField13"); // NOI18N
+        cashFNameTF.setText(resourceMap.getString("cashFNameTF.text")); // NOI18N
+        cashFNameTF.setName("cashFNameTF"); // NOI18N
 
-        jLabel30.setText(resourceMap.getString("jLabel30.text")); // NOI18N
-        jLabel30.setName("jLabel30"); // NOI18N
+        cashLNameLabel.setText(resourceMap.getString("cashLNameLabel.text")); // NOI18N
+        cashLNameLabel.setName("cashLNameLabel"); // NOI18N
 
-        jTextField14.setText(resourceMap.getString("jTextField14.text")); // NOI18N
-        jTextField14.setName("jTextField14"); // NOI18N
+        cashLNameTF.setText(resourceMap.getString("cashLNameTF.text")); // NOI18N
+        cashLNameTF.setName("cashLNameTF"); // NOI18N
 
-        jLabel31.setText(resourceMap.getString("jLabel31.text")); // NOI18N
-        jLabel31.setName("jLabel31"); // NOI18N
+        cashStAddressLabel.setText(resourceMap.getString("cashStAddressLabel.text")); // NOI18N
+        cashStAddressLabel.setName("cashStAddressLabel"); // NOI18N
 
-        jTextField15.setText(resourceMap.getString("jTextField15.text")); // NOI18N
-        jTextField15.setName("jTextField15"); // NOI18N
+        cashStAddressTF.setText(resourceMap.getString("cashStAddressTF.text")); // NOI18N
+        cashStAddressTF.setName("cashStAddressTF"); // NOI18N
 
-        jLabel32.setText(resourceMap.getString("jLabel32.text")); // NOI18N
-        jLabel32.setName("jLabel32"); // NOI18N
+        cashPlaceLabel.setText(resourceMap.getString("cashPlaceLabel.text")); // NOI18N
+        cashPlaceLabel.setName("cashPlaceLabel"); // NOI18N
 
-        jTextField16.setText(resourceMap.getString("jTextField16.text")); // NOI18N
-        jTextField16.setName("jTextField16"); // NOI18N
+        cashPlaceTF.setText(resourceMap.getString("cashPlaceTF.text")); // NOI18N
+        cashPlaceTF.setName("cashPlaceTF"); // NOI18N
 
-        jLabel33.setText(resourceMap.getString("jLabel33.text")); // NOI18N
-        jLabel33.setName("jLabel33"); // NOI18N
+        cashPNumberLabel.setText(resourceMap.getString("cashPNumberLabel.text")); // NOI18N
+        cashPNumberLabel.setName("cashPNumberLabel"); // NOI18N
 
-        jTextField17.setText(resourceMap.getString("jTextField17.text")); // NOI18N
-        jTextField17.setName("jTextField17"); // NOI18N
+        cashPNumberTF.setText(resourceMap.getString("cashPNumberTF.text")); // NOI18N
+        cashPNumberTF.setName("cashPNumberTF"); // NOI18N
 
-        jLabel34.setText(resourceMap.getString("jLabel34.text")); // NOI18N
-        jLabel34.setName("jLabel34"); // NOI18N
+        cashPCodeLabel.setText(resourceMap.getString("cashPCodeLabel.text")); // NOI18N
+        cashPCodeLabel.setName("cashPCodeLabel"); // NOI18N
 
-        jTextField18.setText(resourceMap.getString("jTextField18.text")); // NOI18N
-        jTextField18.setName("jTextField18"); // NOI18N
+        cashPcodeTF.setText(resourceMap.getString("cashPcodeTF.text")); // NOI18N
+        cashPcodeTF.setName("cashPcodeTF"); // NOI18N
 
-        jLabel35.setText(resourceMap.getString("jLabel35.text")); // NOI18N
-        jLabel35.setName("jLabel35"); // NOI18N
+        cashPhoneNumberLabel.setText(resourceMap.getString("cashPhoneNumberLabel.text")); // NOI18N
+        cashPhoneNumberLabel.setName("cashPhoneNumberLabel"); // NOI18N
 
-        jTextField19.setText(resourceMap.getString("jTextField19.text")); // NOI18N
-        jTextField19.setName("jTextField19"); // NOI18N
+        cashPhoneNumberTF.setText(resourceMap.getString("cashPhoneNumberTF.text")); // NOI18N
+        cashPhoneNumberTF.setName("cashPhoneNumberTF"); // NOI18N
 
-        jLabel36.setText(resourceMap.getString("jLabel36.text")); // NOI18N
-        jLabel36.setName("jLabel36"); // NOI18N
+        cashDeliveryDateLabel.setText(resourceMap.getString("cashDeliveryDateLabel.text")); // NOI18N
+        cashDeliveryDateLabel.setName("cashDeliveryDateLabel"); // NOI18N
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setName("jComboBox4"); // NOI18N
+        cashDay.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cashDay.setName("cashDay"); // NOI18N
 
-        jLabel37.setText(resourceMap.getString("jLabel37.text")); // NOI18N
-        jLabel37.setName("jLabel37"); // NOI18N
+        cashSlash.setText(resourceMap.getString("cashSlash.text")); // NOI18N
+        cashSlash.setName("cashSlash"); // NOI18N
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.setName("jComboBox5"); // NOI18N
+        cashMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cashMonth.setName("cashMonth"); // NOI18N
 
-        jLabel38.setText(resourceMap.getString("jLabel38.text")); // NOI18N
-        jLabel38.setName("jLabel38"); // NOI18N
+        cashDivide.setText(resourceMap.getString("cashDivide.text")); // NOI18N
+        cashDivide.setName("cashDivide"); // NOI18N
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox6.setName("jComboBox6"); // NOI18N
+        cashYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cashYear.setName("cashYear"); // NOI18N
 
-        org.jdesktop.layout.GroupLayout jPanel11Layout = new org.jdesktop.layout.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel11Layout.createSequentialGroup()
+        cashSecurityNumberTF.setText(resourceMap.getString("cashSecurityNumberTF.text")); // NOI18N
+        cashSecurityNumberTF.setName("cashSecurityNumberTF"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout cashUserInfoPanelLayout = new org.jdesktop.layout.GroupLayout(cashUserInfoPanel);
+        cashUserInfoPanel.setLayout(cashUserInfoPanelLayout);
+        cashUserInfoPanelLayout.setHorizontalGroup(
+            cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashUserInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jLabel29, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel30)
-                    .add(jTextField14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel33)
-                    .add(jTextField17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel35)
-                    .add(jTextField19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashFNameLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(cashLNameLabel)
+                    .add(cashPNumberLabel)
+                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashLNameTF)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashFNameTF, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+                    .add(cashPhoneNumberLabel)
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                            .add(cashPNumberTF)
+                            .add(cashPhoneNumberTF, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(cashSecurityNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 48, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(258, 258, 258)
-                .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashDay, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel37)
+                        .add(cashSlash)
                         .add(4, 4, 4)
-                        .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(cashMonth, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jLabel38)
+                        .add(cashDivide)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jComboBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jLabel36)
-                    .add(jLabel32)
-                    .add(jLabel31, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 62, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel34)
-                    .add(jTextField18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jTextField16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
+                        .add(cashYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cashPlaceLabel)
+                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashStAddressLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPCodeLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashStAddressTF)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPcodeTF)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashPlaceTF)
+                        .add(org.jdesktop.layout.GroupLayout.LEADING, cashDeliveryDateLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel11Layout.createSequentialGroup()
+        cashUserInfoPanelLayout.setVerticalGroup(
+            cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashUserInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel31)
+                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashStAddressLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField15, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(cashStAddressTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabel34)
+                        .add(cashPCodeLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField18, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel29)
+                        .add(cashPcodeTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashFNameLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(cashFNameTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabel30)
+                        .add(cashLNameLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField14, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(cashLNameTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel32)
+                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashPlaceLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField16, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 20, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel33)
+                        .add(cashPlaceTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashPNumberLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField17, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(cashPNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(cashSecurityNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel35)
+                .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashPhoneNumberLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jTextField19, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel11Layout.createSequentialGroup()
-                        .add(jLabel36)
+                        .add(cashPhoneNumberTF, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cashUserInfoPanelLayout.createSequentialGroup()
+                        .add(cashDeliveryDateLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(jPanel11Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel37)
-                            .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel38)
-                            .add(jComboBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                        .add(cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(cashDay, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(cashSlash)
+                            .add(cashMonth, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(cashDivide)
+                            .add(cashYear, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
         jButton4.setName("jButton4"); // NOI18N
 
-        jLabel39.setText(resourceMap.getString("jLabel39.text")); // NOI18N
-        jLabel39.setName("jLabel39"); // NOI18N
+        cashPaymentLabel.setText(resourceMap.getString("cashPaymentLabel.text")); // NOI18N
+        cashPaymentLabel.setName("cashPaymentLabel"); // NOI18N
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel12.setName("jPanel12"); // NOI18N
+        cashPaymentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cashPaymentPanel.setName("cashPaymentPanel"); // NOI18N
 
-        jRadioButton3.setText(resourceMap.getString("jRadioButton3.text")); // NOI18N
-        jRadioButton3.setName("jRadioButton3"); // NOI18N
+        cashInvoiceRButton.setText(resourceMap.getString("cashInvoiceRButton.text")); // NOI18N
+        cashInvoiceRButton.setName("cashInvoiceRButton"); // NOI18N
 
-        jRadioButton4.setText(resourceMap.getString("jRadioButton4.text")); // NOI18N
-        jRadioButton4.setName("jRadioButton4"); // NOI18N
+        cashDebitCardRButton.setText(resourceMap.getString("cashDebitCardRButton.text")); // NOI18N
+        cashDebitCardRButton.setName("cashDebitCardRButton"); // NOI18N
 
-        org.jdesktop.layout.GroupLayout jPanel12Layout = new org.jdesktop.layout.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel12Layout.createSequentialGroup()
-                .add(225, 225, 225)
-                .add(jRadioButton3)
-                .add(35, 35, 35)
-                .add(jRadioButton4)
-                .addContainerGap(341, Short.MAX_VALUE))
+        cashDebitCardPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cashDebitCardPanel.setName("cashDebitCardPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout cashDebitCardPanelLayout = new org.jdesktop.layout.GroupLayout(cashDebitCardPanel);
+        cashDebitCardPanel.setLayout(cashDebitCardPanelLayout);
+        cashDebitCardPanelLayout.setHorizontalGroup(
+            cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 837, Short.MAX_VALUE)
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel12Layout.createSequentialGroup()
+        cashDebitCardPanelLayout.setVerticalGroup(
+            cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 119, Short.MAX_VALUE)
+        );
+
+        org.jdesktop.layout.GroupLayout cashPaymentPanelLayout = new org.jdesktop.layout.GroupLayout(cashPaymentPanel);
+        cashPaymentPanel.setLayout(cashPaymentPanelLayout);
+        cashPaymentPanelLayout.setHorizontalGroup(
+            cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashPaymentPanelLayout.createSequentialGroup()
+                .add(cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(cashPaymentPanelLayout.createSequentialGroup()
+                        .add(225, 225, 225)
+                        .add(cashInvoiceRButton)
+                        .add(35, 35, 35)
+                        .add(cashDebitCardRButton))
+                    .add(cashPaymentPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(cashDebitCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        cashPaymentPanelLayout.setVerticalGroup(
+            cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cashPaymentPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel12Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jRadioButton3)
-                    .add(jRadioButton4))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(cashPaymentPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(cashInvoiceRButton)
+                    .add(cashDebitCardRButton))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(cashDebitCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         org.jdesktop.layout.GroupLayout cashRegisterPanel1Layout = new org.jdesktop.layout.GroupLayout(cashRegisterPanel1);
@@ -638,35 +673,35 @@ public class IMatView extends FrameView {
             .add(cashRegisterPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .add(cashRegisterPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jPanel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jPanel11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jPanel9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jLabel27, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jPanel10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .add(jLabel28)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 113, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel39))
+                    .add(cashPaymentPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(cashUserInfoPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(cashBasketPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(cashInfoCardPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(cashUserInfoLabel)
+                    .add(cashPaymentLabel)
+                    .add(cashBasketNLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 94, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 143, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         cashRegisterPanel1Layout.setVerticalGroup(
             cashRegisterPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cashRegisterPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .add(jPanel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cashInfoCardPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel27)
+                .add(cashBasketNLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cashBasketPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel28)
+                .add(cashUserInfoLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(cashUserInfoPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jButton4)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel39)
+                .add(cashPaymentLabel)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jPanel12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(cashPaymentPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -686,7 +721,7 @@ public class IMatView extends FrameView {
             framePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(framePanelLayout.createSequentialGroup()
                 .add(centerStagePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
@@ -697,7 +732,7 @@ public class IMatView extends FrameView {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, bottomContentsPanelLayout.createSequentialGroup()
                 .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(28, 28, 28)
-                .add(framePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(framePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 805, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(actionPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -721,13 +756,13 @@ public class IMatView extends FrameView {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1293, Short.MAX_VALUE)
+            .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1295, Short.MAX_VALUE)
             .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(mainPanelLayout.createSequentialGroup()
-                .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
@@ -746,8 +781,41 @@ public class IMatView extends FrameView {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
     private javax.swing.JPanel bottomContentsPanel;
+    private javax.swing.JLabel cashBasketNLabel;
+    private javax.swing.JPanel cashBasketPanel;
+    private javax.swing.JComboBox cashDay;
+    private javax.swing.JPanel cashDebitCardPanel;
+    private javax.swing.JRadioButton cashDebitCardRButton;
+    private javax.swing.JLabel cashDeliveryDateLabel;
+    private javax.swing.JLabel cashDivide;
+    private javax.swing.JLabel cashFNameLabel;
+    private javax.swing.JTextField cashFNameTF;
+    private javax.swing.JPanel cashInfoCardPanel;
+    private javax.swing.JRadioButton cashInvoiceRButton;
+    private javax.swing.JLabel cashLNameLabel;
+    private javax.swing.JTextField cashLNameTF;
+    private javax.swing.JComboBox cashMonth;
+    private javax.swing.JLabel cashPCodeLabel;
+    private javax.swing.JLabel cashPNumberLabel;
+    private javax.swing.JTextField cashPNumberTF;
+    private javax.swing.JLabel cashPaymentLabel;
+    private javax.swing.JPanel cashPaymentPanel;
+    private javax.swing.JTextField cashPcodeTF;
+    private javax.swing.JLabel cashPhoneNumberLabel;
+    private javax.swing.JTextField cashPhoneNumberTF;
+    private javax.swing.JLabel cashPicLabel;
+    private javax.swing.JLabel cashPlaceLabel;
+    private javax.swing.JTextField cashPlaceTF;
     private javax.swing.JPanel cashRegisterPanel;
     private javax.swing.JPanel cashRegisterPanel1;
+    private javax.swing.JTextField cashSecurityNumberTF;
+    private javax.swing.JLabel cashSlash;
+    private javax.swing.JLabel cashStAddressLabel;
+    private javax.swing.JTextField cashStAddressTF;
+    private javax.swing.JTextPane cashTextPane;
+    private javax.swing.JLabel cashUserInfoLabel;
+    private javax.swing.JPanel cashUserInfoPanel;
+    private javax.swing.JComboBox cashYear;
     private javax.swing.JPanel centerStagePanel;
     private javax.swing.JButton diaryButton;
     private javax.swing.JButton drinkButton;
@@ -762,9 +830,6 @@ public class IMatView extends FrameView {
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
-    private javax.swing.JComboBox jComboBox6;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -778,43 +843,16 @@ public class IMatView extends FrameView {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
@@ -823,7 +861,6 @@ public class IMatView extends FrameView {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;

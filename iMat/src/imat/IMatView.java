@@ -58,41 +58,6 @@ public class IMatView extends FrameView {
         framePanel = new javax.swing.JPanel();
         centerStagePanel = new javax.swing.JPanel();
         userInfoPanel = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        jComboBox3 = new javax.swing.JComboBox();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
         cashRegisterPanel = new javax.swing.JPanel();
         cashRegisterPanel1 = new javax.swing.JPanel();
         cashInfoCardPanel = new javax.swing.JPanel();
@@ -130,16 +95,18 @@ public class IMatView extends FrameView {
         cashInvoiceRButton = new javax.swing.JRadioButton();
         cashDebitCardRButton = new javax.swing.JRadioButton();
         cashDebitCardPanel = new javax.swing.JPanel();
+        editShoppingListPanel = new javax.swing.JPanel();
+        mainEditShoppingListPanel = new javax.swing.JPanel();
+        shoppingBasketPanel = new javax.swing.JPanel();
+        mainShoppingBasketPanel = new javax.swing.JPanel();
+        purchaseHistoryPanel = new javax.swing.JPanel();
+        mainPurchaseHistoryPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(IMatView.class);
-        topNavigationPanel.setBackground(resourceMap.getColor("topNavigationPanel.background")); // NOI18N
         topNavigationPanel.setName("topNavigationPanel"); // NOI18N
         topNavigationPanel.setPreferredSize(new java.awt.Dimension(1273, 82));
 
-        homeButton.setIcon(resourceMap.getIcon("homeButton.icon")); // NOI18N
-        homeButton.setText(resourceMap.getString("homeButton.text")); // NOI18N
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
         homeButton.setName("homeButton"); // NOI18N
@@ -149,38 +116,26 @@ public class IMatView extends FrameView {
             }
         });
 
-        fruitButton.setIcon(resourceMap.getIcon("fruitButton.icon")); // NOI18N
-        fruitButton.setText(resourceMap.getString("fruitButton.text")); // NOI18N
         fruitButton.setBorderPainted(false);
         fruitButton.setName("fruitButton"); // NOI18N
 
-        meatButton.setIcon(resourceMap.getIcon("meatButton.icon")); // NOI18N
-        meatButton.setText(resourceMap.getString("meatButton.text")); // NOI18N
         meatButton.setBorderPainted(false);
         meatButton.setContentAreaFilled(false);
         meatButton.setName("meatButton"); // NOI18N
 
-        diaryButton.setIcon(resourceMap.getIcon("diaryButton.icon")); // NOI18N
-        diaryButton.setText(resourceMap.getString("diaryButton.text")); // NOI18N
         diaryButton.setBorderPainted(false);
         diaryButton.setContentAreaFilled(false);
         diaryButton.setDefaultCapable(false);
         diaryButton.setName("diaryButton"); // NOI18N
 
-        dryButton.setIcon(resourceMap.getIcon("dryButton.icon")); // NOI18N
-        dryButton.setText(resourceMap.getString("dryButton.text")); // NOI18N
         dryButton.setBorderPainted(false);
         dryButton.setContentAreaFilled(false);
         dryButton.setName("dryButton"); // NOI18N
 
-        drinkButton.setIcon(resourceMap.getIcon("drinkButton.icon")); // NOI18N
-        drinkButton.setText(resourceMap.getString("drinkButton.text")); // NOI18N
         drinkButton.setContentAreaFilled(false);
         drinkButton.setDefaultCapable(false);
         drinkButton.setName("drinkButton"); // NOI18N
 
-        favButton.setIcon(resourceMap.getIcon("favButton.icon")); // NOI18N
-        favButton.setText(resourceMap.getString("favButton.text")); // NOI18N
         favButton.setContentAreaFilled(false);
         favButton.setDefaultCapable(false);
         favButton.setName("favButton"); // NOI18N
@@ -220,7 +175,7 @@ public class IMatView extends FrameView {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, diaryButton, 0, 0, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, meatButton, 0, 0, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, fruitButton, 0, 0, Short.MAX_VALUE)
-                    .add(org.jdesktop.layout.GroupLayout.TRAILING, homeButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 71, Short.MAX_VALUE)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, homeButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)))
         );
 
         topNavigationPanelLayout.linkSize(new java.awt.Component[] {diaryButton, drinkButton, dryButton, favButton, fruitButton, homeButton, meatButton}, org.jdesktop.layout.GroupLayout.VERTICAL);
@@ -233,7 +188,7 @@ public class IMatView extends FrameView {
         navigationSearchPanel.setLayout(navigationSearchPanelLayout);
         navigationSearchPanelLayout.setHorizontalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1295, Short.MAX_VALUE)
+            .add(0, 1293, Short.MAX_VALUE)
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -264,9 +219,10 @@ public class IMatView extends FrameView {
         );
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1083, Short.MAX_VALUE)
+            .add(0, 1084, Short.MAX_VALUE)
         );
 
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(IMatView.class);
         framePanel.setBackground(resourceMap.getColor("framePanel.background")); // NOI18N
         framePanel.setName("framePanel"); // NOI18N
         framePanel.setPreferredSize(new java.awt.Dimension(805, 804));
@@ -276,117 +232,6 @@ public class IMatView extends FrameView {
 
         userInfoPanel.setName("userInfoPanel"); // NOI18N
         userInfoPanel.setLayout(new java.awt.CardLayout());
-
-        jPanel5.setName("jPanel5"); // NOI18N
-        jPanel5.setLayout(new java.awt.CardLayout());
-
-        jLabel8.setName("jLabel8"); // NOI18N
-        jPanel5.add(jLabel8, "card5");
-
-        jTextField1.setName("jTextField1"); // NOI18N
-        jPanel5.add(jTextField1, "card6");
-
-        jTextField2.setName("jTextField2"); // NOI18N
-        jPanel5.add(jTextField2, "card7");
-
-        jLabel9.setName("jLabel9"); // NOI18N
-        jPanel5.add(jLabel9, "card8");
-
-        jTextField3.setName("jTextField3"); // NOI18N
-        jPanel5.add(jTextField3, "card9");
-
-        jLabel10.setName("jLabel10"); // NOI18N
-        jPanel5.add(jLabel10, "card10");
-
-        jTextField4.setName("jTextField4"); // NOI18N
-        jPanel5.add(jTextField4, "card11");
-
-        jLabel11.setName("jLabel11"); // NOI18N
-        jPanel5.add(jLabel11, "card12");
-
-        jTextField5.setName("jTextField5"); // NOI18N
-        jPanel5.add(jTextField5, "card13");
-
-        jTextField6.setName("jTextField6"); // NOI18N
-        jPanel5.add(jTextField6, "card14");
-
-        jLabel12.setName("jLabel12"); // NOI18N
-        jPanel5.add(jLabel12, "card15");
-
-        jLabel13.setName("jLabel13"); // NOI18N
-        jPanel5.add(jLabel13, "card16");
-
-        jTextField7.setName("jTextField7"); // NOI18N
-        jPanel5.add(jTextField7, "card17");
-
-        jTextField8.setName("jTextField8"); // NOI18N
-        jPanel5.add(jTextField8, "card18");
-
-        jLabel14.setName("jLabel14"); // NOI18N
-        jPanel5.add(jLabel14, "card19");
-
-        jLabel15.setName("jLabel15"); // NOI18N
-        jPanel5.add(jLabel15, "card20");
-
-        jRadioButton1.setName("jRadioButton1"); // NOI18N
-        jPanel5.add(jRadioButton1, "card21");
-
-        jRadioButton2.setName("jRadioButton2"); // NOI18N
-        jPanel5.add(jRadioButton2, "card22");
-
-        jLabel16.setName("jLabel16"); // NOI18N
-        jPanel5.add(jLabel16, "card23");
-
-        jTextField9.setName("jTextField9"); // NOI18N
-        jPanel5.add(jTextField9, "card24");
-
-        jLabel18.setName("jLabel18"); // NOI18N
-        jPanel5.add(jLabel18, "card26");
-
-        jTextField10.setName("jTextField10"); // NOI18N
-        jPanel5.add(jTextField10, "card27");
-
-        jTextField11.setName("jTextField11"); // NOI18N
-        jPanel5.add(jTextField11, "card28");
-
-        jTextField12.setName("jTextField12"); // NOI18N
-        jPanel5.add(jTextField12, "card29");
-
-        jLabel19.setName("jLabel19"); // NOI18N
-        jPanel5.add(jLabel19, "card30");
-
-        jLabel20.setName("jLabel20"); // NOI18N
-        jPanel5.add(jLabel20, "card31");
-
-        jLabel21.setName("jLabel21"); // NOI18N
-        jPanel5.add(jLabel21, "card32");
-
-        jLabel22.setName("jLabel22"); // NOI18N
-        jPanel5.add(jLabel22, "card33");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VISA", "Mastercard" }));
-        jComboBox1.setName("jComboBox1"); // NOI18N
-        jPanel5.add(jComboBox1, "card34");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mån", "jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec" }));
-        jComboBox2.setName("jComboBox2"); // NOI18N
-        jPanel5.add(jComboBox2, "card35");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "år", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2019", "2020" }));
-        jComboBox3.setName("jComboBox3"); // NOI18N
-        jPanel5.add(jComboBox3, "card36");
-
-        jButton2.setName("jButton2"); // NOI18N
-        jPanel5.add(jButton2, "card37");
-
-        jButton3.setName("jButton3"); // NOI18N
-        jPanel5.add(jButton3, "card38");
-
-        jLabel17.setName("jLabel17"); // NOI18N
-        jPanel5.add(jLabel17, "card25");
-
-        userInfoPanel.add(jPanel5, "card2");
-
         centerStagePanel.add(userInfoPanel, "card3");
 
         cashRegisterPanel.setName("jPanel4"); // NOI18N
@@ -399,7 +244,6 @@ public class IMatView extends FrameView {
         cashInfoCardPanel.setName("cashInfoCardPanel"); // NOI18N
 
         cashPicLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cashPicLabel.setText(resourceMap.getString("cashPicLabel.text")); // NOI18N
         cashPicLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashPicLabel.setName("cashPicLabel"); // NOI18N
 
@@ -416,7 +260,7 @@ public class IMatView extends FrameView {
                 .addContainerGap()
                 .add(cashPicLabel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
+                .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 723, Short.MAX_VALUE)
                 .addContainerGap())
         );
         cashInfoCardPanelLayout.setVerticalGroup(
@@ -429,7 +273,6 @@ public class IMatView extends FrameView {
                 .addContainerGap())
         );
 
-        cashBasketNLabel.setText(resourceMap.getString("cashBasketNLabel.text")); // NOI18N
         cashBasketNLabel.setName("cashBasketNLabel"); // NOI18N
 
         cashBasketPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -446,73 +289,54 @@ public class IMatView extends FrameView {
             .add(0, 176, Short.MAX_VALUE)
         );
 
-        cashUserInfoLabel.setText(resourceMap.getString("cashUserInfoLabel.text")); // NOI18N
         cashUserInfoLabel.setName("cashUserInfoLabel"); // NOI18N
 
         cashUserInfoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashUserInfoPanel.setName("cashUserInfoPanel"); // NOI18N
 
-        cashFNameLabel.setText(resourceMap.getString("cashFNameLabel.text")); // NOI18N
         cashFNameLabel.setName("cashFNameLabel"); // NOI18N
 
-        cashFNameTF.setText(resourceMap.getString("cashFNameTF.text")); // NOI18N
         cashFNameTF.setName("cashFNameTF"); // NOI18N
 
-        cashLNameLabel.setText(resourceMap.getString("cashLNameLabel.text")); // NOI18N
         cashLNameLabel.setName("cashLNameLabel"); // NOI18N
 
-        cashLNameTF.setText(resourceMap.getString("cashLNameTF.text")); // NOI18N
         cashLNameTF.setName("cashLNameTF"); // NOI18N
 
-        cashStAddressLabel.setText(resourceMap.getString("cashStAddressLabel.text")); // NOI18N
         cashStAddressLabel.setName("cashStAddressLabel"); // NOI18N
 
-        cashStAddressTF.setText(resourceMap.getString("cashStAddressTF.text")); // NOI18N
         cashStAddressTF.setName("cashStAddressTF"); // NOI18N
 
-        cashPlaceLabel.setText(resourceMap.getString("cashPlaceLabel.text")); // NOI18N
         cashPlaceLabel.setName("cashPlaceLabel"); // NOI18N
 
-        cashPlaceTF.setText(resourceMap.getString("cashPlaceTF.text")); // NOI18N
         cashPlaceTF.setName("cashPlaceTF"); // NOI18N
 
-        cashPNumberLabel.setText(resourceMap.getString("cashPNumberLabel.text")); // NOI18N
         cashPNumberLabel.setName("cashPNumberLabel"); // NOI18N
 
-        cashPNumberTF.setText(resourceMap.getString("cashPNumberTF.text")); // NOI18N
         cashPNumberTF.setName("cashPNumberTF"); // NOI18N
 
-        cashPCodeLabel.setText(resourceMap.getString("cashPCodeLabel.text")); // NOI18N
         cashPCodeLabel.setName("cashPCodeLabel"); // NOI18N
 
-        cashPcodeTF.setText(resourceMap.getString("cashPcodeTF.text")); // NOI18N
         cashPcodeTF.setName("cashPcodeTF"); // NOI18N
 
-        cashPhoneNumberLabel.setText(resourceMap.getString("cashPhoneNumberLabel.text")); // NOI18N
         cashPhoneNumberLabel.setName("cashPhoneNumberLabel"); // NOI18N
 
-        cashPhoneNumberTF.setText(resourceMap.getString("cashPhoneNumberTF.text")); // NOI18N
         cashPhoneNumberTF.setName("cashPhoneNumberTF"); // NOI18N
 
-        cashDeliveryDateLabel.setText(resourceMap.getString("cashDeliveryDateLabel.text")); // NOI18N
         cashDeliveryDateLabel.setName("cashDeliveryDateLabel"); // NOI18N
 
         cashDay.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cashDay.setName("cashDay"); // NOI18N
 
-        cashSlash.setText(resourceMap.getString("cashSlash.text")); // NOI18N
         cashSlash.setName("cashSlash"); // NOI18N
 
         cashMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cashMonth.setName("cashMonth"); // NOI18N
 
-        cashDivide.setText(resourceMap.getString("cashDivide.text")); // NOI18N
         cashDivide.setName("cashDivide"); // NOI18N
 
         cashYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cashYear.setName("cashYear"); // NOI18N
 
-        cashSecurityNumberTF.setText(resourceMap.getString("cashSecurityNumberTF.text")); // NOI18N
         cashSecurityNumberTF.setName("cashSecurityNumberTF"); // NOI18N
 
         org.jdesktop.layout.GroupLayout cashUserInfoPanelLayout = new org.jdesktop.layout.GroupLayout(cashUserInfoPanel);
@@ -556,7 +380,7 @@ public class IMatView extends FrameView {
                         .add(org.jdesktop.layout.GroupLayout.LEADING, cashPcodeTF)
                         .add(org.jdesktop.layout.GroupLayout.LEADING, cashPlaceTF)
                         .add(org.jdesktop.layout.GroupLayout.LEADING, cashDeliveryDateLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(234, Short.MAX_VALUE))
         );
         cashUserInfoPanelLayout.setVerticalGroup(
             cashUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -609,19 +433,15 @@ public class IMatView extends FrameView {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
         jButton4.setName("jButton4"); // NOI18N
 
-        cashPaymentLabel.setText(resourceMap.getString("cashPaymentLabel.text")); // NOI18N
         cashPaymentLabel.setName("cashPaymentLabel"); // NOI18N
 
         cashPaymentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashPaymentPanel.setName("cashPaymentPanel"); // NOI18N
 
-        cashInvoiceRButton.setText(resourceMap.getString("cashInvoiceRButton.text")); // NOI18N
         cashInvoiceRButton.setName("cashInvoiceRButton"); // NOI18N
 
-        cashDebitCardRButton.setText(resourceMap.getString("cashDebitCardRButton.text")); // NOI18N
         cashDebitCardRButton.setName("cashDebitCardRButton"); // NOI18N
 
         cashDebitCardPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -631,7 +451,7 @@ public class IMatView extends FrameView {
         cashDebitCardPanel.setLayout(cashDebitCardPanelLayout);
         cashDebitCardPanelLayout.setHorizontalGroup(
             cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 837, Short.MAX_VALUE)
+            .add(0, 841, Short.MAX_VALUE)
         );
         cashDebitCardPanelLayout.setVerticalGroup(
             cashDebitCardPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -709,6 +529,66 @@ public class IMatView extends FrameView {
 
         centerStagePanel.add(cashRegisterPanel, "card4");
 
+        editShoppingListPanel.setName("editShoppingListPanel"); // NOI18N
+        editShoppingListPanel.setLayout(new java.awt.CardLayout());
+
+        mainEditShoppingListPanel.setName("mainEditShoppingListPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout mainEditShoppingListPanelLayout = new org.jdesktop.layout.GroupLayout(mainEditShoppingListPanel);
+        mainEditShoppingListPanel.setLayout(mainEditShoppingListPanelLayout);
+        mainEditShoppingListPanelLayout.setHorizontalGroup(
+            mainEditShoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 885, Short.MAX_VALUE)
+        );
+        mainEditShoppingListPanelLayout.setVerticalGroup(
+            mainEditShoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 806, Short.MAX_VALUE)
+        );
+
+        editShoppingListPanel.add(mainEditShoppingListPanel, "card2");
+
+        centerStagePanel.add(editShoppingListPanel, "card2");
+
+        shoppingBasketPanel.setName("shoppingBasketPanel"); // NOI18N
+        shoppingBasketPanel.setLayout(new java.awt.CardLayout());
+
+        mainShoppingBasketPanel.setName("mainShoppingBasketPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout mainShoppingBasketPanelLayout = new org.jdesktop.layout.GroupLayout(mainShoppingBasketPanel);
+        mainShoppingBasketPanel.setLayout(mainShoppingBasketPanelLayout);
+        mainShoppingBasketPanelLayout.setHorizontalGroup(
+            mainShoppingBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 885, Short.MAX_VALUE)
+        );
+        mainShoppingBasketPanelLayout.setVerticalGroup(
+            mainShoppingBasketPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 806, Short.MAX_VALUE)
+        );
+
+        shoppingBasketPanel.add(mainShoppingBasketPanel, "card2");
+
+        centerStagePanel.add(shoppingBasketPanel, "card2");
+
+        purchaseHistoryPanel.setName("purchaseHistoryPanel"); // NOI18N
+        purchaseHistoryPanel.setLayout(new java.awt.CardLayout());
+
+        mainPurchaseHistoryPanel.setName("mainPurchaseHistoryPanel"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout mainPurchaseHistoryPanelLayout = new org.jdesktop.layout.GroupLayout(mainPurchaseHistoryPanel);
+        mainPurchaseHistoryPanel.setLayout(mainPurchaseHistoryPanelLayout);
+        mainPurchaseHistoryPanelLayout.setHorizontalGroup(
+            mainPurchaseHistoryPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 885, Short.MAX_VALUE)
+        );
+        mainPurchaseHistoryPanelLayout.setVerticalGroup(
+            mainPurchaseHistoryPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(0, 806, Short.MAX_VALUE)
+        );
+
+        purchaseHistoryPanel.add(mainPurchaseHistoryPanel, "card2");
+
+        centerStagePanel.add(purchaseHistoryPanel, "card2");
+
         org.jdesktop.layout.GroupLayout framePanelLayout = new org.jdesktop.layout.GroupLayout(framePanel);
         framePanel.setLayout(framePanelLayout);
         framePanelLayout.setHorizontalGroup(
@@ -721,7 +601,7 @@ public class IMatView extends FrameView {
             framePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(framePanelLayout.createSequentialGroup()
                 .add(centerStagePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
@@ -745,10 +625,10 @@ public class IMatView extends FrameView {
                 .add(bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, bottomContentsPanelLayout.createSequentialGroup()
-                        .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1083, Short.MAX_VALUE)
+                        .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1084, Short.MAX_VALUE)
                         .addContainerGap())
                     .add(bottomContentsPanelLayout.createSequentialGroup()
-                        .add(framePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1023, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(framePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 804, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
 
@@ -756,13 +636,13 @@ public class IMatView extends FrameView {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1295, Short.MAX_VALUE)
+            .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1293, Short.MAX_VALUE)
             .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(mainPanelLayout.createSequentialGroup()
-                .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
@@ -820,50 +700,21 @@ public class IMatView extends FrameView {
     private javax.swing.JButton diaryButton;
     private javax.swing.JButton drinkButton;
     private javax.swing.JButton dryButton;
+    private javax.swing.JPanel editShoppingListPanel;
     private javax.swing.JButton favButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
     private javax.swing.JButton homeButton;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JPanel mainEditShoppingListPanel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel mainPurchaseHistoryPanel;
+    private javax.swing.JPanel mainShoppingBasketPanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;
+    private javax.swing.JPanel purchaseHistoryPanel;
+    private javax.swing.JPanel shoppingBasketPanel;
     private javax.swing.JPanel shoppingListPanel;
     private javax.swing.JPanel topNavigationPanel;
     private javax.swing.JPanel userInfoPanel;

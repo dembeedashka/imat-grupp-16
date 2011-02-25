@@ -1,0 +1,574 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace pref="293" max="32767" attributes="0"/>
+                          <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="uiLastNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiAddressLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiCoLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiZipCodeLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiCityLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiPhoneNumberLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiIdLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiPaymentOptionLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiChFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiChLastNameLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiCardNumerLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiCvvCodeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiCardTypeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="uiValidThroughLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="uiFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiLastNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiZipCodeTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiAddressTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiCoTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiCityTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiPhoneNumberTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="uiIdTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="uiIdHelpTextLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="invoiceRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="creditCardRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="uiChFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiChLastNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="uiCardNumerTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="uiMonthComboBox" min="-2" pref="56" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="uiYearComboBox" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="uiCardTypeComboBox" alignment="0" max="32767" attributes="1"/>
+                              <Component id="uiCvvCodeTextField" alignment="0" min="-2" pref="88" max="-2" attributes="1"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Component id="uiScrollBar" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="uiScrollBar" alignment="0" pref="944" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiFirstNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiFirstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiLastNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiLastNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiAddressLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiAddressTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiCoLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiCoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiZipCodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="uiZipCodeLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="uiCityTextField" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="uiCityLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiPhoneNumberLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiPhoneNumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiIdLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiIdTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="uiIdHelpTextLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="uiPaymentOptionLabel" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="invoiceRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="creditCardRadioButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiChFirstNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiChFirstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="uiChLastNameTextField" min="-2" max="-2" attributes="0"/>
+                  <Component id="uiChLastNameLabel" min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiCardNumerLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiCardNumerTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiCvvCodeLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiCvvCodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiCardTypeLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiCardTypeComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="uiValidThroughLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="uiMonthComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="uiYearComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton2" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="uiHeaderPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder thickness="4"/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="uiHeaderPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="uiPictureLabel" min="-2" pref="102" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="uiTitleLabel" min="-2" pref="204" max="-2" attributes="0"/>
+                      <Component id="uiScrollPane" pref="383" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="uiTitleLabel" min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="uiScrollPane" min="-2" pref="59" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="uiPictureLabel" alignment="0" pref="121" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="uiPictureLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="uiPictureLabel.text"/>
+            <Property name="name" type="java.lang.String" value="uiPictureLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="uiTitleLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="uiTitleLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="uiTitleLabel.text"/>
+            <Property name="name" type="java.lang.String" value="uiTitleLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="uiScrollPane">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+            <Property name="verticalScrollBarPolicy" type="int" value="21"/>
+            <Property name="name" type="java.lang.String" value="uiScrollPane" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="uiInfoTextArea">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="lineWrap" type="boolean" value="true"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" resourceKey="uiInfoTextArea.text"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                    <BevelBorder bevelType="1"/>
+                  </Border>
+                </Property>
+                <Property name="enabled" type="boolean" value="false"/>
+                <Property name="name" type="java.lang.String" value="uiInfoTextArea" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JScrollBar" name="uiScrollBar">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="uiScrollBar" noResource="true"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="uiBreadcrumbsPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="uiBreadcrumbsPanel" noResource="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="506" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="72" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JLabel" name="uiFirstNameLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiFirstNameLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiFirstNameLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiFirstNameLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiFirstNameTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiFirstNameTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiFirstNameTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiLastNameLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiLastNameLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiLastNameLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiLastNameLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiLastNameTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiLastNameTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiLastNameTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiAddressTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiAddressTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiAddressTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiAddressLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiAddressLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiAddressLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiAddressLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiCoLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiCoLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiCoLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiCoLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiZipCodeLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiZipCodeLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiZipCodeLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiZipCodeLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiCityLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiCityLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiCityLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiCityLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiCoTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiCoTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiCoTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiZipCodeTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiZipCodeTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiZipCodeTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiCityTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiCityTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiCityTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiPhoneNumberLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiPhoneNumberLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiPhoneNumberLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiPhoneNumberLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiIdLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiIdLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiIdLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiIdLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiPhoneNumberTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiPhoneNumberTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiPhoneNumberTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiIdTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiIdTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiIdTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiPaymentOptionLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiPaymentOptionLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiPaymentOptionLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiPaymentOptionLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="invoiceRadioButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="invoiceRadioButton.text"/>
+        <Property name="name" type="java.lang.String" value="invoiceRadioButton" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="creditCardRadioButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="creditCardRadioButton.text"/>
+        <Property name="name" type="java.lang.String" value="creditCardRadioButton" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiChFirstNameLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiChFirstNameLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiChFirstNameLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiChFirstNameLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiChFirstNameTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiChFirstNameTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiChFirstNameTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiChLastNameLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiChLastNameLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiChLastNameLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiChLastNameLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiChLastNameTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiChLastNameTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiChLastNameTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiCardNumerLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiCardNumerLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiCardNumerLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiCardNumerLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiCvvCodeLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiCvvCodeLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiCvvCodeLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiCvvCodeLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiCardTypeLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiCardTypeLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiCardTypeLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiCardTypeLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiValidThroughLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiValidThroughLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiValidThroughLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiValidThroughLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiCardNumerTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiCardNumerTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiCardNumerTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="uiCvvCodeTextField">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="uiCvvCodeTextField.text"/>
+        <Property name="name" type="java.lang.String" value="uiCvvCodeTextField" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="uiCardTypeComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="VISA"/>
+            <StringItem index="1" value="Mastercard"/>
+          </StringArray>
+        </Property>
+        <Property name="name" type="java.lang.String" value="uiCardTypeComboBox" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="uiMonthComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="12">
+            <StringItem index="0" value="jan"/>
+            <StringItem index="1" value="feb"/>
+            <StringItem index="2" value="mar"/>
+            <StringItem index="3" value="apr"/>
+            <StringItem index="4" value="maj"/>
+            <StringItem index="5" value="jun"/>
+            <StringItem index="6" value="jul"/>
+            <StringItem index="7" value="aug"/>
+            <StringItem index="8" value="sep"/>
+            <StringItem index="9" value="okt"/>
+            <StringItem index="10" value="nov"/>
+            <StringItem index="11" value="dec"/>
+          </StringArray>
+        </Property>
+        <Property name="name" type="java.lang.String" value="uiMonthComboBox" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="uiYearComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="11">
+            <StringItem index="0" value="2010"/>
+            <StringItem index="1" value="2011"/>
+            <StringItem index="2" value="2012"/>
+            <StringItem index="3" value="2013"/>
+            <StringItem index="4" value="2014"/>
+            <StringItem index="5" value="2015"/>
+            <StringItem index="6" value="2016"/>
+            <StringItem index="7" value="2017"/>
+            <StringItem index="8" value="2018"/>
+            <StringItem index="9" value="2019"/>
+            <StringItem index="10" value="2020"/>
+          </StringArray>
+        </Property>
+        <Property name="name" type="java.lang.String" value="uiYearComboBox" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="uiIdHelpTextLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="uiIdHelpTextLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="uiIdHelpTextLabel.text"/>
+        <Property name="name" type="java.lang.String" value="uiIdHelpTextLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="jButton1.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
+        <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="jButton2.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="jButton2.text"/>
+        <Property name="name" type="java.lang.String" value="jButton2" noResource="true"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

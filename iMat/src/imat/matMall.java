@@ -61,6 +61,8 @@ public class matMall extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         headerText = new javax.swing.JTextPane();
         jSplitPane1 = new javax.swing.JSplitPane();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jSplitPane2 = new javax.swing.JSplitPane();
         jSplitPane3 = new javax.swing.JSplitPane();
 
@@ -114,6 +116,19 @@ public class matMall extends javax.swing.JPanel {
         jSplitPane1.setDividerLocation(387);
         jSplitPane1.setName("jSplitPane1"); // NOI18N
 
+        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
+        jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jSplitPane1.setLeftComponent(jButton1);
+
+        jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
+        jButton2.setName("jButton2"); // NOI18N
+        jSplitPane1.setRightComponent(jButton2);
+
         jSplitPane2.setDividerLocation(387);
         jSplitPane2.setName("jSplitPane2"); // NOI18N
 
@@ -150,10 +165,16 @@ public class matMall extends javax.swing.JPanel {
         add(jPanel1, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel headerIcon;
     private javax.swing.JTextPane headerText;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

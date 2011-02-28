@@ -1,0 +1,246 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[795, 784]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="detailPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="detailPanel" min="-2" pref="339" max="-2" attributes="0"/>
+              <EmptySpace pref="434" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="detailPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
+        <Property name="name" type="java.lang.String" value="detailPanel" noResource="true"/>
+        <Property name="opaque" type="boolean" value="false"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[775, 209]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="detailPicturePanel" min="-2" pref="159" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="detailPriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="detailBasketAmountLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="detailBasketAmountLabel2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="detailScrollPanel" pref="588" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="detailAmountLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="detailAmountSpinner" min="-2" pref="56" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="detailUnitLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="detailCostLabel" min="-2" max="-2" attributes="1"/>
+                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="detailBasketButton" min="-2" max="-2" attributes="3"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="detailProductNameLabel" min="-2" pref="159" max="-2" attributes="0"/>
+                          <EmptySpace pref="291" max="32767" attributes="0"/>
+                          <Component id="detailFavoriteLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="detailFavoriteButton" min="-2" pref="51" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="detailPicturePanel" min="-2" pref="141" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="detailBasketAmountLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="detailBasketAmountLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="detailProductNameLabel" alignment="3" min="-2" pref="57" max="-2" attributes="1"/>
+                                  <Component id="detailFavoriteLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="detailFavoriteButton" min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="detailScrollPanel" min="-2" pref="182" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="detailAmountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="detailAmountSpinner" alignment="3" pref="31" max="32767" attributes="0"/>
+                      <Component id="detailUnitLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="detailCostLabel" alignment="3" pref="37" max="32767" attributes="0"/>
+                      <Component id="detailPriceLabel" alignment="3" pref="74" max="32767" attributes="0"/>
+                      <Component id="detailBasketButton" alignment="3" pref="31" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="detailPicturePanel">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" resourceKey="detailPicturePanel.text"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
+            <Property name="name" type="java.lang.String" value="detailPicturePanel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="detailScrollPanel">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="detailScrollPanel" noResource="true"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextPane" name="detailDescriptionTextPanel">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="detailDescriptionTextPanel.text"/>
+                <Property name="name" type="java.lang.String" value="detailDescriptionTextPanel" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="detailProductNameLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailProductNameLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="detailProductNameLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailProductNameLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="detailFavoriteButton">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="detailFavoriteButton.icon"/>
+            <Property name="text" type="java.lang.String" resourceKey="detailFavoriteButton.text"/>
+            <Property name="name" type="java.lang.String" value="detailFavoriteButton" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailBasketAmountLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel1.text"/>
+            <Property name="name" type="java.lang.String" value="detailBasketAmountLabel1" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailBasketAmountLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel2.text"/>
+            <Property name="name" type="java.lang.String" value="detailBasketAmountLabel2" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailPriceLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailPriceLabel.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="detailPriceLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailPriceLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSpinner" name="detailAmountSpinner">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="detailAmountSpinner" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailAmountLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailAmountLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailAmountLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailUnitLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailUnitLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailUnitLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailCostLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailCostLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailCostLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="detailBasketButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailBasketButton.text"/>
+            <Property name="name" type="java.lang.String" value="detailBasketButton" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="detailBasketButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailFavoriteLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailFavoriteLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailFavoriteLabel" noResource="true"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

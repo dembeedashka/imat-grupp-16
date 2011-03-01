@@ -1,6 +1,6 @@
 package imat;
 
-import imat.iMatPresenter.Category;
+import java.awt.Color;
 
 /**
  *
@@ -13,5 +13,14 @@ public class NavigationHistoryState {
     Category selectedCategory;
 
     public NavigationHistoryState() {
+        this.selectedCategory = new Category(Color.WHITE, "card4");
+    }
+
+    public NavigationHistoryState(Category selectedCategory) {
+        this.selectedCategory = selectedCategory;
+    }
+
+    public Category getSelectedCategory() {
+        return selectedCategory;
     }
 }

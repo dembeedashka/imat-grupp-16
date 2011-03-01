@@ -21,24 +21,24 @@ public class NavigationHistoryManager {
     private List<NavigationHistoryState> history;
     private int                          historyIndex;
 
-    private JButton                      forwardButton,
-                                         backButton;
+    private JButton                      backButton,
+                                         forwardButton;
 
-    public NavigationHistoryManager(NavigationHistoryUpdater updater, JButton forwardButton, JButton backButton) {
-        this.updater       = updater;
-        this.forwardButton = forwardButton;
+    public NavigationHistoryManager(JButton backButton, JButton forwardButton) {
         this.backButton    = backButton;
+        this.forwardButton = forwardButton;
     }
 
     /**
      * Must be called after an instance of NavigationHistoryManager is created before it can be used.
-     * All other public methods in this class should start by calling initCheck() to check this.
+     * All other public methods in this class should start by calling initCheck() to verify this.
      */
-    public void init(NavigationHistoryState initialState) {
+    public void init(NavigationHistoryUpdater updater, NavigationHistoryState initialState) {
         if(!initFlag) {
             initFlag       = true;
             history        = new LinkedList<NavigationHistoryState>();
             historyIndex   = -1;
+            this.updater   = updater;
             
             update(initialState);
         }
@@ -106,11 +106,8 @@ public class NavigationHistoryManager {
      * Used to update the state to previously stored history states.
      */
     private void updateHistoryState() {
-        if(isIgnoreUpdates()) {
-            return;
-        }
-
         updater.updateHistoryState(getCurrentState());
+        updateButtons();
     }
 
     /**
@@ -118,8 +115,13 @@ public class NavigationHistoryManager {
      */
     private void updateState() {
         updater.updateState(getCurrentState());
+        updateButtons();
+    }
 
-        // update buttons
+    /**
+     * Enables and disables the back and forward buttons based on the history.
+     */
+    private void updateButtons() {
         if(backButton != null) {
             backButton.setEnabled(hasBackHistory());
         }

@@ -18,7 +18,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="topNavigationPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="1" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="bottomContentsPanel" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -45,13 +45,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="meatButton" min="-2" pref="188" max="-2" attributes="1"/>
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                      <Component id="diaryButton" min="-2" pref="188" max="-2" attributes="0"/>
+                      <Component id="dairyButton" min="-2" pref="188" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="dryButton" min="-2" pref="192" max="-2" attributes="0"/>
+                      <Component id="pantryButton" min="-2" pref="192" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="drinkButton" min="-2" pref="191" max="-2" attributes="0"/>
+                      <Component id="snacksButton" min="-2" pref="191" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="favButton" min="-2" pref="191" max="-2" attributes="0"/>
+                      <Component id="favouritesButton" min="-2" pref="191" max="-2" attributes="0"/>
                       <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -61,10 +61,10 @@
                   <Component id="homeButton" min="-2" pref="82" max="-2" attributes="1"/>
                   <Component id="meatButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
                   <Component id="fruitButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
-                  <Component id="diaryButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
-                  <Component id="dryButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
-                  <Component id="drinkButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
-                  <Component id="favButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
+                  <Component id="dairyButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
+                  <Component id="pantryButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
+                  <Component id="snacksButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
+                  <Component id="favouritesButton" alignment="0" min="-2" pref="82" max="-2" attributes="1"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -76,9 +76,6 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="homeButton" noResource="true"/>
-                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                  <Dimension value="[204, 93]"/>
-                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeButtonActionPerformed"/>
@@ -107,42 +104,54 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="meatButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="diaryButton">
+            <Component class="javax.swing.JButton" name="dairyButton">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" resourceKey="diaryButton.icon"/>
-                <Property name="text" type="java.lang.String" resourceKey="diaryButton.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="dairyButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="dairyButton.text"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="defaultCapable" type="boolean" value="false"/>
-                <Property name="name" type="java.lang.String" value="diaryButton" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="dairyButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dairyButtonActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="dryButton">
+            <Component class="javax.swing.JButton" name="pantryButton">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" resourceKey="dryButton.icon"/>
-                <Property name="text" type="java.lang.String" resourceKey="dryButton.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="pantryButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="pantryButton.text"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
-                <Property name="name" type="java.lang.String" value="dryButton" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="pantryButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pantryButtonActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="drinkButton">
+            <Component class="javax.swing.JButton" name="snacksButton">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" resourceKey="drinkButton.icon"/>
-                <Property name="text" type="java.lang.String" resourceKey="drinkButton.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="snacksButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="snacksButton.text"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="defaultCapable" type="boolean" value="false"/>
-                <Property name="name" type="java.lang.String" value="drinkButton" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="snacksButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="snacksButtonActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="favButton">
+            <Component class="javax.swing.JButton" name="favouritesButton">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" resourceKey="favButton.icon"/>
-                <Property name="text" type="java.lang.String" resourceKey="favButton.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="favouritesButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="favouritesButton.text"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="defaultCapable" type="boolean" value="false"/>
-                <Property name="name" type="java.lang.String" value="favButton" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="favouritesButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="favouritesButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -190,15 +199,48 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1397" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="backButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="forwardButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="1105" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="backButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="forwardButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="backButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="backButton.text"/>
+                    <Property name="name" type="java.lang.String" value="backButton" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="forwardButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="forwardButton.text"/>
+                    <Property name="name" type="java.lang.String" value="forwardButton" noResource="true"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="forwardButtonActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="shoppingListPanel">
               <Properties>
@@ -812,6 +854,6 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-42,0,0,5,117"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,4,-29,0,0,5,117"/>
   </AuxValues>
 </Form>

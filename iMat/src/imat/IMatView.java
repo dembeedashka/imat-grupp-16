@@ -4,37 +4,46 @@
 
 package imat;
 
-import java.awt.CardLayout;
 import java.awt.Color;
-import org.jdesktop.application.Action;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 /**
  * The application's main frame.
  */
 public class IMatView extends FrameView {
 
-    
+    private Category      home,
+                          fruit,
+                          meat,
+                          dairy,
+                          pantry,
+                          snacks,
+                          favourites;
+
+    private IMatPresenter presenter;
 
     public IMatView(SingleFrameApplication app) {
         super(app);
         
         initComponents();
-  
-        
-    }
 
-    @Action
-    public void showAboutBox() {
-        if (aboutBox == null) {
-            JFrame mainFrame = IMatApp.getApplication().getMainFrame();
-            aboutBox = new IMatAboutBox(mainFrame);
-            aboutBox.setLocationRelativeTo(mainFrame);
-        }
-        IMatApp.getApplication().show(aboutBox);
+        home       = new Category(Color.WHITE, "card4");
+        fruit      = new Category(Color.GREEN, "card4");
+        meat       = new Category(Color.RED, "card4");
+        dairy      = new Category(Color.BLUE, "card4");
+        pantry     = new Category(Color.YELLOW, "card4");
+        snacks     = new Category(Color.ORANGE, "card4");
+        favourites = new Category(Color.GRAY, "card4");
+
+        presenter  = new IMatPresenter(
+            backButton,
+            forwardButton,
+            navigationSearchPanel,
+            framePanel,
+            centerStagePanel
+        );
     }
 
     /** This method is called from within the constructor to
@@ -51,12 +60,14 @@ public class IMatView extends FrameView {
         homeButton = new javax.swing.JButton();
         fruitButton = new javax.swing.JButton();
         meatButton = new javax.swing.JButton();
-        diaryButton = new javax.swing.JButton();
-        dryButton = new javax.swing.JButton();
-        drinkButton = new javax.swing.JButton();
-        favButton = new javax.swing.JButton();
+        dairyButton = new javax.swing.JButton();
+        pantryButton = new javax.swing.JButton();
+        snacksButton = new javax.swing.JButton();
+        favouritesButton = new javax.swing.JButton();
         bottomContentsPanel = new javax.swing.JPanel();
         navigationSearchPanel = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
+        forwardButton = new javax.swing.JButton();
         shoppingListPanel = new javax.swing.JPanel();
         actionPanel = new javax.swing.JPanel();
         framePanel = new javax.swing.JPanel();
@@ -115,7 +126,6 @@ public class IMatView extends FrameView {
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
         homeButton.setName("homeButton"); // NOI18N
-        homeButton.setPreferredSize(new java.awt.Dimension(204, 93));
         homeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 homeButtonActionPerformed(evt);
@@ -143,30 +153,50 @@ public class IMatView extends FrameView {
             }
         });
 
-        diaryButton.setIcon(resourceMap.getIcon("diaryButton.icon")); // NOI18N
-        diaryButton.setText(resourceMap.getString("diaryButton.text")); // NOI18N
-        diaryButton.setBorderPainted(false);
-        diaryButton.setContentAreaFilled(false);
-        diaryButton.setDefaultCapable(false);
-        diaryButton.setName("diaryButton"); // NOI18N
+        dairyButton.setIcon(resourceMap.getIcon("dairyButton.icon")); // NOI18N
+        dairyButton.setText(resourceMap.getString("dairyButton.text")); // NOI18N
+        dairyButton.setBorderPainted(false);
+        dairyButton.setContentAreaFilled(false);
+        dairyButton.setDefaultCapable(false);
+        dairyButton.setName("dairyButton"); // NOI18N
+        dairyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dairyButtonActionPerformed(evt);
+            }
+        });
 
-        dryButton.setIcon(resourceMap.getIcon("dryButton.icon")); // NOI18N
-        dryButton.setText(resourceMap.getString("dryButton.text")); // NOI18N
-        dryButton.setBorderPainted(false);
-        dryButton.setContentAreaFilled(false);
-        dryButton.setName("dryButton"); // NOI18N
+        pantryButton.setIcon(resourceMap.getIcon("pantryButton.icon")); // NOI18N
+        pantryButton.setText(resourceMap.getString("pantryButton.text")); // NOI18N
+        pantryButton.setBorderPainted(false);
+        pantryButton.setContentAreaFilled(false);
+        pantryButton.setName("pantryButton"); // NOI18N
+        pantryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantryButtonActionPerformed(evt);
+            }
+        });
 
-        drinkButton.setIcon(resourceMap.getIcon("drinkButton.icon")); // NOI18N
-        drinkButton.setText(resourceMap.getString("drinkButton.text")); // NOI18N
-        drinkButton.setContentAreaFilled(false);
-        drinkButton.setDefaultCapable(false);
-        drinkButton.setName("drinkButton"); // NOI18N
+        snacksButton.setIcon(resourceMap.getIcon("snacksButton.icon")); // NOI18N
+        snacksButton.setText(resourceMap.getString("snacksButton.text")); // NOI18N
+        snacksButton.setContentAreaFilled(false);
+        snacksButton.setDefaultCapable(false);
+        snacksButton.setName("snacksButton"); // NOI18N
+        snacksButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                snacksButtonActionPerformed(evt);
+            }
+        });
 
-        favButton.setIcon(resourceMap.getIcon("favButton.icon")); // NOI18N
-        favButton.setText(resourceMap.getString("favButton.text")); // NOI18N
-        favButton.setContentAreaFilled(false);
-        favButton.setDefaultCapable(false);
-        favButton.setName("favButton"); // NOI18N
+        favouritesButton.setIcon(resourceMap.getIcon("favouritesButton.icon")); // NOI18N
+        favouritesButton.setText(resourceMap.getString("favouritesButton.text")); // NOI18N
+        favouritesButton.setContentAreaFilled(false);
+        favouritesButton.setDefaultCapable(false);
+        favouritesButton.setName("favouritesButton"); // NOI18N
+        favouritesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                favouritesButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout topNavigationPanelLayout = new org.jdesktop.layout.GroupLayout(topNavigationPanel);
         topNavigationPanel.setLayout(topNavigationPanelLayout);
@@ -180,13 +210,13 @@ public class IMatView extends FrameView {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(meatButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 188, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(8, 8, 8)
-                .add(diaryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 188, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(dairyButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 188, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(dryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(pantryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 192, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(drinkButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(snacksButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(favButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(favouritesButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         topNavigationPanelLayout.setVerticalGroup(
@@ -194,25 +224,51 @@ public class IMatView extends FrameView {
             .add(homeButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(meatButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
             .add(fruitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(diaryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(dryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(drinkButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-            .add(favButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(dairyButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(pantryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(snacksButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(favouritesButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
         );
 
         bottomContentsPanel.setName("bottomContentsPanel"); // NOI18N
 
         navigationSearchPanel.setName("navigationSearchPanel"); // NOI18N
 
+        backButton.setText(resourceMap.getString("backButton.text")); // NOI18N
+        backButton.setName("backButton"); // NOI18N
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        forwardButton.setText(resourceMap.getString("forwardButton.text")); // NOI18N
+        forwardButton.setName("forwardButton"); // NOI18N
+        forwardButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forwardButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout navigationSearchPanelLayout = new org.jdesktop.layout.GroupLayout(navigationSearchPanel);
         navigationSearchPanel.setLayout(navigationSearchPanelLayout);
         navigationSearchPanelLayout.setHorizontalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 1397, Short.MAX_VALUE)
+            .add(navigationSearchPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(backButton)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(forwardButton)
+                .addContainerGap(1105, Short.MAX_VALUE))
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 40, Short.MAX_VALUE)
+            .add(navigationSearchPanelLayout.createSequentialGroup()
+                .add(8, 8, 8)
+                .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(backButton)
+                    .add(forwardButton))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         shoppingListPanel.setName("shoppingListPanel"); // NOI18N
@@ -482,7 +538,7 @@ public class IMatView extends FrameView {
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(mainPanelLayout.createSequentialGroup()
                 .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 1, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -490,43 +546,50 @@ public class IMatView extends FrameView {
     }// </editor-fold>//GEN-END:initComponents
 
     private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-        // TODO add your handling code here:
-        navigationSearchPanel.setBackground(Color.WHITE);
-        framePanel.setBackground(Color.WHITE);
-        CardLayout layout = (CardLayout)centerStagePanel.getLayout();
-        layout.show(centerStagePanel, "card4");
+        presenter.display(home);
     }//GEN-LAST:event_homeButtonActionPerformed
 
     private void fruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitButtonActionPerformed
-        navigationSearchPanel.setBackground(Color.GREEN);
-        framePanel.setBackground(Color.GREEN);
-        CardLayout layout = (CardLayout)centerStagePanel.getLayout();
-        layout.show(centerStagePanel, "card2");
-        //matMall1.getHeaderText().setText("Välkommen!" + "\n" + "Detta är frukt & grönt sektionen!" );
-
-
-
-
-        // TODO add you+ handling code here:
+        presenter.display(fruit);
     }//GEN-LAST:event_fruitButtonActionPerformed
 
     private void meatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meatButtonActionPerformed
-        navigationSearchPanel.setBackground(Color.RED);
-        framePanel.setBackground(Color.RED);
-        CardLayout layout = (CardLayout)centerStagePanel.getLayout();
-        layout.show(centerStagePanel, "card2");
-        //matMall1.getHeaderText().setText("Välkommen!" + "\n" + "Detta är kött & fisk sektionen!");
+        presenter.display(meat);
     }//GEN-LAST:event_meatButtonActionPerformed
+
+    private void dairyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dairyButtonActionPerformed
+        presenter.display(dairy);
+    }//GEN-LAST:event_dairyButtonActionPerformed
+
+    private void pantryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantryButtonActionPerformed
+        presenter.display(pantry);
+    }//GEN-LAST:event_pantryButtonActionPerformed
+
+    private void snacksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snacksButtonActionPerformed
+        presenter.display(snacks);
+    }//GEN-LAST:event_snacksButtonActionPerformed
+
+    private void favouritesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favouritesButtonActionPerformed
+        presenter.display(favourites);
+    }//GEN-LAST:event_favouritesButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        presenter.back();
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void forwardButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forwardButtonActionPerformed
+        presenter.forward();
+    }//GEN-LAST:event_forwardButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
+    private javax.swing.JButton backButton;
     private javax.swing.JPanel bottomContentsPanel;
     private javax.swing.JPanel cashRegisterPanel;
     private javax.swing.JPanel centerStagePanel;
-    private javax.swing.JButton diaryButton;
-    private javax.swing.JButton drinkButton;
-    private javax.swing.JButton dryButton;
-    private javax.swing.JButton favButton;
+    private javax.swing.JButton dairyButton;
+    private javax.swing.JButton favouritesButton;
+    private javax.swing.JButton forwardButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
     private javax.swing.JPanel helpSectionPanel;
@@ -571,7 +634,9 @@ public class IMatView extends FrameView {
     private javax.swing.JPanel matMallPanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;
+    private javax.swing.JButton pantryButton;
     private javax.swing.JPanel shoppingListPanel;
+    private javax.swing.JButton snacksButton;
     private javax.swing.JPanel startPagePanel;
     private javax.swing.JPanel topNavigationPanel;
     private javax.swing.JPanel userInfoPanel;

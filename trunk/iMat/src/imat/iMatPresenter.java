@@ -1,9 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package imat;
+
 import java.awt.Color;
 import javax.swing.*;
 
@@ -12,7 +8,8 @@ import javax.swing.*;
  * @author David
  */
 public class iMatPresenter {
-    
+
+    public enum Category {HOME, FRUIT, MEAT, DAIRY, PANTRY, SNACK, FAVOURITES}
       
     
     public iMatPresenter(JPanel navigationSearchPanel) {

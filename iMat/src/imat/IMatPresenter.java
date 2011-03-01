@@ -13,16 +13,11 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     
     NavigationHistoryManager historyManager;
 
-    private JButton          backButton,
-                             forwardButton;
-
     private JPanel           navigationSearchPanel,
                              framePanel,
                              centerStagePanel;
 
     public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel framePanel, JPanel centerStagePanel) {
-        this.backButton            = backButton;
-        this.forwardButton         = forwardButton;
         this.navigationSearchPanel = navigationSearchPanel;
         this.framePanel            = framePanel;
         this.centerStagePanel      = centerStagePanel;

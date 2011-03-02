@@ -4,9 +4,9 @@
  */
 
 /*
- * shoppingListPanel1.java
+ * shoppingListPanel2.java
  *
- * Created on 2011-mar-02, 10:37:06
+ * Created on 2011-mar-02, 11:06:29
  */
 
 package imat;
@@ -15,9 +15,9 @@ package imat;
  *
  * @author Boel_
  */
-public class shoppingListPanel1 extends javax.swing.JFrame {
+public class shoppingListPanel1 extends javax.swing.JPanel {
 
-    /** Creates new form shoppingListPanel1 */
+    /** Creates new form shoppingListPanel2 */
     public shoppingListPanel1() {
         initComponents();
     }
@@ -31,65 +31,36 @@ public class shoppingListPanel1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        shoppingListSpacePanel = new javax.swing.JPanel();
         shoppingList1 = new imat.shoppingList();
         viewEditShoppingList = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Form"); // NOI18N
-
-        shoppingListSpacePanel.setName("shoppingListSpacePanel"); // NOI18N
 
         shoppingList1.setName("shoppingList1"); // NOI18N
 
-        javax.swing.GroupLayout shoppingListSpacePanelLayout = new javax.swing.GroupLayout(shoppingListSpacePanel);
-        shoppingListSpacePanel.setLayout(shoppingListSpacePanelLayout);
-        shoppingListSpacePanelLayout.setHorizontalGroup(
-            shoppingListSpacePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingList1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        shoppingListSpacePanelLayout.setVerticalGroup(
-            shoppingListSpacePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingList1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(shoppingListPanel1.class);
         viewEditShoppingList.setText(resourceMap.getString("viewEditShoppingList.text")); // NOI18N
-        viewEditShoppingList.setActionCommand(resourceMap.getString("viewEditShoppingList.actionCommand")); // NOI18N
         viewEditShoppingList.setName("viewEditShoppingList"); // NOI18N
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListSpacePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(viewEditShoppingList, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
+            .addComponent(shoppingList1, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(shoppingListSpacePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(shoppingList1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(viewEditShoppingList, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new shoppingListPanel1().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private imat.shoppingList shoppingList1;
-    private javax.swing.JPanel shoppingListSpacePanel;
     private javax.swing.JButton viewEditShoppingList;
     // End of variables declaration//GEN-END:variables
 

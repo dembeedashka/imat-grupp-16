@@ -1,13 +1,9 @@
 <?xml version="1.1" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
   </Properties>
-  <SyntheticProperties>
-    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="true"/>
@@ -23,50 +19,29 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="shoppingListSpacePanel" alignment="0" min="-2" max="-2" attributes="0"/>
           <Component id="viewEditShoppingList" alignment="0" pref="273" max="32767" attributes="0"/>
+          <Component id="shoppingList1" alignment="0" pref="273" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="shoppingListSpacePanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="15" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="shoppingList1" pref="476" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="viewEditShoppingList" min="-2" pref="76" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="shoppingListSpacePanel">
+    <Component class="imat.shoppingList" name="shoppingList1">
       <Properties>
-        <Property name="name" type="java.lang.String" value="shoppingListSpacePanel" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="shoppingList1" noResource="true"/>
       </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingList1" min="-2" pref="273" max="-2" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingList1" min="-2" pref="486" max="-2" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="imat.shoppingList" name="shoppingList1">
-          <Properties>
-            <Property name="name" type="java.lang.String" value="shoppingList1" noResource="true"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
+    </Component>
     <Component class="javax.swing.JButton" name="viewEditShoppingList">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="viewEditShoppingList.text"/>
-        <Property name="actionCommand" type="java.lang.String" resourceKey="viewEditShoppingList.actionCommand"/>
         <Property name="name" type="java.lang.String" value="viewEditShoppingList" noResource="true"/>
       </Properties>
     </Component>

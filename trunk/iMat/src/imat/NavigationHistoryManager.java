@@ -37,10 +37,11 @@ public class NavigationHistoryManager {
         if(!initFlag) {
             initFlag       = true;
             history        = new LinkedList<NavigationHistoryState>();
-            historyIndex   = -1;
+            historyIndex   = 0;
             this.updater   = updater;
-            
-            update(initialState);
+
+            history.add(initialState);
+            updateState();
         }
     }
 
@@ -88,7 +89,7 @@ public class NavigationHistoryManager {
     public void update(NavigationHistoryState newState) {
         initCheck();
 
-        if(isIgnoreUpdates()) {
+        if(isIgnoreUpdates() || newState.equals(getCurrentState())) {
             return;
         }
 

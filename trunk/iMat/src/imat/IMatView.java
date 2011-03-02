@@ -29,13 +29,13 @@ public class IMatView extends FrameView {
         
         initComponents();
 
-        home       = new Category(Color.WHITE, "card4", null);
-        fruit      = new Category(Color.GREEN, "card4", null);
-        meat       = new Category(Color.RED, "card4", null);
-        dairy      = new Category(Color.BLUE, "card4", null);
-        pantry     = new Category(Color.YELLOW, "card4", null);
-        snacks     = new Category(Color.ORANGE, "card4", null);
-        favourites = new Category(Color.GRAY, "card4", null);
+        home       = new Category(Color.WHITE, "home");
+        fruit      = new Category(Color.GREEN, "card4");
+        meat       = new Category(Color.RED, "card4");
+        dairy      = new Category(Color.BLUE, "card4");
+        pantry     = new Category(Color.YELLOW, "card4");
+        snacks     = new Category(Color.ORANGE, "card4");
+        favourites = new Category(Color.GRAY, "card4");
 
         presenter  = new IMatPresenter(
             backButton,
@@ -323,7 +323,7 @@ public class IMatView extends FrameView {
 
         startPagePanel.add(mainStartPagePanel, "card2");
 
-        centerStagePanel.add(startPagePanel, "card2");
+        centerStagePanel.add(startPagePanel, "home");
 
         matMallPanel.setName("matMallPanel"); // NOI18N
 

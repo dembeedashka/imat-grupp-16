@@ -10,7 +10,7 @@ import javax.swing.JPanel;
  * @author David and Max
  */
 public class IMatPresenter implements NavigationHistoryUpdater {
-    
+
     NavigationHistoryManager historyManager;
 
     private JPanel           navigationSearchPanel,
@@ -26,10 +26,16 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         historyManager.init(this, new NavigationHistoryState());
     }
 
+    /**
+     * Update GUI.
+     */
     public void display(Category category) {
-        historyManager.update(new NavigationHistoryState(category));
+        historyManager.update(new NavigationHistoryState(category, null));
     }
 
+    /**
+     * Called by the Navigation History Manager through the display method above.
+     */
     public void updateState(NavigationHistoryState state) {
         CardLayout layout = (CardLayout) centerStagePanel.getLayout();
 
@@ -38,14 +44,23 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         layout.show(centerStagePanel, state.getSelectedCategory().getCard());
     }
 
+    /**
+     * Called by the Navigation History Manager through the back and forward methods below.
+     */
     public void updateHistoryState(NavigationHistoryState state) {
         updateState(state);
     }
 
+    /**
+     * Called when pressing the back button.
+     */
     public void back() {
         historyManager.back();
     }
 
+    /**
+     * Called when pressing the forward button.
+     */
     public void forward() {
         historyManager.forward();
     }

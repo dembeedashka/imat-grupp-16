@@ -44,19 +44,19 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="82" max="-2" attributes="0"/>
+                  <Component id="productIcon" min="-2" pref="82" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" pref="54" max="-2" attributes="1"/>
+                  <Component id="productName" min="-2" pref="54" max="-2" attributes="1"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="productPrice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jSpinner1" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="productAmount" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="3"/>
-                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="1"/>
+                      <Component id="addToCartButton" alignment="0" min="-2" max="-2" attributes="3"/>
+                      <Component id="productTotalPrice" alignment="0" min="-2" max="-2" attributes="1"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -67,17 +67,17 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel3" alignment="0" pref="74" max="32767" attributes="0"/>
+                      <Component id="productName" alignment="0" pref="74" max="32767" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" pref="74" max="32767" attributes="0"/>
-                          <Component id="jSpinner1" alignment="3" pref="31" max="32767" attributes="0"/>
+                          <Component id="productPrice" alignment="3" pref="74" max="32767" attributes="0"/>
+                          <Component id="productAmount" alignment="3" pref="31" max="32767" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jButton1" alignment="1" pref="74" max="32767" attributes="0"/>
+                      <Component id="productIcon" alignment="1" pref="74" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel2" pref="37" max="32767" attributes="0"/>
+                          <Component id="productTotalPrice" pref="37" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton2" pref="31" max="32767" attributes="0"/>
+                          <Component id="addToCartButton" pref="31" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -86,36 +86,36 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="productIcon">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
-            <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
+            <Property name="text" type="java.lang.String" resourceKey="productIcon.text"/>
+            <Property name="name" type="java.lang.String" value="productIcon" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="addToCartButton">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="jButton2.text"/>
-            <Property name="name" type="java.lang.String" value="jButton2" noResource="true"/>
+            <Property name="text" type="java.lang.String" resourceKey="addToCartButton.text"/>
+            <Property name="name" type="java.lang.String" value="addToCartButton" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addToCartButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="productTotalPrice">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="jLabel2.text"/>
-            <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
+            <Property name="text" type="java.lang.String" resourceKey="productTotalPrice.text"/>
+            <Property name="name" type="java.lang.String" value="productTotalPrice" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="productName">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="jLabel3.text"/>
-            <Property name="name" type="java.lang.String" value="jLabel3" noResource="true"/>
+            <Property name="text" type="java.lang.String" resourceKey="productName.text"/>
+            <Property name="name" type="java.lang.String" value="productName" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JSpinner" name="jSpinner1">
+        <Component class="javax.swing.JSpinner" name="productAmount">
           <Properties>
-            <Property name="name" type="java.lang.String" value="jSpinner1" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="productAmount" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -124,10 +124,10 @@
             <Property name="name" type="java.lang.String" value="jLabel4" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="productPrice">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="jLabel5.text"/>
-            <Property name="name" type="java.lang.String" value="jLabel5" noResource="true"/>
+            <Property name="text" type="java.lang.String" resourceKey="productPrice.text"/>
+            <Property name="name" type="java.lang.String" value="productPrice" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

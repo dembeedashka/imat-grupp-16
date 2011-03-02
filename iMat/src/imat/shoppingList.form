@@ -19,34 +19,28 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="shoppingListRow" max="32767" attributes="1"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="shoppingListBottomPanel" alignment="1" max="32767" attributes="1"/>
-                          <Component id="shoppingListTopPanel" alignment="1" max="32767" attributes="1"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="shoppingListRow" max="32767" attributes="1"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="shoppingListScrollBar" min="-2" max="-2" attributes="0"/>
           </Group>
+          <Component id="shoppingListTopPanel" alignment="0" max="32767" attributes="1"/>
+          <Component id="shoppingListBottomPanel" alignment="0" max="32767" attributes="1"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <Component id="shoppingListTopPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Component id="shoppingListRow" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="148" max="32767" attributes="0"/>
-              <Component id="shoppingListBottomPanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="shoppingListScrollBar" min="-2" pref="314" max="-2" attributes="0"/>
+                  <Component id="shoppingListRow" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="shoppingListBottomPanel" max="32767" attributes="0"/>
           </Group>
-          <Component id="shoppingListScrollBar" alignment="0" pref="397" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -64,14 +58,21 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListHeader" alignment="0" pref="229" max="32767" attributes="0"/>
-              <Component id="shoppingListName" alignment="0" pref="229" max="32767" attributes="0"/>
+              <Component id="shoppingListName" alignment="0" pref="275" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <Component id="shoppingListHeader" pref="192" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="shoppingListHeader" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="shoppingListHeader" max="32767" attributes="1"/>
+                      <Component id="jButton1" alignment="0" pref="43" max="32767" attributes="1"/>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="shoppingListName" pref="28" max="32767" attributes="0"/>
               </Group>
@@ -93,6 +94,13 @@
             <Property name="name" type="java.lang.String" value="shoppingListName" noResource="true"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="jButton1.font"/>
+            <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
+            <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="shoppingListBottomPanel">
@@ -103,18 +111,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="shoppingListAddRow" min="-2" pref="225" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
+              <Component id="shoppingListAddRow" alignment="0" pref="281" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="shoppingListAddRow" min="-2" pref="73" max="-2" attributes="0"/>
-              </Group>
+              <Component id="shoppingListAddRow" alignment="0" pref="86" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -141,7 +143,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="shoppingListItem" min="-2" pref="138" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="shoppingListCheckBox" pref="24" max="32767" attributes="0"/>
+                  <Component id="shoppingListCheckBox" pref="48" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>

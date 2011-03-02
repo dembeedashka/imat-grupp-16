@@ -13,7 +13,7 @@ public class NavigationHistoryState {
     Category selectedCategory;
 
     public NavigationHistoryState() {
-        this.selectedCategory = new Category(Color.WHITE, "card4");
+        this.selectedCategory = new Category(Color.WHITE, "card4", null);
     }
 
     public NavigationHistoryState(Category selectedCategory) {

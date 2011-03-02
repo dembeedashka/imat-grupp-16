@@ -29,13 +29,13 @@ public class IMatView extends FrameView {
         
         initComponents();
 
-        home       = new Category(Color.WHITE, "home");
-        fruit      = new Category(Color.GREEN, "card4");
-        meat       = new Category(Color.RED, "card4");
-        dairy      = new Category(Color.BLUE, "card4");
-        pantry     = new Category(Color.YELLOW, "card4");
-        snacks     = new Category(Color.ORANGE, "card4");
-        favourites = new Category(Color.GRAY, "card4");
+        home       = new Category(Category.HOME_WHITE, "home");
+        fruit      = new Category(Category.FRUIT_GREEN, "card4");
+        meat       = new Category(Category.MEAT_RED, "card4");
+        dairy      = new Category(Category.DAIRY_BLUE, "card4");
+        pantry     = new Category(Category.PANTRY_YELLOW, "card4");
+        snacks     = new Category(Category.SNACKS_ORANGE, "card4");
+        favourites = new Category(Category.FAVOURITES_BROWN, "card4");
 
         presenter  = new IMatPresenter(
             backButton,

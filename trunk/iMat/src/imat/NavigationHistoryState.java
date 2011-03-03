@@ -1,6 +1,6 @@
 package imat;
 
-import java.awt.Color;
+import javax.swing.ImageIcon;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -15,7 +15,7 @@ public class NavigationHistoryState {
     Product  productDetails;
 
     public NavigationHistoryState() {
-        this.selectedCategory = new Category(Color.WHITE, "card4");
+        this.selectedCategory = IMatView.home;
     }
 
     public NavigationHistoryState(Category selectedCategory, Product productDetails) {

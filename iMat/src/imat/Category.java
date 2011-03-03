@@ -1,6 +1,7 @@
 package imat;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,10 +20,22 @@ public class Category {
 
     private Color   color;
     private String  card;
+    private ImageIcon pic;
+    private String description;
 
-    public Category(Color color, String card) {
+    public Category(Color color, String card, ImageIcon pic, String description) {
         this.color = color;
         this.card = card;
+        this.pic = pic;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public ImageIcon getPic() {
+        return pic;
     }
 
     public String getCard() {

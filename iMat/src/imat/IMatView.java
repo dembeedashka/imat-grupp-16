@@ -4,7 +4,7 @@
 
 package imat;
 
-import java.awt.Color;
+import javax.swing.ImageIcon;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
 import javax.swing.JDialog;
@@ -14,13 +14,13 @@ import javax.swing.JDialog;
  */
 public class IMatView extends FrameView {
 
-    private Category      home,
-                          fruit,
-                          meat,
-                          dairy,
-                          pantry,
-                          snacks,
-                          favourites;
+    public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("images/headers/kat0big.gif"), "HELLO WORLD");
+    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "card4", new ImageIcon("images/headers/kat1big.gif"), "HELLO WORLD");
+    public static final Category      meat       = new Category(Category.MEAT_RED, "card4", new ImageIcon("images/headers/kat2big.gif"), "HELLO WORLD");
+    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "card4", new ImageIcon("images/headers/kat3big.gif"), "HELLO WORLD");
+    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "card4", new ImageIcon("images/headers/kat4big.gif"), "HELLO WORLD");
+    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "card4", new ImageIcon("images/headers/kat5big.gif"), "HELLO WORLD");
+    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "card4", new ImageIcon("images/headers/kat6big.gif"), "HELLO WORLD");;
 
     private IMatPresenter presenter;
 
@@ -29,20 +29,13 @@ public class IMatView extends FrameView {
         
         initComponents();
 
-        home       = new Category(Category.HOME_WHITE, "home");
-        fruit      = new Category(Category.FRUIT_GREEN, "card4");
-        meat       = new Category(Category.MEAT_RED, "card4");
-        dairy      = new Category(Category.DAIRY_BLUE, "card4");
-        pantry     = new Category(Category.PANTRY_YELLOW, "card4");
-        snacks     = new Category(Category.SNACKS_ORANGE, "card4");
-        favourites = new Category(Category.FAVOURITES_BROWN, "card4");
-
         presenter  = new IMatPresenter(
             backButton,
             forwardButton,
             navigationSearchPanel,
             framePanel,
-            centerStagePanel
+            centerStagePanel,
+            new HeaderPanel1()
         );
     }
 
@@ -74,7 +67,7 @@ public class IMatView extends FrameView {
         framePanel = new javax.swing.JPanel();
         centerStagePanel = new javax.swing.JPanel();
         startPagePanel = new javax.swing.JPanel();
-        mainStartPagePanel = new javax.swing.JPanel();
+        headerPanel11 = new imat.HeaderPanel1();
         matMallPanel = new javax.swing.JPanel();
         userInfoPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -313,20 +306,8 @@ public class IMatView extends FrameView {
         startPagePanel.setName("startPagePanel"); // NOI18N
         startPagePanel.setLayout(new java.awt.CardLayout());
 
-        mainStartPagePanel.setName("mainStartPagePanel"); // NOI18N
-
-        org.jdesktop.layout.GroupLayout mainStartPagePanelLayout = new org.jdesktop.layout.GroupLayout(mainStartPagePanel);
-        mainStartPagePanel.setLayout(mainStartPagePanelLayout);
-        mainStartPagePanelLayout.setHorizontalGroup(
-            mainStartPagePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 885, Short.MAX_VALUE)
-        );
-        mainStartPagePanelLayout.setVerticalGroup(
-            mainStartPagePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 940, Short.MAX_VALUE)
-        );
-
-        startPagePanel.add(mainStartPagePanel, "card2");
+        headerPanel11.setName("headerPanel11"); // NOI18N
+        startPagePanel.add(headerPanel11, "card2");
 
         centerStagePanel.add(startPagePanel, "home");
 
@@ -597,6 +578,7 @@ public class IMatView extends FrameView {
     private javax.swing.JButton forwardButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
+    private imat.HeaderPanel1 headerPanel11;
     private javax.swing.JPanel helpSectionPanel;
     private javax.swing.JButton homeButton;
     private javax.swing.JButton jButton2;
@@ -635,7 +617,6 @@ public class IMatView extends FrameView {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JPanel mainStartPagePanel;
     private javax.swing.JPanel matMallPanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;

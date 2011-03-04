@@ -35,7 +35,7 @@ public class IMatView extends FrameView {
             navigationSearchPanel,
             framePanel,
             centerStagePanel,
-            new HeaderPanel1()
+            new HeaderPanel2()
         );
     }
 
@@ -67,7 +67,7 @@ public class IMatView extends FrameView {
         framePanel = new javax.swing.JPanel();
         centerStagePanel = new javax.swing.JPanel();
         startPagePanel = new javax.swing.JPanel();
-        headerPanel11 = new imat.HeaderPanel1();
+        headerPanel21 = new imat.HeaderPanel2();
         matMallPanel = new javax.swing.JPanel();
         userInfoPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -306,8 +306,8 @@ public class IMatView extends FrameView {
         startPagePanel.setName("startPagePanel"); // NOI18N
         startPagePanel.setLayout(new java.awt.CardLayout());
 
-        headerPanel11.setName("headerPanel11"); // NOI18N
-        startPagePanel.add(headerPanel11, "card2");
+        headerPanel21.setName("headerPanel21"); // NOI18N
+        startPagePanel.add(headerPanel21, "card2");
 
         centerStagePanel.add(startPagePanel, "home");
 
@@ -578,7 +578,7 @@ public class IMatView extends FrameView {
     private javax.swing.JButton forwardButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
-    private imat.HeaderPanel1 headerPanel11;
+    private imat.HeaderPanel2 headerPanel21;
     private javax.swing.JPanel helpSectionPanel;
     private javax.swing.JButton homeButton;
     private javax.swing.JButton jButton2;

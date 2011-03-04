@@ -17,9 +17,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     private JPanel           navigationSearchPanel,
                              framePanel,
                              centerStagePanel;
-    private HeaderPanel1     headerPanel;
+    private HeaderPanel2     headerPanel;
 
-    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel framePanel, JPanel centerStagePanel, HeaderPanel1 headerPanel) {
+    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel framePanel, JPanel centerStagePanel, HeaderPanel2 headerPanel) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.framePanel            = framePanel;
         this.centerStagePanel      = centerStagePanel;
@@ -49,8 +49,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
         navigationSearchPanel.setBackground(category.getColor());
         framePanel.setBackground(category.getColor());
-        //headerPanel.getHeaderPicLabel().setIcon(category.getPic());
-        //headerPanel.getHeaderTextPane().setText(category.getDescription());
+        headerPanel.getHeaderPanelPicLabel().setIcon(category.getPic());
+        headerPanel.getHeaderPanelTextPane().setText(category.getDescription());
         
         layout.show(centerStagePanel, category.getCard());
 

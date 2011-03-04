@@ -1,5 +1,9 @@
 package imat;
 
+import imat.navigationhistory.NavigationHistoryUpdater;
+import imat.navigationhistory.NavigationHistoryState;
+import imat.navigationhistory.NavigationHistoryManager;
+import imat.categories.Category;
 import java.awt.CardLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;

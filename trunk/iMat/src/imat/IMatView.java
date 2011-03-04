@@ -4,6 +4,7 @@
 
 package imat;
 
+import imat.categories.Category;
 import javax.swing.ImageIcon;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;

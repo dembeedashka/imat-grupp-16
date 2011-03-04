@@ -1,7 +1,6 @@
 package imat;
 
 import javax.swing.ImageIcon;
-import javax.swing.JPanel;
 
 /**
  *
@@ -9,8 +8,8 @@ import javax.swing.JPanel;
  */
 public class SubcategoryOther extends Category {
 
-    public SubcategoryOther(String card, ImageIcon pic, String description, JPanel contentsPanel) {
-        super(Category.HOME_WHITE, card, pic, description, contentsPanel);
+    public SubcategoryOther(String card, ImageIcon pic, String description) {
+        super(Category.HOME_WHITE, card, pic, description);
     }
 
 }

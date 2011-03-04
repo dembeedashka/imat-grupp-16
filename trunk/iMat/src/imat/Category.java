@@ -23,18 +23,12 @@ public class Category {
     private String    card;
     private ImageIcon pic;
     private String    description;
-    private JPanel    contentsPanel;
 
-    public Category(Color color, String card, ImageIcon pic, String description, JPanel contentsPanel) {
+    public Category(Color color, String card, ImageIcon pic, String description) {
         this.color         = color;
         this.card          = card;
         this.pic           = pic;
         this.description   = description;
-        this.contentsPanel = contentsPanel;
-    }
-
-    public JPanel getContentsPanel() {
-        return contentsPanel;
     }
 
     public String getDescription() {

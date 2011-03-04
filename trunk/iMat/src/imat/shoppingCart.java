@@ -34,6 +34,7 @@ public class shoppingCart extends javax.swing.JPanel {
         matMallHeaderPanel = new imat.HeaderPanel2();
 
         setName("Form"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(795, 784));
 
         matMallHeaderPanel.setName("matMallHeaderPanel"); // NOI18N
 

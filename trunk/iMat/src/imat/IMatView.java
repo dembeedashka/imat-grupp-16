@@ -5,7 +5,7 @@
 package imat;
 
 import imat.categories.Category;
-import java.awt.Color;
+import imat.categories.SubcategoryOther;
 import javax.swing.ImageIcon;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
@@ -16,13 +16,13 @@ import org.jdesktop.application.FrameView;
 public class IMatView extends FrameView {
 
     public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
-    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "card4", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
-    public static final Category      meat       = new Category(Category.MEAT_RED, "card4", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
-    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "card4", new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
-    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "card4", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
-    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "card4", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
-    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "card4", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
-    public static final Category      search     = new Category(Color.WHITE, "search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
+    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "fruit", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
+    public static final Category      meat       = new Category(Category.MEAT_RED, "meat", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
+    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "dairy", new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
+    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
+    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
+    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "fav", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
+    public static final SubcategoryOther      search     = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
 
     private IMatPresenter presenter;
 
@@ -81,6 +81,7 @@ public class IMatView extends FrameView {
         cardHomePanel = new javax.swing.JPanel();
         cardHelpPanel = new javax.swing.JPanel();
         cardSearchPanel = new javax.swing.JPanel();
+        searchView1 = new imat.SearchView();
         cardShoppingPanel = new javax.swing.JPanel();
         cardShoppingCartPanel = new javax.swing.JPanel();
         shoppingCart1 = new imat.shoppingCart();
@@ -316,7 +317,7 @@ public class IMatView extends FrameView {
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(actionPanelLayout.createSequentialGroup()
                 .add(actionPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -388,15 +389,23 @@ public class IMatView extends FrameView {
 
         cardSearchPanel.setName("cardSearchPanel"); // NOI18N
 
+        searchView1.setName("searchView1"); // NOI18N
+
         org.jdesktop.layout.GroupLayout cardSearchPanelLayout = new org.jdesktop.layout.GroupLayout(cardSearchPanel);
         cardSearchPanel.setLayout(cardSearchPanelLayout);
         cardSearchPanelLayout.setHorizontalGroup(
             cardSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 818, Short.MAX_VALUE)
+            .add(cardSearchPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(searchView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         cardSearchPanelLayout.setVerticalGroup(
             cardSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 590, Short.MAX_VALUE)
+            .add(cardSearchPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(searchView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardSearchPanel, "search");
@@ -701,6 +710,7 @@ public class IMatView extends FrameView {
     private imat.matMall pantryMall;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchTextField;
+    private imat.SearchView searchView1;
     private imat.shoppingCart shoppingCart1;
     private imat.shoppingList shoppingList1;
     private javax.swing.JPanel shoppingListPanel;

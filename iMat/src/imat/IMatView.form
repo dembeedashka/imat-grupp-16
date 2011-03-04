@@ -170,7 +170,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="framePanel" min="-2" pref="818" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="actionPanel" pref="262" max="32767" attributes="0"/>
+                      <Component id="actionPanel" pref="240" max="32767" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="bottomBorderPanel" alignment="0" max="32767" attributes="1"/>
@@ -214,7 +214,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="292" max="32767" attributes="0"/>
+                          <EmptySpace pref="284" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -288,15 +288,34 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="262" max="32767" attributes="0"/>
+                      <Component id="shoppingList1" min="-2" max="-2" attributes="0"/>
+                      <Component id="showShoppingListButton" alignment="0" pref="284" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="590" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="shoppingList1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="showShoppingListButton" pref="84" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="imat.shoppingList" name="shoppingList1">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="shoppingList1" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="showShoppingListButton">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="showShoppingListButton.font"/>
+                    <Property name="text" type="java.lang.String" resourceKey="showShoppingListButton.text"/>
+                    <Property name="name" type="java.lang.String" value="showShoppingListButton" noResource="true"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="actionPanel">
               <Properties>
@@ -315,15 +334,28 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="262" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="actionPanel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="590" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="actionPanel1" min="-2" pref="315" max="-2" attributes="0"/>
+                          <EmptySpace pref="275" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="imat.actionPanel" name="actionPanel1">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="actionPanel1" noResource="true"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="framePanel">
               <Properties>

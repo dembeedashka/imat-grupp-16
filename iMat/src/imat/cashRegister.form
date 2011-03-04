@@ -28,8 +28,8 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cashRegisterPanel1" alignment="0" pref="1179" max="32767" attributes="0"/>
-          <Component id="cashRegisterScrollBar" alignment="0" pref="1179" max="32767" attributes="0"/>
+          <Component id="cashRegisterPanel1" alignment="0" pref="922" max="32767" attributes="0"/>
+          <Component id="cashRegisterScrollBar" alignment="0" pref="922" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -46,18 +46,20 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cashBasketPanel" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="cashPaymentPanel" alignment="0" pref="888" max="32767" attributes="0"/>
                       <Component id="cashInfoCardPanel" alignment="0" max="32767" attributes="0"/>
                       <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="cashBasketNLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                      <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="cashBasketPanel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -82,9 +84,9 @@
                   <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashPaymentPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="cashCompletepurchaseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -98,29 +100,15 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="266" max="32767" attributes="0"/>
-                      <Component id="cashHeaderPanel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="888" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="cashHeaderPanel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
-          <SubComponents>
-            <Component class="imat.HeaderPanel2" name="cashHeaderPanel">
-              <Properties>
-                <Property name="name" type="java.lang.String" value="cashHeaderPanel" noResource="true"/>
-              </Properties>
-            </Component>
-          </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="cashBasketNLabel">
           <Properties>
@@ -141,7 +129,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="874" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="886" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -207,7 +195,7 @@
                           <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
                           <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="148" max="32767" attributes="0"/>
+                      <EmptySpace pref="156" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -495,6 +483,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -526,8 +515,8 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashDebitCardPanel1" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="cashDebitCardPanel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -557,33 +546,37 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="cashCardLNameLabel" alignment="0" max="32767" attributes="1"/>
-                                      <Component id="cashCardLNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                      <Component id="cashCardnumberLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                                      <Component id="cashCardnumberTfield" alignment="0" max="32767" attributes="1"/>
-                                  </Group>
-                                  <Component id="cashCardFNameLabel" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                                  <Component id="cashCardFNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cashCardtypeCBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cashCardtypeLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cashCvcLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="cashCvcTField" alignment="0" max="32767" attributes="1"/>
-                                          <Component id="cashMonthCBox" alignment="0" min="-2" max="-2" attributes="1"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="cashCardLNameLabel" alignment="0" max="32767" attributes="1"/>
+                                              <Component id="cashCardLNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                              <Component id="cashCardnumberLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                              <Component id="cashCardnumberTfield" alignment="0" max="32767" attributes="1"/>
+                                          </Group>
+                                          <Component id="cashCardFNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashDebitSlash" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashYearCBox" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cashCardtypeCBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cashCardtypeLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cashCvcLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="cashCvcTField" alignment="0" max="32767" attributes="1"/>
+                                                  <Component id="cashMonthCBox" alignment="0" min="-2" max="-2" attributes="1"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cashDebitSlash" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="cashYearCBox" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="cashValidityLabel" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Component id="cashValidityLabel" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                  <Component id="cashCardFNameLabel" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="291" max="32767" attributes="0"/>
+                              <EmptySpace pref="304" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>

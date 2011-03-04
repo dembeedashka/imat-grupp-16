@@ -70,7 +70,6 @@ public class IMatView extends FrameView {
         searchButton = new javax.swing.JButton();
         helpButton = new javax.swing.JButton();
         shoppingListPanel = new javax.swing.JPanel();
-        shoppingListPanel11 = new imat.shoppingListPanel1();
         actionPanel = new javax.swing.JPanel();
         framePanel = new javax.swing.JPanel();
         centerStagePanel = new javax.swing.JPanel();
@@ -268,19 +267,15 @@ public class IMatView extends FrameView {
 
         shoppingListPanel.setName("shoppingListPanel"); // NOI18N
 
-        shoppingListPanel11.setName("shoppingListPanel11"); // NOI18N
-
         org.jdesktop.layout.GroupLayout shoppingListPanelLayout = new org.jdesktop.layout.GroupLayout(shoppingListPanel);
         shoppingListPanel.setLayout(shoppingListPanelLayout);
         shoppingListPanelLayout.setHorizontalGroup(
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(shoppingListPanel11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+            .add(0, 262, Short.MAX_VALUE)
         );
         shoppingListPanelLayout.setVerticalGroup(
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(shoppingListPanelLayout.createSequentialGroup()
-                .add(shoppingListPanel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+            .add(0, 590, Short.MAX_VALUE)
         );
 
         actionPanel.setMaximumSize(new java.awt.Dimension(222, 570));
@@ -519,7 +514,6 @@ public class IMatView extends FrameView {
     private javax.swing.JTextField searchTextField;
     private imat.SearchView searchView1;
     private javax.swing.JPanel shoppingListPanel;
-    private imat.shoppingListPanel1 shoppingListPanel11;
     private imat.ShoppingListView shoppingListView1;
     private javax.swing.JButton snacksButton;
     private javax.swing.JPanel topNavigationPanel;

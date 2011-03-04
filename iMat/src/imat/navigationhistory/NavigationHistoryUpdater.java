@@ -1,4 +1,4 @@
-package imat;
+package imat.navigationhistory;
 
 /**
  *

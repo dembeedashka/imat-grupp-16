@@ -1,5 +1,7 @@
-package imat;
+package imat.navigationhistory;
 
+import imat.IMatView;
+import imat.categories.Category;
 import se.chalmers.ait.dat215.project.Product;
 
 /**

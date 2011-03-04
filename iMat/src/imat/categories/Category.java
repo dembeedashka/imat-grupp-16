@@ -1,4 +1,4 @@
-package imat;
+package imat.categories;
 
 import java.awt.Color;
 import javax.swing.ImageIcon;

@@ -26,61 +26,61 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="93" max="32767" attributes="0"/>
+                              <EmptySpace pref="99" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="uiLastNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiAddressLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiCoLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiZipCodeLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiCityLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiPhoneNumberLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiIdLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiPaymentOptionLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiChFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiChLastNameLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiCardNumerLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiCvvCodeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiCardTypeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="uiValidThroughLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="uiLastNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiAddressLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiCoLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiZipCodeLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiCityLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiPhoneNumberLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiIdLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiPaymentOptionLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiChFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiChLastNameLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiCardNumerLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiCvvCodeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiCardTypeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="uiValidThroughLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="uiZipCodeTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiCityTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiPhoneNumberTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="uiIdTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="uiIdHelpTextLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="invoiceRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="creditCardRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="uiChFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="uiZipCodeTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiCityTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiPhoneNumberTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="uiIdTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                              <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="uiIdHelpTextLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="invoiceRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="creditCardRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="uiChFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="uiFirstNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="uiLastNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="uiAddressTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="uiCoTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="114" pref="114" max="114" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="uiMonthComboBox" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="uiYearComboBox" min="-2" pref="60" max="-2" attributes="0"/>
                                   </Group>
@@ -91,9 +91,10 @@
                                   <Component id="uiChLastNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="uiCardNumerTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="80" pref="80" max="80" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
@@ -156,7 +157,9 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="uiIdLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="uiIdTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="uiIdHelpTextLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -197,6 +200,7 @@
                   <Component id="uiValidThroughLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="uiMonthComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="uiYearComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="18" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -436,18 +440,18 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="12">
-            <StringItem index="0" value="jan"/>
-            <StringItem index="1" value="feb"/>
-            <StringItem index="2" value="mar"/>
-            <StringItem index="3" value="apr"/>
-            <StringItem index="4" value="maj"/>
-            <StringItem index="5" value="jun"/>
-            <StringItem index="6" value="jul"/>
-            <StringItem index="7" value="aug"/>
-            <StringItem index="8" value="sep"/>
-            <StringItem index="9" value="okt"/>
-            <StringItem index="10" value="nov"/>
-            <StringItem index="11" value="dec"/>
+            <StringItem index="0" value="01"/>
+            <StringItem index="1" value="02"/>
+            <StringItem index="2" value="03"/>
+            <StringItem index="3" value="04"/>
+            <StringItem index="4" value="05"/>
+            <StringItem index="5" value="06"/>
+            <StringItem index="6" value="07"/>
+            <StringItem index="7" value="08"/>
+            <StringItem index="8" value="09"/>
+            <StringItem index="9" value="10"/>
+            <StringItem index="10" value="11"/>
+            <StringItem index="11" value="12"/>
           </StringArray>
         </Property>
         <Property name="name" type="java.lang.String" value="uiMonthComboBox" noResource="true"/>
@@ -497,6 +501,24 @@
     <Component class="imat.HeaderPanel2" name="uiHeaderPanel">
       <Properties>
         <Property name="name" type="java.lang.String" value="uiHeaderPanel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabel1.text"/>
+        <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jTextField1.text"/>
+        <Property name="name" type="java.lang.String" value="jTextField1" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="jLabel2.text"/>
+        <Property name="name" type="java.lang.String" value="jLabel2" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

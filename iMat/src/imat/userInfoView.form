@@ -21,26 +21,23 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace pref="293" max="32767" attributes="0"/>
-                          <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="93" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="uiLastNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="uiFirstNameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -60,11 +57,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="uiFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiLastNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
                           <Component id="uiZipCodeTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiAddressTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiCoTextField" min="-2" pref="88" max="-2" attributes="0"/>
                           <Component id="uiCityTextField" min="-2" pref="88" max="-2" attributes="0"/>
                           <Component id="uiPhoneNumberTextField" min="-2" pref="88" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -75,33 +68,51 @@
                           <Component id="invoiceRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="creditCardRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="uiChFirstNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiChLastNameTextField" min="-2" pref="88" max="-2" attributes="0"/>
-                          <Component id="uiCardNumerTextField" min="-2" pref="88" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="uiMonthComboBox" min="-2" pref="56" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="uiYearComboBox" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="uiFirstNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiLastNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiAddressTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiCoTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="114" pref="114" max="114" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="uiCardTypeComboBox" alignment="0" max="32767" attributes="1"/>
-                              <Component id="uiCvvCodeTextField" alignment="0" min="-2" pref="88" max="-2" attributes="1"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="uiMonthComboBox" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="uiYearComboBox" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="uiCardTypeComboBox" alignment="0" max="32767" attributes="1"/>
+                                      <Component id="uiCvvCodeTextField" alignment="0" min="-2" pref="88" max="-2" attributes="1"/>
+                                  </Group>
+                                  <Component id="uiChLastNameTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="uiCardNumerTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="80" pref="80" max="80" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
+                      <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="uiScrollBar" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="uiScrollBar" alignment="0" pref="944" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
+          <Component id="uiScrollBar" alignment="0" pref="1060" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
               <Component id="uiBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="uiFirstNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="uiFirstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -187,7 +198,7 @@
                   <Component id="uiMonthComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="uiYearComboBox" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton2" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
@@ -198,93 +209,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="uiHeaderPanel">
-      <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder thickness="4"/>
-          </Border>
-        </Property>
-        <Property name="name" type="java.lang.String" value="uiHeaderPanel" noResource="true"/>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="uiPictureLabel" min="-2" pref="102" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="uiTitleLabel" min="-2" pref="204" max="-2" attributes="0"/>
-                      <Component id="uiScrollPane" pref="383" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="uiTitleLabel" min="-2" pref="40" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="uiScrollPane" min="-2" pref="59" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="uiPictureLabel" alignment="0" pref="121" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="uiPictureLabel">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="uiPictureLabel.text"/>
-            <Property name="name" type="java.lang.String" value="uiPictureLabel" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="uiTitleLabel">
-          <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="uiTitleLabel.font"/>
-            <Property name="text" type="java.lang.String" resourceKey="uiTitleLabel.text"/>
-            <Property name="name" type="java.lang.String" value="uiTitleLabel" noResource="true"/>
-          </Properties>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="uiScrollPane">
-          <Properties>
-            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
-            <Property name="verticalScrollBarPolicy" type="int" value="21"/>
-            <Property name="name" type="java.lang.String" value="uiScrollPane" noResource="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JTextArea" name="uiInfoTextArea">
-              <Properties>
-                <Property name="columns" type="int" value="20"/>
-                <Property name="lineWrap" type="boolean" value="true"/>
-                <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" resourceKey="uiInfoTextArea.text"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
-                    <BevelBorder bevelType="1"/>
-                  </Border>
-                </Property>
-                <Property name="enabled" type="boolean" value="false"/>
-                <Property name="name" type="java.lang.String" value="uiInfoTextArea" noResource="true"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
     <Component class="javax.swing.JScrollBar" name="uiScrollBar">
       <Properties>
         <Property name="name" type="java.lang.String" value="uiScrollBar" noResource="true"/>
@@ -298,12 +222,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="506" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="638" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="72" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="57" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -568,6 +492,11 @@
         <Property name="font" type="java.awt.Font" resourceKey="jButton2.font"/>
         <Property name="text" type="java.lang.String" resourceKey="jButton2.text"/>
         <Property name="name" type="java.lang.String" value="jButton2" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="imat.HeaderPanel2" name="uiHeaderPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="uiHeaderPanel" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

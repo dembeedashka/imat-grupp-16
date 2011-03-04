@@ -214,7 +214,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="284" max="32767" attributes="0"/>
+                          <EmptySpace pref="292" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -531,7 +531,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="matMall1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fruitMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -540,16 +540,16 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="matMall1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fruitMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="imat.matMall" name="matMall1">
+                        <Component class="imat.matMall" name="fruitMall">
                           <Properties>
-                            <Property name="name" type="java.lang.String" value="matMall1" noResource="true"/>
+                            <Property name="name" type="java.lang.String" value="fruitMall" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -569,7 +569,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="matMall2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dairyMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -578,16 +578,16 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="matMall2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dairyMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="imat.matMall" name="matMall2">
+                        <Component class="imat.matMall" name="dairyMall">
                           <Properties>
-                            <Property name="name" type="java.lang.String" value="matMall2" noResource="true"/>
+                            <Property name="name" type="java.lang.String" value="dairyMall" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -607,7 +607,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="matMall3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="meatMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -616,16 +616,54 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="matMall3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="meatMall" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="imat.matMall" name="matMall3">
+                        <Component class="imat.matMall" name="meatMall">
                           <Properties>
-                            <Property name="name" type="java.lang.String" value="matMall3" noResource="true"/>
+                            <Property name="name" type="java.lang.String" value="meatMall" noResource="true"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="cardFavourites">
+                      <Properties>
+                        <Property name="name" type="java.lang.String" value="cardFavourites" noResource="true"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="meat"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="favMall" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="favMall" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="imat.matMall" name="favMall">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="favMall" noResource="true"/>
                           </Properties>
                         </Component>
                       </SubComponents>

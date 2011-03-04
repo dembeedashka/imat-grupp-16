@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
@@ -37,14 +37,13 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="apBasketButton" alignment="0" pref="202" max="32767" attributes="0"/>
-                      <Component id="apBasketPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="apUserinfoButton" alignment="0" pref="202" max="32767" attributes="0"/>
-                      <Component id="apReceiptButton" alignment="0" pref="202" max="32767" attributes="0"/>
-                      <Component id="apCashregisterButton" alignment="0" pref="202" max="32767" attributes="0"/>
+                      <Component id="apReceiptButton" alignment="1" pref="224" max="32767" attributes="0"/>
+                      <Component id="apCashregisterButton" alignment="1" pref="224" max="32767" attributes="0"/>
+                      <Component id="apBasketButton" alignment="0" pref="224" max="32767" attributes="0"/>
+                      <Component id="apUserinfoButton" alignment="1" pref="224" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -53,16 +52,14 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="apBasketButton" min="-2" pref="67" max="-2" attributes="0"/>
+                  <Component id="apBasketButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="apBasketPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="apUserinfoButton" min="-2" pref="69" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="apReceiptButton" min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="apReceiptButton" min="-2" pref="75" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="apCashregisterButton" min="-2" pref="60" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="apCashregisterButton" min="-2" pref="70" max="-2" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -92,104 +89,6 @@
             <Property name="name" type="java.lang.String" value="apCashregisterButton" noResource="true"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="apBasketPanel">
-          <Properties>
-            <Property name="background" type="java.awt.Color" resourceKey="apBasketPanel.background"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                <EtchetBorder/>
-              </Border>
-            </Property>
-            <Property name="name" type="java.lang.String" value="apBasketPanel" noResource="true"/>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="apAmountLabel" pref="92" max="32767" attributes="1"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="apSumLabel" min="-2" max="-2" attributes="1"/>
-                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="apSumNr" pref="12" max="32767" attributes="1"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="apSekLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="apAmountNr" pref="12" max="32767" attributes="1"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="apPiecesLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="apAmountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="apAmountNr" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="apPiecesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="apSumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="apSumNr" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="apSekLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JLabel" name="apAmountLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apAmountLabel.text"/>
-                <Property name="name" type="java.lang.String" value="apAmountLabel" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="apSumLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apSumLabel.text"/>
-                <Property name="name" type="java.lang.String" value="apSumLabel" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="apAmountNr">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apAmountNr.text"/>
-                <Property name="name" type="java.lang.String" value="apAmountNr" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="apSumNr">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apSumNr.text"/>
-                <Property name="name" type="java.lang.String" value="apSumNr" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="apPiecesLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apPiecesLabel.text"/>
-                <Property name="name" type="java.lang.String" value="apPiecesLabel" noResource="true"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="apSekLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="apSekLabel.text"/>
-                <Property name="name" type="java.lang.String" value="apSekLabel" noResource="true"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

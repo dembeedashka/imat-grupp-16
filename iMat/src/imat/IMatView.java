@@ -13,13 +13,13 @@ import org.jdesktop.application.FrameView;
  */
 public class IMatView extends FrameView {
 
-    public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD", null);
-    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "card4", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD", null);
-    public static final Category      meat       = new Category(Category.MEAT_RED, "card4", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD", null);
-    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "card4", new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD", null);
-    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "card4", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD", null);
-    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "card4", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD", null);
-    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "card4", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD", null);
+    public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
+    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "card4", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
+    public static final Category      meat       = new Category(Category.MEAT_RED, "card4", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
+    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "card4", new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
+    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "card4", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
+    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "card4", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
+    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "card4", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
 
     private IMatPresenter presenter;
 
@@ -29,7 +29,7 @@ public class IMatView extends FrameView {
         initComponents();
 
         // make window size static
-        getFrame().setResizable(false);
+        //getFrame().setResizable(false);
 
         presenter  = new IMatPresenter(
             backButton,

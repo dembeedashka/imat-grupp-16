@@ -9,8 +9,8 @@ import javax.swing.JPanel;
  */
 public class SubcategoryDairy extends Category {
 
-    public SubcategoryDairy(String card, ImageIcon pic, String description, JPanel contentsPanel) {
-        super(Category.DAIRY_BLUE, card, pic, description, contentsPanel);
+    public SubcategoryDairy(String card, ImageIcon pic, String description) {
+        super(Category.DAIRY_BLUE, card, pic, description);
     }
 
 }

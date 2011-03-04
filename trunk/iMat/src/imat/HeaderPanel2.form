@@ -20,11 +20,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="headerPanelScrollPane" alignment="0" pref="438" max="32767" attributes="0"/>
-                  <Component id="headerPanelPicLabel" alignment="0" pref="438" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="headerPanelPicLabel" alignment="0" pref="609" max="32767" attributes="0"/>
+                  <Component id="headerPanelScrollPane" alignment="1" pref="609" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -34,10 +34,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="headerPanelPicLabel" min="-2" pref="130" max="-2" attributes="0"/>
+              <Component id="headerPanelPicLabel" min="-2" pref="176" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="headerPanelScrollPane" min="-2" pref="113" max="-2" attributes="0"/>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

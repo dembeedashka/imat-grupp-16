@@ -30,6 +30,14 @@ public class matMall extends javax.swing.JPanel {
         setVisible(true);
     }
 
+    public HeaderPanel2 getMatMallHeaderPanel() {
+        return matMallHeaderPanel;
+    }
+
+    public void setMatMallHeaderPanel(HeaderPanel2 matMallHeaderPanel) {
+        this.matMallHeaderPanel = matMallHeaderPanel;
+    }
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -68,7 +76,7 @@ public class matMall extends javax.swing.JPanel {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 

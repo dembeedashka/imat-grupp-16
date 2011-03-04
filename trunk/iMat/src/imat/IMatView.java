@@ -83,11 +83,13 @@ public class IMatView extends FrameView {
         cardShoppingCartPanel = new javax.swing.JPanel();
         shoppingCart1 = new imat.shoppingCart();
         cardFruitPanel = new javax.swing.JPanel();
-        matMall1 = new imat.matMall();
+        fruitMall = new imat.matMall();
         cardDairyPanel = new javax.swing.JPanel();
-        matMall2 = new imat.matMall();
+        dairyMall = new imat.matMall();
         cardMeatPanel = new javax.swing.JPanel();
-        matMall3 = new imat.matMall();
+        meatMall = new imat.matMall();
+        cardFavourites = new javax.swing.JPanel();
+        favMall = new imat.matMall();
         bottomBorderPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
@@ -257,7 +259,7 @@ public class IMatView extends FrameView {
                 .add(searchButton)
                 .add(247, 247, 247)
                 .add(helpButton)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -411,7 +413,7 @@ public class IMatView extends FrameView {
 
         cardFruitPanel.setName("cardFruitPanel"); // NOI18N
 
-        matMall1.setName("matMall1"); // NOI18N
+        fruitMall.setName("fruitMall"); // NOI18N
 
         org.jdesktop.layout.GroupLayout cardFruitPanelLayout = new org.jdesktop.layout.GroupLayout(cardFruitPanel);
         cardFruitPanel.setLayout(cardFruitPanelLayout);
@@ -419,14 +421,14 @@ public class IMatView extends FrameView {
             cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardFruitPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matMall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(fruitMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         cardFruitPanelLayout.setVerticalGroup(
             cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardFruitPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matMall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(fruitMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -434,7 +436,7 @@ public class IMatView extends FrameView {
 
         cardDairyPanel.setName("cardDairyPanel"); // NOI18N
 
-        matMall2.setName("matMall2"); // NOI18N
+        dairyMall.setName("dairyMall"); // NOI18N
 
         org.jdesktop.layout.GroupLayout cardDairyPanelLayout = new org.jdesktop.layout.GroupLayout(cardDairyPanel);
         cardDairyPanel.setLayout(cardDairyPanelLayout);
@@ -442,14 +444,14 @@ public class IMatView extends FrameView {
             cardDairyPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardDairyPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matMall2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(dairyMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         cardDairyPanelLayout.setVerticalGroup(
             cardDairyPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, cardDairyPanelLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(matMall2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(dairyMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -457,7 +459,7 @@ public class IMatView extends FrameView {
 
         cardMeatPanel.setName("cardMeatPanel"); // NOI18N
 
-        matMall3.setName("matMall3"); // NOI18N
+        meatMall.setName("meatMall"); // NOI18N
 
         org.jdesktop.layout.GroupLayout cardMeatPanelLayout = new org.jdesktop.layout.GroupLayout(cardMeatPanel);
         cardMeatPanel.setLayout(cardMeatPanelLayout);
@@ -465,18 +467,41 @@ public class IMatView extends FrameView {
             cardMeatPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardMeatPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matMall3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(meatMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         cardMeatPanelLayout.setVerticalGroup(
             cardMeatPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardMeatPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matMall3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(meatMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardMeatPanel, "meat");
+
+        cardFavourites.setName("cardFavourites"); // NOI18N
+
+        favMall.setName("favMall"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout cardFavouritesLayout = new org.jdesktop.layout.GroupLayout(cardFavourites);
+        cardFavourites.setLayout(cardFavouritesLayout);
+        cardFavouritesLayout.setHorizontalGroup(
+            cardFavouritesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cardFavouritesLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(favMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        cardFavouritesLayout.setVerticalGroup(
+            cardFavouritesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cardFavouritesLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(favMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        centerStagePanel.add(cardFavourites, "meat");
 
         org.jdesktop.layout.GroupLayout framePanelLayout = new org.jdesktop.layout.GroupLayout(framePanel);
         framePanel.setLayout(framePanelLayout);
@@ -596,6 +621,7 @@ public class IMatView extends FrameView {
     private javax.swing.JPanel bottomBorderPanel;
     private javax.swing.JPanel bottomContentsPanel;
     private javax.swing.JPanel cardDairyPanel;
+    private javax.swing.JPanel cardFavourites;
     private javax.swing.JPanel cardFruitPanel;
     private javax.swing.JPanel cardHelpPanel;
     private javax.swing.JPanel cardHomePanel;
@@ -605,17 +631,18 @@ public class IMatView extends FrameView {
     private javax.swing.JPanel cardShoppingPanel;
     private javax.swing.JPanel centerStagePanel;
     private javax.swing.JButton dairyButton;
+    private imat.matMall dairyMall;
+    private imat.matMall favMall;
     private javax.swing.JButton favouritesButton;
     private javax.swing.JButton forwardButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
+    private imat.matMall fruitMall;
     private javax.swing.JButton helpButton;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel mainPanel;
-    private imat.matMall matMall1;
-    private imat.matMall matMall2;
-    private imat.matMall matMall3;
     private javax.swing.JButton meatButton;
+    private imat.matMall meatMall;
     private javax.swing.JPanel navigationSearchPanel;
     private javax.swing.JButton pantryButton;
     private javax.swing.JButton searchButton;

@@ -21,6 +21,7 @@ public class IMatView extends FrameView {
     public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "card4", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
     public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "card4", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
     public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "card4", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
+    public static final Category      search     = new Category(Category.FAVOURITES_BROWN, "search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
 
     private IMatPresenter presenter;
 
@@ -64,6 +65,9 @@ public class IMatView extends FrameView {
         navigationSearchPanel = new javax.swing.JPanel();
         backButton = new javax.swing.JButton();
         forwardButton = new javax.swing.JButton();
+        searchTextField = new javax.swing.JTextField();
+        searchButton = new javax.swing.JButton();
+        helpButton = new javax.swing.JButton();
         shoppingListPanel = new javax.swing.JPanel();
         shoppingListPanel11 = new imat.shoppingListPanel1();
         actionPanel = new javax.swing.JPanel();
@@ -175,7 +179,7 @@ public class IMatView extends FrameView {
                 .add(snacksButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(favouritesButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         topNavigationPanelLayout.setVerticalGroup(
             topNavigationPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -210,6 +214,20 @@ public class IMatView extends FrameView {
             }
         });
 
+        searchTextField.setText(resourceMap.getString("searchTextField.text")); // NOI18N
+        searchTextField.setName("searchTextField"); // NOI18N
+
+        searchButton.setText(resourceMap.getString("searchButton.text")); // NOI18N
+        searchButton.setName("searchButton"); // NOI18N
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+
+        helpButton.setText(resourceMap.getString("helpButton.text")); // NOI18N
+        helpButton.setName("helpButton"); // NOI18N
+
         org.jdesktop.layout.GroupLayout navigationSearchPanelLayout = new org.jdesktop.layout.GroupLayout(navigationSearchPanel);
         navigationSearchPanel.setLayout(navigationSearchPanelLayout);
         navigationSearchPanelLayout.setHorizontalGroup(
@@ -219,16 +237,30 @@ public class IMatView extends FrameView {
                 .add(backButton)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(forwardButton)
-                .addContainerGap(1106, Short.MAX_VALUE))
+                .add(94, 94, 94)
+                .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(searchButton)
+                .add(247, 247, 247)
+                .add(helpButton)
+                .addContainerGap(292, Short.MAX_VALUE))
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigationSearchPanelLayout.createSequentialGroup()
-                .add(8, 8, 8)
-                .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(backButton)
-                    .add(forwardButton))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(navigationSearchPanelLayout.createSequentialGroup()
+                        .add(8, 8, 8)
+                        .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(backButton)
+                            .add(forwardButton)))
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, navigationSearchPanelLayout.createSequentialGroup()
+                        .add(8, 8, 8)
+                        .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(searchTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                            .add(searchButton)
+                            .add(helpButton))))
+                .addContainerGap())
         );
 
         shoppingListPanel.setName("shoppingListPanel"); // NOI18N
@@ -245,7 +277,7 @@ public class IMatView extends FrameView {
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(shoppingListPanelLayout.createSequentialGroup()
                 .add(shoppingListPanel11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         actionPanel.setMaximumSize(new java.awt.Dimension(222, 570));
@@ -257,7 +289,7 @@ public class IMatView extends FrameView {
         actionPanel.setLayout(actionPanelLayout);
         actionPanelLayout.setHorizontalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 242, Short.MAX_VALUE)
+            .add(0, 262, Short.MAX_VALUE)
         );
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -309,7 +341,7 @@ public class IMatView extends FrameView {
         );
         bottomBorderPanelLayout.setVerticalGroup(
             bottomBorderPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 22, Short.MAX_VALUE)
+            .add(0, 16, Short.MAX_VALUE)
         );
 
         org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
@@ -322,7 +354,7 @@ public class IMatView extends FrameView {
                 .add(18, 18, 18)
                 .add(framePanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 818, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
-                .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
                 .addContainerGap())
             .add(bottomBorderPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(navigationSearchPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -394,6 +426,10 @@ public class IMatView extends FrameView {
         presenter.forward();
     }//GEN-LAST:event_forwardButtonActionPerformed
 
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        presenter.display(search);
+    }//GEN-LAST:event_searchButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
     private javax.swing.JButton backButton;
@@ -405,12 +441,15 @@ public class IMatView extends FrameView {
     private javax.swing.JButton forwardButton;
     private javax.swing.JPanel framePanel;
     private javax.swing.JButton fruitButton;
+    private javax.swing.JButton helpButton;
     private javax.swing.JButton homeButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton meatButton;
     private javax.swing.JPanel navigationSearchPanel;
     private javax.swing.JButton pantryButton;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JTextField searchTextField;
     private javax.swing.JPanel shoppingListPanel;
     private imat.shoppingListPanel1 shoppingListPanel11;
     private javax.swing.JButton snacksButton;

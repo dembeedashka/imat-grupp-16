@@ -2,6 +2,7 @@ package imat;
 
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
@@ -18,16 +19,22 @@ public class Category {
     public static final Color SNACKS_ORANGE    = new Color(234, 168, 82);
     public static final Color FAVOURITES_BROWN = new Color(143, 110, 67);
 
-    private Color   color;
-    private String  card;
+    private Color     color;
+    private String    card;
     private ImageIcon pic;
-    private String description;
+    private String    description;
+    private JPanel    contentsPanel;
 
-    public Category(Color color, String card, ImageIcon pic, String description) {
-        this.color = color;
-        this.card = card;
-        this.pic = pic;
-        this.description = description;
+    public Category(Color color, String card, ImageIcon pic, String description, JPanel contentsPanel) {
+        this.color         = color;
+        this.card          = card;
+        this.pic           = pic;
+        this.description   = description;
+        this.contentsPanel = contentsPanel;
+    }
+
+    public JPanel getContentsPanel() {
+        return contentsPanel;
     }
 
     public String getDescription() {

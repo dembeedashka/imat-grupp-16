@@ -2,7 +2,6 @@ package imat;
 
 import java.awt.CardLayout;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -15,13 +14,15 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     NavigationHistoryManager historyManager;
 
     private JPanel           navigationSearchPanel,
-                             framePanel,
+                             bottomContentsPanel,
+                             bottomBorderPanel,
                              centerStagePanel;
     private HeaderPanel2     headerPanel;
 
-    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel framePanel, JPanel centerStagePanel, HeaderPanel2 headerPanel) {
+    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, HeaderPanel2 headerPanel) {
         this.navigationSearchPanel = navigationSearchPanel;
-        this.framePanel            = framePanel;
+        this.bottomContentsPanel   = bottomContentsPanel;
+        this.bottomBorderPanel     = bottomBorderPanel;
         this.centerStagePanel      = centerStagePanel;
         this.headerPanel           = headerPanel;
 
@@ -48,7 +49,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         Category category = state.getSelectedCategory();
 
         navigationSearchPanel.setBackground(category.getColor());
-        framePanel.setBackground(category.getColor());
+        bottomContentsPanel.setBackground(category.getColor());
+        bottomBorderPanel.setBackground(category.getColor());
         headerPanel.getHeaderPanelPicLabel().setIcon(category.getPic());
         headerPanel.getHeaderPanelTextPane().setText(category.getDescription());
         

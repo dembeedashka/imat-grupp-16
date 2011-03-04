@@ -32,14 +32,12 @@ public class homeView extends javax.swing.JPanel {
     private void initComponents() {
 
         homeBreadcrumbsPanel = new javax.swing.JPanel();
-        homeLogoLabel = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        homeInfoTextArea1 = new javax.swing.JTextArea();
         homeUserInfoButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         homeInfoTextArea2 = new javax.swing.JTextArea();
         homeHelpButton = new javax.swing.JButton();
         homeScrollBar = new javax.swing.JScrollBar();
+        homeViewHeaderPanel = new imat.HeaderPanel2();
 
         setName("Form"); // NOI18N
 
@@ -57,22 +55,6 @@ public class homeView extends javax.swing.JPanel {
         );
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(homeView.class);
-        homeLogoLabel.setFont(resourceMap.getFont("homeLogoLabel.font")); // NOI18N
-        homeLogoLabel.setText(resourceMap.getString("homeLogoLabel.text")); // NOI18N
-        homeLogoLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        homeLogoLabel.setName("homeLogoLabel"); // NOI18N
-
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
-
-        homeInfoTextArea1.setColumns(20);
-        homeInfoTextArea1.setEditable(false);
-        homeInfoTextArea1.setFont(resourceMap.getFont("homeInfoTextArea1.font")); // NOI18N
-        homeInfoTextArea1.setLineWrap(true);
-        homeInfoTextArea1.setRows(5);
-        homeInfoTextArea1.setText(resourceMap.getString("homeInfoTextArea1.text")); // NOI18N
-        homeInfoTextArea1.setName("homeInfoTextArea1"); // NOI18N
-        jScrollPane1.setViewportView(homeInfoTextArea1);
-
         homeUserInfoButton.setFont(resourceMap.getFont("homeUserInfoButton.font")); // NOI18N
         homeUserInfoButton.setText(resourceMap.getString("homeUserInfoButton.text")); // NOI18N
         homeUserInfoButton.setName("homeUserInfoButton"); // NOI18N
@@ -94,47 +76,51 @@ public class homeView extends javax.swing.JPanel {
 
         homeScrollBar.setName("homeScrollBar"); // NOI18N
 
+        homeViewHeaderPanel.setName("homeViewHeaderPanel"); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(291, Short.MAX_VALUE)
-                        .addComponent(homeHelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(220, 220, 220))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(284, 284, 284)
-                        .addComponent(homeUserInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(221, 221, 221))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
-                            .addComponent(homeLogoLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE))
-                        .addGap(108, 108, 108))
-                    .addComponent(homeBreadcrumbsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(homeBreadcrumbsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(homeViewHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(191, 191, 191))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(homeUserInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(223, 223, 223)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap(293, Short.MAX_VALUE)
+                            .addComponent(homeHelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(218, 218, 218)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(117, 117, 117)))
                 .addComponent(homeScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(homeBreadcrumbsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(homeLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(homeViewHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(homeUserInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(homeHelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
-            .addComponent(homeScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE)
+                .addContainerGap(75, Short.MAX_VALUE))
+            .addComponent(homeScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -142,12 +128,10 @@ public class homeView extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel homeBreadcrumbsPanel;
     private javax.swing.JButton homeHelpButton;
-    private javax.swing.JTextArea homeInfoTextArea1;
     private javax.swing.JTextArea homeInfoTextArea2;
-    private javax.swing.JLabel homeLogoLabel;
     private javax.swing.JScrollBar homeScrollBar;
     private javax.swing.JButton homeUserInfoButton;
-    private javax.swing.JScrollPane jScrollPane1;
+    private imat.HeaderPanel2 homeViewHeaderPanel;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 

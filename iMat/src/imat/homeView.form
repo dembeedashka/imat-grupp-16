@@ -21,28 +21,35 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace pref="291" max="32767" attributes="0"/>
-                      <Component id="homeHelpButton" min="-2" pref="364" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
-                      <Component id="homeUserInfoButton" min="-2" pref="364" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane2" alignment="1" pref="633" max="32767" attributes="1"/>
-                          <Component id="jScrollPane1" alignment="0" pref="633" max="32767" attributes="1"/>
-                          <Component id="homeLogoLabel" alignment="1" pref="633" max="32767" attributes="1"/>
+                          <Group type="102" attributes="0">
+                              <Component id="homeBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="homeViewHeaderPanel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="homeUserInfoButton" min="-2" pref="364" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="293" max="32767" attributes="0"/>
+                          <Component id="homeHelpButton" min="-2" pref="364" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="homeBreadcrumbsPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="612" max="-2" attributes="1"/>
+                      <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Component id="homeScrollBar" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -51,19 +58,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="homeBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-              <Component id="homeLogoLabel" min="-2" pref="168" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+              <Component id="homeViewHeaderPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="homeUserInfoButton" min="-2" pref="83" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="homeHelpButton" min="-2" pref="83" max="-2" attributes="0"/>
-              <EmptySpace pref="63" max="32767" attributes="0"/>
+              <EmptySpace pref="75" max="32767" attributes="0"/>
           </Group>
-          <Component id="homeScrollBar" alignment="0" pref="840" max="32767" attributes="0"/>
+          <Component id="homeScrollBar" alignment="0" pref="800" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -85,41 +90,6 @@
           </Group>
         </DimensionLayout>
       </Layout>
-    </Container>
-    <Component class="javax.swing.JLabel" name="homeLogoLabel">
-      <Properties>
-        <Property name="font" type="java.awt.Font" resourceKey="homeLogoLabel.font"/>
-        <Property name="text" type="java.lang.String" resourceKey="homeLogoLabel.text"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder/>
-          </Border>
-        </Property>
-        <Property name="name" type="java.lang.String" value="homeLogoLabel" noResource="true"/>
-      </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="jScrollPane1" noResource="true"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="homeInfoTextArea1">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="editable" type="boolean" value="false"/>
-            <Property name="font" type="java.awt.Font" resourceKey="homeInfoTextArea1.font"/>
-            <Property name="lineWrap" type="boolean" value="true"/>
-            <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" resourceKey="homeInfoTextArea1.text"/>
-            <Property name="name" type="java.lang.String" value="homeInfoTextArea1" noResource="true"/>
-          </Properties>
-        </Component>
-      </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="homeUserInfoButton">
       <Properties>
@@ -161,6 +131,11 @@
     <Component class="javax.swing.JScrollBar" name="homeScrollBar">
       <Properties>
         <Property name="name" type="java.lang.String" value="homeScrollBar" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="imat.HeaderPanel2" name="homeViewHeaderPanel">
+      <Properties>
+        <Property name="name" type="java.lang.String" value="homeViewHeaderPanel" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

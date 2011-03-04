@@ -2,6 +2,7 @@
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
+    <Property name="background" type="java.awt.Color" resourceKey="Form.background"/>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
   </Properties>
   <AuxValues>
@@ -22,8 +23,8 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="headerScrollPane" alignment="0" pref="457" max="32767" attributes="0"/>
-                  <Component id="headerPicLabel" alignment="0" pref="457" max="32767" attributes="0"/>
+                  <Component id="headerPanelScrollPane" alignment="0" pref="438" max="32767" attributes="0"/>
+                  <Component id="headerPanelPicLabel" alignment="0" pref="438" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -33,24 +34,25 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="headerPicLabel" min="-2" pref="152" max="-2" attributes="0"/>
+              <Component id="headerPanelPicLabel" min="-2" pref="130" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="headerScrollPane" pref="130" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="headerPanelScrollPane" min="-2" pref="113" max="-2" attributes="0"/>
+              <EmptySpace pref="28" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="headerPicLabel">
+    <Component class="javax.swing.JLabel" name="headerPanelPicLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="headerPicLabel.text"/>
-        <Property name="name" type="java.lang.String" value="headerPicLabel" noResource="true"/>
+        <Property name="icon" type="javax.swing.Icon" resourceKey="headerPanelPicLabel.icon"/>
+        <Property name="text" type="java.lang.String" resourceKey="headerPanelPicLabel.text"/>
+        <Property name="name" type="java.lang.String" value="headerPanelPicLabel" noResource="true"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="headerScrollPane">
+    <Container class="javax.swing.JScrollPane" name="headerPanelScrollPane">
       <Properties>
-        <Property name="name" type="java.lang.String" value="headerScrollPane" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="headerPanelScrollPane" noResource="true"/>
       </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -58,9 +60,12 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextPane" name="headerTextPane">
+        <Component class="javax.swing.JTextPane" name="headerPanelTextPane">
           <Properties>
-            <Property name="name" type="java.lang.String" value="headerTextPane" noResource="true"/>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" resourceKey="headerPanelTextPane.text"/>
+            <Property name="name" type="java.lang.String" value="headerPanelTextPane" noResource="true"/>
+            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>

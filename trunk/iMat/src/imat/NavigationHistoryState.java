@@ -1,6 +1,5 @@
 package imat;
 
-import javax.swing.ImageIcon;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -11,8 +10,8 @@ public class NavigationHistoryState {
 
     // behöver hålla reda på: kategori, underkategori/detaljvy/kort, kortets innehåll, sökfältet, scroll-position (?)
 
-    Category selectedCategory;
-    Product  productDetails;
+    Category selectedCategory; // used to get color and card to show
+    Product  productDetails;   // should be null unless product details are shown in the state
 
     public NavigationHistoryState() {
         this.selectedCategory = IMatView.home;

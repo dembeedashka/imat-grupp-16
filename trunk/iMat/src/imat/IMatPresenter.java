@@ -3,6 +3,7 @@ package imat;
 import java.awt.CardLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import se.chalmers.ait.dat215.project.Product;
 
 
 /**
@@ -17,14 +18,12 @@ public class IMatPresenter implements NavigationHistoryUpdater {
                              bottomContentsPanel,
                              bottomBorderPanel,
                              centerStagePanel;
-    private HeaderPanel2     headerPanel;
 
-    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, HeaderPanel2 headerPanel) {
+    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
         this.centerStagePanel      = centerStagePanel;
-        this.headerPanel           = headerPanel;
 
         init(backButton, forwardButton);
     }
@@ -35,7 +34,7 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     }
 
     /**
-     * Update GUI.
+     * Update GUI by calling the Navigation History Manager that calls method updateState below.
      */
     public void display(Category category) {
         historyManager.update(new NavigationHistoryState(category, null));
@@ -47,15 +46,17 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     public void updateState(NavigationHistoryState state) {
         CardLayout layout = (CardLayout) centerStagePanel.getLayout();
         Category category = state.getSelectedCategory();
+        Product  product  = state.getProductDetails();
 
         navigationSearchPanel.setBackground(category.getColor());
         bottomContentsPanel.setBackground(category.getColor());
         bottomBorderPanel.setBackground(category.getColor());
-        headerPanel.getHeaderPanelPicLabel().setIcon(category.getPic());
-        headerPanel.getHeaderPanelTextPane().setText(category.getDescription());
         
-        layout.show(centerStagePanel, category.getCard());
+        if(product != null) {
+            // TODO: update product details stuff
+        }
 
+        layout.show(centerStagePanel, category.getCard());
     }
 
     /**

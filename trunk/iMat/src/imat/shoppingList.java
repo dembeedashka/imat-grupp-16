@@ -37,10 +37,8 @@ public class shoppingList extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         shoppingListBottomPanel = new javax.swing.JPanel();
         shoppingListAddRow = new javax.swing.JButton();
-        shoppingListRow = new javax.swing.JPanel();
-        shoppingListTrashCan = new javax.swing.JLabel();
-        shoppingListItem = new javax.swing.JTextField();
-        shoppingListCheckBox = new javax.swing.JCheckBox();
+        shoppingListRowPanel = new javax.swing.JPanel();
+        shoppingListRow1 = new imat.ShoppingListRow();
         shoppingListScrollBar = new javax.swing.JScrollBar();
 
         setName("Form"); // NOI18N
@@ -65,9 +63,9 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListTopPanel.setLayout(shoppingListTopPanelLayout);
         shoppingListTopPanelLayout.setHorizontalGroup(
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shoppingListTopPanelLayout.createSequentialGroup()
-                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1))
         );
@@ -86,51 +84,42 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListAddRow.setFont(resourceMap.getFont("shoppingListAddRow.font")); // NOI18N
         shoppingListAddRow.setText(resourceMap.getString("shoppingListAddRow.text")); // NOI18N
         shoppingListAddRow.setName("shoppingListAddRow"); // NOI18N
+        shoppingListAddRow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shoppingListAddRowActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout shoppingListBottomPanelLayout = new javax.swing.GroupLayout(shoppingListBottomPanel);
         shoppingListBottomPanel.setLayout(shoppingListBottomPanelLayout);
         shoppingListBottomPanelLayout.setHorizontalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
         );
         shoppingListBottomPanelLayout.setVerticalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
         );
 
-        shoppingListRow.setName("shoppingListRow"); // NOI18N
+        shoppingListRowPanel.setName("shoppingListRowPanel"); // NOI18N
 
-        shoppingListTrashCan.setText(resourceMap.getString("shoppingListTrashCan.text")); // NOI18N
-        shoppingListTrashCan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        shoppingListTrashCan.setName("shoppingListTrashCan"); // NOI18N
+        shoppingListRow1.setName("shoppingListRow1"); // NOI18N
 
-        shoppingListItem.setText(resourceMap.getString("shoppingListItem.text")); // NOI18N
-        shoppingListItem.setName("shoppingListItem"); // NOI18N
-
-        shoppingListCheckBox.setText(resourceMap.getString("shoppingListCheckBox.text")); // NOI18N
-        shoppingListCheckBox.setName("shoppingListCheckBox"); // NOI18N
-
-        javax.swing.GroupLayout shoppingListRowLayout = new javax.swing.GroupLayout(shoppingListRow);
-        shoppingListRow.setLayout(shoppingListRowLayout);
-        shoppingListRowLayout.setHorizontalGroup(
-            shoppingListRowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(shoppingListRowLayout.createSequentialGroup()
-                .addComponent(shoppingListTrashCan, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingListItem, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingListCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        shoppingListRowLayout.setVerticalGroup(
-            shoppingListRowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(shoppingListRowLayout.createSequentialGroup()
+        javax.swing.GroupLayout shoppingListRowPanelLayout = new javax.swing.GroupLayout(shoppingListRowPanel);
+        shoppingListRowPanel.setLayout(shoppingListRowPanelLayout);
+        shoppingListRowPanelLayout.setHorizontalGroup(
+            shoppingListRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shoppingListRowPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(shoppingListRowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(shoppingListCheckBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(shoppingListItem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(shoppingListTrashCan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(shoppingListRow1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        shoppingListRowPanelLayout.setVerticalGroup(
+            shoppingListRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shoppingListRowPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(shoppingListRow1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(257, Short.MAX_VALUE))
         );
 
         shoppingListScrollBar.setName("shoppingListScrollBar"); // NOI18N
@@ -139,13 +128,12 @@ public class shoppingList extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(shoppingListRow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(21, 21, 21)
-                .addComponent(shoppingListScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(shoppingListTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(shoppingListBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(shoppingListRowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shoppingListScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,26 +141,28 @@ public class shoppingList extends javax.swing.JPanel {
                 .addComponent(shoppingListTopPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(shoppingListScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(shoppingListRow, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(shoppingListScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+                    .addComponent(shoppingListRowPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(shoppingListBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void shoppingListAddRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListAddRowActionPerformed
+        // TODO: Add rows!
+        //shoppingListRowPanel.add(new ShoppingListRow());
+    }//GEN-LAST:event_shoppingListAddRowActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton shoppingListAddRow;
     private javax.swing.JPanel shoppingListBottomPanel;
-    private javax.swing.JCheckBox shoppingListCheckBox;
     private javax.swing.JLabel shoppingListHeader;
-    private javax.swing.JTextField shoppingListItem;
     private javax.swing.JTextField shoppingListName;
-    private javax.swing.JPanel shoppingListRow;
+    private imat.ShoppingListRow shoppingListRow1;
+    private javax.swing.JPanel shoppingListRowPanel;
     private javax.swing.JScrollBar shoppingListScrollBar;
     private javax.swing.JPanel shoppingListTopPanel;
-    private javax.swing.JLabel shoppingListTrashCan;
     // End of variables declaration//GEN-END:variables
 
 }

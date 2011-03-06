@@ -19,14 +19,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="shoppingListRow" max="32767" attributes="1"/>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Component id="shoppingListScrollBar" min="-2" max="-2" attributes="0"/>
-          </Group>
           <Component id="shoppingListTopPanel" alignment="0" max="32767" attributes="1"/>
           <Component id="shoppingListBottomPanel" alignment="0" max="32767" attributes="1"/>
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="shoppingListRowPanel" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="shoppingListScrollBar" min="-2" pref="16" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -35,8 +34,8 @@
               <Component id="shoppingListTopPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="shoppingListScrollBar" min="-2" pref="314" max="-2" attributes="0"/>
-                  <Component id="shoppingListRow" min="-2" max="-2" attributes="0"/>
+                  <Component id="shoppingListScrollBar" pref="326" max="32767" attributes="1"/>
+                  <Component id="shoppingListRowPanel" min="-2" max="-2" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="shoppingListBottomPanel" max="32767" attributes="0"/>
@@ -58,9 +57,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListName" alignment="0" pref="276" max="32767" attributes="0"/>
+              <Component id="shoppingListName" alignment="0" pref="282" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="shoppingListHeader" pref="195" max="32767" attributes="0"/>
+                  <Component id="shoppingListHeader" pref="199" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -111,12 +110,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListAddRow" alignment="0" pref="282" max="32767" attributes="0"/>
+              <Component id="shoppingListAddRow" alignment="0" pref="288" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListAddRow" alignment="0" pref="86" max="32767" attributes="0"/>
+              <Component id="shoppingListAddRow" alignment="1" pref="76" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -127,24 +126,24 @@
             <Property name="text" type="java.lang.String" resourceKey="shoppingListAddRow.text"/>
             <Property name="name" type="java.lang.String" value="shoppingListAddRow" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="shoppingListAddRowActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="shoppingListRow">
+    <Container class="javax.swing.JPanel" name="shoppingListRowPanel">
       <Properties>
-        <Property name="name" type="java.lang.String" value="shoppingListRow" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="shoppingListRowPanel" noResource="true"/>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="shoppingListTrashCan" min="-2" pref="36" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="shoppingListItem" min="-2" pref="138" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="shoppingListCheckBox" pref="48" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="shoppingListRow1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -152,38 +151,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="shoppingListCheckBox" alignment="1" pref="39" max="32767" attributes="0"/>
-                      <Component id="shoppingListItem" alignment="1" pref="39" max="32767" attributes="0"/>
-                      <Component id="shoppingListTrashCan" alignment="1" pref="39" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="shoppingListRow1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="257" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="shoppingListTrashCan">
+        <Component class="imat.ShoppingListRow" name="shoppingListRow1">
           <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="shoppingListTrashCan.text"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                <LineBorder/>
-              </Border>
-            </Property>
-            <Property name="name" type="java.lang.String" value="shoppingListTrashCan" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="shoppingListItem">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="shoppingListItem.text"/>
-            <Property name="name" type="java.lang.String" value="shoppingListItem" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JCheckBox" name="shoppingListCheckBox">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="shoppingListCheckBox.text"/>
-            <Property name="name" type="java.lang.String" value="shoppingListCheckBox" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="shoppingListRow1" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

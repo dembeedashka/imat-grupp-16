@@ -691,7 +691,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="fruitMall" pref="998" max="32767" attributes="0"/>
+                                      <Component id="fruitMall" pref="1152" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
@@ -723,7 +723,7 @@
                                               <Component id="cabbageButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="185" max="32767" attributes="0"/>
+                                      <EmptySpace pref="339" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -759,7 +759,7 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="vegetableButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="101" max="32767" attributes="0"/>
+                                      <EmptySpace pref="189" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -892,11 +892,42 @@
                             </Constraint>
                           </Constraints>
 
-                          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+                          <Layout>
+                            <DimensionLayout dim="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dairyMall" alignment="0" pref="767" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
+                                      <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="246" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                            <DimensionLayout dim="1">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="dairyMall" min="-2" pref="335" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="397" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                            </DimensionLayout>
+                          </Layout>
                           <SubComponents>
                             <Component class="imat.matMall" name="dairyMall">
                               <Properties>
                                 <Property name="name" type="java.lang.String" value="dairyMall" noResource="true"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="dairySubButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="dairySubButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="dairySubButton.text"/>
+                                <Property name="name" type="java.lang.String" value="dairySubButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -914,10 +945,13 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="meatMall" alignment="0" pref="768" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                      <Component id="fishButton" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="meatMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="59" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -925,8 +959,13 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="meatMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="174" max="32767" attributes="0"/>
+                                      <Component id="meatMall" min="-2" pref="339" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="fishButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="403" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -935,6 +974,26 @@
                             <Component class="imat.matMall" name="meatMall">
                               <Properties>
                                 <Property name="name" type="java.lang.String" value="meatMall" noResource="true"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="fishButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="fishButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="fishButton.text"/>
+                                <Property name="name" type="java.lang.String" value="fishButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="meatSubButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="meatSubButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="meatSubButton.text"/>
+                                <Property name="name" type="java.lang.String" value="meatSubButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -990,10 +1049,22 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="drinksMall" alignment="0" pref="803" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="drinksMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="nutsSeedsButton" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="sweetsButton" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="coldDrinksButton" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="hotDrinksButton" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace pref="105" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1001,8 +1072,18 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="drinksMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="174" max="32767" attributes="0"/>
+                                      <Component id="drinksMall" min="-2" pref="338" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="coldDrinksButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="hotDrinksButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="nutsSeedsButton" min="-2" max="-2" attributes="0"/>
+                                          <Component id="sweetsButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="293" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1011,6 +1092,46 @@
                             <Component class="imat.matMall" name="drinksMall">
                               <Properties>
                                 <Property name="name" type="java.lang.String" value="drinksMall" noResource="true"/>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="coldDrinksButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="coldDrinksButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="coldDrinksButton.text"/>
+                                <Property name="name" type="java.lang.String" value="coldDrinksButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="hotDrinksButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="hotDrinksButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="hotDrinksButton.text"/>
+                                <Property name="name" type="java.lang.String" value="hotDrinksButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="nutsSeedsButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="nutsSeedsButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="nutsSeedsButton.text"/>
+                                <Property name="name" type="java.lang.String" value="nutsSeedsButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="javax.swing.JButton" name="sweetsButton">
+                              <Properties>
+                                <Property name="icon" type="javax.swing.Icon" resourceKey="sweetsButton.icon"/>
+                                <Property name="text" type="java.lang.String" resourceKey="sweetsButton.text"/>
+                                <Property name="name" type="java.lang.String" value="sweetsButton" noResource="true"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[300, 62]"/>
+                                </Property>
                               </Properties>
                             </Component>
                           </SubComponents>
@@ -1028,7 +1149,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subCategoryMall" alignment="0" pref="738" max="32767" attributes="0"/>
+                                  <Component id="subCategoryMall" alignment="0" pref="1162" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">

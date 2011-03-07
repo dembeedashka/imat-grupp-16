@@ -6,7 +6,7 @@
 /*
  * helpView.java
  *
- * Created on Feb 25, 2011, 12:26:19 PM
+ * Created on Mar 7, 2011, 9:59:01 AM
  */
 
 package imat;
@@ -15,7 +15,7 @@ package imat;
  *
  * @author harryson
  */
-public class helpView extends javax.swing.JFrame {
+public class helpView extends javax.swing.JPanel {
 
     /** Creates new form helpView */
     public helpView() {
@@ -37,20 +37,19 @@ public class helpView extends javax.swing.JFrame {
         helpInstructionLabel = new javax.swing.JLabel();
         helpInstructionPanel = new javax.swing.JPanel();
         helpShoppingLIstLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
         helpShoppningListTA = new javax.swing.JTextArea();
         helpFavoritesLabel = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        jScrollPane5 = new javax.swing.JScrollPane();
         helpFavoritesTA = new javax.swing.JTextArea();
         helpHowTo = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
+        jScrollPane6 = new javax.swing.JScrollPane();
         helpHowToTA = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        helpContactLabel = new javax.swing.JLabel();
+        helpContactPanel = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Form"); // NOI18N
 
         helpPanel1.setName("helpPanel1"); // NOI18N
@@ -63,14 +62,14 @@ public class helpView extends javax.swing.JFrame {
         helpInfoCardPanel.setLayout(helpInfoCardPanelLayout);
         helpInfoCardPanelLayout.setHorizontalGroup(
             helpInfoCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, helpInfoCardPanelLayout.createSequentialGroup()
-                .addContainerGap(214, Short.MAX_VALUE)
+            .addGroup(helpInfoCardPanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addComponent(helpViewHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(197, 197, 197))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         helpInfoCardPanelLayout.setVerticalGroup(
             helpInfoCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(helpInfoCardPanelLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, helpInfoCardPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(helpViewHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -85,36 +84,36 @@ public class helpView extends javax.swing.JFrame {
         helpShoppingLIstLabel.setText(resourceMap.getString("helpShoppingLIstLabel.text")); // NOI18N
         helpShoppingLIstLabel.setName("helpShoppingLIstLabel"); // NOI18N
 
-        jScrollPane2.setName("jScrollPane2"); // NOI18N
+        jScrollPane4.setName("jScrollPane4"); // NOI18N
 
         helpShoppningListTA.setColumns(20);
         helpShoppningListTA.setEditable(false);
         helpShoppningListTA.setRows(5);
         helpShoppningListTA.setText(resourceMap.getString("helpShoppningListTA.text")); // NOI18N
         helpShoppningListTA.setName("helpShoppningListTA"); // NOI18N
-        jScrollPane2.setViewportView(helpShoppningListTA);
+        jScrollPane4.setViewportView(helpShoppningListTA);
 
         helpFavoritesLabel.setText(resourceMap.getString("helpFavoritesLabel.text")); // NOI18N
         helpFavoritesLabel.setName("helpFavoritesLabel"); // NOI18N
 
-        jScrollPane3.setName("jScrollPane3"); // NOI18N
+        jScrollPane5.setName("jScrollPane5"); // NOI18N
 
         helpFavoritesTA.setColumns(20);
         helpFavoritesTA.setEditable(false);
         helpFavoritesTA.setRows(5);
         helpFavoritesTA.setName("helpFavoritesTA"); // NOI18N
-        jScrollPane3.setViewportView(helpFavoritesTA);
+        jScrollPane5.setViewportView(helpFavoritesTA);
 
         helpHowTo.setText(resourceMap.getString("helpHowTo.text")); // NOI18N
         helpHowTo.setName("helpHowTo"); // NOI18N
 
-        jScrollPane4.setName("jScrollPane4"); // NOI18N
+        jScrollPane6.setName("jScrollPane6"); // NOI18N
 
         helpHowToTA.setColumns(20);
         helpHowToTA.setEditable(false);
         helpHowToTA.setRows(5);
         helpHowToTA.setName("helpHowToTA"); // NOI18N
-        jScrollPane4.setViewportView(helpHowToTA);
+        jScrollPane6.setViewportView(helpHowToTA);
 
         javax.swing.GroupLayout helpInstructionPanelLayout = new javax.swing.GroupLayout(helpInstructionPanel);
         helpInstructionPanel.setLayout(helpInstructionPanelLayout);
@@ -123,12 +122,12 @@ public class helpView extends javax.swing.JFrame {
             .addGroup(helpInstructionPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(helpInstructionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
                     .addComponent(helpShoppingLIstLabel)
                     .addComponent(helpFavoritesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
-                    .addComponent(helpHowTo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                    .addComponent(helpHowTo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE))
                 .addContainerGap())
         );
         helpInstructionPanelLayout.setVerticalGroup(
@@ -137,48 +136,48 @@ public class helpView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(helpShoppingLIstLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(helpFavoritesLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(helpHowTo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
-        jLabel2.setName("jLabel2"); // NOI18N
+        helpContactLabel.setText(resourceMap.getString("helpContactLabel.text")); // NOI18N
+        helpContactLabel.setName("helpContactLabel"); // NOI18N
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setName("jPanel1"); // NOI18N
+        helpContactPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        helpContactPanel.setName("helpContactPanel"); // NOI18N
 
-        jLabel3.setText(resourceMap.getString("jLabel3.text")); // NOI18N
-        jLabel3.setName("jLabel3"); // NOI18N
+        jLabel8.setText(resourceMap.getString("jLabel8.text")); // NOI18N
+        jLabel8.setName("jLabel8"); // NOI18N
 
-        jLabel4.setText(resourceMap.getString("jLabel4.text")); // NOI18N
-        jLabel4.setName("jLabel4"); // NOI18N
+        jLabel9.setText(resourceMap.getString("jLabel9.text")); // NOI18N
+        jLabel9.setName("jLabel9"); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout helpContactPanelLayout = new javax.swing.GroupLayout(helpContactPanel);
+        helpContactPanel.setLayout(helpContactPanelLayout);
+        helpContactPanelLayout.setHorizontalGroup(
+            helpContactPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(helpContactPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(643, Short.MAX_VALUE))
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(530, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        helpContactPanelLayout.setVerticalGroup(
+            helpContactPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(helpContactPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                .addGroup(helpContactPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -188,13 +187,13 @@ public class helpView extends javax.swing.JFrame {
             helpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, helpPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(helpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(helpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(helpInstructionLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(helpContactLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(helpInstructionPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(helpInfoCardPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(helpInstructionLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(helpContactPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         helpPanel1Layout.setVerticalGroup(
             helpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,42 +205,40 @@ public class helpView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(helpInstructionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
+                .addComponent(helpContactLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addComponent(helpContactPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 919, Short.MAX_VALUE)
+            .addGap(0, 806, Short.MAX_VALUE)
+            .addGap(0, 806, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(helpPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(20, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 968, Short.MAX_VALUE)
+            .addGap(0, 944, Short.MAX_VALUE)
+            .addGap(0, 944, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(9, 9, 9)
                     .addComponent(helpPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-    * @param args the command line arguments
-    */
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel helpContactLabel;
+    private javax.swing.JPanel helpContactPanel;
     private javax.swing.JLabel helpFavoritesLabel;
     private javax.swing.JTextArea helpFavoritesTA;
     private javax.swing.JLabel helpHowTo;
@@ -253,13 +250,11 @@ public class helpView extends javax.swing.JFrame {
     private javax.swing.JLabel helpShoppingLIstLabel;
     private javax.swing.JTextArea helpShoppningListTA;
     private imat.HeaderPanel2 helpViewHeaderPanel;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     // End of variables declaration//GEN-END:variables
 
 }

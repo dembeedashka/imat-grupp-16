@@ -63,7 +63,10 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" resourceKey="jTextField1.text"/>
+        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="jTextField1.disabledTextColor"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="jTextField1" noResource="true"/>
       </Properties>
     </Component>
@@ -75,7 +78,10 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField2">
       <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" resourceKey="jTextField2.text"/>
+        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="jTextField2.disabledTextColor"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="jTextField2" noResource="true"/>
       </Properties>
     </Component>

@@ -42,14 +42,20 @@ public class cartItem extends javax.swing.JPanel {
 
         jSpinner1.setName("jSpinner1"); // NOI18N
 
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(cartItem.class);
         jTextField1.setText(resourceMap.getString("jTextField1.text")); // NOI18N
+        jTextField1.setDisabledTextColor(resourceMap.getColor("jTextField1.disabledTextColor")); // NOI18N
+        jTextField1.setEnabled(false);
         jTextField1.setName("jTextField1"); // NOI18N
 
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
 
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText(resourceMap.getString("jTextField2.text")); // NOI18N
+        jTextField2.setDisabledTextColor(resourceMap.getColor("jTextField2.disabledTextColor")); // NOI18N
+        jTextField2.setEnabled(false);
         jTextField2.setName("jTextField2"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

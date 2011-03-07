@@ -42,6 +42,7 @@ public class actionPanel extends javax.swing.JPanel {
         actionPanel1.setName("actionPanel1"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(actionPanel.class);
+        apBasketButton.setIcon(resourceMap.getIcon("apBasketButton.icon")); // NOI18N
         apBasketButton.setText(resourceMap.getString("apBasketButton.text")); // NOI18N
         apBasketButton.setName("apBasketButton"); // NOI18N
         apBasketButton.addActionListener(new java.awt.event.ActionListener() {
@@ -50,12 +51,16 @@ public class actionPanel extends javax.swing.JPanel {
             }
         });
 
+        apUserinfoButton.setIcon(resourceMap.getIcon("apUserinfoButton.icon")); // NOI18N
         apUserinfoButton.setText(resourceMap.getString("apUserinfoButton.text")); // NOI18N
         apUserinfoButton.setName("apUserinfoButton"); // NOI18N
+        apUserinfoButton.setPreferredSize(new java.awt.Dimension(200, 65));
 
+        apReceiptButton.setIcon(resourceMap.getIcon("apReceiptButton.icon")); // NOI18N
         apReceiptButton.setText(resourceMap.getString("apReceiptButton.text")); // NOI18N
         apReceiptButton.setName("apReceiptButton"); // NOI18N
 
+        apCashregisterButton.setIcon(resourceMap.getIcon("apCashregisterButton.icon")); // NOI18N
         apCashregisterButton.setText(resourceMap.getString("apCashregisterButton.text")); // NOI18N
         apCashregisterButton.setName("apCashregisterButton"); // NOI18N
 
@@ -63,26 +68,25 @@ public class actionPanel extends javax.swing.JPanel {
         actionPanel1.setLayout(actionPanel1Layout);
         actionPanel1Layout.setHorizontalGroup(
             actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(actionPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, actionPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(apUserinfoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(apBasketButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(apCashregisterButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(apReceiptButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(apBasketButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(apReceiptButton, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE)
+                    .addComponent(apUserinfoButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, Short.MAX_VALUE)
+                    .addComponent(apCashregisterButton, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         actionPanel1Layout.setVerticalGroup(
             actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, actionPanel1Layout.createSequentialGroup()
-                .addComponent(apBasketButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(apBasketButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(apUserinfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(apReceiptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(apCashregisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(apCashregisterButton))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

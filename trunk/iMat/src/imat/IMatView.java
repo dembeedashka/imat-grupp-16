@@ -24,13 +24,13 @@ public class IMatView extends FrameView {
     public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
     public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
     public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "fav", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
-    public static final Category      subPantry  = new SubcategoryPantry("subCategory", null, null);
     public static final Category      help       = new SubcategoryOther("help", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
 
     public static final Category     search      = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
     public static final Category     shop        = new SubcategoryOther("shop", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
     public static final Category     cart        = new SubcategoryOther("cart", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
 
+    public static Category           subPantry  = new SubcategoryPantry("subCategory", null, null);
 
     private IMatPresenter presenter;
 
@@ -997,8 +997,7 @@ public class IMatView extends FrameView {
     }//GEN-LAST:event_showShoppingListButtonActionPerformed
 
     private void breadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_breadButtonActionPerformed
-        subCategoryMall.setPic(new ImageIcon("src/imat/resources/images/subcategories/bread_big.gif"));
-        subCategoryMall.setDescription("Bröd");
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/bread_big.gif"), "Bröd");
         presenter.display(subPantry);
     }//GEN-LAST:event_breadButtonActionPerformed
 
@@ -1021,6 +1020,11 @@ public class IMatView extends FrameView {
     private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchTextFieldActionPerformed
+
+    private void updateSubcategory(ImageIcon headerIcon, String description) {
+        subPantry.setHeaderIcon(headerIcon);
+        subPantry.setDescription(description);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;

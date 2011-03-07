@@ -1212,12 +1212,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subCategoryMall" alignment="0" pref="1182" max="32767" attributes="0"/>
+                                  <Component id="subCategoryMall" alignment="0" pref="799" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subCategoryMall" alignment="0" pref="1266" max="32767" attributes="0"/>
+                                  <Component id="subCategoryMall" alignment="0" pref="517" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>

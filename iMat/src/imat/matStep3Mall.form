@@ -52,14 +52,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="detailPicturePanel" min="-2" pref="159" max="-2" attributes="0"/>
+                      <Component id="detailPictureLabel" min="-2" pref="159" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="detailPriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="detailBasketAmountLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="detailBasketAmountLabel" min="-2" pref="17" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Component id="detailBasketAmountLabel2" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -97,14 +99,6 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="detailPicturePanel" min="-2" pref="141" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="detailBasketAmountLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="detailBasketAmountLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="detailProductNameLabel" alignment="3" min="-2" pref="57" max="-2" attributes="1"/>
@@ -114,9 +108,18 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="detailScrollPanel" min="-2" pref="182" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="1">
+                          <Component id="detailPictureLabel" min="-2" pref="141" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="detailBasketAmountLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="detailBasketAmountLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="detailBasketAmountLabel" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="detailAmountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="detailAmountSpinner" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
@@ -131,16 +134,16 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="detailPicturePanel">
+        <Component class="javax.swing.JLabel" name="detailPictureLabel">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" resourceKey="detailPicturePanel.text"/>
+            <Property name="text" type="java.lang.String" resourceKey="detailPictureLabel.text"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder/>
               </Border>
             </Property>
-            <Property name="name" type="java.lang.String" value="detailPicturePanel" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="detailPictureLabel" noResource="true"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="detailScrollPanel">
@@ -153,10 +156,10 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextPane" name="detailDescriptionTextPanel">
+            <Component class="javax.swing.JTextPane" name="detailDescriptionTextPane">
               <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="detailDescriptionTextPanel.text"/>
-                <Property name="name" type="java.lang.String" value="detailDescriptionTextPanel" noResource="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="detailDescriptionTextPane.text"/>
+                <Property name="name" type="java.lang.String" value="detailDescriptionTextPane" noResource="true"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -230,6 +233,12 @@
           <Properties>
             <Property name="text" type="java.lang.String" resourceKey="detailFavoriteLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailFavoriteLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailBasketAmountLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailBasketAmountLabel" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

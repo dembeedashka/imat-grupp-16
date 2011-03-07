@@ -5,8 +5,12 @@
 package imat;
 
 import imat.categories.Category;
+import imat.categories.SubcategoryDairy;
+import imat.categories.SubcategoryFruit;
+import imat.categories.SubcategoryMeat;
 import imat.categories.SubcategoryOther;
 import imat.categories.SubcategoryPantry;
+import imat.categories.SubcategorySnacks;
 import javax.swing.ImageIcon;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
@@ -33,6 +37,10 @@ public class IMatView extends FrameView {
     public static final Category     cart        = new SubcategoryOther("cart", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
 
     public static Category           subPantry  = new SubcategoryPantry("subCategory", null, null);
+    public static Category           subFruit   = new SubcategoryFruit("subCategory", null, null);
+    public static Category           subDairy   = new SubcategoryDairy("subCategory", null, null);
+    public static Category           subMeat   = new SubcategoryMeat("subCategory", null, null);
+    public static Category           subSnacks   = new SubcategorySnacks("subCategory", null, null);
 
     private IMatPresenter presenter;
 
@@ -302,6 +310,7 @@ public class IMatView extends FrameView {
             }
         });
 
+        helpButton.setIcon(resourceMap.getIcon("helpButton.icon")); // NOI18N
         helpButton.setText(resourceMap.getString("helpButton.text")); // NOI18N
         helpButton.setName("helpButton"); // NOI18N
         helpButton.addActionListener(new java.awt.event.ActionListener() {
@@ -325,7 +334,7 @@ public class IMatView extends FrameView {
                 .add(searchButton)
                 .add(247, 247, 247)
                 .add(helpButton)
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -347,6 +356,7 @@ public class IMatView extends FrameView {
         shoppingList1.setName("shoppingList1"); // NOI18N
 
         showShoppingListButton.setFont(resourceMap.getFont("showShoppingListButton.font")); // NOI18N
+        showShoppingListButton.setIcon(resourceMap.getIcon("showShoppingListButton.icon")); // NOI18N
         showShoppingListButton.setText(resourceMap.getString("showShoppingListButton.text")); // NOI18N
         showShoppingListButton.setName("showShoppingListButton"); // NOI18N
         showShoppingListButton.addActionListener(new java.awt.event.ActionListener() {
@@ -360,15 +370,18 @@ public class IMatView extends FrameView {
         shoppingListPanelLayout.setHorizontalGroup(
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(shoppingList1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, showShoppingListButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, shoppingListPanelLayout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .add(showShoppingListButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 205, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(25, 25, 25))
         );
         shoppingListPanelLayout.setVerticalGroup(
             shoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(shoppingListPanelLayout.createSequentialGroup()
                 .add(shoppingList1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 462, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(18, 18, 18)
-                .add(showShoppingListButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 53, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(showShoppingListButton)
+                .addContainerGap())
         );
 
         actionPanel.setMaximumSize(new java.awt.Dimension(222, 570));
@@ -389,8 +402,8 @@ public class IMatView extends FrameView {
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(actionPanelLayout.createSequentialGroup()
-                .add(actionPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 476, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .add(actionPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 496, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         framePanel.setBackground(resourceMap.getColor("framePanel.background")); // NOI18N
@@ -560,56 +573,111 @@ public class IMatView extends FrameView {
         berryButton.setText(resourceMap.getString("berryButton.text")); // NOI18N
         berryButton.setName("berryButton"); // NOI18N
         berryButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        berryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                berryButtonActionPerformed(evt);
+            }
+        });
 
         cabbageButton.setIcon(resourceMap.getIcon("cabbageButton.icon")); // NOI18N
         cabbageButton.setText(resourceMap.getString("cabbageButton.text")); // NOI18N
         cabbageButton.setName("cabbageButton"); // NOI18N
         cabbageButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        cabbageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cabbageButtonActionPerformed(evt);
+            }
+        });
 
         citrusFruitButton.setIcon(resourceMap.getIcon("citrusFruitButton.icon")); // NOI18N
         citrusFruitButton.setText(resourceMap.getString("citrusFruitButton.text")); // NOI18N
         citrusFruitButton.setName("citrusFruitButton"); // NOI18N
         citrusFruitButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        citrusFruitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                citrusFruitButtonActionPerformed(evt);
+            }
+        });
 
         exoticFruitButton.setIcon(resourceMap.getIcon("exoticFruitButton.icon")); // NOI18N
         exoticFruitButton.setText(resourceMap.getString("exoticFruitButton.text")); // NOI18N
         exoticFruitButton.setName("exoticFruitButton"); // NOI18N
         exoticFruitButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        exoticFruitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exoticFruitButtonActionPerformed(evt);
+            }
+        });
 
         drupeButton.setIcon(resourceMap.getIcon("drupeButton.icon")); // NOI18N
         drupeButton.setText(resourceMap.getString("drupeButton.text")); // NOI18N
         drupeButton.setName("drupeButton"); // NOI18N
         drupeButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        drupeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                drupeButtonActionPerformed(evt);
+            }
+        });
 
         herbButton.setIcon(resourceMap.getIcon("herbButton.icon")); // NOI18N
         herbButton.setText(resourceMap.getString("herbButton.text")); // NOI18N
         herbButton.setName("herbButton"); // NOI18N
         herbButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        herbButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                herbButtonActionPerformed(evt);
+            }
+        });
 
         melonButton.setIcon(resourceMap.getIcon("melonButton.icon")); // NOI18N
         melonButton.setText(resourceMap.getString("melonButton.text")); // NOI18N
         melonButton.setName("melonButton"); // NOI18N
         melonButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        melonButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                melonButtonActionPerformed(evt);
+            }
+        });
 
         podButton.setIcon(resourceMap.getIcon("podButton.icon")); // NOI18N
         podButton.setText(resourceMap.getString("podButton.text")); // NOI18N
         podButton.setName("podButton"); // NOI18N
         podButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        podButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                podButtonActionPerformed(evt);
+            }
+        });
 
         potatoButton.setIcon(resourceMap.getIcon("potatoButton.icon")); // NOI18N
         potatoButton.setText(resourceMap.getString("potatoButton.text")); // NOI18N
         potatoButton.setName("potatoButton"); // NOI18N
         potatoButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        potatoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                potatoButtonActionPerformed(evt);
+            }
+        });
 
         rootVegetableButton.setIcon(resourceMap.getIcon("rootVegetableButton.icon")); // NOI18N
         rootVegetableButton.setText(resourceMap.getString("rootVegetableButton.text")); // NOI18N
         rootVegetableButton.setName("rootVegetableButton"); // NOI18N
         rootVegetableButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        rootVegetableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rootVegetableButtonActionPerformed(evt);
+            }
+        });
 
         vegetableButton.setIcon(resourceMap.getIcon("vegetableButton.icon")); // NOI18N
         vegetableButton.setText(resourceMap.getString("vegetableButton.text")); // NOI18N
         vegetableButton.setName("vegetableButton"); // NOI18N
         vegetableButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        vegetableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vegetableButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout cardFruitPanelLayout = new org.jdesktop.layout.GroupLayout(cardFruitPanel);
         cardFruitPanel.setLayout(cardFruitPanelLayout);
@@ -684,6 +752,11 @@ public class IMatView extends FrameView {
         dairySubButton.setText(resourceMap.getString("dairySubButton.text")); // NOI18N
         dairySubButton.setName("dairySubButton"); // NOI18N
         dairySubButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        dairySubButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dairySubButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout cardDairyPanelLayout = new org.jdesktop.layout.GroupLayout(cardDairyPanel);
         cardDairyPanel.setLayout(cardDairyPanelLayout);
@@ -714,11 +787,21 @@ public class IMatView extends FrameView {
         fishButton.setText(resourceMap.getString("fishButton.text")); // NOI18N
         fishButton.setName("fishButton"); // NOI18N
         fishButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        fishButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fishButtonActionPerformed(evt);
+            }
+        });
 
         meatSubButton.setIcon(resourceMap.getIcon("meatSubButton.icon")); // NOI18N
         meatSubButton.setText(resourceMap.getString("meatSubButton.text")); // NOI18N
         meatSubButton.setName("meatSubButton"); // NOI18N
         meatSubButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        meatSubButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                meatSubButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout cardMeatPanelLayout = new org.jdesktop.layout.GroupLayout(cardMeatPanel);
         cardMeatPanel.setLayout(cardMeatPanelLayout);
@@ -789,21 +872,41 @@ public class IMatView extends FrameView {
         coldDrinksButton.setText(resourceMap.getString("coldDrinksButton.text")); // NOI18N
         coldDrinksButton.setName("coldDrinksButton"); // NOI18N
         coldDrinksButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        coldDrinksButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coldDrinksButtonActionPerformed(evt);
+            }
+        });
 
         hotDrinksButton.setIcon(resourceMap.getIcon("hotDrinksButton.icon")); // NOI18N
         hotDrinksButton.setText(resourceMap.getString("hotDrinksButton.text")); // NOI18N
         hotDrinksButton.setName("hotDrinksButton"); // NOI18N
         hotDrinksButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        hotDrinksButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hotDrinksButtonActionPerformed(evt);
+            }
+        });
 
         nutsSeedsButton.setIcon(resourceMap.getIcon("nutsSeedsButton.icon")); // NOI18N
         nutsSeedsButton.setText(resourceMap.getString("nutsSeedsButton.text")); // NOI18N
         nutsSeedsButton.setName("nutsSeedsButton"); // NOI18N
         nutsSeedsButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        nutsSeedsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nutsSeedsButtonActionPerformed(evt);
+            }
+        });
 
         sweetsButton.setIcon(resourceMap.getIcon("sweetsButton.icon")); // NOI18N
         sweetsButton.setText(resourceMap.getString("sweetsButton.text")); // NOI18N
         sweetsButton.setName("sweetsButton"); // NOI18N
         sweetsButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        sweetsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sweetsButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout cardDrinksPanelLayout = new org.jdesktop.layout.GroupLayout(cardDrinksPanel);
         cardDrinksPanel.setLayout(cardDrinksPanelLayout);
@@ -868,15 +971,15 @@ public class IMatView extends FrameView {
             cardDetailedViewPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardDetailedViewPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matStep3Mall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(377, Short.MAX_VALUE))
+                .add(matStep3Mall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 639, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         cardDetailedViewPanelLayout.setVerticalGroup(
             cardDetailedViewPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardDetailedViewPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(matStep3Mall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .add(matStep3Mall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 348, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardDetailedViewPanel, "detailedView");
@@ -930,8 +1033,8 @@ public class IMatView extends FrameView {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(framePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-                    .add(actionPanel, 0, 550, Short.MAX_VALUE))
+                    .add(framePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE)
+                    .add(actionPanel, 0, 554, Short.MAX_VALUE))
                 .add(313, 313, 313)
                 .add(bottomBorderPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -948,8 +1051,7 @@ public class IMatView extends FrameView {
             .add(mainPanelLayout.createSequentialGroup()
                 .add(topNavigationPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 616, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(bottomContentsPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE))
         );
 
         setComponent(mainPanel);
@@ -1016,14 +1118,12 @@ public class IMatView extends FrameView {
     }//GEN-LAST:event_helpButtonActionPerformed
 
     private void flourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flourButtonActionPerformed
-        subCategoryMall.setPic(new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif"));
-        subCategoryMall.setDescription("Mjöl, socker & salt");
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif"),("Mjöl, socker & salt"));
         presenter.display(subPantry);
     }//GEN-LAST:event_flourButtonActionPerformed
 
     private void pastaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pastaButtonActionPerformed
-        subCategoryMall.setPic(new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif"));
-        subCategoryMall.setDescription("Pasta");
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif"),("Pasta"));
         presenter.display(subPantry);
     }//GEN-LAST:event_pastaButtonActionPerformed
 
@@ -1031,9 +1131,107 @@ public class IMatView extends FrameView {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchTextFieldActionPerformed
 
+    private void berryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_berryButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/berry_big.gif"),("Bär"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_berryButtonActionPerformed
+
+    private void cabbageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cabbageButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/cabbage_big.gif"),("Kål"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_cabbageButtonActionPerformed
+
+    private void citrusFruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_citrusFruitButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/citrus_fruit_big.gif"),("Citrusfrukter"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_citrusFruitButtonActionPerformed
+
+    private void exoticFruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exoticFruitButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif"),("Exotiska frukter"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_exoticFruitButtonActionPerformed
+
+    private void drupeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drupeButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/fruit_big.gif"),("Stenfrukter"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_drupeButtonActionPerformed
+
+    private void herbButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_herbButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/herb_big.gif"),("Örtkryddor"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_herbButtonActionPerformed
+
+    private void melonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_melonButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/melons_big.gif"),("Meloner"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_melonButtonActionPerformed
+
+    private void podButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_podButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/pod_big.gif"),("Baljväxter"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_podButtonActionPerformed
+
+    private void potatoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potatoButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/potato_rice_big.gif"),("Potatis & ris"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_potatoButtonActionPerformed
+
+    private void rootVegetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootVegetableButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/root_vegetable_big.gif"),("Rotfrukter"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_rootVegetableButtonActionPerformed
+
+    private void vegetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vegetableButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif"),("Grönsaker"));
+        presenter.display(subFruit);
+    }//GEN-LAST:event_vegetableButtonActionPerformed
+
+    private void dairySubButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dairySubButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/dairies_big.gif"),("Mejeriprodukter"));
+        presenter.display(subDairy);
+    }//GEN-LAST:event_dairySubButtonActionPerformed
+
+    private void fishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/fish_big.gif"),("Fisk"));
+        presenter.display(subMeat);
+    }//GEN-LAST:event_fishButtonActionPerformed
+
+    private void meatSubButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meatSubButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/meat_big.gif"),("Kött"));
+        presenter.display(subMeat);
+    }//GEN-LAST:event_meatSubButtonActionPerformed
+
+    private void coldDrinksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coldDrinksButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/cold_drinks_big.gif"),("Drycker (kalla)"));
+        presenter.display(subSnacks);
+    }//GEN-LAST:event_coldDrinksButtonActionPerformed
+
+    private void hotDrinksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotDrinksButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/hot_drinks_big.gif"),("Drycker (varma)"));
+        presenter.display(subSnacks);
+    }//GEN-LAST:event_hotDrinksButtonActionPerformed
+
+    private void nutsSeedsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutsSeedsButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/nuts_and_seeds_big.gif"),("Nötter och frön"));
+        presenter.display(subSnacks);
+    }//GEN-LAST:event_nutsSeedsButtonActionPerformed
+
+    private void sweetsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sweetsButtonActionPerformed
+        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/sweet_big.gif"),("Sötsaker"));
+        presenter.display(subSnacks);
+    }//GEN-LAST:event_sweetsButtonActionPerformed
+
     private void updateSubcategory(ImageIcon headerIcon, String description) {
         subPantry.setHeaderIcon(headerIcon);
         subPantry.setDescription(description);
+        subFruit.setHeaderIcon(headerIcon);
+        subFruit.setDescription(description);
+        subDairy.setHeaderIcon(headerIcon);
+        subDairy.setDescription(description);
+        subMeat.setHeaderIcon(headerIcon);
+        subMeat.setDescription(description);
+        subSnacks.setHeaderIcon(headerIcon);
+        subSnacks.setDescription(description);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

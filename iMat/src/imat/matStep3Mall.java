@@ -11,6 +11,9 @@
 
 package imat;
 
+import javax.swing.Icon;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -28,6 +31,46 @@ public class matStep3Mall extends javax.swing.JPanel {
         //TODO: update to show product
     }
 
+    public JLabel getDetailCostLabel() {
+        return detailCostLabel;
+    }
+
+    public void setDetailCostLabel(String cost) {
+        detailCostLabel.setText(cost);
+    }
+
+    public JTextPane getDetailDescriptionTextPanel() {
+        return detailDescriptionTextPane;
+    }
+
+    public void setDetailDescriptionTextPane(String description) {
+        detailDescriptionTextPane.setText(description);
+    }
+
+    public JLabel getDetailPicturePanel() {
+        return detailPictureLabel;
+    }
+
+    public void setDetailPictureLabel(Icon icon) {
+        detailPictureLabel.setIcon(icon);
+    }
+
+    public JLabel getDetailPriceLabel() {
+        return detailPriceLabel;
+    }
+
+    public void setDetailPriceLabel(int price) {
+        detailPriceLabel.setText(price+"");
+    }
+
+    public JLabel getDetailProductNameLabel() {
+        return detailProductNameLabel;
+    }
+
+    public void setDetailProductNameLabel(String name) {
+        detailProductNameLabel.setText(name);
+    }
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -38,9 +81,9 @@ public class matStep3Mall extends javax.swing.JPanel {
     private void initComponents() {
 
         detailPanel = new javax.swing.JPanel();
-        detailPicturePanel = new javax.swing.JLabel();
+        detailPictureLabel = new javax.swing.JLabel();
         detailScrollPanel = new javax.swing.JScrollPane();
-        detailDescriptionTextPanel = new javax.swing.JTextPane();
+        detailDescriptionTextPane = new javax.swing.JTextPane();
         detailProductNameLabel = new javax.swing.JLabel();
         detailFavoriteButton = new javax.swing.JButton();
         detailBasketAmountLabel1 = new javax.swing.JLabel();
@@ -52,6 +95,7 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailCostLabel = new javax.swing.JLabel();
         detailBasketButton = new javax.swing.JButton();
         detailFavoriteLabel = new javax.swing.JLabel();
+        detailBasketAmountLabel = new javax.swing.JLabel();
 
         setName("Form"); // NOI18N
         setPreferredSize(new java.awt.Dimension(795, 784));
@@ -61,17 +105,17 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailPanel.setOpaque(false);
         detailPanel.setPreferredSize(new java.awt.Dimension(775, 209));
 
-        detailPicturePanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        detailPictureLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(matStep3Mall.class);
-        detailPicturePanel.setText(resourceMap.getString("detailPicturePanel.text")); // NOI18N
-        detailPicturePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        detailPicturePanel.setName("detailPicturePanel"); // NOI18N
+        detailPictureLabel.setText(resourceMap.getString("detailPictureLabel.text")); // NOI18N
+        detailPictureLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        detailPictureLabel.setName("detailPictureLabel"); // NOI18N
 
         detailScrollPanel.setName("detailScrollPanel"); // NOI18N
 
-        detailDescriptionTextPanel.setText(resourceMap.getString("detailDescriptionTextPanel.text")); // NOI18N
-        detailDescriptionTextPanel.setName("detailDescriptionTextPanel"); // NOI18N
-        detailScrollPanel.setViewportView(detailDescriptionTextPanel);
+        detailDescriptionTextPane.setText(resourceMap.getString("detailDescriptionTextPane.text")); // NOI18N
+        detailDescriptionTextPane.setName("detailDescriptionTextPane"); // NOI18N
+        detailScrollPanel.setViewportView(detailDescriptionTextPane);
 
         detailProductNameLabel.setFont(resourceMap.getFont("detailProductNameLabel.font")); // NOI18N
         detailProductNameLabel.setText(resourceMap.getString("detailProductNameLabel.text")); // NOI18N
@@ -113,6 +157,9 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailFavoriteLabel.setText(resourceMap.getString("detailFavoriteLabel.text")); // NOI18N
         detailFavoriteLabel.setName("detailFavoriteLabel"); // NOI18N
 
+        detailBasketAmountLabel.setText(resourceMap.getString("detailBasketAmountLabel.text")); // NOI18N
+        detailBasketAmountLabel.setName("detailBasketAmountLabel"); // NOI18N
+
         javax.swing.GroupLayout detailPanelLayout = new javax.swing.GroupLayout(detailPanel);
         detailPanel.setLayout(detailPanelLayout);
         detailPanelLayout.setHorizontalGroup(
@@ -120,14 +167,16 @@ public class matStep3Mall extends javax.swing.JPanel {
             .addGroup(detailPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(detailPicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(detailPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(detailPriceLabel)
                             .addGroup(detailPanelLayout.createSequentialGroup()
                                 .addComponent(detailBasketAmountLabel1)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(detailBasketAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(3, 3, 3)
                                 .addComponent(detailBasketAmountLabel2)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,20 +205,21 @@ public class matStep3Mall extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(detailPanelLayout.createSequentialGroup()
-                        .addComponent(detailPicturePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(detailBasketAmountLabel1)
-                            .addComponent(detailBasketAmountLabel2)))
-                    .addGroup(detailPanelLayout.createSequentialGroup()
                         .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(detailProductNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(detailFavoriteLabel))
                             .addComponent(detailFavoriteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(detailScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(detailScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(detailPanelLayout.createSequentialGroup()
+                        .addComponent(detailPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(detailBasketAmountLabel1)
+                            .addComponent(detailBasketAmountLabel2)
+                            .addComponent(detailBasketAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(detailAmountLabel)
                     .addComponent(detailAmountSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,15 +250,16 @@ public class matStep3Mall extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel detailAmountLabel;
     private javax.swing.JSpinner detailAmountSpinner;
+    private javax.swing.JLabel detailBasketAmountLabel;
     private javax.swing.JLabel detailBasketAmountLabel1;
     private javax.swing.JLabel detailBasketAmountLabel2;
     private javax.swing.JButton detailBasketButton;
     private javax.swing.JLabel detailCostLabel;
-    private javax.swing.JTextPane detailDescriptionTextPanel;
+    private javax.swing.JTextPane detailDescriptionTextPane;
     private javax.swing.JButton detailFavoriteButton;
     private javax.swing.JLabel detailFavoriteLabel;
     private javax.swing.JPanel detailPanel;
-    private javax.swing.JLabel detailPicturePanel;
+    private javax.swing.JLabel detailPictureLabel;
     private javax.swing.JLabel detailPriceLabel;
     private javax.swing.JLabel detailProductNameLabel;
     private javax.swing.JScrollPane detailScrollPanel;

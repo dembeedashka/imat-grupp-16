@@ -16,6 +16,7 @@ import org.jdesktop.application.FrameView;
  */
 public class IMatView extends FrameView {
 
+
     public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
     public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "fruit", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
     public static final Category      meat       = new Category(Category.MEAT_RED, "meat", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
@@ -28,6 +29,7 @@ public class IMatView extends FrameView {
 
     public static final Category     search      = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
     public static final Category     shop        = new SubcategoryOther("shop", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
+    public static final Category     cart        = new SubcategoryOther("cart", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
 
 
     private IMatPresenter presenter;
@@ -276,6 +278,11 @@ public class IMatView extends FrameView {
 
         searchTextField.setText(resourceMap.getString("searchTextField.text")); // NOI18N
         searchTextField.setName("searchTextField"); // NOI18N
+        searchTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchTextFieldActionPerformed(evt);
+            }
+        });
 
         searchButton.setText(resourceMap.getString("searchButton.text")); // NOI18N
         searchButton.setName("searchButton"); // NOI18N
@@ -1008,6 +1015,10 @@ public class IMatView extends FrameView {
         subCategoryMall.setDescription("Pasta");
         presenter.display(subPantry);
     }//GEN-LAST:event_pastaButtonActionPerformed
+
+    private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;

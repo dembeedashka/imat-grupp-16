@@ -44,6 +44,11 @@ public class actionPanel extends javax.swing.JPanel {
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(actionPanel.class);
         apBasketButton.setText(resourceMap.getString("apBasketButton.text")); // NOI18N
         apBasketButton.setName("apBasketButton"); // NOI18N
+        apBasketButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apBasketButtonActionPerformed(evt);
+            }
+        });
 
         apUserinfoButton.setText(resourceMap.getString("apUserinfoButton.text")); // NOI18N
         apUserinfoButton.setName("apUserinfoButton"); // NOI18N
@@ -61,7 +66,7 @@ public class actionPanel extends javax.swing.JPanel {
             .addGroup(actionPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(apUserinfoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(apUserinfoButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                     .addComponent(apBasketButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                     .addComponent(apCashregisterButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                     .addComponent(apReceiptButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))
@@ -91,6 +96,10 @@ public class actionPanel extends javax.swing.JPanel {
             .addComponent(actionPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void apBasketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apBasketButtonActionPerformed
+
+    }//GEN-LAST:event_apBasketButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

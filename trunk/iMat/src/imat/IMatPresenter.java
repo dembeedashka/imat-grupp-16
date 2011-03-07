@@ -101,4 +101,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     public void forward() {
         historyManager.forward();
     }
+
+    public void clearSubProducts()
+    {
+        subCategoryMall.getProductPanel().removeAll();
+    }
 }

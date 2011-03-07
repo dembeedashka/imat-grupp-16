@@ -10,6 +10,8 @@ import imat.categories.SubcategoryPantry;
 import javax.swing.ImageIcon;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Product;
 
 /**
  * The application's main frame.
@@ -977,6 +979,12 @@ public class IMatView extends FrameView {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         presenter.display(search);
+        String text = searchTextField.getText();
+        for (Product p : IMatDataHandler.getInstance().getProducts()){
+            if(p.getName().indexOf(text)>0){
+                //SearchView.addProduct(p);
+            }
+        }
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void showShoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showShoppingListButtonActionPerformed

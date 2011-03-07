@@ -69,8 +69,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
         // update header and description for subcategory template only
         if(category.getClass() != Category.class) {
-            subCategoryMall.setPic(category.getHeaderIcon());
-            subCategoryMall.setDescription(category.getDescription());
+            subCategoryMall.setPic(state.getHeaderIcon());
+            subCategoryMall.setDescription(state.getDescription());
         }
         
         if(product != null) {

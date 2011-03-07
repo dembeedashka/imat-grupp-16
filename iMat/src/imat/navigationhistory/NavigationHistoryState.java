@@ -41,6 +41,14 @@ public class NavigationHistoryState {
         return selectedCategory;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public ImageIcon getHeaderIcon() {
+        return headerIcon;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {

@@ -215,7 +215,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="291" max="32767" attributes="0"/>
+                          <EmptySpace pref="299" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -895,11 +895,11 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="dairyMall" alignment="0" pref="767" max="32767" attributes="0"/>
+                                  <Component id="dairyMall" alignment="0" pref="1162" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
                                       <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="246" max="32767" attributes="0"/>
+                                      <EmptySpace pref="641" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -909,7 +909,7 @@
                                       <Component id="dairyMall" min="-2" pref="335" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="397" max="32767" attributes="0"/>
+                                      <EmptySpace pref="554" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -945,13 +945,13 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="meatMall" alignment="0" pref="768" max="32767" attributes="0"/>
+                                  <Component id="meatMall" alignment="0" pref="1162" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                                       <Component id="fishButton" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="59" max="32767" attributes="0"/>
+                                      <EmptySpace pref="453" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -965,7 +965,7 @@
                                           <Component id="fishButton" min="-2" max="-2" attributes="0"/>
                                           <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="403" max="32767" attributes="0"/>
+                                      <EmptySpace pref="539" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1049,7 +1049,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="drinksMall" alignment="0" pref="803" max="32767" attributes="0"/>
+                                  <Component id="drinksMall" alignment="0" pref="1162" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1064,7 +1064,7 @@
                                               <Component id="hotDrinksButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="105" max="32767" attributes="0"/>
+                                      <EmptySpace pref="464" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1083,7 +1083,7 @@
                                           <Component id="nutsSeedsButton" min="-2" max="-2" attributes="0"/>
                                           <Component id="sweetsButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="293" max="32767" attributes="0"/>
+                                      <EmptySpace pref="467" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>

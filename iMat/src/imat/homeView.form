@@ -21,15 +21,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
-                      <Component id="homeUserInfoButton" min="-2" pref="364" max="-2" attributes="0"/>
-                  </Group>
                   <Component id="homeBreadcrumbsPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
-                      <Component id="homeHelpButton" min="-2" pref="364" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -37,8 +29,16 @@
                           <Component id="homeViewHeaderPanel" alignment="0" pref="595" max="32767" attributes="1"/>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="278" max="-2" attributes="0"/>
+                      <Component id="homeHelpButton" min="-2" pref="203" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="281" max="-2" attributes="0"/>
+                      <Component id="homeUserInfoButton" min="-2" pref="206" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
+              <EmptySpace pref="117" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,12 +49,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="homeViewHeaderPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="homeUserInfoButton" min="-2" pref="83" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="homeUserInfoButton" min="-2" pref="66" max="-2" attributes="1"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="homeHelpButton" min="-2" pref="83" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="homeHelpButton" pref="66" max="32767" attributes="1"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,6 +81,7 @@
     <Component class="javax.swing.JButton" name="homeUserInfoButton">
       <Properties>
         <Property name="font" type="java.awt.Font" resourceKey="homeUserInfoButton.font"/>
+        <Property name="icon" type="javax.swing.Icon" resourceKey="homeUserInfoButton.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="homeUserInfoButton.text"/>
         <Property name="name" type="java.lang.String" value="homeUserInfoButton" noResource="true"/>
       </Properties>
@@ -111,6 +112,7 @@
     <Component class="javax.swing.JButton" name="homeHelpButton">
       <Properties>
         <Property name="font" type="java.awt.Font" resourceKey="homeHelpButton.font"/>
+        <Property name="icon" type="javax.swing.Icon" resourceKey="homeHelpButton.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="homeHelpButton.text"/>
         <Property name="name" type="java.lang.String" value="homeHelpButton" noResource="true"/>
       </Properties>

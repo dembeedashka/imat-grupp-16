@@ -81,6 +81,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListBottomPanel.setName("shoppingListBottomPanel"); // NOI18N
 
         shoppingListAddRow.setFont(resourceMap.getFont("shoppingListAddRow.font")); // NOI18N
+        shoppingListAddRow.setIcon(resourceMap.getIcon("shoppingListAddRow.icon")); // NOI18N
         shoppingListAddRow.setText(resourceMap.getString("shoppingListAddRow.text")); // NOI18N
         shoppingListAddRow.setName("shoppingListAddRow"); // NOI18N
         shoppingListAddRow.addActionListener(new java.awt.event.ActionListener() {

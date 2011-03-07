@@ -119,6 +119,7 @@
         <Component class="javax.swing.JButton" name="shoppingListAddRow">
           <Properties>
             <Property name="font" type="java.awt.Font" resourceKey="shoppingListAddRow.font"/>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="shoppingListAddRow.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="shoppingListAddRow.text"/>
             <Property name="name" type="java.lang.String" value="shoppingListAddRow" noResource="true"/>
           </Properties>

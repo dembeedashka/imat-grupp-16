@@ -11,6 +11,9 @@
 
 package imat;
 
+import javax.swing.Icon;
+import javax.swing.JPanel;
+
 /**
  *
  * @author David
@@ -20,6 +23,24 @@ public class matStep2Mall extends javax.swing.JPanel {
     /** Creates new form matStep2Mall */
     public matStep2Mall() {
         initComponents();
+    }
+
+    public void setPic(Icon icon)
+    {
+        matMallHeaderPanel.getHeaderPanelPicLabel().setIcon(icon);
+    }
+
+    public void setDescription(String string)
+    {
+        matMallHeaderPanel.getHeaderPanelTextPane().setText(string);
+    }
+
+    public JPanel getProductPanel() {
+        return productPanel;
+    }
+
+    public void setProductPanel(JPanel productPanel) {
+        this.productPanel = productPanel;
     }
 
     /** This method is called from within the constructor to

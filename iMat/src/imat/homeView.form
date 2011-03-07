@@ -38,8 +38,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-              <Component id="homeScrollBar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,7 +56,6 @@
               <Component id="homeHelpButton" min="-2" pref="83" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
-          <Component id="homeScrollBar" alignment="0" pref="758" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -115,11 +113,6 @@
         <Property name="font" type="java.awt.Font" resourceKey="homeHelpButton.font"/>
         <Property name="text" type="java.lang.String" resourceKey="homeHelpButton.text"/>
         <Property name="name" type="java.lang.String" value="homeHelpButton" noResource="true"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JScrollBar" name="homeScrollBar">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="homeScrollBar" noResource="true"/>
       </Properties>
     </Component>
     <Component class="imat.HeaderPanel2" name="homeViewHeaderPanel">

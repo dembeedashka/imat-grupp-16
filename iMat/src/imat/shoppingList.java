@@ -62,9 +62,9 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListTopPanel.setLayout(shoppingListTopPanelLayout);
         shoppingListTopPanelLayout.setHorizontalGroup(
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
+            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shoppingListTopPanelLayout.createSequentialGroup()
-                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1))
         );
@@ -93,7 +93,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListBottomPanel.setLayout(shoppingListBottomPanelLayout);
         shoppingListBottomPanelLayout.setHorizontalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .addComponent(shoppingListAddRow, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
         );
         shoppingListBottomPanelLayout.setVerticalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +114,7 @@ public class shoppingList extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(shoppingListTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(shoppingListBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(shoppingListRowScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .addComponent(shoppingListRowScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +128,6 @@ public class shoppingList extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void shoppingListAddRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListAddRowActionPerformed
-        // TODO: Add rows!
         shoppingListRowPanel.add(new ShoppingListRow());
         shoppingListRowPanel.revalidate();
         shoppingListRowPanel.repaint();

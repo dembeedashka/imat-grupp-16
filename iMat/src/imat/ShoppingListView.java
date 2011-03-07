@@ -32,7 +32,6 @@ public class ShoppingListView extends javax.swing.JPanel {
     private void initComponents() {
 
         shoppingBreadcrumbPanel = new javax.swing.JPanel();
-        shoppingScrollBar = new javax.swing.JScrollBar();
         headerPanel21 = new imat.HeaderPanel2();
         shoppingListDisplayPanel = new javax.swing.JPanel();
 
@@ -50,8 +49,6 @@ public class ShoppingListView extends javax.swing.JPanel {
             shoppingBreadcrumbPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 101, Short.MAX_VALUE)
         );
-
-        shoppingScrollBar.setName("shoppingScrollBar"); // NOI18N
 
         headerPanel21.setName("headerPanel21"); // NOI18N
 
@@ -79,12 +76,10 @@ public class ShoppingListView extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 823, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(shoppingBreadcrumbPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -99,7 +94,6 @@ public class ShoppingListView extends javax.swing.JPanel {
     private imat.HeaderPanel2 headerPanel21;
     private javax.swing.JPanel shoppingBreadcrumbPanel;
     private javax.swing.JPanel shoppingListDisplayPanel;
-    private javax.swing.JScrollBar shoppingScrollBar;
     // End of variables declaration//GEN-END:variables
 
 }

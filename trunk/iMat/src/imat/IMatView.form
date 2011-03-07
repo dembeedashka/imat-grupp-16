@@ -215,7 +215,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="291" max="32767" attributes="0"/>
+                          <EmptySpace pref="299" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -649,7 +649,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="shoppingCart1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace pref="312" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -686,7 +686,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="fruitMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace pref="312" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -743,7 +743,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="meatMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace pref="312" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -781,7 +781,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="favMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace pref="312" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -819,7 +819,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="drinksMall" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="357" max="32767" attributes="0"/>
+                                      <EmptySpace pref="312" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>

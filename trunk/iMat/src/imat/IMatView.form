@@ -215,7 +215,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="311" max="32767" attributes="0"/>
+                          <EmptySpace pref="319" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -546,12 +546,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="helpView1" alignment="0" pref="902" max="32767" attributes="0"/>
+                                  <Component id="helpView1" alignment="0" pref="1182" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="helpView1" alignment="0" pref="1011" max="32767" attributes="0"/>
+                                  <Component id="helpView1" alignment="0" pref="1027" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -576,12 +576,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="searchView1" alignment="0" pref="757" max="32767" attributes="0"/>
+                                  <Component id="searchView1" alignment="0" pref="1182" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="searchView1" alignment="0" pref="542" max="32767" attributes="0"/>
+                                  <Component id="searchView1" alignment="0" pref="1027" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>

@@ -49,8 +49,9 @@ public class itemPanel extends javax.swing.JPanel {
         return productName;
     }
 
-    public void setProductName(JLabel productName) {
-        this.productName = productName;
+    public void setProductName(String productName) {
+        this.productName.setText(productName);
+
     }
 
     public JLabel getProductPrice() {

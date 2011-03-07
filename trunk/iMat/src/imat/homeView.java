@@ -36,7 +36,6 @@ public class homeView extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         homeInfoTextArea2 = new javax.swing.JTextArea();
         homeHelpButton = new javax.swing.JButton();
-        homeScrollBar = new javax.swing.JScrollBar();
         homeViewHeaderPanel = new imat.HeaderPanel2();
 
         setName("Form"); // NOI18N
@@ -74,8 +73,6 @@ public class homeView extends javax.swing.JPanel {
         homeHelpButton.setText(resourceMap.getString("homeHelpButton.text")); // NOI18N
         homeHelpButton.setName("homeHelpButton"); // NOI18N
 
-        homeScrollBar.setName("homeScrollBar"); // NOI18N
-
         homeViewHeaderPanel.setName("homeViewHeaderPanel"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -96,8 +93,7 @@ public class homeView extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(homeViewHeaderPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE))))
-                .addGap(101, 101, 101)
-                .addComponent(homeScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(117, 117, 117))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,7 +108,6 @@ public class homeView extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(homeHelpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(homeScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -121,7 +116,6 @@ public class homeView extends javax.swing.JPanel {
     private javax.swing.JPanel homeBreadcrumbsPanel;
     private javax.swing.JButton homeHelpButton;
     private javax.swing.JTextArea homeInfoTextArea2;
-    private javax.swing.JScrollBar homeScrollBar;
     private javax.swing.JButton homeUserInfoButton;
     private imat.HeaderPanel2 homeViewHeaderPanel;
     private javax.swing.JScrollPane jScrollPane2;

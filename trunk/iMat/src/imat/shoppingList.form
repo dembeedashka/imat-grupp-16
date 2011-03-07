@@ -21,7 +21,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="shoppingListTopPanel" alignment="0" max="32767" attributes="1"/>
           <Component id="shoppingListBottomPanel" alignment="0" max="32767" attributes="1"/>
-          <Component id="shoppingListRowScrollPane" alignment="0" pref="264" max="32767" attributes="0"/>
+          <Component id="shoppingListRowScrollPane" alignment="0" pref="255" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -50,9 +50,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListName" alignment="0" pref="258" max="32767" attributes="0"/>
+              <Component id="shoppingListName" alignment="0" pref="249" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="shoppingListHeader" pref="175" max="32767" attributes="0"/>
+                  <Component id="shoppingListHeader" pref="166" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -103,7 +103,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListAddRow" alignment="0" pref="264" max="32767" attributes="0"/>
+              <Component id="shoppingListAddRow" alignment="0" pref="255" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">

@@ -31,14 +31,11 @@ public class SearchView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        searchScrollBar = new javax.swing.JScrollBar();
         searchBreadcrumbPanel = new javax.swing.JPanel();
         searchHeaderPanel = new imat.HeaderPanel2();
         searchDisplayPanel = new javax.swing.JPanel();
 
         setName("Form"); // NOI18N
-
-        searchScrollBar.setName("searchScrollBar"); // NOI18N
 
         searchBreadcrumbPanel.setName("searchBreadcrumbPanel"); // NOI18N
 
@@ -81,12 +78,10 @@ public class SearchView extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(searchHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchScrollBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(searchScrollBar, javax.swing.GroupLayout.DEFAULT_SIZE, 767, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(searchHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -102,7 +97,6 @@ public class SearchView extends javax.swing.JPanel {
     private javax.swing.JPanel searchBreadcrumbPanel;
     private javax.swing.JPanel searchDisplayPanel;
     private imat.HeaderPanel2 searchHeaderPanel;
-    private javax.swing.JScrollBar searchScrollBar;
     // End of variables declaration//GEN-END:variables
 
 }

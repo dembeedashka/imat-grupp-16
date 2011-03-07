@@ -19,8 +19,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="topNavigationPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="bottomContentsPanel" min="-2" pref="616" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="bottomContentsPanel" pref="638" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -185,8 +184,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="shoppingListPanel" alignment="0" min="-2" max="-2" attributes="1"/>
-                          <Component id="framePanel" alignment="0" pref="550" max="32767" attributes="1"/>
-                          <Component id="actionPanel" alignment="0" min="0" pref="550" max="32767" attributes="1"/>
+                          <Component id="framePanel" alignment="0" pref="554" max="32767" attributes="1"/>
+                          <Component id="actionPanel" alignment="0" min="0" pref="554" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
                       <Component id="bottomBorderPanel" max="32767" attributes="0"/>
@@ -215,7 +214,7 @@
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
                           <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="319" max="32767" attributes="0"/>
+                          <EmptySpace pref="277" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -278,6 +277,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="helpButton">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="helpButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="helpButton.text"/>
                     <Property name="name" type="java.lang.String" value="helpButton" noResource="true"/>
                   </Properties>
@@ -296,16 +296,20 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="shoppingList1" alignment="0" pref="264" max="32767" attributes="1"/>
-                      <Component id="showShoppingListButton" alignment="1" pref="264" max="32767" attributes="1"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="34" max="32767" attributes="0"/>
+                          <Component id="showShoppingListButton" min="-2" pref="205" max="-2" attributes="1"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="shoppingList1" min="-2" pref="462" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="showShoppingListButton" min="-2" pref="53" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="showShoppingListButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -319,6 +323,7 @@
                 <Component class="javax.swing.JButton" name="showShoppingListButton">
                   <Properties>
                     <Property name="font" type="java.awt.Font" resourceKey="showShoppingListButton.font"/>
+                    <Property name="icon" type="javax.swing.Icon" resourceKey="showShoppingListButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="showShoppingListButton.text"/>
                     <Property name="name" type="java.lang.String" value="showShoppingListButton" noResource="true"/>
                   </Properties>
@@ -354,8 +359,8 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="actionPanel1" min="-2" pref="476" max="-2" attributes="0"/>
-                          <EmptySpace pref="74" max="32767" attributes="0"/>
+                          <Component id="actionPanel1" min="-2" pref="496" max="-2" attributes="0"/>
+                          <EmptySpace pref="58" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -742,6 +747,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="berryButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="cabbageButton">
                               <Properties>
@@ -752,6 +760,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cabbageButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="citrusFruitButton">
                               <Properties>
@@ -762,6 +773,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="citrusFruitButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="exoticFruitButton">
                               <Properties>
@@ -772,6 +786,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exoticFruitButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="drupeButton">
                               <Properties>
@@ -782,6 +799,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="drupeButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="herbButton">
                               <Properties>
@@ -792,6 +812,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="herbButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="melonButton">
                               <Properties>
@@ -802,6 +825,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="melonButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="podButton">
                               <Properties>
@@ -812,6 +838,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="podButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="potatoButton">
                               <Properties>
@@ -822,6 +851,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="potatoButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="rootVegetableButton">
                               <Properties>
@@ -832,6 +864,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rootVegetableButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="vegetableButton">
                               <Properties>
@@ -842,6 +877,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vegetableButtonActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -892,6 +930,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dairySubButtonActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -948,6 +989,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fishButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="meatSubButton">
                               <Properties>
@@ -958,6 +1002,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="meatSubButtonActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -1094,6 +1141,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coldDrinksButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="hotDrinksButton">
                               <Properties>
@@ -1104,6 +1154,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hotDrinksButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="nutsSeedsButton">
                               <Properties>
@@ -1114,6 +1167,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nutsSeedsButtonActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="sweetsButton">
                               <Properties>
@@ -1124,6 +1180,9 @@
                                   <Dimension value="[300, 62]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sweetsButtonActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -1172,8 +1231,8 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="matStep3Mall1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="377" max="32767" attributes="0"/>
+                                      <Component id="matStep3Mall1" min="-2" pref="639" max="-2" attributes="0"/>
+                                      <EmptySpace pref="97" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1181,8 +1240,8 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="matStep3Mall1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="232" max="32767" attributes="0"/>
+                                      <Component id="matStep3Mall1" min="-2" pref="348" max="-2" attributes="0"/>
+                                      <EmptySpace pref="239" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1240,6 +1299,6 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-53,0,0,5,-111"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-42,0,0,5,-111"/>
   </AuxValues>
 </Form>

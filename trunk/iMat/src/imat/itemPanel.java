@@ -11,6 +11,7 @@
 
 package imat;
 
+import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
@@ -21,28 +22,16 @@ import javax.swing.JSpinner;
  */
 public class itemPanel extends javax.swing.JPanel {
 
-    public JButton getAddToCartButton() {
-        return addToCartButton;
-    }
-
-    public void setAddToCartButton(JButton addToCartButton) {
-        this.addToCartButton = addToCartButton;
-    }
-
     public JSpinner getProductAmount() {
         return productAmount;
-    }
-
-    public void setProductAmount(JSpinner productAmount) {
-        this.productAmount = productAmount;
     }
 
     public JButton getProductIcon() {
         return productIcon;
     }
 
-    public void setProductIcon(JButton productIcon) {
-        this.productIcon = productIcon;
+    public void setProductIcon(Icon icon) {
+        this.productIcon.setIcon(icon);
     }
 
     public JLabel getProductName() {
@@ -58,8 +47,8 @@ public class itemPanel extends javax.swing.JPanel {
         return productPrice;
     }
 
-    public void setProductPrice(JLabel productPrice) {
-        this.productPrice = productPrice;
+    public void setProductPrice(int productPrice) {
+        this.productPrice.setText(productPrice+"");
     }
 
     public JLabel getProductTotalPrice() {

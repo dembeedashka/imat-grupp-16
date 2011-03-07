@@ -978,13 +978,14 @@ public class IMatView extends FrameView {
     }//GEN-LAST:event_forwardButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        presenter.display(search);
+
         String text = searchTextField.getText();
         for (Product p : IMatDataHandler.getInstance().getProducts()){
-            if(p.getName().indexOf(text)>0){
-                //SearchView.addProduct(p);
+            if(p.getName().indexOf(text)>-1){
+                searchView1.addProduct(p);
             }
         }
+        presenter.display(search);
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void showShoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showShoppingListButtonActionPerformed

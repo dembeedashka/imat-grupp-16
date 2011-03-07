@@ -21,11 +21,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="shoppingListTopPanel" alignment="0" max="32767" attributes="1"/>
           <Component id="shoppingListBottomPanel" alignment="0" max="32767" attributes="1"/>
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="shoppingListRowPanel" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="shoppingListScrollBar" min="-2" pref="16" max="-2" attributes="0"/>
-          </Group>
+          <Component id="shoppingListRowScrollPane" alignment="0" pref="264" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -33,12 +29,9 @@
           <Group type="102" attributes="0">
               <Component id="shoppingListTopPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="shoppingListScrollBar" pref="326" max="32767" attributes="1"/>
-                  <Component id="shoppingListRowPanel" min="-2" max="-2" attributes="1"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="shoppingListBottomPanel" max="32767" attributes="0"/>
+              <Component id="shoppingListRowScrollPane" min="-2" pref="292" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="shoppingListBottomPanel" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,9 +50,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListName" alignment="0" pref="282" max="32767" attributes="0"/>
+              <Component id="shoppingListName" alignment="0" pref="258" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="shoppingListHeader" pref="199" max="32767" attributes="0"/>
+                  <Component id="shoppingListHeader" pref="175" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -110,12 +103,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListAddRow" alignment="0" pref="288" max="32767" attributes="0"/>
+              <Component id="shoppingListAddRow" alignment="0" pref="264" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListAddRow" alignment="1" pref="76" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="shoppingListAddRow" min="-2" pref="54" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -132,43 +128,23 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="shoppingListRowPanel">
+    <Container class="javax.swing.JScrollPane" name="shoppingListRowScrollPane">
       <Properties>
-        <Property name="name" type="java.lang.String" value="shoppingListRowPanel" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="shoppingListRowScrollPane" noResource="true"/>
       </Properties>
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="shoppingListRow1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="shoppingListRow1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="257" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="imat.ShoppingListRow" name="shoppingListRow1">
+        <Container class="javax.swing.JPanel" name="shoppingListRowPanel">
           <Properties>
-            <Property name="name" type="java.lang.String" value="shoppingListRow1" noResource="true"/>
+            <Property name="name" type="java.lang.String" value="shoppingListRowPanel" noResource="true"/>
           </Properties>
-        </Component>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+            <Property name="axis" type="int" value="1"/>
+          </Layout>
+        </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JScrollBar" name="shoppingListScrollBar">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="shoppingListScrollBar" noResource="true"/>
-      </Properties>
-    </Component>
   </SubComponents>
 </Form>

@@ -54,7 +54,7 @@ public class ShoppingListRow extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(rowPicLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rowItemTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                .addComponent(rowItemTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(rowCheckBox)
                 .addContainerGap())

@@ -5,6 +5,7 @@ import imat.navigationhistory.NavigationHistoryState;
 import imat.navigationhistory.NavigationHistoryManager;
 import imat.categories.Category;
 import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import se.chalmers.ait.dat215.project.Product;
@@ -22,12 +23,17 @@ public class IMatPresenter implements NavigationHistoryUpdater {
                              bottomContentsPanel,
                              bottomBorderPanel,
                              centerStagePanel;
+    
+    matStep2Mall             subCategoryMall;
+    matStep3Mall             productDetails;
 
-    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel) {
+    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
         this.centerStagePanel      = centerStagePanel;
+        this.subCategoryMall       = subCategoryMall;
+        this.productDetails        = productDetails;
 
         init(backButton, forwardButton);
     }
@@ -41,23 +47,35 @@ public class IMatPresenter implements NavigationHistoryUpdater {
      * Update GUI by calling the Navigation History Manager that calls method updateState below.
      */
     public void display(Category category) {
-        historyManager.update(new NavigationHistoryState(category, null));
+        historyManager.update(new NavigationHistoryState(category));
+    }
+
+    public void display(Category selectedCategory, Product productDetails) {
+        historyManager.update(new NavigationHistoryState(selectedCategory, productDetails));
     }
 
     /**
      * Called by the Navigation History Manager through the display method above.
      */
     public void updateState(NavigationHistoryState state) {
-        CardLayout layout = (CardLayout) centerStagePanel.getLayout();
-        Category category = state.getSelectedCategory();
-        Product  product  = state.getProductDetails();
+        CardLayout layout     = (CardLayout) centerStagePanel.getLayout();
+        Category   category   = state.getSelectedCategory();
+        Color      color      = category.getColor();
+        Product    product    = state.getProductDetails();
 
-        navigationSearchPanel.setBackground(category.getColor());
-        bottomContentsPanel.setBackground(category.getColor());
-        bottomBorderPanel.setBackground(category.getColor());
+        navigationSearchPanel.setBackground(color);
+        bottomContentsPanel.setBackground(color);
+        bottomBorderPanel.setBackground(color);
+
+        // update header and description for subcategory template only
+        if(category.getClass() != Category.class) {
+            subCategoryMall.setPic(category.getHeaderIcon());
+            subCategoryMall.setDescription(category.getDescription());
+        }
         
         if(product != null) {
             // TODO: update product details stuff
+            productDetails.showProduct(product);
         }
 
         layout.show(centerStagePanel, category.getCard());

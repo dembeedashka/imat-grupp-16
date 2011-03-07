@@ -11,6 +11,8 @@
 
 package imat;
 
+import se.chalmers.ait.dat215.project.Product;
+
 /**
  *
  * @author David
@@ -20,6 +22,10 @@ public class matStep3Mall extends javax.swing.JPanel {
     /** Creates new form matStep2Mall */
     public matStep3Mall() {
         initComponents();
+    }
+
+    public void showProduct(Product product) {
+        //TODO: update to show product
     }
 
     /** This method is called from within the constructor to

@@ -49,7 +49,9 @@ public class IMatView extends FrameView {
             navigationSearchPanel,
             bottomContentsPanel,
             bottomBorderPanel,
-            centerStagePanel
+            centerStagePanel,
+            subCategoryMall,
+            null
         );
     }
 

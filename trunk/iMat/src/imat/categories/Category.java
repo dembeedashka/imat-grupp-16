@@ -19,24 +19,32 @@ public class Category {
     public static final Color SNACKS_ORANGE    = new Color(234, 168, 82);
     public static final Color FAVOURITES_BROWN = new Color(143, 110, 67);
 
-    private Color     color;
-    private String    card;
-    private ImageIcon pic;
-    private String    description;
+    protected Color     color;
+    protected String    card;
+    protected ImageIcon headerIcon;
+    protected String    description;
 
-    public Category(Color color, String card, ImageIcon pic, String description) {
+    public Category(Color color, String card, ImageIcon headerIcon, String description) {
         this.color         = color;
         this.card          = card;
-        this.pic           = pic;
+        this.headerIcon    = headerIcon;
         this.description   = description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setHeaderIcon(ImageIcon headerIcon) {
+        this.headerIcon = headerIcon;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public ImageIcon getPic() {
-        return pic;
+    public ImageIcon getHeaderIcon() {
+        return headerIcon;
     }
 
     public String getCard() {

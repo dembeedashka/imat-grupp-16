@@ -24,9 +24,9 @@ public class IMatView extends FrameView {
     public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
     public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "fav", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
     public static final Category      subPantry  = new SubcategoryPantry("subCategory", null, null);
-    public static final SubcategoryOther      help     = new SubcategoryOther("help", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
+    public static final Category      help       = new SubcategoryOther("help", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
 
-    public static final Category    search       = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
+    public static final Category     search      = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
     public static final Category     shop        = new SubcategoryOther("shop", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
 
 
@@ -110,6 +110,17 @@ public class IMatView extends FrameView {
         shoppingCart1 = new imat.shoppingCart();
         cardFruitPanel = new javax.swing.JPanel();
         fruitMall = new imat.matMall();
+        berryButton = new javax.swing.JButton();
+        cabbageButton = new javax.swing.JButton();
+        citrusFruitButton = new javax.swing.JButton();
+        exoticFruitButton = new javax.swing.JButton();
+        drupeButton = new javax.swing.JButton();
+        herbButton = new javax.swing.JButton();
+        melonButton = new javax.swing.JButton();
+        podButton = new javax.swing.JButton();
+        potatoButton = new javax.swing.JButton();
+        rootVegetableButton = new javax.swing.JButton();
+        vegetableButton = new javax.swing.JButton();
         cardDairyPanel = new javax.swing.JPanel();
         dairyMall = new imat.matMall();
         cardMeatPanel = new javax.swing.JPanel();
@@ -388,11 +399,21 @@ public class IMatView extends FrameView {
         flourButton.setText(resourceMap.getString("flourButton.text")); // NOI18N
         flourButton.setName("flourButton"); // NOI18N
         flourButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        flourButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                flourButtonActionPerformed(evt);
+            }
+        });
 
         pastaButton.setIcon(resourceMap.getIcon("pastaButton.icon")); // NOI18N
         pastaButton.setText(resourceMap.getString("pastaButton.text")); // NOI18N
         pastaButton.setName("pastaButton"); // NOI18N
         pastaButton.setPreferredSize(new java.awt.Dimension(300, 62));
+        pastaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pastaButtonActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout cardPantryPanelLayout = new org.jdesktop.layout.GroupLayout(cardPantryPanel);
         cardPantryPanel.setLayout(cardPantryPanelLayout);
@@ -536,21 +557,122 @@ public class IMatView extends FrameView {
 
         fruitMall.setName("fruitMall"); // NOI18N
 
+        berryButton.setIcon(resourceMap.getIcon("berryButton.icon")); // NOI18N
+        berryButton.setText(resourceMap.getString("berryButton.text")); // NOI18N
+        berryButton.setName("berryButton"); // NOI18N
+        berryButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        cabbageButton.setIcon(resourceMap.getIcon("cabbageButton.icon")); // NOI18N
+        cabbageButton.setText(resourceMap.getString("cabbageButton.text")); // NOI18N
+        cabbageButton.setName("cabbageButton"); // NOI18N
+        cabbageButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        citrusFruitButton.setIcon(resourceMap.getIcon("citrusFruitButton.icon")); // NOI18N
+        citrusFruitButton.setText(resourceMap.getString("citrusFruitButton.text")); // NOI18N
+        citrusFruitButton.setName("citrusFruitButton"); // NOI18N
+        citrusFruitButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        exoticFruitButton.setIcon(resourceMap.getIcon("exoticFruitButton.icon")); // NOI18N
+        exoticFruitButton.setText(resourceMap.getString("exoticFruitButton.text")); // NOI18N
+        exoticFruitButton.setName("exoticFruitButton"); // NOI18N
+        exoticFruitButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        drupeButton.setIcon(resourceMap.getIcon("drupeButton.icon")); // NOI18N
+        drupeButton.setText(resourceMap.getString("drupeButton.text")); // NOI18N
+        drupeButton.setName("drupeButton"); // NOI18N
+        drupeButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        herbButton.setIcon(resourceMap.getIcon("herbButton.icon")); // NOI18N
+        herbButton.setText(resourceMap.getString("herbButton.text")); // NOI18N
+        herbButton.setName("herbButton"); // NOI18N
+        herbButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        melonButton.setIcon(resourceMap.getIcon("melonButton.icon")); // NOI18N
+        melonButton.setText(resourceMap.getString("melonButton.text")); // NOI18N
+        melonButton.setName("melonButton"); // NOI18N
+        melonButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        podButton.setIcon(resourceMap.getIcon("podButton.icon")); // NOI18N
+        podButton.setText(resourceMap.getString("podButton.text")); // NOI18N
+        podButton.setName("podButton"); // NOI18N
+        podButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        potatoButton.setIcon(resourceMap.getIcon("potatoButton.icon")); // NOI18N
+        potatoButton.setText(resourceMap.getString("potatoButton.text")); // NOI18N
+        potatoButton.setName("potatoButton"); // NOI18N
+        potatoButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        rootVegetableButton.setIcon(resourceMap.getIcon("rootVegetableButton.icon")); // NOI18N
+        rootVegetableButton.setText(resourceMap.getString("rootVegetableButton.text")); // NOI18N
+        rootVegetableButton.setName("rootVegetableButton"); // NOI18N
+        rootVegetableButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
+        vegetableButton.setIcon(resourceMap.getIcon("vegetableButton.icon")); // NOI18N
+        vegetableButton.setText(resourceMap.getString("vegetableButton.text")); // NOI18N
+        vegetableButton.setName("vegetableButton"); // NOI18N
+        vegetableButton.setPreferredSize(new java.awt.Dimension(300, 62));
+
         org.jdesktop.layout.GroupLayout cardFruitPanelLayout = new org.jdesktop.layout.GroupLayout(cardFruitPanel);
         cardFruitPanel.setLayout(cardFruitPanelLayout);
         cardFruitPanelLayout.setHorizontalGroup(
             cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardFruitPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(fruitMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(357, Short.MAX_VALUE))
+                .add(fruitMall, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 998, Short.MAX_VALUE))
+            .add(cardFruitPanelLayout.createSequentialGroup()
+                .add(213, 213, 213)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(vegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(cardFruitPanelLayout.createSequentialGroup()
+                        .add(potatoButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(rootVegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cardFruitPanelLayout.createSequentialGroup()
+                        .add(melonButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(podButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cardFruitPanelLayout.createSequentialGroup()
+                        .add(drupeButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(herbButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cardFruitPanelLayout.createSequentialGroup()
+                        .add(citrusFruitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(exoticFruitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(cardFruitPanelLayout.createSequentialGroup()
+                        .add(berryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(cabbageButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
         cardFruitPanelLayout.setVerticalGroup(
             cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardFruitPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(fruitMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .add(fruitMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 324, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(18, 18, 18)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(berryButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(cabbageButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(citrusFruitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(exoticFruitButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(drupeButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(herbButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(melonButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(podButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(cardFruitPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(potatoButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(rootVegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(vegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardFruitPanel, "fruit");
@@ -791,13 +913,27 @@ public class IMatView extends FrameView {
        presenter.display(help);
     }//GEN-LAST:event_helpButtonActionPerformed
 
+    private void flourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flourButtonActionPerformed
+        subCategoryMall.setPic(new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif"));
+        subCategoryMall.setDescription("Mjöl, socker & salt");
+        presenter.display(subPantry);
+    }//GEN-LAST:event_flourButtonActionPerformed
+
+    private void pastaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pastaButtonActionPerformed
+        subCategoryMall.setPic(new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif"));
+        subCategoryMall.setDescription("Pasta");
+        presenter.display(subPantry);
+    }//GEN-LAST:event_pastaButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;
     private imat.actionPanel actionPanel1;
     private javax.swing.JButton backButton;
+    private javax.swing.JButton berryButton;
     private javax.swing.JPanel bottomBorderPanel;
     private javax.swing.JPanel bottomContentsPanel;
     private javax.swing.JButton breadButton;
+    private javax.swing.JButton cabbageButton;
     private javax.swing.JPanel cardDairyPanel;
     private javax.swing.JPanel cardDetailedViewPanel;
     private javax.swing.JPanel cardDrinksPanel;
@@ -812,9 +948,12 @@ public class IMatView extends FrameView {
     private javax.swing.JPanel cardShoppingPanel;
     private javax.swing.JPanel cardSubCategoryPanel;
     private javax.swing.JPanel centerStagePanel;
+    private javax.swing.JButton citrusFruitButton;
     private javax.swing.JButton dairyButton;
     private imat.matMall dairyMall;
     private imat.matMall drinksMall;
+    private javax.swing.JButton drupeButton;
+    private javax.swing.JButton exoticFruitButton;
     private imat.matMall favMall;
     private javax.swing.JButton favouritesButton;
     private javax.swing.JButton flourButton;
@@ -824,16 +963,21 @@ public class IMatView extends FrameView {
     private imat.matMall fruitMall;
     private javax.swing.JButton helpButton;
     private imat.helpView helpView1;
+    private javax.swing.JButton herbButton;
     private javax.swing.JButton homeButton;
     private imat.homeView homeView1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JScrollPane mainScrollPane;
     private javax.swing.JButton meatButton;
     private imat.matMall meatMall;
+    private javax.swing.JButton melonButton;
     private javax.swing.JPanel navigationSearchPanel;
     private javax.swing.JButton pantryButton;
     private imat.matMall pantryMall;
     private javax.swing.JButton pastaButton;
+    private javax.swing.JButton podButton;
+    private javax.swing.JButton potatoButton;
+    private javax.swing.JButton rootVegetableButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchTextField;
     private imat.SearchView searchView1;
@@ -845,5 +989,6 @@ public class IMatView extends FrameView {
     private javax.swing.JButton snacksButton;
     private imat.matStep2Mall subCategoryMall;
     private javax.swing.JPanel topNavigationPanel;
+    private javax.swing.JButton vegetableButton;
     // End of variables declaration//GEN-END:variables
 }

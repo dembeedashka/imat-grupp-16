@@ -31,6 +31,7 @@ public class itemPanel extends javax.swing.JPanel {
     private IMatDataHandler handler = IMatDataHandler.getInstance();
     private ImageIcon star = new ImageIcon("src/resources/images/buttons/star.gif");
     private ImageIcon star2 = new ImageIcon("src/resources/images/buttons/star2.gif");
+    private double price;
 
     public Product getProduct() {
         return product;
@@ -271,5 +272,5 @@ public class itemPanel extends javax.swing.JPanel {
     private javax.swing.JLabel productUnitLabel;
     private javax.swing.JLabel productUnitLabel2;
     // End of variables declaration//GEN-END:variables
-    double price;
+
 }

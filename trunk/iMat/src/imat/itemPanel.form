@@ -112,7 +112,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="addToCartButton">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="jLabel4.font"/>
             <Property name="text" type="java.lang.String" resourceKey="addToCartButton.text"/>
             <Property name="name" type="java.lang.String" value="addToCartButton" noResource="true"/>
           </Properties>
@@ -122,7 +121,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="productTotalPrice">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="jLabel4.font"/>
             <Property name="text" type="java.lang.String" resourceKey="productTotalPrice.text"/>
             <Property name="name" type="java.lang.String" value="productTotalPrice" noResource="true"/>
           </Properties>

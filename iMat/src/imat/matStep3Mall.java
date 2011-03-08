@@ -11,10 +11,12 @@
 
 package imat;
 
-import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 
 /**
  *
@@ -22,54 +24,47 @@ import se.chalmers.ait.dat215.project.Product;
  */
 public class matStep3Mall extends javax.swing.JPanel {
 
+    private IMatDataHandler handler = IMatDataHandler.getInstance();
+    private ImageIcon star = new ImageIcon("src/imat/resources/images/buttons/star.gif");
+    private ImageIcon star2 = new ImageIcon("src/imat/resources/images/buttons/star2.gif");
+    private Product product;
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
+
     /** Creates new form matStep2Mall */
     public matStep3Mall() {
         initComponents();
     }
 
     public void showProduct(Product product) {
-        //TODO: update to show product
+        detailCostLabel.setText(product.getPrice()+"");
+        detailDescriptionTextPane.setText(product.getName()+" är gott!");
+        detailPictureLabel.setIcon(new ImageIcon(product.getImageName()));
+        detailPriceLabel.setText(product.getPrice()+"");
+        detailProductNameLabel.setText(product.getName());
+        this.product=product;
     }
 
     public JLabel getDetailCostLabel() {
         return detailCostLabel;
     }
 
-    public void setDetailCostLabel(String cost) {
-        detailCostLabel.setText(cost);
-    }
-
     public JTextPane getDetailDescriptionTextPanel() {
         return detailDescriptionTextPane;
-    }
-
-    public void setDetailDescriptionTextPane(String description) {
-        detailDescriptionTextPane.setText(description);
     }
 
     public JLabel getDetailPicturePanel() {
         return detailPictureLabel;
     }
 
-    public void setDetailPictureLabel(Icon icon) {
-        detailPictureLabel.setIcon(icon);
-    }
-
     public JLabel getDetailPriceLabel() {
         return detailPriceLabel;
     }
 
-    public void setDetailPriceLabel(int price) {
-        detailPriceLabel.setText(price+"");
-    }
 
     public JLabel getDetailProductNameLabel() {
         return detailProductNameLabel;
     }
 
-    public void setDetailProductNameLabel(String name) {
-        detailProductNameLabel.setText(name);
-    }
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -124,6 +119,11 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailFavoriteButton.setIcon(resourceMap.getIcon("detailFavoriteButton.icon")); // NOI18N
         detailFavoriteButton.setText(resourceMap.getString("detailFavoriteButton.text")); // NOI18N
         detailFavoriteButton.setName("detailFavoriteButton"); // NOI18N
+        detailFavoriteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                detailFavoriteButtonActionPerformed(evt);
+            }
+        });
 
         detailBasketAmountLabel1.setText(resourceMap.getString("detailBasketAmountLabel1.text")); // NOI18N
         detailBasketAmountLabel1.setName("detailBasketAmountLabel1"); // NOI18N
@@ -180,7 +180,7 @@ public class matStep3Mall extends javax.swing.JPanel {
                                 .addComponent(detailBasketAmountLabel2)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(detailScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
+                    .addComponent(detailScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addComponent(detailAmountLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -193,7 +193,7 @@ public class matStep3Mall extends javax.swing.JPanel {
                         .addComponent(detailBasketButton))
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addComponent(detailProductNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
                         .addComponent(detailFavoriteLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(detailFavoriteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -211,8 +211,7 @@ public class matStep3Mall extends javax.swing.JPanel {
                                 .addComponent(detailFavoriteLabel))
                             .addComponent(detailFavoriteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(detailScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                        .addComponent(detailScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addComponent(detailPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -220,6 +219,7 @@ public class matStep3Mall extends javax.swing.JPanel {
                             .addComponent(detailBasketAmountLabel1)
                             .addComponent(detailBasketAmountLabel2)
                             .addComponent(detailBasketAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(detailAmountLabel)
                     .addComponent(detailAmountSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -234,17 +234,30 @@ public class matStep3Mall extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(detailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+            .addComponent(detailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(detailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+            .addComponent(detailPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 784, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void detailBasketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailBasketButtonActionPerformed
-        // TODO add your handling code here:
+        cart.addProduct(product,(Integer) detailAmountSpinner.getValue()*1.0);
     }//GEN-LAST:event_detailBasketButtonActionPerformed
+
+    private void detailFavoriteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailFavoriteButtonActionPerformed
+        if(handler.isFavorite(product))
+        {
+            handler.removeFavorite(product);
+            detailFavoriteButton.setIcon(star);
+        }
+        else
+        {
+            handler.addFavorite(product);
+            detailFavoriteButton.setIcon(star2);
+        }
+    }//GEN-LAST:event_detailFavoriteButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

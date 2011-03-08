@@ -118,6 +118,13 @@ public class IMatView extends FrameView implements WindowListener {
         pantryMall.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/kat4big.gif"));
         drinksMall.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/kat5big.gif"));
         favMall.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/kat6big.gif"));
+        searchView1.getSearchHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/search.gif"));
+        cashRegister1.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/register.gif"));
+        shoppingListView1.getHeaderPanel21().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/shoppinglist.gif"));
+        helpView1.getHelpViewHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/help.gif"));
+        shoppingCart1.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/cart.gif"));
+        userInfoView1.getUiHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/user.gif"));
+
     }
     /** This method is called from within the constructor to
      * initialize the form.

@@ -13,7 +13,7 @@ import se.chalmers.ait.dat215.project.Product;
 
 
 /**
- *
+ * This class uses the singleton pattern.
  * @author David and Max
  */
 public class IMatPresenter implements NavigationHistoryUpdater {
@@ -96,8 +96,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
             // TODO: update product details stuff
             productDetails.showProduct(product);
         }
-
-        layout.show(centerStagePanel, category.getCard());
+        else {
+            layout.show(centerStagePanel, category.getCard());
+        }
     }
 
     /**

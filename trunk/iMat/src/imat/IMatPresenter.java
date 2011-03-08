@@ -6,6 +6,7 @@ import imat.navigationhistory.NavigationHistoryManager;
 import imat.categories.Category;
 import java.awt.CardLayout;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import se.chalmers.ait.dat215.project.Product;
@@ -46,11 +47,15 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     /**
      * Update GUI by calling the Navigation History Manager that calls method updateState below.
      */
-    public void display(Category category) {
+    public void displayCategory(Category category) {
         historyManager.update(new NavigationHistoryState(category));
     }
 
-    public void display(Category selectedCategory, Product productDetails) {
+    public void displaySubcategory(Category selectedCategory, ImageIcon headerIcon, String description) {
+        historyManager.update(new NavigationHistoryState(selectedCategory, headerIcon, description));
+    }
+
+    public void displayProduct(Category selectedCategory, Product productDetails) {
         historyManager.update(new NavigationHistoryState(selectedCategory, productDetails));
     }
 
@@ -61,7 +66,7 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         CardLayout layout     = (CardLayout) centerStagePanel.getLayout();
         Category   category   = state.getSelectedCategory();
         Color      color      = category.getColor();
-        Product    product    = state.getProductDetails();
+        Product    product    = state.getProduct();
 
         navigationSearchPanel.setBackground(color);
         bottomContentsPanel.setBackground(color);

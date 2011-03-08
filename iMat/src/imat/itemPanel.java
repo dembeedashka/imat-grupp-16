@@ -32,6 +32,7 @@ public class itemPanel extends javax.swing.JPanel {
     private ImageIcon star = new ImageIcon("src/imat/resources/images/buttons/star.gif");
     private ImageIcon star2 = new ImageIcon("src/imat/resources/images/buttons/star2.gif");
     private double price;
+    private IMatPresenter presenter = IMatPresenter.getInstance();
 
     public Product getProduct() {
         return product;
@@ -119,6 +120,11 @@ public class itemPanel extends javax.swing.JPanel {
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(itemPanel.class);
         productIcon.setText(resourceMap.getString("productIcon.text")); // NOI18N
         productIcon.setName("productIcon"); // NOI18N
+        productIcon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productIconActionPerformed(evt);
+            }
+        });
 
         addToCartButton.setText(resourceMap.getString("addToCartButton.text")); // NOI18N
         addToCartButton.setName("addToCartButton"); // NOI18N
@@ -256,6 +262,11 @@ public class itemPanel extends javax.swing.JPanel {
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
         productTotalPriceDisplay.setText(price * (Integer)productAmount.getValue()+"");
     }//GEN-LAST:event_productAmountStateChanged
+
+    private void productIconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIconActionPerformed
+        presenter.displayProduct(presenter.getCurrentCategory(), product);
+        
+    }//GEN-LAST:event_productIconActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

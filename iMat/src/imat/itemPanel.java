@@ -113,13 +113,13 @@ public class itemPanel extends javax.swing.JPanel {
         setName("Form"); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setMaximumSize(new java.awt.Dimension(398, 184));
         jPanel1.setName("jPanel1"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(itemPanel.class);
         productIcon.setText(resourceMap.getString("productIcon.text")); // NOI18N
         productIcon.setName("productIcon"); // NOI18N
 
-        addToCartButton.setFont(resourceMap.getFont("jLabel4.font")); // NOI18N
         addToCartButton.setText(resourceMap.getString("addToCartButton.text")); // NOI18N
         addToCartButton.setName("addToCartButton"); // NOI18N
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +128,6 @@ public class itemPanel extends javax.swing.JPanel {
             }
         });
 
-        productTotalPrice.setFont(resourceMap.getFont("jLabel4.font")); // NOI18N
         productTotalPrice.setText(resourceMap.getString("productTotalPrice.text")); // NOI18N
         productTotalPrice.setName("productTotalPrice"); // NOI18N
 
@@ -233,7 +232,7 @@ public class itemPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -25,10 +25,10 @@ public class Category {
     protected String    description;
 
     public Category(Color color, String card, ImageIcon headerIcon, String description) {
-        this.color         = color;
-        this.card          = card;
-        this.headerIcon    = headerIcon;
-        this.description   = description;
+        this.color       = color;
+        this.card        = card;
+        this.headerIcon  = headerIcon;
+        this.description = description;
     }
 
     public void setDescription(String description) {

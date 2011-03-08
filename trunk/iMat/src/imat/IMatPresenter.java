@@ -81,10 +81,6 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         historyManager.update(new NavigationHistoryState(selectedCategory, productDetails));
     }
 
-    public Category getCurrentCategory() {
-        return historyManager.getCurrentState().getSelectedCategory();
-    }
-
     /**
      * Called by the Navigation History Manager through the display method above.
      */
@@ -140,5 +136,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     public void clearSubProducts()
     {
         subCategoryMall.getProductPanel().removeAll();
+    }
+
+    public Category getCurrentCategory() {
+        return historyManager.getCurrentState().getSelectedCategory();
     }
 }

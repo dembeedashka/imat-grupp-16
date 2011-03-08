@@ -265,9 +265,7 @@ public class itemPanel extends javax.swing.JPanel {
 
     private void productIconActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIconActionPerformed
         presenter.displayProduct(presenter.getCurrentCategory(), product);
-        
     }//GEN-LAST:event_productIconActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addToCartButton;

@@ -29,14 +29,17 @@ public class IMatPresenter implements NavigationHistoryUpdater {
                                      centerStagePanel;
 
     private JScrollPane              mainScrollPane;
+
     
     private matStep2Mall             subCategoryMall;
     private matStep3Mall             productDetails;
+    
+    private String                   productDetailsCard;
 
     private IMatPresenter() {
     }
 
-    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane) {
+    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane, String productDetailsCard) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
@@ -44,6 +47,7 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         this.subCategoryMall       = subCategoryMall;
         this.productDetails        = productDetails;
         this.mainScrollPane        = mainScrollPane;
+        this.productDetailsCard    = productDetailsCard;
 
         historyManager             = new NavigationHistoryManager(backButton, forwardButton);
         historyManager.init(this, new NavigationHistoryState());
@@ -77,6 +81,10 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         historyManager.update(new NavigationHistoryState(selectedCategory, productDetails));
     }
 
+    public Category getCurrentCategory() {
+        return historyManager.getCurrentState().getSelectedCategory();
+    }
+
     /**
      * Called by the Navigation History Manager through the display method above.
      */
@@ -97,8 +105,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         }
         
         if(product != null) {
-            // TODO: update product details stuff
             productDetails.showProduct(product);
+            layout.show(centerStagePanel, productDetailsCard);
         }
         else {
             layout.show(centerStagePanel, category.getCard());

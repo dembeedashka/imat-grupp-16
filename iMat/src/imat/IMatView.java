@@ -49,29 +49,29 @@ public class IMatView extends FrameView {
     public static final ImageIcon VEGETABLE_FRUIT_HEADER  = new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif");
 
     /* main categories */
-    public static final Category  HOME       = new Category(Category.HOME_WHITE,       "home",   new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
-    public static final Category  FRUIT      = new Category(Category.FRUIT_GREEN,      "fruit",  new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
-    public static final Category  MEAT       = new Category(Category.MEAT_RED,         "meat",   new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
-    public static final Category  DAIRY      = new Category(Category.DAIRY_BLUE,       "dairy",  new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
-    public static final Category  PANTRY     = new Category(Category.PANTRY_YELLOW,    "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
-    public static final Category  SNACKS     = new Category(Category.SNACKS_ORANGE,    "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
-    public static final Category  FAVOURITES = new Category(Category.FAVOURITES_BROWN, "fav",    new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
+    public static final Category  HOME                    = new Category(Category.HOME_WHITE,       "home",   new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
+    public static final Category  FRUIT                   = new Category(Category.FRUIT_GREEN,      "fruit",  new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
+    public static final Category  MEAT                    = new Category(Category.MEAT_RED,         "meat",   new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
+    public static final Category  DAIRY                   = new Category(Category.DAIRY_BLUE,       "dairy",  new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
+    public static final Category  PANTRY                  = new Category(Category.PANTRY_YELLOW,    "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
+    public static final Category  SNACKS                  = new Category(Category.SNACKS_ORANGE,    "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
+    public static final Category  FAVOURITES              = new Category(Category.FAVOURITES_BROWN, "fav",    new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
 
     /* pseudo-categories used as main categories */
-    public static final Category  HELP       = new SubcategoryOther("help",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
-    public static final Category  SEARCH     = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
-    public static final Category  SHOP       = new SubcategoryOther("shop",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
-    public static final Category  CART       = new SubcategoryOther("cart",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
-    public static final Category  USERINFO   = new SubcategoryOther("user",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Användarinfo");
-    public static final Category  CASH       = new SubcategoryOther("cash",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Kassa");
-    public static final Category  PURCHASES  = new SubcategoryOther("purchases",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Tidigare inköp");
+    public static final Category  HELP                    = new SubcategoryOther("help",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
+    public static final Category  SEARCH                  = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
+    public static final Category  SHOP                    = new SubcategoryOther("shop",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
+    public static final Category  CART                    = new SubcategoryOther("cart",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
+    public static final Category  USERINFO                = new SubcategoryOther("user",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Användarinfo");
+    public static final Category  CASH                    = new SubcategoryOther("cash",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Kassa");
+    public static final Category  PURCHASES               = new SubcategoryOther("purchases",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Tidigare inköp");
 
     /* subcategories */
-    public static Category        subPantry  = new SubcategoryPantry("subCategory", null, null);
-    public static Category        subFruit   = new SubcategoryFruit( "subCategory", null, null);
-    public static Category        subDairy   = new SubcategoryDairy( "subCategory", null, null);
-    public static Category        subMeat    = new SubcategoryMeat(  "subCategory", null, null);
-    public static Category        subSnacks  = new SubcategorySnacks("subCategory", null, null);
+    public static Category        subPantry               = new SubcategoryPantry("subCategory", null, null);
+    public static Category        subFruit                = new SubcategoryFruit( "subCategory", null, null);
+    public static Category        subDairy                = new SubcategoryDairy( "subCategory", null, null);
+    public static Category        subMeat                 = new SubcategoryMeat(  "subCategory", null, null);
+    public static Category        subSnacks               = new SubcategorySnacks("subCategory", null, null);
 
     private IMatPresenter         presenter;
 
@@ -100,7 +100,8 @@ public class IMatView extends FrameView {
             centerStagePanel,
             subCategoryMall,
             matStep3Mall1,
-            mainScrollPane
+            mainScrollPane,
+            "detailedView"
         );
     }
 

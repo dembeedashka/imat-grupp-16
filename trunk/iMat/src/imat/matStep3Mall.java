@@ -38,7 +38,7 @@ public class matStep3Mall extends javax.swing.JPanel {
     public void showProduct(Product product) {
         detailCostLabel.setText(product.getPrice()+"");
         detailDescriptionTextPane.setText(product.getName()+" är gott!");
-        detailPictureLabel.setIcon(new ImageIcon(product.getImageName()));
+        detailPictureLabel.setIcon(new ImageIcon("src/imat/resources/imat/images/"+product.getImageName()));
         detailPriceLabel.setText(product.getPrice()+"");
         detailProductNameLabel.setText(product.getName());
         this.product=product;

@@ -11,12 +11,18 @@
 
 package imat;
 
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.ShoppingCart;
+
 /**
  *
  * @author David
  */
 public class shoppingCart extends javax.swing.JPanel {
 
+    private ShoppingCart handler = IMatDataHandler.getInstance().getShoppingCart();
+
+    private IMatPresenter presenter = IMatPresenter.getInstance();
     /** Creates new form shoppingCart */
     public shoppingCart() {
         initComponents();
@@ -39,24 +45,38 @@ public class shoppingCart extends javax.swing.JPanel {
         shoppingCartList1 = new imat.shoppingCartList();
 
         setName("Form"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(795, 784));
+        setPreferredSize(new java.awt.Dimension(795, 1200));
 
         matMallHeaderPanel.setName("matMallHeaderPanel"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(795, 1200));
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(shoppingCart.class);
-        clearCartButton.setFont(resourceMap.getFont("jButton2.font")); // NOI18N
         clearCartButton.setText(resourceMap.getString("clearCartButton.text")); // NOI18N
         clearCartButton.setName("clearCartButton"); // NOI18N
+        clearCartButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearCartButtonActionPerformed(evt);
+            }
+        });
 
         cashInButton.setFont(resourceMap.getFont("cashInButton.font")); // NOI18N
         cashInButton.setText(resourceMap.getString("cashInButton.text")); // NOI18N
         cashInButton.setName("cashInButton"); // NOI18N
+        cashInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cashInButtonActionPerformed(evt);
+            }
+        });
 
-        keepShoppingButton.setFont(resourceMap.getFont("jButton2.font")); // NOI18N
         keepShoppingButton.setText(resourceMap.getString("keepShoppingButton.text")); // NOI18N
         keepShoppingButton.setName("keepShoppingButton"); // NOI18N
+        keepShoppingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                keepShoppingButtonActionPerformed(evt);
+            }
+        });
 
         shoppingCartList1.setName("shoppingCartList1"); // NOI18N
 
@@ -67,12 +87,12 @@ public class shoppingCart extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(shoppingCartList1, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(shoppingCartList1, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(clearCartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addGap(65, 65, 65)
                         .addComponent(keepShoppingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                         .addComponent(cashInButton, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -83,11 +103,12 @@ public class shoppingCart extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(shoppingCartList1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(cashInButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(keepShoppingButton, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                    .addComponent(clearCartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(cashInButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(keepShoppingButton, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
+                    .addComponent(clearCartButton, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -97,7 +118,7 @@ public class shoppingCart extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
+                .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
                 .addContainerGap())
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -107,9 +128,21 @@ public class shoppingCart extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cashInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashInButtonActionPerformed
+        presenter.displayCategory(IMatView.CASH);
+    }//GEN-LAST:event_cashInButtonActionPerformed
+
+    private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
+        handler.clear();
+    }//GEN-LAST:event_clearCartButtonActionPerformed
+
+    private void keepShoppingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keepShoppingButtonActionPerformed
+        presenter.displayCategory(IMatView.HOME);
+    }//GEN-LAST:event_keepShoppingButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
@@ -23,12 +23,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cashRegisterPanel1" min="-2" pref="829" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="cashRegisterPanel1" min="-2" pref="854" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cashRegisterPanel1" min="-2" pref="1125" max="-2" attributes="0"/>
+          <Component id="cashRegisterPanel1" min="-2" pref="1760" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -45,49 +48,44 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Component id="cashBreadcrumb" alignment="1" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="cashBasketPanel" alignment="0" max="32767" attributes="1"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashBasketPanel" max="32767" attributes="1"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashPaymentPanel" max="32767" attributes="1"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashUserInfoPanel" max="32767" attributes="1"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashUserInfoLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="633" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jButton4" min="-2" pref="171" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="751" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="cashCompletepurchaseButton" min="-2" pref="179" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           <Component id="cashBasketNLabel" min="-2" pref="94" max="-2" attributes="0"/>
-                          <EmptySpace pref="725" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="1"/>
+                      <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="1"/>
+                      <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton4" alignment="1" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="85" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="282" max="-2" attributes="0"/>
+                  <Component id="cashBreadcrumb" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cashBasketNLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashBasketPanel" min="-2" max="-2" attributes="0"/>
@@ -103,7 +101,6 @@
                   <Component id="cashPaymentPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashCompletepurchaseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -128,15 +125,22 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="807" max="32767" attributes="0"/>
+                  <Component id="shoppingCartList1" alignment="0" pref="828" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="187" max="32767" attributes="0"/>
+                  <Component id="shoppingCartList1" alignment="0" pref="607" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="imat.shoppingCartList" name="shoppingCartList1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="shoppingCartList1" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="cashUserInfoLabel">
           <Properties>
@@ -181,9 +185,7 @@
                               <Component id="cashSlash" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                               <Component id="cashMonth" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashDivide" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                               <Component id="cashYear" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="cashPlaceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -194,7 +196,7 @@
                           <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
                           <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="214" max="32767" attributes="0"/>
+                      <EmptySpace pref="73" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -249,7 +251,6 @@
                                   <Component id="cashDay" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cashSlash" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cashMonth" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cashDivide" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cashYear" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -261,9 +262,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="cashFNameLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="cashFNameLabel.text"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="cashFNameTF">
               <Properties>
@@ -409,12 +407,6 @@
                 <Property name="name" type="java.lang.String" value="cashMonth" noResource="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="cashDivide">
-              <Properties>
-                <Property name="text" type="java.lang.String" resourceKey="cashDivide.text"/>
-                <Property name="name" type="java.lang.String" value="cashDivide" noResource="true"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JComboBox" name="cashYear">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -529,7 +521,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="cashCardnumberTfield" alignment="0" pref="239" max="32767" attributes="1"/>
+                                      <Component id="cashCardnumberTfield" alignment="0" pref="187" max="32767" attributes="1"/>
                                       <Component id="cashCardnumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -542,7 +534,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cashCardFNameTField" pref="239" max="32767" attributes="0"/>
+                                  <Component id="cashCardFNameTField" pref="187" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
@@ -562,7 +554,7 @@
                               </Group>
                               <Component id="cashCardtypeCBox" min="-2" pref="78" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="370" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -739,6 +731,57 @@
             </Property>
           </Properties>
         </Component>
+        <Container class="javax.swing.JPanel" name="cashBreadcrumb">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="cashBreadcrumb" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="854" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="62" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jPanel1" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerPanel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerPanel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="imat.HeaderPanel2" name="headerPanel21">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="headerPanel21" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

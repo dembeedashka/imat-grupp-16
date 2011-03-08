@@ -168,7 +168,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="shoppingListPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="framePanel" min="-2" pref="863" max="-2" attributes="0"/>
+                      <Component id="framePanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="actionPanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -184,8 +184,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="shoppingListPanel" alignment="0" min="-2" max="-2" attributes="1"/>
-                          <Component id="framePanel" alignment="0" pref="563" max="32767" attributes="1"/>
-                          <Component id="actionPanel" alignment="0" min="0" pref="563" max="32767" attributes="1"/>
+                          <Component id="framePanel" alignment="0" pref="804" max="32767" attributes="1"/>
+                          <Component id="actionPanel" alignment="0" min="0" pref="804" max="32767" attributes="1"/>
                       </Group>
                       <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
                       <Component id="bottomBorderPanel" max="32767" attributes="0"/>
@@ -212,9 +212,9 @@
                           <Component id="searchTextField" min="-2" pref="401" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="279" max="32767" attributes="0"/>
-                          <Component id="helpButton" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
+                          <Component id="helpButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="262" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -360,7 +360,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="actionPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="60" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -368,7 +368,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="actionPanel1" min="-2" pref="496" max="-2" attributes="0"/>
-                          <EmptySpace pref="67" max="32767" attributes="0"/>
+                          <EmptySpace pref="308" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -393,7 +393,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="mainScrollPane" alignment="0" pref="863" max="32767" attributes="0"/>
+                      <Component id="mainScrollPane" alignment="0" pref="805" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -405,6 +405,9 @@
               <SubComponents>
                 <Container class="javax.swing.JScrollPane" name="mainScrollPane">
                   <Properties>
+                    <Property name="horizontalScrollBar" type="javax.swing.JScrollBar" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="null"/>
+                    </Property>
                     <Property name="name" type="java.lang.String" value="mainScrollPane" noResource="true"/>
                   </Properties>
 
@@ -414,6 +417,9 @@
                       <Properties>
                         <Property name="background" type="java.awt.Color" resourceKey="centerStagePanel.background"/>
                         <Property name="name" type="java.lang.String" value="centerStagePanel" noResource="true"/>
+                        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                          <Dimension value="[750, 1200]"/>
+                        </Property>
                       </Properties>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -421,6 +427,9 @@
                         <Container class="javax.swing.JPanel" name="cardPantryPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardPantryPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -431,12 +440,16 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pantryMall" alignment="0" pref="786" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="249" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                       <Component id="breadButton" min="-2" pref="296" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="flourButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="398" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="pastaButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="flourButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="132" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="pantryMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
@@ -456,9 +469,9 @@
                                           <Component id="breadButton" max="32767" attributes="1"/>
                                           <Component id="flourButton" alignment="0" max="32767" attributes="1"/>
                                       </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="pastaButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="764" max="32767" attributes="0"/>
+                                      <EmptySpace pref="647" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -519,6 +532,9 @@
                         <Container class="javax.swing.JPanel" name="cardHomePanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardHomePanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -549,6 +565,9 @@
                         <Container class="javax.swing.JPanel" name="cardHelpPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardHelpPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -579,6 +598,9 @@
                         <Container class="javax.swing.JPanel" name="cardSearchPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardSearchPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -609,6 +631,9 @@
                         <Container class="javax.swing.JPanel" name="cardShoppingPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardShoppingPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -645,6 +670,9 @@
                         <Container class="javax.swing.JPanel" name="cardShoppingCartPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardShoppingCartPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -681,6 +709,9 @@
                         <Container class="javax.swing.JPanel" name="cardFruitPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardFruitPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -920,6 +951,9 @@
                         <Container class="javax.swing.JPanel" name="cardDairyPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardDairyPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -973,6 +1007,9 @@
                         <Container class="javax.swing.JPanel" name="cardMeatPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardMeatPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1045,6 +1082,9 @@
                         <Container class="javax.swing.JPanel" name="cardFavourites">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardFavourites" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1111,6 +1151,9 @@
                         <Container class="javax.swing.JPanel" name="cardDrinksPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardDrinksPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1223,6 +1266,9 @@
                         <Container class="javax.swing.JPanel" name="cardSubCategoryPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardSubCategoryPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1253,6 +1299,9 @@
                         <Container class="javax.swing.JPanel" name="cardDetailedViewPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardDetailedViewPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1291,6 +1340,9 @@
                         <Container class="javax.swing.JPanel" name="cardUserInfoPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardUserInfoPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1302,8 +1354,9 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="userInfoView1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="291" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="userInfoView1" min="-2" pref="612" max="-2" attributes="0"/>
+                                      <EmptySpace pref="164" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1327,6 +1380,9 @@
                         <Container class="javax.swing.JPanel" name="cardCashPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardCashPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -1363,6 +1419,9 @@
                         <Container class="javax.swing.JPanel" name="cardPreviousPurchasesPanel">
                           <Properties>
                             <Property name="name" type="java.lang.String" value="cardPreviousPurchasesPanel" noResource="true"/>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[750, 1200]"/>
+                            </Property>
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">

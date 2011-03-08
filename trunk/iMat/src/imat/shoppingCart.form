@@ -22,12 +22,8 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="matMallHeaderPanel" pref="818" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
+          <Component id="matMallHeaderPanel" alignment="1" pref="795" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -45,6 +41,9 @@
     <Component class="imat.HeaderPanel2" name="matMallHeaderPanel">
       <Properties>
         <Property name="name" type="java.lang.String" value="matMallHeaderPanel" noResource="true"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[795, 329]"/>
+        </Property>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
@@ -58,10 +57,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="shoppingCartList1" alignment="0" pref="818" max="32767" attributes="0"/>
+                      <Component id="shoppingCartList1" alignment="0" pref="775" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="clearCartButton" linkSize="1" min="-2" pref="179" max="-2" attributes="0"/>
-                          <EmptySpace pref="90" max="32767" attributes="0"/>
+                          <EmptySpace pref="47" max="32767" attributes="0"/>
                           <Component id="keepShoppingButton" linkSize="1" min="-2" pref="214" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                           <Component id="cashInButton" linkSize="1" min="-2" pref="202" max="-2" attributes="0"/>
@@ -75,7 +74,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Component id="shoppingCartList1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="cashInButton" max="32767" attributes="1"/>
                       <Component id="keepShoppingButton" alignment="1" pref="131" max="32767" attributes="1"/>
@@ -89,7 +88,6 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="clearCartButton">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="jButton2.font"/>
             <Property name="text" type="java.lang.String" resourceKey="clearCartButton.text"/>
             <Property name="name" type="java.lang.String" value="clearCartButton" noResource="true"/>
           </Properties>
@@ -103,7 +101,6 @@
         </Component>
         <Component class="javax.swing.JButton" name="keepShoppingButton">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="jButton2.font"/>
             <Property name="text" type="java.lang.String" resourceKey="keepShoppingButton.text"/>
             <Property name="name" type="java.lang.String" value="keepShoppingButton" noResource="true"/>
           </Properties>

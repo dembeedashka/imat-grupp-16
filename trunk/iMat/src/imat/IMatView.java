@@ -317,6 +317,7 @@ public class IMatView extends FrameView {
         navigationSearchPanel.setBackground(resourceMap.getColor("navigationSearchPanel.background")); // NOI18N
         navigationSearchPanel.setName("navigationSearchPanel"); // NOI18N
 
+        backButton.setIcon(resourceMap.getIcon("backButton.icon")); // NOI18N
         backButton.setText(resourceMap.getString("backButton.text")); // NOI18N
         backButton.setName("backButton"); // NOI18N
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -325,6 +326,7 @@ public class IMatView extends FrameView {
             }
         });
 
+        forwardButton.setIcon(resourceMap.getIcon("forwardButton.icon")); // NOI18N
         forwardButton.setText(resourceMap.getString("forwardButton.text")); // NOI18N
         forwardButton.setName("forwardButton"); // NOI18N
         forwardButton.addActionListener(new java.awt.event.ActionListener() {
@@ -365,25 +367,24 @@ public class IMatView extends FrameView {
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigationSearchPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(backButton)
+                .add(backButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 106, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(forwardButton)
-                .add(94, 94, 94)
+                .add(forwardButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 105, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(76, 76, 76)
                 .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchButton)
                 .add(247, 247, 247)
                 .add(helpButton)
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
         navigationSearchPanelLayout.setVerticalGroup(
             navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(navigationSearchPanelLayout.createSequentialGroup()
                 .add(20, 20, 20)
                 .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                        .add(backButton)
-                        .add(forwardButton))
+                    .add(forwardButton)
+                    .add(backButton)
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, navigationSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                         .add(searchTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                         .add(searchButton)

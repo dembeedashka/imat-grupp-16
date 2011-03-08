@@ -3,9 +3,6 @@
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[795, 1200]"/>
-    </Property>
   </Properties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
@@ -22,36 +19,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cashInfoCardPanel2" alignment="0" pref="825" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="cashRegisterPanel1" min="-2" pref="815" max="-2" attributes="1"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="cashRegisterPanel1" min="-2" pref="900" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
-          <Component id="matMallHeaderPanel" alignment="0" pref="825" max="32767" attributes="1"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="cashInfoCardPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="matMallHeaderPanel" min="-2" pref="324" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="cashRegisterPanel1" min="-2" pref="822" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="cashRegisterPanel1" alignment="0" pref="922" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="imat.HeaderPanel2" name="matMallHeaderPanel">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="matMallHeaderPanel" noResource="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[795, 329]"/>
-        </Property>
-      </Properties>
-    </Component>
     <Container class="javax.swing.JPanel" name="cashRegisterPanel1">
       <Properties>
         <Property name="name" type="java.lang.String" value="cashRegisterPanel1" noResource="true"/>
@@ -64,19 +44,22 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cashInfoCardPanel" alignment="0" max="32767" attributes="0"/>
                       <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="cashBasketNLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                      <Component id="cashPaymentPanel" alignment="0" min="0" pref="795" max="32767" attributes="1"/>
-                      <Component id="cashUserInfoPanel" alignment="0" pref="795" max="32767" attributes="1"/>
-                      <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
-                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
-                      <Component id="cashBasketPanel" alignment="0" pref="795" max="32767" attributes="1"/>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="cashBasketPanel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -84,10 +67,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cashInfoCardPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashBasketNLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashBasketPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashUserInfoLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashUserInfoPanel" min="-2" max="-2" attributes="0"/>
@@ -97,14 +82,32 @@
                   <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashPaymentPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="cashCompletepurchaseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace pref="105" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
+        <Container class="javax.swing.JPanel" name="cashInfoCardPanel">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="cashInfoCardPanel" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="888" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
         <Component class="javax.swing.JLabel" name="cashBasketNLabel">
           <Properties>
             <Property name="text" type="java.lang.String" resourceKey="cashBasketNLabel.text"/>
@@ -119,21 +122,17 @@
               </Border>
             </Property>
             <Property name="name" type="java.lang.String" value="cashBasketPanel" noResource="true"/>
-            <Property name="opaque" type="boolean" value="false"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[780, 210]"/>
-            </Property>
           </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="793" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="886" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="208" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="176" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -152,11 +151,6 @@
               </Border>
             </Property>
             <Property name="name" type="java.lang.String" value="cashUserInfoPanel" noResource="true"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[780, 236]"/>
-            </Property>
-            <Property name="requestFocusEnabled" type="boolean" value="false"/>
-            <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
           </Properties>
 
           <Layout>
@@ -199,7 +193,7 @@
                           <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
                           <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="200" max="32767" attributes="0"/>
+                      <EmptySpace pref="290" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -455,9 +449,6 @@
               </Border>
             </Property>
             <Property name="name" type="java.lang.String" value="cashPaymentPanel" noResource="true"/>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[780, 192]"/>
-            </Property>
           </Properties>
 
           <Layout>
@@ -523,7 +514,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="cashDebitCardPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -758,27 +749,6 @@
           </Properties>
         </Component>
       </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="cashInfoCardPanel2">
-      <Properties>
-        <Property name="name" type="java.lang.String" value="cashInfoCardPanel" noResource="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[795, 45]"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="825" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
     </Container>
   </SubComponents>
 </Form>

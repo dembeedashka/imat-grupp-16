@@ -11,6 +11,8 @@ import imat.categories.SubcategoryMeat;
 import imat.categories.SubcategoryOther;
 import imat.categories.SubcategoryPantry;
 import imat.categories.SubcategorySnacks;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import javax.swing.ImageIcon;
 import javax.swing.ScrollPaneConstants;
 import org.jdesktop.application.SingleFrameApplication;
@@ -22,7 +24,7 @@ import se.chalmers.ait.dat215.project.ProductCategory;
 /**
  * The application's main frame.
  */
-public class IMatView extends FrameView {
+public class IMatView extends FrameView implements WindowListener {
 
 
     /* header icons */
@@ -103,6 +105,8 @@ public class IMatView extends FrameView {
             mainScrollPane,
             "detailedView"
         );
+
+        getFrame().addWindowListener(this);
     }
 
     private void initHeaders()
@@ -1542,4 +1546,32 @@ public class IMatView extends FrameView {
     private imat.userInfoView userInfoView1;
     private javax.swing.JButton vegetableButton;
     // End of variables declaration//GEN-END:variables
+
+    public void windowOpened(WindowEvent e) {
+        
+    }
+
+    public void windowClosing(WindowEvent e) {
+        IMatDataHandler.getInstance().shutDown();
+    }
+
+    public void windowClosed(WindowEvent e) {
+        
+    }
+
+    public void windowIconified(WindowEvent e) {
+        
+    }
+
+    public void windowDeiconified(WindowEvent e) {
+        
+    }
+
+    public void windowActivated(WindowEvent e) {
+        
+    }
+
+    public void windowDeactivated(WindowEvent e) {
+        
+    }
 }

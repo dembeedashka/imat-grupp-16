@@ -153,6 +153,10 @@
           <Events>
             <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="productAmountStateChanged"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner(model)"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="SpinnerModel model = new SpinnerNumberModel(0, 0, 1000, 1);"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="productUnitLabel">
           <Properties>

@@ -11,6 +11,8 @@
 
 package imat;
 
+import javax.swing.ScrollPaneConstants;
+
 /**
  *
  * @author Boel_
@@ -20,6 +22,13 @@ public class shoppingList extends javax.swing.JPanel {
     /** Creates new form shoppingList */
     public shoppingList() {
         initComponents();
+
+        shoppingListRowScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        shoppingListRowScrollPane.getVerticalScrollBar().setUnitIncrement(16);
+
+        for(int i = 0; i < 5; i++) {
+            shoppingListAddRowActionPerformed(null);
+        }
     }
 
     /** This method is called from within the constructor to
@@ -53,6 +62,14 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListName.setFont(resourceMap.getFont("shoppingListName.font")); // NOI18N
         shoppingListName.setText(resourceMap.getString("shoppingListName.text")); // NOI18N
         shoppingListName.setName("shoppingListName"); // NOI18N
+        shoppingListName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                shoppingListNameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                shoppingListNameFocusLost(evt);
+            }
+        });
 
         jButton1.setFont(resourceMap.getFont("jButton1.font")); // NOI18N
         jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
@@ -65,7 +82,7 @@ public class shoppingList extends javax.swing.JPanel {
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shoppingListTopPanelLayout.createSequentialGroup()
-                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1))
         );
@@ -76,7 +93,7 @@ public class shoppingList extends javax.swing.JPanel {
                     .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addComponent(shoppingListName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE))
         );
 
         shoppingListBottomPanel.setName("shoppingListBottomPanel"); // NOI18N
@@ -137,6 +154,18 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListRowPanel.revalidate();
         shoppingListRowPanel.repaint();
     }//GEN-LAST:event_shoppingListAddRowActionPerformed
+
+    private void shoppingListNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_shoppingListNameFocusGained
+        if(shoppingListName.getText().equals("Skriv listans namn här")) {
+            shoppingListName.setText("");
+        }
+    }//GEN-LAST:event_shoppingListNameFocusGained
+
+    private void shoppingListNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_shoppingListNameFocusLost
+        if(shoppingListName.getText().equals("")) {
+            shoppingListName.setText("Skriv listans namn här");
+        }
+    }//GEN-LAST:event_shoppingListNameFocusLost
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

@@ -45,7 +45,7 @@
                       <Component id="apUserinfoButton" alignment="0" pref="210" max="32767" attributes="1"/>
                       <Component id="apCashregisterButton" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
                   </Group>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -66,6 +66,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="apBasketButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="apBasketButton.font"/>
             <Property name="icon" type="javax.swing.Icon" resourceKey="apBasketButton.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="apBasketButton.text"/>
             <Property name="name" type="java.lang.String" value="apBasketButton" noResource="true"/>

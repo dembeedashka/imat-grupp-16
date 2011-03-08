@@ -52,7 +52,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="shoppingListName" alignment="0" pref="249" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="shoppingListHeader" pref="132" max="32767" attributes="0"/>
+                  <Component id="shoppingListHeader" pref="146" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -85,6 +85,10 @@
             <Property name="text" type="java.lang.String" resourceKey="shoppingListName.text"/>
             <Property name="name" type="java.lang.String" value="shoppingListName" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="shoppingListNameFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="shoppingListNameFocusLost"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>

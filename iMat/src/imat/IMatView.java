@@ -12,7 +12,7 @@ import imat.categories.SubcategoryOther;
 import imat.categories.SubcategoryPantry;
 import imat.categories.SubcategorySnacks;
 import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
+import javax.swing.ScrollPaneConstants;
 import org.jdesktop.application.SingleFrameApplication;
 import org.jdesktop.application.FrameView;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
@@ -82,11 +82,13 @@ public class IMatView extends FrameView {
         initComponents();
         initHeaders();
 
-        // fix text position of forward button
-        forwardButton.setHorizontalTextPosition(SwingConstants.LEFT);
-
         // make window size static
         //getFrame().setResizable(false);
+
+        // scroll bar behaviour
+        mainScrollPane.getVerticalScrollBar().setUnitIncrement(16);
+        mainScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        mainScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         presenter = IMatPresenter.getInstance();
         presenter.init(
@@ -335,6 +337,7 @@ public class IMatView extends FrameView {
         forwardButton.setFont(resourceMap.getFont("forwardButton.font")); // NOI18N
         forwardButton.setIcon(resourceMap.getIcon("forwardButton.icon")); // NOI18N
         forwardButton.setText(resourceMap.getString("forwardButton.text")); // NOI18N
+        forwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         forwardButton.setName("forwardButton"); // NOI18N
         forwardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,6 +351,14 @@ public class IMatView extends FrameView {
         searchTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchTextFieldActionPerformed(evt);
+            }
+        });
+        searchTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                searchTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                searchTextFieldFocusLost(evt);
             }
         });
 
@@ -1117,7 +1128,7 @@ public class IMatView extends FrameView {
         );
         framePanelLayout.setVerticalGroup(
             framePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainScrollPane, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 549, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(mainScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
         );
 
         bottomBorderPanel.setBackground(resourceMap.getColor("bottomBorderPanel.background")); // NOI18N
@@ -1263,7 +1274,7 @@ public class IMatView extends FrameView {
     }//GEN-LAST:event_pastaButtonActionPerformed
 
     private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
-        // TODO add your handling code here:
+        searchButtonActionPerformed(evt);
     }//GEN-LAST:event_searchTextFieldActionPerformed
 
     private void berryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_berryButtonActionPerformed
@@ -1427,6 +1438,18 @@ public class IMatView extends FrameView {
         }
         presenter.displaySubcategory(subSnacks, SNACKS_HEADER, "Sötsaker");
     }//GEN-LAST:event_sweetsButtonActionPerformed
+
+    private void searchTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchTextFieldFocusGained
+        if(searchTextField.getText().equals("Till exempel: päron eller mjölk")) {
+            searchTextField.setText("");
+        }
+    }//GEN-LAST:event_searchTextFieldFocusGained
+
+    private void searchTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchTextFieldFocusLost
+        if(searchTextField.getText().equals("")) {
+            searchTextField.setText("Till exempel: päron eller mjölk");
+        }
+    }//GEN-LAST:event_searchTextFieldFocusLost
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;

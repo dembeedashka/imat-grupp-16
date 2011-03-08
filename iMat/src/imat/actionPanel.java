@@ -11,6 +11,9 @@
 
 package imat;
 
+import java.text.DecimalFormat;
+import javax.swing.SwingConstants;
+
 /**
  *
  * @author Harryson
@@ -22,7 +25,20 @@ public class actionPanel extends javax.swing.JPanel {
     /** Creates new form actionPanel */
     public actionPanel() {
         initComponents();
+
+        apBasketButton.setVerticalTextPosition(SwingConstants.CENTER);
+        apBasketButton.setHorizontalTextPosition(SwingConstants.CENTER);
+        updateCartButtonText(0, 0);
     }
+
+    public void updateCartButtonText(int nrOfItems, double sum) {
+        int    intSum = (int) sum,
+               intDec = (int) ((sum - intSum) * 100);
+        String pad    = intDec < 10 ? "0" : "";
+        
+        apBasketButton.setText("<html><p><p><p><p>Antal varor: " + nrOfItems + " st<p>Summa: " + intSum + "," + intDec + pad + " kr</p></p></p></p></p></html>");
+    }
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -44,6 +60,7 @@ public class actionPanel extends javax.swing.JPanel {
         actionPanel1.setName("actionPanel1"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(actionPanel.class);
+        apBasketButton.setFont(resourceMap.getFont("apBasketButton.font")); // NOI18N
         apBasketButton.setIcon(resourceMap.getIcon("apBasketButton.icon")); // NOI18N
         apBasketButton.setText(resourceMap.getString("apBasketButton.text")); // NOI18N
         apBasketButton.setName("apBasketButton"); // NOI18N
@@ -92,7 +109,7 @@ public class actionPanel extends javax.swing.JPanel {
                     .addComponent(apReceiptButton, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE)
                     .addComponent(apUserinfoButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, Short.MAX_VALUE)
                     .addComponent(apCashregisterButton, javax.swing.GroupLayout.Alignment.LEADING, 0, 0, Short.MAX_VALUE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         actionPanel1Layout.setVerticalGroup(
             actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

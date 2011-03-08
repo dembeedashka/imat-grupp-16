@@ -190,7 +190,6 @@ public class IMatView extends FrameView implements WindowListener {
         cardFavourites = new javax.swing.JPanel();
         favMall = new imat.matMall();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         cardDrinksPanel = new javax.swing.JPanel();
         drinksMall = new imat.matMall();
         coldDrinksButton = new javax.swing.JButton();
@@ -401,7 +400,7 @@ public class IMatView extends FrameView implements WindowListener {
                 .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 271, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 269, Short.MAX_VALUE)
                 .add(helpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(48, 48, 48))
         );
@@ -648,7 +647,7 @@ public class IMatView extends FrameView implements WindowListener {
             cardShoppingCartPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardShoppingCartPanelLayout.createSequentialGroup()
                 .add(shoppingCart1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1216, Short.MAX_VALUE))
+                .addContainerGap(800, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardShoppingCartPanel, "cart");
@@ -928,10 +927,7 @@ public class IMatView extends FrameView implements WindowListener {
         favMall.setName("favMall"); // NOI18N
 
         jPanel1.setName("jPanel1"); // NOI18N
-        jPanel1.setLayout(new java.awt.GridLayout(1, 2));
-
-        jScrollPane1.setName("jScrollPane1"); // NOI18N
-        jPanel1.add(jScrollPane1);
+        jPanel1.setLayout(new java.awt.GridLayout(4, 2));
 
         org.jdesktop.layout.GroupLayout cardFavouritesLayout = new org.jdesktop.layout.GroupLayout(cardFavourites);
         cardFavourites.setLayout(cardFavouritesLayout);
@@ -1115,7 +1111,7 @@ public class IMatView extends FrameView implements WindowListener {
             cardCashPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardCashPanelLayout.createSequentialGroup()
                 .add(cashRegister1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(875, Short.MAX_VALUE))
+                .addContainerGap(207, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardCashPanel, "cash");
@@ -1233,6 +1229,25 @@ public class IMatView extends FrameView implements WindowListener {
     }//GEN-LAST:event_snacksButtonActionPerformed
 
     private void favouritesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favouritesButtonActionPerformed
+        jPanel1.removeAll();
+        for(Product p: IMatDataHandler.getInstance().favorites())
+        {
+        itemPanel pa = new itemPanel();
+        pa.setProductName(p.getName());
+        pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+
+        if(IMatDataHandler.getInstance().isFavorite(p))
+        {
+            pa.setStar("src/imat/resources/images/buttons/star.gif");
+        }
+
+        pa.setProductPrice(p.getPrice());
+        pa.setProductUnitLabel(p.getUnit());
+        jPanel1.add(pa);
+        jPanel1.revalidate();
+        jPanel1.repaint();
+        }
+
         presenter.displayCategory(FAVOURITES);
     }//GEN-LAST:event_favouritesButtonActionPerformed
 
@@ -1516,7 +1531,6 @@ public class IMatView extends FrameView implements WindowListener {
     private imat.homeView homeView1;
     private javax.swing.JButton hotDrinksButton;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JScrollPane mainScrollPane;
     private imat.matStep3Mall matStep3Mall1;

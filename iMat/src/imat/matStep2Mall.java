@@ -53,6 +53,7 @@ public class matStep2Mall extends javax.swing.JPanel {
         itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+        pa.setProduct(p);
 
         if(IMatDataHandler.getInstance().isFavorite(p))
         {

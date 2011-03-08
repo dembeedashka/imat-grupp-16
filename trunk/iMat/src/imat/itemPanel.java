@@ -16,6 +16,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
@@ -105,7 +107,8 @@ public class itemPanel extends javax.swing.JPanel {
         addToCartButton = new javax.swing.JButton();
         productTotalPrice = new javax.swing.JLabel();
         productName = new javax.swing.JLabel();
-        productAmount = new javax.swing.JSpinner();
+        SpinnerModel model = new SpinnerNumberModel(0, 0, 1000, 1);
+        productAmount = new javax.swing.JSpinner(model);
         productUnitLabel = new javax.swing.JLabel();
         productPrice = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();

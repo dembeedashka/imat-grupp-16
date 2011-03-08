@@ -49,11 +49,11 @@ public class matStep2Mall extends javax.swing.JPanel {
 
 
     public void addProduct(Product p){
-
         itemPanel pa = new itemPanel();
-        pa.setProduct(p);
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+        pa.setProductPrice(p.getPrice());
+        pa.setProductUnitLabel(p.getUnit());
         productPanel.add(pa);
         productPanel.revalidate();
         productPanel.repaint();

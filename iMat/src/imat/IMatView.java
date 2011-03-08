@@ -47,7 +47,6 @@ public class IMatView extends FrameView {
     public static final ImageIcon EXOTIC_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif");
     public static final ImageIcon CITRUS_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/citrus_fruit_big.gif");
 
-
     /* main categories */
     public static final Category  HOME       = new Category(Category.HOME_WHITE,       "home",   new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
     public static final Category  FRUIT      = new Category(Category.FRUIT_GREEN,      "fruit",  new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");

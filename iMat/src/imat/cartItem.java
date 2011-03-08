@@ -11,9 +11,7 @@
 
 package imat;
 
-import javax.swing.JButton;
-import javax.swing.JSpinner;
-import javax.swing.JTextField;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  *
@@ -21,44 +19,24 @@ import javax.swing.JTextField;
  */
 public class cartItem extends javax.swing.JPanel {
 
-    public JSpinner getProductAmount() {
-        return productAmount;
-    }
 
-    public void setProductAmount(JSpinner productAmount) {
-        this.productAmount = productAmount;
-    }
+    
 
-    public JTextField getProductName() {
-        return productName;
-    }
-
-    public void setProductName(JTextField productName) {
-        this.productName = productName;
-    }
-
-    public JTextField getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(JTextField productPrice) {
-        this.productPrice = productPrice;
-    }
-
-    public JButton getRemoveProduct() {
-        return removeProduct;
-    }
-
-    public void setRemoveProduct(JButton removeProduct) {
-        this.removeProduct = removeProduct;
-    }
-
-
+    
 
     /** Creates new form cartItem */
     public cartItem() {
         initComponents();
     }
+    
+    public cartItem(ShoppingItem lol) {
+        productName.setText(lol.getProduct().getName());
+        productPrice.setText(lol.getTotal() + " :-");
+        productAmount.setValue(lol.getAmount());
+    }
+
+
+   
 
     /** This method is called from within the constructor to
      * initialize the form.

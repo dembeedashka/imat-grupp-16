@@ -103,6 +103,7 @@ public class IMatView extends FrameView implements WindowListener {
             subCategoryMall,
             matStep3Mall1,
             mainScrollPane,
+            shoppingCart1,
             "detailedView"
         );
 

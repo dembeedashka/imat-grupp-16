@@ -11,8 +11,10 @@
 
 package imat;
 
+import javax.swing.JPanel;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.ShoppingCart;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  *
@@ -25,6 +27,16 @@ public class shoppingCartList extends javax.swing.JPanel {
     /** Creates new form shoppingCartList */
     public shoppingCartList() {
         initComponents();
+    }
+
+    public void addToShoppingCart()
+    {
+           productPanel.add(new cartItem());
+
+    }
+
+    public JPanel getProductPanel () {
+        return productPanel;
     }
 
     /** This method is called from within the constructor to
@@ -45,6 +57,7 @@ public class shoppingCartList extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         totalPrice = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+        productPanel = new javax.swing.JPanel();
 
         setName("Form"); // NOI18N
 
@@ -104,7 +117,12 @@ public class shoppingCartList extends javax.swing.JPanel {
         );
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jScrollPane1.setHorizontalScrollBar(null);
         jScrollPane1.setName("jScrollPane1"); // NOI18N
+
+        productPanel.setName("productPanel"); // NOI18N
+        productPanel.setLayout(new javax.swing.BoxLayout(productPanel, javax.swing.BoxLayout.Y_AXIS));
+        jScrollPane1.setViewportView(productPanel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -173,6 +191,7 @@ public class shoppingCartList extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel productPanel;
     private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables
 

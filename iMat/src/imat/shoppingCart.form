@@ -36,7 +36,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="matMallHeaderPanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" pref="760" max="32767" attributes="0"/>
+              <Component id="jPanel1" pref="854" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,13 +78,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Component id="shoppingCartList1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="cashInButton" alignment="1" max="32767" attributes="1"/>
-                          <Component id="keepShoppingButton" alignment="0" pref="131" max="32767" attributes="1"/>
-                      </Group>
-                      <Component id="clearCartButton" pref="131" max="32767" attributes="1"/>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="clearCartButton" max="32767" attributes="1"/>
+                      <Component id="cashInButton" alignment="1" max="32767" attributes="1"/>
+                      <Component id="keepShoppingButton" alignment="0" pref="131" max="32767" attributes="1"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>

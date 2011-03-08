@@ -12,15 +12,33 @@
 package imat;
 
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 
 /**
  *
  * @author David
  */
 public class itemPanel extends javax.swing.JPanel {
+
+    private Product product;
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
+    private IMatDataHandler handler = IMatDataHandler.getInstance();
+    private ImageIcon star = new ImageIcon("src/resources/images/buttons/star.gif");
+    private ImageIcon star2 = new ImageIcon("src/resources/images/buttons/star2.gif");
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public JSpinner getProductAmount() {
         return productAmount;
@@ -55,8 +73,8 @@ public class itemPanel extends javax.swing.JPanel {
         return productTotalPrice;
     }
 
-    public void setProductTotalPrice(JLabel productTotalPrice) {
-        this.productTotalPrice = productTotalPrice;
+    public void setProductTotalPrice(String productTotalPrice) {
+        this.productTotalPrice.setText(productTotalPrice);
     }
 
     /** Creates new form itemPanel */
@@ -124,8 +142,14 @@ public class itemPanel extends javax.swing.JPanel {
         productPrice.setText(resourceMap.getString("productPrice.text")); // NOI18N
         productPrice.setName("productPrice"); // NOI18N
 
+        jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -157,8 +181,8 @@ public class itemPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                    .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -185,8 +209,21 @@ public class itemPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
-        // TODO add your handling code here:
+        cart.addProduct(product,(Double)productAmount.getValue());
 }//GEN-LAST:event_addToCartButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(handler.isFavorite(product))
+        {
+            handler.addFavorite(product);
+            jButton1.setIcon(star2);
+        }
+        else
+        {
+            handler.removeFavorite(product);
+            jButton1.setIcon(star);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

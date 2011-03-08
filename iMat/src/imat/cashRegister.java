@@ -11,11 +11,18 @@
 
 package imat;
 
+import se.chalmers.ait.dat215.project.CreditCard;
+import se.chalmers.ait.dat215.project.Customer;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+
 /**
  *
  * @author David
  */
 public class cashRegister extends javax.swing.JPanel {
+
+    private Customer customer = IMatDataHandler.getInstance().getCustomer();
+    private CreditCard card   = IMatDataHandler.getInstance().getCreditCard();
 
     /** Creates new form cashRegister */
     public cashRegister() {
@@ -114,6 +121,8 @@ public class cashRegister extends javax.swing.JPanel {
         cashUserInfoPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashUserInfoPanel.setName("cashUserInfoPanel"); // NOI18N
 
+        cashFNameLabel.setText(resourceMap.getString("cashFNameLabel.text")); // NOI18N
+
         cashFNameTF.setName("cashFNameTF"); // NOI18N
 
         cashLNameLabel.setText(resourceMap.getString("cashLNameLabel.text")); // NOI18N
@@ -168,16 +177,16 @@ public class cashRegister extends javax.swing.JPanel {
             .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cashFNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cashLNameLabel)
                     .addComponent(cashPNumberLabel)
+                    .addComponent(cashPhoneNumberLabel)
+                    .addComponent(cashLNameLabel)
                     .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(cashLNameTF, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cashFNameTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
-                    .addComponent(cashPhoneNumberLabel)
+                        .addComponent(cashFNameTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                     .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(cashPNumberTF, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cashPhoneNumberTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
+                        .addComponent(cashPhoneNumberTF, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cashPNumberTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                    .addComponent(cashFNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(258, 258, 258)
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
@@ -202,22 +211,20 @@ public class cashRegister extends javax.swing.JPanel {
             .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
-                        .addComponent(cashStAddressLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashStAddressTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cashPCodeLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashPcodeTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
-                        .addComponent(cashFNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashFNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cashLNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashLNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(cashStAddressLabel)
+                    .addComponent(cashFNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashStAddressTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cashFNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashPCodeLabel)
+                    .addComponent(cashLNameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashPcodeTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cashLNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
@@ -247,6 +254,11 @@ public class cashRegister extends javax.swing.JPanel {
 
         jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
         jButton4.setName("jButton4"); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cashSaveUserInfo(evt);
+            }
+        });
 
         cashPaymentLabel.setText(resourceMap.getString("cashPaymentLabel.text")); // NOI18N
         cashPaymentLabel.setName("cashPaymentLabel"); // NOI18N
@@ -523,6 +535,26 @@ public class cashRegister extends javax.swing.JPanel {
     private void dontShowDebitCardButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dontShowDebitCardButton
         cashDebitCardPanel.setVisible(false);
     }//GEN-LAST:event_dontShowDebitCardButton
+
+    private void cashSaveUserInfo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashSaveUserInfo
+        customer.setAddress(cashStAddressTF.toString());
+        customer.setFirstName(cashFNameTF.toString());
+        customer.setLastName(cashLNameTF.toString());
+        customer.setPhoneNumber(cashPhoneNumberTF.toString());
+        customer.setPostCode(cashPcodeTF.toString());
+        customer.setPostAddress(cashPlaceTF.toString());
+        card.setCardNumber(cashCardnumberTfield.toString());
+        card.setCardType(cashCardtypeCBox.toString());
+        card.setHoldersName(cashCardFNameTField.toString()+" "+cashCardLNameTField.toString());
+        card.setValidMonth(Integer.parseInt(cashMonthCBox.toString()));
+        card.setValidYear(Integer.parseInt(cashYearCBox.toString()));
+
+        try {
+            card.setVerificationCode(Integer.parseInt(cashCvcTField.toString()));
+        } catch(NumberFormatException e) {
+            // TODO Add same page error message
+        }
+}//GEN-LAST:event_cashSaveUserInfo
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

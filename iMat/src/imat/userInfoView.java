@@ -401,7 +401,15 @@ public class userInfoView extends javax.swing.JPanel {
       card.setHoldersName(uiChFirstNameTextField.toString()+" "+uiChLastNameTextField.toString());
       card.setValidMonth(Integer.parseInt(uiMonthComboBox.toString()));
       card.setValidMonth(Integer.parseInt(uiYearComboBox.toString()));
-      card.setVerificationCode(Integer.parseInt(uiCvvCodeTextField.toString()));
+
+      try  
+      {
+          card.setVerificationCode(Integer.parseInt(uiCvvCodeTextField.toString()));
+      }
+      catch(NumberFormatException e)
+      {
+          // TODO Add same page error message
+      }
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

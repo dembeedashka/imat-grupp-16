@@ -1240,10 +1240,8 @@ public class IMatView extends FrameView {
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         searchView1.getResultsPanel().removeAll();
         String text = searchTextField.getText();
-        for (Product p : IMatDataHandler.getInstance().getProducts()){
-            if(p.getName().indexOf(text)>-1){
-                searchView1.addProduct(p);
-            }
+        for (Product p : IMatDataHandler.getInstance().findProducts(text)){
+            searchView1.addProduct(p);
         }
         presenter.displayCategory(SEARCH);
     }//GEN-LAST:event_searchButtonActionPerformed

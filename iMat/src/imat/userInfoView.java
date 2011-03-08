@@ -400,7 +400,7 @@ public class userInfoView extends javax.swing.JPanel {
       card.setCardType(uiCardTypeComboBox.toString());
       card.setHoldersName(uiChFirstNameTextField.toString()+" "+uiChLastNameTextField.toString());
       card.setValidMonth(Integer.parseInt(uiMonthComboBox.toString()));
-      card.setValidMonth(Integer.parseInt(uiYearComboBox.toString()));
+      card.setValidYear(Integer.parseInt(uiYearComboBox.toString()));
 
       try  
       {

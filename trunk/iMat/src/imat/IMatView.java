@@ -28,25 +28,25 @@ public class IMatView extends FrameView {
     /* header icons */
     public static final ImageIcon BERRY_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/berry_big.gif");
     public static final ImageIcon BREAD_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/bread_big.gif");
-    public static final ImageIcon FLOUR_SUGAR_SALT_HEADER = new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif");
-    public static final ImageIcon PASTA_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif");
-    public static final ImageIcon SNACKS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/sweet_big.gif");
-    public static final ImageIcon FISH_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/fish_big.gif");
     public static final ImageIcon CABBAGE_HEADER          = new ImageIcon("src/imat/resources/images/subcategories/cabbage_big.gif");
-    public static final ImageIcon NUTS_AND_SEEDS_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/nuts_and_seeds_big.gif");
-    public static final ImageIcon HOT_DRINKS_HEADER       = new ImageIcon("src/imat/resources/images/subcategories/hot_drinks_big.gif");
-    public static final ImageIcon COLD_DRINKS_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/cold_drinks_big.gif");
-    public static final ImageIcon MEAT_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/meat_big.gif");
-    public static final ImageIcon DAIRY_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/dairy_big.gif");
-    public static final ImageIcon VEGETABLE_FRUIT_HEADER  = new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif");
-    public static final ImageIcon ROOT_VEGETABLE_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/root_vegetable_big.gif");
-    public static final ImageIcon POTATO_RICE_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/potato_rice_big.gif");
-    public static final ImageIcon POD_HEADER              = new ImageIcon("src/imat/resources/images/subcategories/pod_big.gif");
-    public static final ImageIcon MELONS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/melons_big.gif");
-    public static final ImageIcon HERB_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/herb_big.gif");
-    public static final ImageIcon FRUIT_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/fruit_big.gif");
-    public static final ImageIcon EXOTIC_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif");
     public static final ImageIcon CITRUS_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/citrus_fruit_big.gif");
+    public static final ImageIcon COLD_DRINKS_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/cold_drinks_big.gif");
+    public static final ImageIcon DAIRIES_HEADER          = new ImageIcon("src/imat/resources/images/subcategories/dairies_big.gif");
+    public static final ImageIcon EXOTIC_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif");
+    public static final ImageIcon FISH_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/fish_big.gif");
+    public static final ImageIcon FLOUR_SUGAR_SALT_HEADER = new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif");
+    public static final ImageIcon FRUIT_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/fruit_big.gif");
+    public static final ImageIcon HERB_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/herb_big.gif");
+    public static final ImageIcon HOT_DRINKS_HEADER       = new ImageIcon("src/imat/resources/images/subcategories/hot_drinks_big.gif");
+    public static final ImageIcon NUTS_AND_SEEDS_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/nuts_and_seeds_big.gif");
+    public static final ImageIcon MEAT_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/meat_big.gif");
+    public static final ImageIcon MELONS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/melons_big.gif");
+    public static final ImageIcon PASTA_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif");
+    public static final ImageIcon POD_HEADER              = new ImageIcon("src/imat/resources/images/subcategories/pod_big.gif");
+    public static final ImageIcon POTATO_RICE_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/potato_rice_big.gif");
+    public static final ImageIcon ROOT_VEGETABLE_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/root_vegetable_big.gif");
+    public static final ImageIcon SNACKS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/sweet_big.gif");
+    public static final ImageIcon VEGETABLE_FRUIT_HEADER  = new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif");
 
     /* main categories */
     public static final Category  HOME       = new Category(Category.HOME_WHITE,       "home",   new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
@@ -1382,7 +1382,7 @@ public class IMatView extends FrameView {
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.displaySubcategory(subDairy, DAIRY_HEADER, "Mejeriprodukter");
+        presenter.displaySubcategory(subDairy, DAIRIES_HEADER, "Mejeriprodukter");
     }//GEN-LAST:event_dairySubButtonActionPerformed
 
     private void fishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishButtonActionPerformed

@@ -42,6 +42,11 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailPriceLabel.setText(product.getPrice()+"");
         detailProductNameLabel.setText(product.getName());
         this.product=product;
+
+        if(IMatDataHandler.getInstance().isFavorite(product))
+        {
+            detailFavoriteButton.setIcon(star);
+        }
     }
 
     public JLabel getDetailCostLabel() {

@@ -88,6 +88,10 @@ public class itemPanel extends javax.swing.JPanel {
         this.productTotalPrice.setText(productTotalPrice);
     }
 
+    public void setStar(String path) {
+        jButton1.setIcon(star);
+    }
+
     /** Creates new form itemPanel */
     public itemPanel() {
         initComponents();

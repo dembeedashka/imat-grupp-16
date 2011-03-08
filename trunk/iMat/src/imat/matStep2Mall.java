@@ -14,6 +14,7 @@ package imat;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -52,11 +53,19 @@ public class matStep2Mall extends javax.swing.JPanel {
         itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+
+        if(IMatDataHandler.getInstance().isFavorite(p))
+        {
+            pa.setStar("src/imat/resources/images/buttons/star.gif");
+        }
+
         pa.setProductPrice(p.getPrice());
         pa.setProductUnitLabel(p.getUnit());
         productPanel.add(pa);
         productPanel.revalidate();
         productPanel.repaint();
+
+
     }
 
     /** This method is called from within the constructor to

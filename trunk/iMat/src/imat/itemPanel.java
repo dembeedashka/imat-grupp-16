@@ -19,6 +19,7 @@ import javax.swing.JSpinner;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  *
@@ -243,7 +244,14 @@ public class itemPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
-        cart.addProduct(product,(Integer) productAmount.getValue()*1.0);
+        ShoppingItem item = new ShoppingItem(product,(Integer) productAmount.getValue()*1.0);
+        cart.addItem(item);
+        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
+        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().revalidate();
+        System.out.println("troll");
+
+
+
 }//GEN-LAST:event_addToCartButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

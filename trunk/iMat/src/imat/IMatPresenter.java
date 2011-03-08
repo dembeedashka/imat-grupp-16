@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import se.chalmers.ait.dat215.project.Product;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 
 
 /**
@@ -30,6 +31,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
     private JScrollPane              mainScrollPane;
 
+    private shoppingCart             shoppingCartPanel;
+
     
     private matStep2Mall             subCategoryMall;
     private matStep3Mall             productDetails;
@@ -39,7 +42,7 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     private IMatPresenter() {
     }
 
-    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane, String productDetailsCard) {
+    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane, shoppingCart shoppingCartPanel, String productDetailsCard) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
@@ -48,6 +51,7 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         this.productDetails        = productDetails;
         this.mainScrollPane        = mainScrollPane;
         this.productDetailsCard    = productDetailsCard;
+        this.shoppingCartPanel     = shoppingCartPanel;
 
         historyManager             = new NavigationHistoryManager(backButton, forwardButton);
         historyManager.init(this, new NavigationHistoryState());
@@ -64,6 +68,11 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     @Override
     public Object clone() throws CloneNotSupportedException {
         throw new CloneNotSupportedException();
+    }
+
+
+    public shoppingCart getShoppingCartPanel () {
+        return shoppingCartPanel;
     }
 
     /**

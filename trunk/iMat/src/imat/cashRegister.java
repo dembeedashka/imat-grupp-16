@@ -31,10 +31,13 @@ public class cashRegister extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         cashRegisterPanel1 = new javax.swing.JPanel();
         cashInfoCardPanel = new javax.swing.JPanel();
+        headerPanel21 = new imat.HeaderPanel2();
         cashBasketNLabel = new javax.swing.JLabel();
         cashBasketPanel = new javax.swing.JPanel();
+        shoppingCartList1 = new imat.shoppingCartList();
         cashUserInfoLabel = new javax.swing.JLabel();
         cashUserInfoPanel = new javax.swing.JPanel();
         cashFNameLabel = new javax.swing.JLabel();
@@ -63,21 +66,20 @@ public class cashRegister extends javax.swing.JPanel {
         cashInvoiceRButton = new javax.swing.JRadioButton();
         cashDebitCardRButton = new javax.swing.JRadioButton();
         cashDebitCardPanel = new javax.swing.JPanel();
-        cashDebitCardPanel1 = new javax.swing.JPanel();
         cashCardFNameLabel = new javax.swing.JLabel();
-        cashCardFNameTField = new javax.swing.JTextField();
-        cashCardLNameLabel = new javax.swing.JLabel();
         cashCardLNameTField = new javax.swing.JTextField();
-        cashCardnumberLabel = new javax.swing.JLabel();
-        cashCardnumberTfield = new javax.swing.JTextField();
-        cashValidityLabel = new javax.swing.JLabel();
+        cashCardtypeCBox = new javax.swing.JComboBox();
+        cashCvcTField = new javax.swing.JTextField();
+        cashCvcLabel = new javax.swing.JLabel();
+        cashCardLNameLabel = new javax.swing.JLabel();
         cashMonthCBox = new javax.swing.JComboBox();
+        cashCardnumberTfield = new javax.swing.JTextField();
+        cashCardnumberLabel = new javax.swing.JLabel();
+        cashCardtypeLabel = new javax.swing.JLabel();
+        cashValidityLabel = new javax.swing.JLabel();
         cashDebitSlash = new javax.swing.JLabel();
         cashYearCBox = new javax.swing.JComboBox();
-        cashCvcLabel = new javax.swing.JLabel();
-        cashCvcTField = new javax.swing.JTextField();
-        cashCardtypeLabel = new javax.swing.JLabel();
-        cashCardtypeCBox = new javax.swing.JComboBox();
+        cashCardFNameTField = new javax.swing.JTextField();
         cashCompletepurchaseButton = new javax.swing.JButton();
 
         setName("Form"); // NOI18N
@@ -88,15 +90,23 @@ public class cashRegister extends javax.swing.JPanel {
 
         cashInfoCardPanel.setName("cashInfoCardPanel"); // NOI18N
 
+        headerPanel21.setName("headerPanel21"); // NOI18N
+
         javax.swing.GroupLayout cashInfoCardPanelLayout = new javax.swing.GroupLayout(cashInfoCardPanel);
         cashInfoCardPanel.setLayout(cashInfoCardPanelLayout);
         cashInfoCardPanelLayout.setHorizontalGroup(
             cashInfoCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 888, Short.MAX_VALUE)
+            .addGroup(cashInfoCardPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(186, Short.MAX_VALUE))
         );
         cashInfoCardPanelLayout.setVerticalGroup(
             cashInfoCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 31, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cashInfoCardPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(cashRegister.class);
@@ -106,15 +116,17 @@ public class cashRegister extends javax.swing.JPanel {
         cashBasketPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashBasketPanel.setName("cashBasketPanel"); // NOI18N
 
+        shoppingCartList1.setName("shoppingCartList1"); // NOI18N
+
         javax.swing.GroupLayout cashBasketPanelLayout = new javax.swing.GroupLayout(cashBasketPanel);
         cashBasketPanel.setLayout(cashBasketPanelLayout);
         cashBasketPanelLayout.setHorizontalGroup(
             cashBasketPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 886, Short.MAX_VALUE)
+            .addComponent(shoppingCartList1, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
         );
         cashBasketPanelLayout.setVerticalGroup(
             cashBasketPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 176, Short.MAX_VALUE)
+            .addComponent(shoppingCartList1, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
         );
 
         cashUserInfoLabel.setText(resourceMap.getString("cashUserInfoLabel.text")); // NOI18N
@@ -124,7 +136,6 @@ public class cashRegister extends javax.swing.JPanel {
         cashUserInfoPanel.setName("cashUserInfoPanel"); // NOI18N
 
         cashFNameLabel.setText(resourceMap.getString("cashFNameLabel.text")); // NOI18N
-        cashFNameLabel.setName("cashFNameLabel"); // NOI18N
 
         cashFNameTF.setName("cashFNameTF"); // NOI18N
 
@@ -212,7 +223,7 @@ public class cashRegister extends javax.swing.JPanel {
                     .addComponent(cashPcodeTF)
                     .addComponent(cashDeliveryDateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cashPlaceTF))
-                .addContainerGap(290, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         cashUserInfoPanelLayout.setVerticalGroup(
             cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,38 +283,56 @@ public class cashRegister extends javax.swing.JPanel {
         cashPaymentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         cashPaymentPanel.setName("cashPaymentPanel"); // NOI18N
 
+        buttonGroup1.add(cashInvoiceRButton);
         cashInvoiceRButton.setText(resourceMap.getString("cashInvoiceRButton.text")); // NOI18N
         cashInvoiceRButton.setName("cashInvoiceRButton"); // NOI18N
+        cashInvoiceRButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dontShowDebitCardButton(evt);
+            }
+        });
 
+        buttonGroup1.add(cashDebitCardRButton);
         cashDebitCardRButton.setText(resourceMap.getString("cashDebitCardRButton.text")); // NOI18N
         cashDebitCardRButton.setName("cashDebitCardRButton"); // NOI18N
+        cashDebitCardRButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showDebitCardButton(evt);
+            }
+        });
 
         cashDebitCardPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cashDebitCardPanel.setName("cashDebitCardPanel"); // NOI18N
 
-        cashDebitCardPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cashDebitCardPanel1.setName("cashDebitCardPanel1"); // NOI18N
-
         cashCardFNameLabel.setText(resourceMap.getString("cashCardFNameLabel.text")); // NOI18N
         cashCardFNameLabel.setName("cashCardFNameLabel"); // NOI18N
 
-        cashCardFNameTField.setName("cashCardFNameTField"); // NOI18N
+        cashCardLNameTField.setName("cashCardLNameTField"); // NOI18N
+
+        cashCardtypeCBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VISA", "Mastercard" }));
+        cashCardtypeCBox.setName("cashCardtypeCBox"); // NOI18N
+
+        cashCvcTField.setName("cashCvcTField"); // NOI18N
+
+        cashCvcLabel.setText(resourceMap.getString("cashCvcLabel.text")); // NOI18N
+        cashCvcLabel.setName("cashCvcLabel"); // NOI18N
 
         cashCardLNameLabel.setText(resourceMap.getString("cashCardLNameLabel.text")); // NOI18N
         cashCardLNameLabel.setName("cashCardLNameLabel"); // NOI18N
 
-        cashCardLNameTField.setName("cashCardLNameTField"); // NOI18N
+        cashMonthCBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        cashMonthCBox.setName("cashMonthCBox"); // NOI18N
+
+        cashCardnumberTfield.setName("cashCardnumberTfield"); // NOI18N
 
         cashCardnumberLabel.setText(resourceMap.getString("cashCardnumberLabel.text")); // NOI18N
         cashCardnumberLabel.setName("cashCardnumberLabel"); // NOI18N
 
-        cashCardnumberTfield.setName("cashCardnumberTfield"); // NOI18N
+        cashCardtypeLabel.setText(resourceMap.getString("cashCardtypeLabel.text")); // NOI18N
+        cashCardtypeLabel.setName("cashCardtypeLabel"); // NOI18N
 
         cashValidityLabel.setText(resourceMap.getString("cashValidityLabel.text")); // NOI18N
         cashValidityLabel.setName("cashValidityLabel"); // NOI18N
-
-        cashMonthCBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
-        cashMonthCBox.setName("cashMonthCBox"); // NOI18N
 
         cashDebitSlash.setText(resourceMap.getString("cashDebitSlash.text")); // NOI18N
         cashDebitSlash.setName("cashDebitSlash"); // NOI18N
@@ -311,95 +340,79 @@ public class cashRegister extends javax.swing.JPanel {
         cashYearCBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020" }));
         cashYearCBox.setName("cashYearCBox"); // NOI18N
 
-        cashCvcLabel.setText(resourceMap.getString("cashCvcLabel.text")); // NOI18N
-        cashCvcLabel.setName("cashCvcLabel"); // NOI18N
-
-        cashCvcTField.setName("cashCvcTField"); // NOI18N
-
-        cashCardtypeLabel.setText(resourceMap.getString("cashCardtypeLabel.text")); // NOI18N
-        cashCardtypeLabel.setName("cashCardtypeLabel"); // NOI18N
-
-        cashCardtypeCBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VISA", "Mastercard" }));
-        cashCardtypeCBox.setName("cashCardtypeCBox"); // NOI18N
-
-        javax.swing.GroupLayout cashDebitCardPanel1Layout = new javax.swing.GroupLayout(cashDebitCardPanel1);
-        cashDebitCardPanel1.setLayout(cashDebitCardPanel1Layout);
-        cashDebitCardPanel1Layout.setHorizontalGroup(
-            cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                        .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cashCardLNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cashCardLNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cashCardnumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(cashCardnumberTfield))
-                            .addComponent(cashCardFNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(204, 204, 204)
-                        .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cashCardtypeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cashCardtypeLabel)
-                            .addComponent(cashCvcLabel)
-                            .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                                .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(cashCvcTField, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cashMonthCBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cashDebitSlash)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cashYearCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cashValidityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(cashCardFNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(304, Short.MAX_VALUE))
-        );
-        cashDebitCardPanel1Layout.setVerticalGroup(
-            cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cashCardFNameLabel)
-                    .addComponent(cashCardtypeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                        .addComponent(cashCardFNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCardLNameLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCardLNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCardnumberLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCardnumberTfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cashDebitCardPanel1Layout.createSequentialGroup()
-                        .addComponent(cashCardtypeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashValidityLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(cashDebitCardPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cashMonthCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cashYearCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cashDebitSlash))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCvcLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashCvcTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+        cashCardFNameTField.setName("cashCardFNameTField"); // NOI18N
 
         javax.swing.GroupLayout cashDebitCardPanelLayout = new javax.swing.GroupLayout(cashDebitCardPanel);
         cashDebitCardPanel.setLayout(cashDebitCardPanelLayout);
         cashDebitCardPanelLayout.setHorizontalGroup(
             cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
-                .addComponent(cashDebitCardPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(cashCardFNameLabel))
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cashCardnumberTfield, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                            .addComponent(cashCardnumberLabel)))
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cashCardLNameTField)
+                            .addComponent(cashCardLNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(cashCardFNameTField, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)))
+                .addGap(290, 290, 290)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cashCardtypeLabel)
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addComponent(cashMonthCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(cashDebitSlash)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cashYearCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cashValidityLabel)
+                    .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(cashCvcTField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cashCvcLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cashCardtypeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(165, 165, 165))
         );
         cashDebitCardPanelLayout.setVerticalGroup(
             cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
-                .addComponent(cashDebitCardPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashCardFNameLabel)
+                    .addComponent(cashCardtypeLabel))
+                .addGap(11, 11, 11)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashCardFNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cashCardtypeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cashCardLNameLabel)
+                    .addComponent(cashValidityLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cashMonthCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cashDebitSlash)
+                        .addComponent(cashYearCBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cashCardLNameTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addComponent(cashCvcLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cashCvcTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                        .addComponent(cashCardnumberLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cashCardnumberTfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout cashPaymentPanelLayout = new javax.swing.GroupLayout(cashPaymentPanel);
@@ -407,15 +420,13 @@ public class cashRegister extends javax.swing.JPanel {
         cashPaymentPanelLayout.setHorizontalGroup(
             cashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cashPaymentPanelLayout.createSequentialGroup()
-                .addGroup(cashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cashPaymentPanelLayout.createSequentialGroup()
-                        .addGap(225, 225, 225)
-                        .addComponent(cashInvoiceRButton)
-                        .addGap(35, 35, 35)
-                        .addComponent(cashDebitCardRButton))
-                    .addGroup(cashPaymentPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(225, 225, 225)
+                .addComponent(cashInvoiceRButton)
+                .addGap(35, 35, 35)
+                .addComponent(cashDebitCardRButton))
+            .addGroup(cashPaymentPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         cashPaymentPanelLayout.setVerticalGroup(
@@ -426,8 +437,8 @@ public class cashRegister extends javax.swing.JPanel {
                     .addComponent(cashInvoiceRButton)
                     .addComponent(cashDebitCardRButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         cashCompletepurchaseButton.setText(resourceMap.getString("cashCompletepurchaseButton.text")); // NOI18N
@@ -438,20 +449,21 @@ public class cashRegister extends javax.swing.JPanel {
         cashRegisterPanel1.setLayout(cashRegisterPanel1Layout);
         cashRegisterPanel1Layout.setHorizontalGroup(
             cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cashRegisterPanel1Layout.createSequentialGroup()
+            .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cashCompletepurchaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cashPaymentPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cashInfoCardPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cashUserInfoLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cashPaymentLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cashBasketNLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(cashUserInfoPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cashBasketPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGroup(cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cashPaymentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cashInfoCardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cashBasketPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cashUserInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
+                        .addGroup(cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cashBasketNLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cashUserInfoLabel)
+                            .addComponent(cashPaymentLabel))
+                        .addContainerGap(590, Short.MAX_VALUE))
+                    .addComponent(cashCompletepurchaseButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         cashRegisterPanel1Layout.setVerticalGroup(
             cashRegisterPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -462,7 +474,7 @@ public class cashRegister extends javax.swing.JPanel {
                 .addComponent(cashBasketNLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cashBasketPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(cashUserInfoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cashUserInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -472,27 +484,34 @@ public class cashRegister extends javax.swing.JPanel {
                 .addComponent(cashPaymentLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cashPaymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(19, 19, 19)
                 .addComponent(cashCompletepurchaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(cashRegisterPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+            .addComponent(cashRegisterPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 843, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cashRegisterPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 922, Short.MAX_VALUE)
+            .addComponent(cashRegisterPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1662, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void showDebitCardButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showDebitCardButton
+        cashDebitCardPanel.setVisible(true);
+    }//GEN-LAST:event_showDebitCardButton
+
+    private void dontShowDebitCardButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dontShowDebitCardButton
+        cashDebitCardPanel.setVisible(false);
+    }//GEN-LAST:event_dontShowDebitCardButton
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel cashBasketNLabel;
     private javax.swing.JPanel cashBasketPanel;
     private javax.swing.JLabel cashCardFNameLabel;
@@ -508,7 +527,6 @@ public class cashRegister extends javax.swing.JPanel {
     private javax.swing.JTextField cashCvcTField;
     private javax.swing.JComboBox cashDay;
     private javax.swing.JPanel cashDebitCardPanel;
-    private javax.swing.JPanel cashDebitCardPanel1;
     private javax.swing.JRadioButton cashDebitCardRButton;
     private javax.swing.JLabel cashDebitSlash;
     private javax.swing.JLabel cashDeliveryDateLabel;
@@ -540,7 +558,9 @@ public class cashRegister extends javax.swing.JPanel {
     private javax.swing.JLabel cashValidityLabel;
     private javax.swing.JComboBox cashYear;
     private javax.swing.JComboBox cashYearCBox;
+    private imat.HeaderPanel2 headerPanel21;
     private javax.swing.JButton jButton4;
+    private imat.shoppingCartList shoppingCartList1;
     // End of variables declaration//GEN-END:variables
 
 }

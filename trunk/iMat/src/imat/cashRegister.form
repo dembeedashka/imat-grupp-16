@@ -1,6 +1,10 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
   </Properties>
@@ -19,15 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="cashRegisterPanel1" min="-2" pref="900" max="-2" attributes="0"/>
-              <EmptySpace pref="21" max="32767" attributes="0"/>
-          </Group>
+          <Component id="cashRegisterPanel1" min="-2" pref="843" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cashRegisterPanel1" alignment="0" pref="922" max="32767" attributes="0"/>
+          <Component id="cashRegisterPanel1" min="-2" pref="1662" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -44,22 +45,24 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
-                      <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="1"/>
                       <Component id="cashInfoCardPanel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="cashBasketNLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="1"/>
-                          <Component id="cashBasketPanel" alignment="0" max="32767" attributes="1"/>
-                          <Component id="jButton4" alignment="1" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="cashBasketPanel" alignment="0" max="32767" attributes="1"/>
+                      <Component id="cashUserInfoPanel" alignment="0" max="32767" attributes="1"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cashBasketNLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                              <Component id="cashUserInfoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="590" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="cashCompletepurchaseButton" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
+                      <Component id="jButton4" alignment="1" min="-2" pref="171" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -72,7 +75,7 @@
                   <Component id="cashBasketNLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashBasketPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cashUserInfoLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashUserInfoPanel" min="-2" max="-2" attributes="0"/>
@@ -82,9 +85,9 @@
                   <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="cashPaymentPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Component id="cashCompletepurchaseButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="105" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -98,15 +101,30 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="888" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="headerPanel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="186" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="headerPanel21" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="imat.HeaderPanel2" name="headerPanel21">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="headerPanel21" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="cashBasketNLabel">
           <Properties>
@@ -127,15 +145,22 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="886" max="32767" attributes="0"/>
+                  <Component id="shoppingCartList1" alignment="0" pref="829" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="176" max="32767" attributes="0"/>
+                  <Component id="shoppingCartList1" alignment="0" pref="564" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="imat.shoppingCartList" name="shoppingCartList1">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="shoppingCartList1" noResource="true"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="cashUserInfoLabel">
           <Properties>
@@ -193,7 +218,7 @@
                           <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
                           <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace pref="290" max="32767" attributes="0"/>
+                      <EmptySpace pref="99" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -262,7 +287,6 @@
             <Component class="javax.swing.JLabel" name="cashFNameLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" resourceKey="cashFNameLabel.text"/>
-                <Property name="name" type="java.lang.String" value="cashFNameLabel" noResource="true"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="cashFNameTF">
@@ -455,18 +479,14 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
-                              <Component id="cashInvoiceRButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="cashDebitCardRButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                      <Component id="cashInvoiceRButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="cashDebitCardRButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -480,8 +500,8 @@
                           <Component id="cashDebitCardRButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cashDebitCardPanel" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="cashDebitCardPanel" min="-2" pref="214" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -489,15 +509,27 @@
           <SubComponents>
             <Component class="javax.swing.JRadioButton" name="cashInvoiceRButton">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" resourceKey="cashInvoiceRButton.text"/>
                 <Property name="name" type="java.lang.String" value="cashInvoiceRButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dontShowDebitCardButton"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="cashDebitCardRButton">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="buttonGroup1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" resourceKey="cashDebitCardRButton.text"/>
                 <Property name="name" type="java.lang.String" value="cashDebitCardRButton" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showDebitCardButton"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="cashDebitCardPanel">
               <Properties>
@@ -512,229 +544,212 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashDebitCardPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="100" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Component id="cashCardFNameLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cashCardnumberTfield" alignment="0" pref="187" max="32767" attributes="1"/>
+                                      <Component id="cashCardnumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="cashCardLNameTField" alignment="0" max="32767" attributes="1"/>
+                                      <Component id="cashCardLNameLabel" alignment="0" max="32767" attributes="1"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cashCardFNameTField" pref="187" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cashCardtypeLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="cashMonthCBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <Component id="cashDebitSlash" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cashYearCBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="cashValidityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="cashCvcTField" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="cashCvcLabel" alignment="0" max="32767" attributes="1"/>
+                              </Group>
+                              <Component id="cashCardtypeCBox" min="-2" pref="78" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="cashDebitCardPanel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cashCardFNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cashCardtypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cashCardFNameTField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cashCardtypeCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cashCardLNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cashValidityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cashMonthCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cashDebitSlash" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cashYearCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="cashCardLNameTField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="cashCvcLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cashCvcTField" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="cashCardnumberLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cashCardnumberTfield" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="cashDebitCardPanel1">
+                <Component class="javax.swing.JLabel" name="cashCardFNameLabel">
                   <Properties>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                        <EmptyBorder/>
-                      </Border>
-                    </Property>
-                    <Property name="name" type="java.lang.String" value="cashDebitCardPanel1" noResource="true"/>
+                    <Property name="text" type="java.lang.String" resourceKey="cashCardFNameLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashCardFNameLabel" noResource="true"/>
                   </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="cashCardLNameLabel" alignment="0" max="32767" attributes="1"/>
-                                              <Component id="cashCardLNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                              <Component id="cashCardnumberLabel" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
-                                              <Component id="cashCardnumberTfield" alignment="0" max="32767" attributes="1"/>
-                                          </Group>
-                                          <Component id="cashCardFNameTField" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cashCardtypeCBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cashCardtypeLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cashCvcLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="cashCvcTField" alignment="0" max="32767" attributes="1"/>
-                                                  <Component id="cashMonthCBox" alignment="0" min="-2" max="-2" attributes="1"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cashDebitSlash" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cashYearCBox" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="cashValidityLabel" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="cashCardFNameLabel" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="304" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="cashCardFNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cashCardtypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="cashCardFNameTField" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCardLNameLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCardLNameTField" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCardnumberLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCardnumberTfield" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="cashCardtypeCBox" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashValidityLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="cashMonthCBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cashYearCBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cashDebitSlash" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCvcLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCvcTField" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="cashCardFNameLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashCardFNameLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashCardFNameLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cashCardFNameTField">
-                      <Properties>
-                        <Property name="name" type="java.lang.String" value="cashCardFNameTField" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashCardLNameLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashCardLNameLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashCardLNameLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cashCardLNameTField">
-                      <Properties>
-                        <Property name="name" type="java.lang.String" value="cashCardLNameTField" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashCardnumberLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashCardnumberLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashCardnumberLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cashCardnumberTfield">
-                      <Properties>
-                        <Property name="name" type="java.lang.String" value="cashCardnumberTfield" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashValidityLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashValidityLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashValidityLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="cashMonthCBox">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="12">
-                            <StringItem index="0" value="01"/>
-                            <StringItem index="1" value="02"/>
-                            <StringItem index="2" value="03"/>
-                            <StringItem index="3" value="04"/>
-                            <StringItem index="4" value="05"/>
-                            <StringItem index="5" value="06"/>
-                            <StringItem index="6" value="07"/>
-                            <StringItem index="7" value="08"/>
-                            <StringItem index="8" value="09"/>
-                            <StringItem index="9" value="10"/>
-                            <StringItem index="10" value="11"/>
-                            <StringItem index="11" value="12"/>
-                          </StringArray>
-                        </Property>
-                        <Property name="name" type="java.lang.String" value="cashMonthCBox" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashDebitSlash">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashDebitSlash.text"/>
-                        <Property name="name" type="java.lang.String" value="cashDebitSlash" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="cashYearCBox">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="11">
-                            <StringItem index="0" value="2010"/>
-                            <StringItem index="1" value="2011"/>
-                            <StringItem index="2" value="2012"/>
-                            <StringItem index="3" value="2013"/>
-                            <StringItem index="4" value="2014"/>
-                            <StringItem index="5" value="2015"/>
-                            <StringItem index="6" value="2016"/>
-                            <StringItem index="7" value="2017"/>
-                            <StringItem index="8" value="2018"/>
-                            <StringItem index="9" value="2019"/>
-                            <StringItem index="10" value="2020"/>
-                          </StringArray>
-                        </Property>
-                        <Property name="name" type="java.lang.String" value="cashYearCBox" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashCvcLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashCvcLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashCvcLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cashCvcTField">
-                      <Properties>
-                        <Property name="name" type="java.lang.String" value="cashCvcTField" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="cashCardtypeLabel">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" resourceKey="cashCardtypeLabel.text"/>
-                        <Property name="name" type="java.lang.String" value="cashCardtypeLabel" noResource="true"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="cashCardtypeCBox">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="2">
-                            <StringItem index="0" value="VISA"/>
-                            <StringItem index="1" value="Mastercard"/>
-                          </StringArray>
-                        </Property>
-                        <Property name="name" type="java.lang.String" value="cashCardtypeCBox" noResource="true"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cashCardLNameTField">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="cashCardLNameTField" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cashCardtypeCBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="VISA"/>
+                        <StringItem index="1" value="Mastercard"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="cashCardtypeCBox" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cashCvcTField">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="cashCvcTField" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashCvcLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashCvcLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashCvcLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashCardLNameLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashCardLNameLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashCardLNameLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cashMonthCBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="12">
+                        <StringItem index="0" value="01"/>
+                        <StringItem index="1" value="02"/>
+                        <StringItem index="2" value="03"/>
+                        <StringItem index="3" value="04"/>
+                        <StringItem index="4" value="05"/>
+                        <StringItem index="5" value="06"/>
+                        <StringItem index="6" value="07"/>
+                        <StringItem index="7" value="08"/>
+                        <StringItem index="8" value="09"/>
+                        <StringItem index="9" value="10"/>
+                        <StringItem index="10" value="11"/>
+                        <StringItem index="11" value="12"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="cashMonthCBox" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cashCardnumberTfield">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="cashCardnumberTfield" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashCardnumberLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashCardnumberLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashCardnumberLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashCardtypeLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashCardtypeLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashCardtypeLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashValidityLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashValidityLabel.text"/>
+                    <Property name="name" type="java.lang.String" value="cashValidityLabel" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="cashDebitSlash">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="cashDebitSlash.text"/>
+                    <Property name="name" type="java.lang.String" value="cashDebitSlash" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="cashYearCBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="11">
+                        <StringItem index="0" value="2010"/>
+                        <StringItem index="1" value="2011"/>
+                        <StringItem index="2" value="2012"/>
+                        <StringItem index="3" value="2013"/>
+                        <StringItem index="4" value="2014"/>
+                        <StringItem index="5" value="2015"/>
+                        <StringItem index="6" value="2016"/>
+                        <StringItem index="7" value="2017"/>
+                        <StringItem index="8" value="2018"/>
+                        <StringItem index="9" value="2019"/>
+                        <StringItem index="10" value="2020"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="name" type="java.lang.String" value="cashYearCBox" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="cashCardFNameTField">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="cashCardFNameTField" noResource="true"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>

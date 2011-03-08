@@ -18,17 +18,22 @@ import se.chalmers.ait.dat215.project.Product;
  */
 public class IMatPresenter implements NavigationHistoryUpdater {
 
-    NavigationHistoryManager historyManager;
+    private static IMatPresenter instance;
 
-    private JPanel           navigationSearchPanel,
-                             bottomContentsPanel,
-                             bottomBorderPanel,
-                             centerStagePanel;
+    private NavigationHistoryManager historyManager;
+
+    private JPanel                   navigationSearchPanel,
+                                     bottomContentsPanel,
+                                     bottomBorderPanel,
+                                     centerStagePanel;
     
-    matStep2Mall             subCategoryMall;
-    matStep3Mall             productDetails;
+    private matStep2Mall             subCategoryMall;
+    private matStep3Mall             productDetails;
 
-    public IMatPresenter(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails) {
+    private IMatPresenter() {
+    }
+
+    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
@@ -36,12 +41,21 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         this.subCategoryMall       = subCategoryMall;
         this.productDetails        = productDetails;
 
-        init(backButton, forwardButton);
+        historyManager             = new NavigationHistoryManager(backButton, forwardButton);
+        historyManager.init(this, new NavigationHistoryState());
     }
 
-    private void init(JButton backButton, JButton forwardButton) {
-        historyManager = new NavigationHistoryManager(backButton, forwardButton);
-        historyManager.init(this, new NavigationHistoryState());
+    public static synchronized IMatPresenter getInstance() {
+        if(instance == null) {
+            instance = new IMatPresenter();
+        }
+
+        return instance;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException();
     }
 
     /**

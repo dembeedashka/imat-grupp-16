@@ -164,18 +164,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="cashFNameLabel" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="cashLNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="cashPNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="cashPhoneNumberLabel" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="cashLNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="cashLNameTF" alignment="0" max="32767" attributes="1"/>
-                              <Component id="cashFNameTF" alignment="0" pref="124" max="32767" attributes="1"/>
+                              <Component id="cashFNameTF" alignment="0" pref="148" max="32767" attributes="1"/>
                           </Group>
-                          <Component id="cashPhoneNumberLabel" alignment="0" min="-2" max="-2" attributes="1"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="cashPNumberTF" alignment="0" max="32767" attributes="1"/>
-                              <Component id="cashPhoneNumberTF" alignment="0" pref="120" max="32767" attributes="1"/>
+                              <Component id="cashPhoneNumberTF" alignment="0" max="32767" attributes="1"/>
+                              <Component id="cashPNumberTF" alignment="0" pref="143" max="32767" attributes="1"/>
                           </Group>
+                          <Component id="cashFNameLabel" min="-2" pref="136" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -205,24 +205,23 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="cashStAddressLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashStAddressTF" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cashPCodeLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashPcodeTF" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="cashFNameLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashFNameTF" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="cashLNameLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cashLNameTF" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="cashStAddressLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="cashFNameLabel" min="-2" pref="17" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cashStAddressTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cashFNameTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cashPCodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cashLNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cashPcodeTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cashLNameTF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -262,6 +261,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="cashFNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="cashFNameLabel.text"/>
+              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="cashFNameTF">
               <Properties>
@@ -426,6 +428,9 @@
             <Property name="text" type="java.lang.String" resourceKey="jButton4.text"/>
             <Property name="name" type="java.lang.String" value="jButton4" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cashSaveUserInfo"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="cashPaymentLabel">
           <Properties>

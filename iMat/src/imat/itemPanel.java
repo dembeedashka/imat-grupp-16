@@ -29,8 +29,8 @@ public class itemPanel extends javax.swing.JPanel {
     private Product product;
     private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
     private IMatDataHandler handler = IMatDataHandler.getInstance();
-    private ImageIcon star = new ImageIcon("src/resources/images/buttons/star.gif");
-    private ImageIcon star2 = new ImageIcon("src/resources/images/buttons/star2.gif");
+    private ImageIcon star = new ImageIcon("src/imat/resources/images/buttons/star.gif");
+    private ImageIcon star2 = new ImageIcon("src/imat/resources/images/buttons/star2.gif");
     private double price;
 
     public Product getProduct() {

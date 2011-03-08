@@ -250,12 +250,12 @@ public class matStep3Mall extends javax.swing.JPanel {
         if(handler.isFavorite(product))
         {
             handler.removeFavorite(product);
-            detailFavoriteButton.setIcon(star);
+            detailFavoriteButton.setIcon(star2);
         }
         else
         {
             handler.addFavorite(product);
-            detailFavoriteButton.setIcon(star2);
+            detailFavoriteButton.setIcon(star);
         }
     }//GEN-LAST:event_detailFavoriteButtonActionPerformed
 

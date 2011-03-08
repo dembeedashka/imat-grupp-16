@@ -70,7 +70,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="productTotalPriceDisplay" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="addToCartButton" alignment="0" pref="84" max="32767" attributes="3"/>
+                              <Component id="addToCartButton" alignment="0" pref="94" max="32767" attributes="3"/>
                           </Group>
                       </Group>
                   </Group>

@@ -11,12 +11,18 @@
 
 package imat;
 
+import se.chalmers.ait.dat215.project.CreditCard;
+import se.chalmers.ait.dat215.project.Customer;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+
 /**
  *
  * @author Boel_
  */
 public class userInfoView extends javax.swing.JPanel {
 
+    private Customer customer = IMatDataHandler.getInstance().getCustomer();
+    private CreditCard card   = IMatDataHandler.getInstance().getCreditCard();
     /** Creates new form userInfoView */
     public userInfoView() {
         initComponents();
@@ -210,6 +216,11 @@ public class userInfoView extends javax.swing.JPanel {
         jButton2.setFont(resourceMap.getFont("jButton2.font")); // NOI18N
         jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
         jButton2.setName("jButton2"); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         uiHeaderPanel.setName("uiHeaderPanel"); // NOI18N
 
@@ -377,6 +388,21 @@ public class userInfoView extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      customer.setAddress(uiAddressTextField.toString());
+      customer.setFirstName(uiFirstNameTextField.toString());
+      customer.setLastName(uiLastNameTextField.toString());
+      customer.setPhoneNumber(uiPhoneNumberTextField.toString());
+      customer.setPostCode(uiZipCodeTextField.toString());
+      customer.setPostAddress(uiCityTextField.toString());
+      card.setCardNumber(uiCardNumerTextField.toString());
+      card.setCardType(uiCardTypeComboBox.toString());
+      card.setHoldersName(uiChFirstNameTextField.toString()+" "+uiChLastNameTextField.toString());
+      card.setValidMonth(Integer.parseInt(uiMonthComboBox.toString()));
+      card.setValidMonth(Integer.parseInt(uiYearComboBox.toString()));
+      card.setVerificationCode(Integer.parseInt(uiCvvCodeTextField.toString()));
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -11,6 +11,8 @@
 
 package imat;
 
+import java.awt.Container;
+
 /**
  *
  * @author Boel_
@@ -38,6 +40,7 @@ public class ShoppingListRow extends javax.swing.JPanel {
         setName("Form"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(ShoppingListRow.class);
+        rowItemTextField.setFont(resourceMap.getFont("rowItemTextField.font")); // NOI18N
         rowItemTextField.setText(resourceMap.getString("rowItemTextField.text")); // NOI18N
         rowItemTextField.setName("rowItemTextField"); // NOI18N
 
@@ -64,7 +67,7 @@ public class ShoppingListRow extends javax.swing.JPanel {
                 .addComponent(rowItemTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rowCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,9 +85,11 @@ public class ShoppingListRow extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void trashButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trashButtonActionPerformed
-        remove(this);
+        Container parent = this.getParent();
+        parent.remove(this);
+        parent.validate();
+        parent.repaint();
     }//GEN-LAST:event_trashButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox rowCheckBox;

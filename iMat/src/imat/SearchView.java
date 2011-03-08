@@ -95,6 +95,8 @@ public class SearchView extends javax.swing.JPanel {
         itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+        pa.setProductPrice(p.getPrice());
+        pa.setProductUnitLabel(p.getUnit());
         resultsPanel.add(pa);
         resultsPanel.revalidate();
         resultsPanel.repaint();

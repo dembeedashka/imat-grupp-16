@@ -65,8 +65,14 @@ public class itemPanel extends javax.swing.JPanel {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductUnitLabel(String productUnitLabel) {
+        this.productUnitLabel.setText(productUnitLabel.substring(3));
+        this.productUnitLabel2.setText(productUnitLabel);
+    }
+    
+    public void setProductPrice(double productPrice) {
         this.productPrice.setText(productPrice+"");
+        this.price=productPrice;
     }
 
     public JLabel getProductTotalPrice() {
@@ -97,9 +103,11 @@ public class itemPanel extends javax.swing.JPanel {
         productTotalPrice = new javax.swing.JLabel();
         productName = new javax.swing.JLabel();
         productAmount = new javax.swing.JSpinner();
-        jLabel4 = new javax.swing.JLabel();
+        productUnitLabel = new javax.swing.JLabel();
         productPrice = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        productUnitLabel2 = new javax.swing.JLabel();
+        productTotalPriceDisplay = new javax.swing.JLabel();
 
         setName("Form"); // NOI18N
 
@@ -132,10 +140,15 @@ public class itemPanel extends javax.swing.JPanel {
 
         productAmount.setFont(resourceMap.getFont("productAmount.font")); // NOI18N
         productAmount.setName("productAmount"); // NOI18N
+        productAmount.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                productAmountStateChanged(evt);
+            }
+        });
 
-        jLabel4.setFont(resourceMap.getFont("jLabel4.font")); // NOI18N
-        jLabel4.setText(resourceMap.getString("jLabel4.text")); // NOI18N
-        jLabel4.setName("jLabel4"); // NOI18N
+        productUnitLabel.setFont(resourceMap.getFont("productUnitLabel.font")); // NOI18N
+        productUnitLabel.setText(resourceMap.getString("productUnitLabel.text")); // NOI18N
+        productUnitLabel.setName("productUnitLabel"); // NOI18N
 
         productPrice.setFont(resourceMap.getFont("productPrice.font")); // NOI18N
         productPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -151,6 +164,14 @@ public class itemPanel extends javax.swing.JPanel {
             }
         });
 
+        productUnitLabel2.setFont(resourceMap.getFont("productUnitLabel2.font")); // NOI18N
+        productUnitLabel2.setText(resourceMap.getString("productUnitLabel2.text")); // NOI18N
+        productUnitLabel2.setName("productUnitLabel2"); // NOI18N
+
+        productTotalPriceDisplay.setFont(resourceMap.getFont("productTotalPriceDisplay.font")); // NOI18N
+        productTotalPriceDisplay.setText(resourceMap.getString("productTotalPriceDisplay.text")); // NOI18N
+        productTotalPriceDisplay.setName("productTotalPriceDisplay"); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -159,21 +180,26 @@ public class itemPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
+                        .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(productIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(productUnitLabel2)
+                        .addGap(30, 30, 30)
                         .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
+                        .addComponent(productUnitLabel)
                         .addGap(16, 16, 16)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(addToCartButton, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                            .addComponent(productTotalPrice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(productTotalPrice)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(productTotalPriceDisplay))
+                            .addComponent(addToCartButton, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -181,7 +207,7 @@ public class itemPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                     .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,7 +215,9 @@ public class itemPanel extends javax.swing.JPanel {
                         .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(productTotalPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(productUnitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(productUnitLabel2)
+                        .addComponent(productTotalPriceDisplay))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(addToCartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(productIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -225,17 +253,23 @@ public class itemPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
+        productTotalPriceDisplay.setText(price * (Integer)productAmount.getValue()+"");
+    }//GEN-LAST:event_productAmountStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addToCartButton;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner productAmount;
     private javax.swing.JButton productIcon;
     private javax.swing.JLabel productName;
     private javax.swing.JLabel productPrice;
     private javax.swing.JLabel productTotalPrice;
+    private javax.swing.JLabel productTotalPriceDisplay;
+    private javax.swing.JLabel productUnitLabel;
+    private javax.swing.JLabel productUnitLabel2;
     // End of variables declaration//GEN-END:variables
-
+    double price;
 }

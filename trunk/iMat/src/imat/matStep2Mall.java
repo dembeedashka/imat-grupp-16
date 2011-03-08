@@ -45,7 +45,11 @@ public class matStep2Mall extends javax.swing.JPanel {
         this.productPanel = productPanel;
     }
 
+    
+
+
     public void addProduct(Product p){
+
         itemPanel pa = new itemPanel();
         pa.setProduct(p);
         pa.setProductName(p.getName());
@@ -68,10 +72,10 @@ public class matStep2Mall extends javax.swing.JPanel {
         matMallHeaderPanel = new imat.HeaderPanel2();
 
         setName("Form"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(795, 784));
+        setPreferredSize(new java.awt.Dimension(790, 1200));
 
         productPanel.setName("productPanel"); // NOI18N
-        productPanel.setLayout(new javax.swing.BoxLayout(productPanel, javax.swing.BoxLayout.Y_AXIS));
+        productPanel.setLayout(new java.awt.GridLayout(0, 2, 3, 3));
 
         matMallHeaderPanel.setName("matMallHeaderPanel"); // NOI18N
 
@@ -92,8 +96,8 @@ public class matStep2Mall extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(matMallHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(productPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(productPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 838, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

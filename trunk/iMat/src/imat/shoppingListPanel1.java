@@ -41,6 +41,11 @@ public class shoppingListPanel1 extends javax.swing.JPanel {
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(shoppingListPanel1.class);
         viewEditShoppingList.setText(resourceMap.getString("viewEditShoppingList.text")); // NOI18N
         viewEditShoppingList.setName("viewEditShoppingList"); // NOI18N
+        viewEditShoppingList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewEditShoppingListActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -57,6 +62,10 @@ public class shoppingListPanel1 extends javax.swing.JPanel {
                 .addComponent(viewEditShoppingList, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void viewEditShoppingListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEditShoppingListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewEditShoppingListActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

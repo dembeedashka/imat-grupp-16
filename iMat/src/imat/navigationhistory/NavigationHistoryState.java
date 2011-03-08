@@ -16,25 +16,33 @@ public class NavigationHistoryState {
     Category  selectedCategory; // used to get color and card to show
     ImageIcon headerIcon;
     String    description;
-    Product   productDetails;   // should be null unless product details are shown in the state
+    Product   product;          // should be null unless product details are shown in the state
 
     public NavigationHistoryState() {
-        this(IMatView.home, null);
+        this(IMatView.HOME, null, null, null);
     }
 
     public NavigationHistoryState(Category selectedCategory) {
-        this(selectedCategory, null);
+        this(selectedCategory, null, null, null);
     }
 
-    public NavigationHistoryState(Category selectedCategory, Product productDetails) {
-        this.selectedCategory    = selectedCategory;
-        this.headerIcon          = selectedCategory.getHeaderIcon();
-        this.description         = selectedCategory.getDescription();
-        this.productDetails      = productDetails;
+    public NavigationHistoryState(Category selectedCategory, Product product) {
+        this(selectedCategory, null, null, product);
     }
 
-    public Product getProductDetails() {
-        return productDetails;
+    public NavigationHistoryState(Category selectedCategory, ImageIcon headerIcon, String description) {
+        this(selectedCategory, headerIcon, description, null);
+    }
+
+    public NavigationHistoryState(Category selectedCategory, ImageIcon headerIcon, String description, Product product) {
+        this.selectedCategory = selectedCategory;
+        this.headerIcon       = headerIcon;
+        this.description      = description;
+        this.product          = product;
+    }
+
+    public Product getProduct() {
+        return product;
     }
 
     public Category getSelectedCategory() {
@@ -67,7 +75,7 @@ public class NavigationHistoryState {
         if ((this.description == null) ? (other.description != null) : !this.description.equals(other.description)) {
             return false;
         }
-        if (this.productDetails != other.productDetails && (this.productDetails == null || !this.productDetails.equals(other.productDetails))) {
+        if (this.product != other.product && (this.product == null || !this.product.equals(other.product))) {
             return false;
         }
         return true;
@@ -79,7 +87,7 @@ public class NavigationHistoryState {
         hash = 53 * hash + (this.selectedCategory != null ? this.selectedCategory.hashCode() : 0);
         hash = 53 * hash + (this.headerIcon != null ? this.headerIcon.hashCode() : 0);
         hash = 53 * hash + (this.description != null ? this.description.hashCode() : 0);
-        hash = 53 * hash + (this.productDetails != null ? this.productDetails.hashCode() : 0);
+        hash = 53 * hash + (this.product != null ? this.product.hashCode() : 0);
         return hash;
     }
 }

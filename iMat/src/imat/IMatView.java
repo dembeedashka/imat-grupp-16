@@ -24,27 +24,55 @@ import se.chalmers.ait.dat215.project.ProductCategory;
 public class IMatView extends FrameView {
 
 
-    public static final Category      home       = new Category(Category.HOME_WHITE, "home", new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
-    public static final Category      fruit      = new Category(Category.FRUIT_GREEN, "fruit", new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
-    public static final Category      meat       = new Category(Category.MEAT_RED, "meat", new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
-    public static final Category      dairy      = new Category(Category.DAIRY_BLUE, "dairy", new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
-    public static final Category      pantry     = new Category(Category.PANTRY_YELLOW, "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
-    public static final Category      snacks     = new Category(Category.SNACKS_ORANGE, "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
-    public static final Category      favourites = new Category(Category.FAVOURITES_BROWN, "fav", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
-    public static final Category      help       = new SubcategoryOther("help", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
+    /* header icons */
+    public static final ImageIcon BERRY_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/berry_big.gif");
+    public static final ImageIcon BREAD_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/bread_big.gif");
+    public static final ImageIcon FLOUR_SUGAR_SALT_HEADER = new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif");
+    public static final ImageIcon PASTA_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif");
+    public static final ImageIcon SNACKS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/sweet_big.gif");
+    public static final ImageIcon FISH_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/fish_big.gif");
+    public static final ImageIcon CABBAGE_HEADER          = new ImageIcon("src/imat/resources/images/subcategories/cabbage_big.gif");
+    public static final ImageIcon NUTS_AND_SEEDS_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/nuts_and_seeds_big.gif");
+    public static final ImageIcon HOT_DRINKS_HEADER       = new ImageIcon("src/imat/resources/images/subcategories/hot_drinks_big.gif");
+    public static final ImageIcon COLD_DRINKS_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/cold_drinks_big.gif");
+    public static final ImageIcon MEAT_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/meat_big.gif");
+    public static final ImageIcon DAIRY_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/dairy_big.gif");
+    public static final ImageIcon VEGETABLE_FRUIT_HEADER  = new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif");
+    public static final ImageIcon ROOT_VEGETABLE_HEADER   = new ImageIcon("src/imat/resources/images/subcategories/root_vegetable_big.gif");
+    public static final ImageIcon POTATO_RICE_HEADER      = new ImageIcon("src/imat/resources/images/subcategories/potato_rice_big.gif");
+    public static final ImageIcon POD_HEADER              = new ImageIcon("src/imat/resources/images/subcategories/pod_big.gif");
+    public static final ImageIcon MELONS_HEADER           = new ImageIcon("src/imat/resources/images/subcategories/melons_big.gif");
+    public static final ImageIcon HERB_HEADER             = new ImageIcon("src/imat/resources/images/subcategories/herb_big.gif");
+    public static final ImageIcon FRUIT_HEADER            = new ImageIcon("src/imat/resources/images/subcategories/fruit_big.gif");
+    public static final ImageIcon EXOTIC_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif");
+    public static final ImageIcon CITRUS_FRUIT_HEADER     = new ImageIcon("src/imat/resources/images/subcategories/citrus_fruit_big.gif");
 
-    public static final Category     search      = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
-    public static final Category     shop        = new SubcategoryOther("shop", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
-    public static final Category     cart        = new SubcategoryOther("cart", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
 
-    public static Category           subPantry  = new SubcategoryPantry("subCategory", null, null);
-    public static Category           subFruit   = new SubcategoryFruit("subCategory", null, null);
-    public static Category           subDairy   = new SubcategoryDairy("subCategory", null, null);
-    public static Category           subMeat   = new SubcategoryMeat("subCategory", null, null);
-    public static Category           subSnacks   = new SubcategorySnacks("subCategory", null, null);
+    /* main categories */
+    public static final Category  HOME       = new Category(Category.HOME_WHITE,       "home",   new ImageIcon("src/imat/resources/images/headers/kat0big.gif"), "HELLO WORLD");
+    public static final Category  FRUIT      = new Category(Category.FRUIT_GREEN,      "fruit",  new ImageIcon("src/imat/resources/images/headers/kat1big.gif"), "HELLO WORLD");
+    public static final Category  MEAT       = new Category(Category.MEAT_RED,         "meat",   new ImageIcon("src/imat/resources/images/headers/kat2big.gif"), "HELLO WORLD");
+    public static final Category  DAIRY      = new Category(Category.DAIRY_BLUE,       "dairy",  new ImageIcon("src/imat/resources/images/headers/kat3big.gif"), "HELLO WORLD");
+    public static final Category  PANTRY     = new Category(Category.PANTRY_YELLOW,    "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
+    public static final Category  SNACKS     = new Category(Category.SNACKS_ORANGE,    "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
+    public static final Category  FAVOURITES = new Category(Category.FAVOURITES_BROWN, "fav",    new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
 
-    private IMatPresenter presenter;
+    /* pseudo-categories used as main categories */
+    public static final Category  HELP       = new SubcategoryOther("help",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
+    public static final Category  SEARCH     = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
+    public static final Category  SHOP       = new SubcategoryOther("shop",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Shopping lists");
+    public static final Category  CART       = new SubcategoryOther("cart",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Varor och sånt");
 
+    /* subcategories */
+    public static Category        subPantry  = new SubcategoryPantry("subCategory", null, null);
+    public static Category        subFruit   = new SubcategoryFruit( "subCategory", null, null);
+    public static Category        subDairy   = new SubcategoryDairy( "subCategory", null, null);
+    public static Category        subMeat    = new SubcategoryMeat(  "subCategory", null, null);
+    public static Category        subSnacks  = new SubcategorySnacks("subCategory", null, null);
+
+    private IMatPresenter         presenter;
+
+    
     public IMatView(SingleFrameApplication app) {
         super(app);
         
@@ -1066,31 +1094,31 @@ public class IMatView extends FrameView {
     }// </editor-fold>//GEN-END:initComponents
 
     private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-        presenter.display(home);
+        presenter.displayCategory(HOME);
     }//GEN-LAST:event_homeButtonActionPerformed
 
     private void fruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitButtonActionPerformed
-        presenter.display(fruit);
+        presenter.displayCategory(FRUIT);
     }//GEN-LAST:event_fruitButtonActionPerformed
 
     private void meatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meatButtonActionPerformed
-        presenter.display(meat);
+        presenter.displayCategory(MEAT);
     }//GEN-LAST:event_meatButtonActionPerformed
 
     private void dairyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dairyButtonActionPerformed
-        presenter.display(dairy);
+        presenter.displayCategory(DAIRY);
     }//GEN-LAST:event_dairyButtonActionPerformed
 
     private void pantryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantryButtonActionPerformed
-        presenter.display(pantry);
+        presenter.displayCategory(PANTRY);
     }//GEN-LAST:event_pantryButtonActionPerformed
 
     private void snacksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snacksButtonActionPerformed
-        presenter.display(snacks);
+        presenter.displayCategory(SNACKS);
     }//GEN-LAST:event_snacksButtonActionPerformed
 
     private void favouritesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_favouritesButtonActionPerformed
-        presenter.display(favourites);
+        presenter.displayCategory(FAVOURITES);
     }//GEN-LAST:event_favouritesButtonActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
@@ -1109,45 +1137,42 @@ public class IMatView extends FrameView {
                 searchView1.addProduct(p);
             }
         }
-        presenter.display(search);
+        presenter.displayCategory(SEARCH);
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void showShoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showShoppingListButtonActionPerformed
-        presenter.display(shop);
+        presenter.displayCategory(SHOP);
     }//GEN-LAST:event_showShoppingListButtonActionPerformed
 
     private void breadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_breadButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/bread_big.gif"), "Bröd");
         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subPantry);
+        presenter.displaySubcategory(subPantry, BREAD_HEADER, "Bröd");
     }//GEN-LAST:event_breadButtonActionPerformed
 
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
-       presenter.display(help);
+       presenter.displayCategory(HELP);
     }//GEN-LAST:event_helpButtonActionPerformed
 
     private void flourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_flourButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/flour_sugar_salt_big.gif"),("Mjöl, socker & salt"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subPantry);
+        presenter.displaySubcategory(subPantry, FLOUR_SUGAR_SALT_HEADER, "Mjöl, socker & salt");
     }//GEN-LAST:event_flourButtonActionPerformed
 
     private void pastaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pastaButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/pasta_big.gif"),("Pasta"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subPantry);
+        presenter.displaySubcategory(subPantry, PASTA_HEADER, "Pasta");
     }//GEN-LAST:event_pastaButtonActionPerformed
 
     private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
@@ -1156,196 +1181,165 @@ public class IMatView extends FrameView {
 
     private void berryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_berryButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/berry_big.gif"),("Bär"));
          for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, BERRY_HEADER, "Bär");
     }//GEN-LAST:event_berryButtonActionPerformed
 
     private void cabbageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cabbageButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/cabbage_big.gif"),("Kål"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, CABBAGE_HEADER, "Kål");
     }//GEN-LAST:event_cabbageButtonActionPerformed
 
     private void citrusFruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_citrusFruitButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/citrus_fruit_big.gif"),("Citrusfrukter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, CITRUS_FRUIT_HEADER, "Citrusfrukter");
     }//GEN-LAST:event_citrusFruitButtonActionPerformed
 
     private void exoticFruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exoticFruitButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/exotic_fruit_big.gif"),("Exotiska frukter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, EXOTIC_FRUIT_HEADER, "Exotiska frukter");
     }//GEN-LAST:event_exoticFruitButtonActionPerformed
 
     private void drupeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drupeButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/fruit_big.gif"),("Stenfrukter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, FRUIT_HEADER, "Stenfrukter");
     }//GEN-LAST:event_drupeButtonActionPerformed
 
     private void herbButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_herbButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/herb_big.gif"),("Örtkryddor"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.HERB))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.HERB))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, HERB_HEADER, "Örtkryddor");
     }//GEN-LAST:event_herbButtonActionPerformed
 
     private void melonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_melonButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/melons_big.gif"),("Meloner"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, MELONS_HEADER, "Meloner");
     }//GEN-LAST:event_melonButtonActionPerformed
 
     private void podButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_podButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/pod_big.gif"),("Baljväxter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.POD))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.POD))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, POD_HEADER, "Baljväxter");
     }//GEN-LAST:event_podButtonActionPerformed
 
     private void potatoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potatoButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/potato_rice_big.gif"),("Potatis & ris"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, POTATO_RICE_HEADER, "Potatis & ris");
     }//GEN-LAST:event_potatoButtonActionPerformed
 
     private void rootVegetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootVegetableButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/root_vegetable_big.gif"),("Rotfrukter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, ROOT_VEGETABLE_HEADER, "Rotfrukter");
     }//GEN-LAST:event_rootVegetableButtonActionPerformed
 
     private void vegetableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vegetableButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/vegetable_fruit_big.gif"),("Grönsaker"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subFruit);
+        presenter.displaySubcategory(subFruit, VEGETABLE_FRUIT_HEADER, "Grönsaker");
     }//GEN-LAST:event_vegetableButtonActionPerformed
 
     private void dairySubButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dairySubButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/dairies_big.gif"),("Mejeriprodukter"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subDairy);
+        presenter.displaySubcategory(subDairy, DAIRY_HEADER, "Mejeriprodukter");
     }//GEN-LAST:event_dairySubButtonActionPerformed
 
     private void fishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fishButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/fish_big.gif"),("Fisk"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FISH))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.FISH))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subMeat);
+        presenter.displaySubcategory(subMeat, FISH_HEADER, "Fisk");
     }//GEN-LAST:event_fishButtonActionPerformed
 
     private void meatSubButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_meatSubButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/meat_big.gif"),("Kött"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subMeat);
+        presenter.displaySubcategory(subMeat, MEAT_HEADER, "Kött");
     }//GEN-LAST:event_meatSubButtonActionPerformed
 
     private void coldDrinksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coldDrinksButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/cold_drinks_big.gif"),("Drycker (kalla)"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subSnacks);
+        presenter.displaySubcategory(subSnacks, COLD_DRINKS_HEADER, "Drycker (kalla)");
     }//GEN-LAST:event_coldDrinksButtonActionPerformed
 
     private void hotDrinksButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotDrinksButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/hot_drinks_big.gif"),("Drycker (varma)"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS))
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subSnacks);
+        presenter.displaySubcategory(subSnacks, HOT_DRINKS_HEADER, "Drycker (varma)");
     }//GEN-LAST:event_hotDrinksButtonActionPerformed
 
     private void nutsSeedsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nutsSeedsButtonActionPerformed
-        presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/nuts_and_seeds_big.gif"),("Nötter och frön"));
-         for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS))
+        presenter.clearSubProducts(); 
+        for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.NUTS_AND_SEEDS))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subSnacks);
+        presenter.displaySubcategory(subSnacks, NUTS_AND_SEEDS_HEADER, "Nötter och frön");
     }//GEN-LAST:event_nutsSeedsButtonActionPerformed
 
     private void sweetsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sweetsButtonActionPerformed
         presenter.clearSubProducts();
-        updateSubcategory(new ImageIcon("src/imat/resources/images/subcategories/sweet_big.gif"),("Sötsaker"));
          for(Product p: IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET))
         {
             subCategoryMall.addProduct(p);
         }
-        presenter.display(subSnacks);
+        presenter.displaySubcategory(subSnacks, SNACKS_HEADER, "Sötsaker");
     }//GEN-LAST:event_sweetsButtonActionPerformed
-
-    private void updateSubcategory(ImageIcon headerIcon, String description) {
-        subPantry.setHeaderIcon(headerIcon);
-        subPantry.setDescription(description);
-        subFruit.setHeaderIcon(headerIcon);
-        subFruit.setDescription(description);
-        subDairy.setHeaderIcon(headerIcon);
-        subDairy.setDescription(description);
-        subMeat.setHeaderIcon(headerIcon);
-        subMeat.setDescription(description);
-        subSnacks.setHeaderIcon(headerIcon);
-        subSnacks.setDescription(description);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel actionPanel;

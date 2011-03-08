@@ -1242,7 +1242,8 @@ public class IMatView extends FrameView implements WindowListener {
         itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
-
+        pa.setProduct(p);
+        
         if(IMatDataHandler.getInstance().isFavorite(p))
         {
             pa.setStar("src/imat/resources/images/buttons/star.gif");

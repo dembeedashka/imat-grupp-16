@@ -17,6 +17,8 @@ package imat;
  */
 public class homeView extends javax.swing.JPanel {
 
+    private IMatPresenter presenter = IMatPresenter.getInstance();
+
     /** Creates new form homeView */
     public homeView() {
         initComponents();
@@ -58,6 +60,11 @@ public class homeView extends javax.swing.JPanel {
         homeUserInfoButton.setIcon(resourceMap.getIcon("homeUserInfoButton.icon")); // NOI18N
         homeUserInfoButton.setText(resourceMap.getString("homeUserInfoButton.text")); // NOI18N
         homeUserInfoButton.setName("homeUserInfoButton"); // NOI18N
+        homeUserInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeUserInfoButtonActionPerformed(evt);
+            }
+        });
 
         jScrollPane2.setName("jScrollPane2"); // NOI18N
 
@@ -74,6 +81,11 @@ public class homeView extends javax.swing.JPanel {
         homeHelpButton.setIcon(resourceMap.getIcon("homeHelpButton.icon")); // NOI18N
         homeHelpButton.setText(resourceMap.getString("homeHelpButton.text")); // NOI18N
         homeHelpButton.setName("homeHelpButton"); // NOI18N
+        homeHelpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeHelpButtonActionPerformed(evt);
+            }
+        });
 
         homeViewHeaderPanel.setName("homeViewHeaderPanel"); // NOI18N
 
@@ -112,6 +124,14 @@ public class homeView extends javax.swing.JPanel {
                 .addGap(33, 33, 33))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeUserInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeUserInfoButtonActionPerformed
+        presenter.displayCategory(IMatView.USERINFO);
+    }//GEN-LAST:event_homeUserInfoButtonActionPerformed
+
+    private void homeHelpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeHelpButtonActionPerformed
+        presenter.displayCategory(IMatView.HELP);
+    }//GEN-LAST:event_homeHelpButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

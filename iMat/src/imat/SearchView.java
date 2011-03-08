@@ -14,6 +14,7 @@ package imat;
 import java.awt.Component;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -100,6 +101,10 @@ public class SearchView extends javax.swing.JPanel {
         resultsPanel.add(pa);
         resultsPanel.revalidate();
         resultsPanel.repaint();
+    }
+
+    public JPanel getResultsPanel() {
+        return resultsPanel;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

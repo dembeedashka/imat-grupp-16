@@ -107,6 +107,14 @@ public class SearchView extends javax.swing.JPanel {
         return resultsPanel;
     }
 
+    public HeaderPanel2 getSearchHeaderPanel() {
+        return searchHeaderPanel;
+    }
+
+    public void setSearchHeaderPanel(HeaderPanel2 searchHeaderPanel) {
+        this.searchHeaderPanel = searchHeaderPanel;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel resultsPanel;
     private javax.swing.JPanel searchBreadcrumbPanel;

@@ -89,6 +89,10 @@ public class ShoppingListView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    public HeaderPanel2 getHeaderPanel21() {
+        return headerPanel21;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private imat.HeaderPanel2 headerPanel21;

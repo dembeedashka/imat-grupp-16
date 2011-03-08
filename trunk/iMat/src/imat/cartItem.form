@@ -29,13 +29,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="166" max="-2" attributes="0"/>
+              <Component id="productName" min="-2" pref="166" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Component id="jSpinner1" min="-2" pref="76" max="-2" attributes="0"/>
+              <Component id="productAmount" min="-2" pref="76" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="123" max="-2" attributes="0"/>
+              <Component id="removeProduct" min="-2" pref="123" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="jTextField2" pref="178" max="32767" attributes="0"/>
+              <Component id="productPrice" pref="304" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -45,10 +45,10 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jSpinner1" alignment="3" pref="23" max="32767" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="productAmount" alignment="3" pref="23" max="32767" attributes="0"/>
+                  <Component id="productName" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="productPrice" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="removeProduct" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -56,33 +56,33 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JSpinner" name="jSpinner1">
+    <Component class="javax.swing.JSpinner" name="productAmount">
       <Properties>
-        <Property name="name" type="java.lang.String" value="jSpinner1" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="productAmount" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="productName">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" resourceKey="jTextField1.text"/>
-        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="jTextField1.disabledTextColor"/>
+        <Property name="text" type="java.lang.String" resourceKey="productName.text"/>
+        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="productName.disabledTextColor"/>
         <Property name="enabled" type="boolean" value="false"/>
-        <Property name="name" type="java.lang.String" value="jTextField1" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="productName" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="removeProduct">
       <Properties>
-        <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
-        <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
+        <Property name="text" type="java.lang.String" resourceKey="removeProduct.text"/>
+        <Property name="name" type="java.lang.String" value="removeProduct" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="productPrice">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" resourceKey="jTextField2.text"/>
-        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="jTextField2.disabledTextColor"/>
+        <Property name="text" type="java.lang.String" resourceKey="productPrice.text"/>
+        <Property name="disabledTextColor" type="java.awt.Color" resourceKey="productPrice.disabledTextColor"/>
         <Property name="enabled" type="boolean" value="false"/>
-        <Property name="name" type="java.lang.String" value="jTextField2" noResource="true"/>
+        <Property name="name" type="java.lang.String" value="productPrice" noResource="true"/>
       </Properties>
     </Component>
   </SubComponents>

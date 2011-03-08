@@ -11,11 +11,49 @@
 
 package imat;
 
+import javax.swing.JButton;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+
 /**
  *
  * @author David
  */
 public class cartItem extends javax.swing.JPanel {
+
+    public JSpinner getProductAmount() {
+        return productAmount;
+    }
+
+    public void setProductAmount(JSpinner productAmount) {
+        this.productAmount = productAmount;
+    }
+
+    public JTextField getProductName() {
+        return productName;
+    }
+
+    public void setProductName(JTextField productName) {
+        this.productName = productName;
+    }
+
+    public JTextField getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(JTextField productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public JButton getRemoveProduct() {
+        return removeProduct;
+    }
+
+    public void setRemoveProduct(JButton removeProduct) {
+        this.removeProduct = removeProduct;
+    }
+
+
 
     /** Creates new form cartItem */
     public cartItem() {
@@ -31,32 +69,32 @@ public class cartItem extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSpinner1 = new javax.swing.JSpinner();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        productAmount = new javax.swing.JSpinner();
+        productName = new javax.swing.JTextField();
+        removeProduct = new javax.swing.JButton();
+        productPrice = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setName("Form"); // NOI18N
         setPreferredSize(new java.awt.Dimension(775, 50));
 
-        jSpinner1.setName("jSpinner1"); // NOI18N
+        productAmount.setName("productAmount"); // NOI18N
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(cartItem.class);
-        jTextField1.setText(resourceMap.getString("jTextField1.text")); // NOI18N
-        jTextField1.setDisabledTextColor(resourceMap.getColor("jTextField1.disabledTextColor")); // NOI18N
-        jTextField1.setEnabled(false);
-        jTextField1.setName("jTextField1"); // NOI18N
+        productName.setText(resourceMap.getString("productName.text")); // NOI18N
+        productName.setDisabledTextColor(resourceMap.getColor("productName.disabledTextColor")); // NOI18N
+        productName.setEnabled(false);
+        productName.setName("productName"); // NOI18N
 
-        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
-        jButton1.setName("jButton1"); // NOI18N
+        removeProduct.setText(resourceMap.getString("removeProduct.text")); // NOI18N
+        removeProduct.setName("removeProduct"); // NOI18N
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText(resourceMap.getString("jTextField2.text")); // NOI18N
-        jTextField2.setDisabledTextColor(resourceMap.getColor("jTextField2.disabledTextColor")); // NOI18N
-        jTextField2.setEnabled(false);
-        jTextField2.setName("jTextField2"); // NOI18N
+        productPrice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        productPrice.setText(resourceMap.getString("productPrice.text")); // NOI18N
+        productPrice.setDisabledTextColor(resourceMap.getColor("productPrice.disabledTextColor")); // NOI18N
+        productPrice.setEnabled(false);
+        productPrice.setName("productPrice"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -64,13 +102,13 @@ public class cartItem extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(removeProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addComponent(productPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -78,20 +116,20 @@ public class cartItem extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(productAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                    .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(removeProduct))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JSpinner productAmount;
+    private javax.swing.JTextField productName;
+    private javax.swing.JTextField productPrice;
+    private javax.swing.JButton removeProduct;
     // End of variables declaration//GEN-END:variables
 
 }

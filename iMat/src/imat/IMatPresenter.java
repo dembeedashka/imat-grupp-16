@@ -9,6 +9,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import se.chalmers.ait.dat215.project.Product;
 
 
@@ -26,6 +27,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
                                      bottomContentsPanel,
                                      bottomBorderPanel,
                                      centerStagePanel;
+
+    private JScrollPane              mainScrollPane;
     
     private matStep2Mall             subCategoryMall;
     private matStep3Mall             productDetails;
@@ -33,13 +36,14 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     private IMatPresenter() {
     }
 
-    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails) {
+    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane) {
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
         this.centerStagePanel      = centerStagePanel;
         this.subCategoryMall       = subCategoryMall;
         this.productDetails        = productDetails;
+        this.mainScrollPane        = mainScrollPane;
 
         historyManager             = new NavigationHistoryManager(backButton, forwardButton);
         historyManager.init(this, new NavigationHistoryState());
@@ -99,6 +103,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         else {
             layout.show(centerStagePanel, category.getCard());
         }
+
+        // reset scroll bar position
+        mainScrollPane.getViewport().setViewPosition(new java.awt.Point(0, 0));
     }
 
     /**

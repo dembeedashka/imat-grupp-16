@@ -19,7 +19,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="topNavigationPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="bottomContentsPanel" pref="644" max="32767" attributes="0"/>
+                  <Component id="bottomContentsPanel" pref="650" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -52,7 +52,7 @@
                       <Component id="snacksButton" min="-2" pref="191" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="favouritesButton" min="-2" pref="191" max="-2" attributes="0"/>
-                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -170,7 +170,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="framePanel" min="-2" pref="863" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="actionPanel" pref="242" max="32767" attributes="0"/>
+                      <Component id="actionPanel" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Component id="bottomBorderPanel" alignment="0" max="32767" attributes="1"/>
@@ -204,17 +204,17 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="backButton" min="-2" pref="124" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="backButton" min="-2" pref="106" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="forwardButton" min="-2" pref="105" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="forwardButton" min="-2" pref="134" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                           <Component id="searchTextField" min="-2" pref="401" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="searchButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
-                          <Component id="helpButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="258" max="32767" attributes="0"/>
+                          <EmptySpace pref="279" max="32767" attributes="0"/>
+                          <Component id="helpButton" min="-2" pref="100" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -223,10 +223,12 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="forwardButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="backButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="backButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="forwardButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="searchTextField" alignment="3" pref="23" max="32767" attributes="1"/>
+                                  <Component id="searchTextField" alignment="3" min="-2" pref="34" max="-2" attributes="1"/>
                                   <Component id="searchButton" alignment="3" min="-2" max="-2" attributes="1"/>
                                   <Component id="helpButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -239,6 +241,7 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="backButton">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="backButton.font"/>
                     <Property name="icon" type="javax.swing.Icon" resourceKey="backButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="backButton.text"/>
                     <Property name="name" type="java.lang.String" value="backButton" noResource="true"/>
@@ -249,6 +252,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="forwardButton">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="forwardButton.font"/>
                     <Property name="icon" type="javax.swing.Icon" resourceKey="forwardButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="forwardButton.text"/>
                     <Property name="name" type="java.lang.String" value="forwardButton" noResource="true"/>
@@ -259,6 +263,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="searchTextField">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="searchTextField.font"/>
                     <Property name="text" type="java.lang.String" resourceKey="searchTextField.text"/>
                     <Property name="name" type="java.lang.String" value="searchTextField" noResource="true"/>
                   </Properties>
@@ -268,6 +273,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="searchButton">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="searchButton.font"/>
                     <Property name="icon" type="javax.swing.Icon" resourceKey="searchButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="searchButton.text"/>
                     <Property name="name" type="java.lang.String" value="searchButton" noResource="true"/>
@@ -278,6 +284,7 @@
                 </Component>
                 <Component class="javax.swing.JButton" name="helpButton">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="helpButton.font"/>
                     <Property name="icon" type="javax.swing.Icon" resourceKey="helpButton.icon"/>
                     <Property name="text" type="java.lang.String" resourceKey="helpButton.text"/>
                     <Property name="name" type="java.lang.String" value="helpButton" noResource="true"/>
@@ -429,13 +436,13 @@
                                       <Component id="breadButton" min="-2" pref="296" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="flourButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="351" max="32767" attributes="0"/>
+                                      <EmptySpace pref="398" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="pantryMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="pantryMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="402" max="-2" attributes="0"/>
                                       <Component id="pastaButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="500" max="32767" attributes="0"/>
+                                      <EmptySpace pref="545" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -522,12 +529,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="homeView1" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="homeView1" alignment="0" pref="1247" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="homeView1" alignment="0" pref="1324" max="32767" attributes="0"/>
+                                  <Component id="homeView1" alignment="0" pref="1336" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -552,12 +559,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="helpView1" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="helpView1" alignment="0" pref="1247" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="helpView1" alignment="0" pref="1324" max="32767" attributes="0"/>
+                                  <Component id="helpView1" alignment="0" pref="1336" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -582,12 +589,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="searchView1" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="searchView1" alignment="0" pref="1247" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="searchView1" alignment="0" pref="1324" max="32767" attributes="0"/>
+                                  <Component id="searchView1" alignment="0" pref="1336" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -614,7 +621,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="shoppingListView1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="448" max="32767" attributes="0"/>
+                                      <EmptySpace pref="493" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -622,7 +629,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="shoppingListView1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="501" max="32767" attributes="0"/>
+                                      <EmptySpace pref="513" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -650,7 +657,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="shoppingCart1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="407" max="32767" attributes="0"/>
+                                      <EmptySpace pref="452" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -658,7 +665,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="shoppingCart1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="540" max="32767" attributes="0"/>
+                                      <EmptySpace pref="552" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -686,7 +693,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="fruitMall" pref="1192" max="32767" attributes="0"/>
+                                      <Component id="fruitMall" pref="1227" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
@@ -718,7 +725,7 @@
                                               <Component id="cabbageButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="379" max="32767" attributes="0"/>
+                                      <EmptySpace pref="434" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -754,7 +761,7 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="vegetableButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="544" max="32767" attributes="0"/>
+                                      <EmptySpace pref="602" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -923,11 +930,11 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="dairyMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="dairyMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
                                       <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="681" max="32767" attributes="0"/>
+                                      <EmptySpace pref="726" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -937,7 +944,7 @@
                                       <Component id="dairyMall" min="-2" pref="335" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="dairySubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="909" max="32767" attributes="0"/>
+                                      <EmptySpace pref="921" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -976,13 +983,13 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="meatMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="meatMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                                       <Component id="fishButton" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="493" max="32767" attributes="0"/>
+                                      <EmptySpace pref="540" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -996,7 +1003,7 @@
                                           <Component id="fishButton" min="-2" max="-2" attributes="0"/>
                                           <Component id="meatSubButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="894" max="32767" attributes="0"/>
+                                      <EmptySpace pref="897" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1048,12 +1055,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="favMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="favMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                           <Component id="jPanel1" min="-2" pref="712" max="-2" attributes="0"/>
-                                          <EmptySpace pref="479" max="32767" attributes="0"/>
+                                          <EmptySpace pref="524" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1062,12 +1069,12 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="favMall" min="-2" pref="346" max="-2" attributes="0"/>
-                                      <EmptySpace pref="978" max="32767" attributes="0"/>
+                                      <EmptySpace pref="990" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
-                                          <Component id="jPanel1" pref="961" max="32767" attributes="0"/>
+                                          <Component id="jPanel1" pref="964" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1114,7 +1121,7 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="drinksMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="drinksMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1129,7 +1136,7 @@
                                               <Component id="hotDrinksButton" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace pref="504" max="32767" attributes="0"/>
+                                      <EmptySpace pref="559" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1148,7 +1155,7 @@
                                           <Component id="nutsSeedsButton" min="-2" max="-2" attributes="0"/>
                                           <Component id="sweetsButton" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="822" max="32767" attributes="0"/>
+                                      <EmptySpace pref="836" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1226,12 +1233,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subCategoryMall" alignment="0" pref="1202" max="32767" attributes="0"/>
+                                  <Component id="subCategoryMall" alignment="0" pref="1247" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="subCategoryMall" alignment="0" pref="1324" max="32767" attributes="0"/>
+                                  <Component id="subCategoryMall" alignment="0" pref="1336" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
@@ -1259,7 +1266,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="matStep3Mall1" min="-2" pref="639" max="-2" attributes="0"/>
-                                      <EmptySpace pref="553" max="32767" attributes="0"/>
+                                      <EmptySpace pref="588" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1268,7 +1275,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="matStep3Mall1" min="-2" pref="348" max="-2" attributes="0"/>
-                                      <EmptySpace pref="965" max="32767" attributes="0"/>
+                                      <EmptySpace pref="968" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1304,7 +1311,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="userInfoView1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="235" max="32767" attributes="0"/>
+                                      <EmptySpace pref="252" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1332,7 +1339,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="cashRegister1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="281" max="32767" attributes="0"/>
+                                      <EmptySpace pref="326" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1340,7 +1347,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="cashRegister1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="402" max="32767" attributes="0"/>
+                                      <EmptySpace pref="414" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1366,12 +1373,12 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="1202" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="1247" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="1324" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="1336" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>

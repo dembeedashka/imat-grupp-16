@@ -238,7 +238,7 @@ public class itemPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
-        cart.addProduct(product,(Double)productAmount.getValue());
+        cart.addProduct(product,(Integer) productAmount.getValue()*1.0);
 }//GEN-LAST:event_addToCartButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

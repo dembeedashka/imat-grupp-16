@@ -17,6 +17,8 @@ package imat;
  */
 public class actionPanel extends javax.swing.JPanel {
 
+    private IMatPresenter presenter = IMatPresenter.getInstance();
+
     /** Creates new form actionPanel */
     public actionPanel() {
         initComponents();
@@ -55,14 +57,29 @@ public class actionPanel extends javax.swing.JPanel {
         apUserinfoButton.setText(resourceMap.getString("apUserinfoButton.text")); // NOI18N
         apUserinfoButton.setName("apUserinfoButton"); // NOI18N
         apUserinfoButton.setPreferredSize(new java.awt.Dimension(200, 65));
+        apUserinfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apUserinfoButtonActionPerformed(evt);
+            }
+        });
 
         apReceiptButton.setIcon(resourceMap.getIcon("apReceiptButton.icon")); // NOI18N
         apReceiptButton.setText(resourceMap.getString("apReceiptButton.text")); // NOI18N
         apReceiptButton.setName("apReceiptButton"); // NOI18N
+        apReceiptButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apReceiptButtonActionPerformed(evt);
+            }
+        });
 
         apCashregisterButton.setIcon(resourceMap.getIcon("apCashregisterButton.icon")); // NOI18N
         apCashregisterButton.setText(resourceMap.getString("apCashregisterButton.text")); // NOI18N
         apCashregisterButton.setName("apCashregisterButton"); // NOI18N
+        apCashregisterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apCashregisterButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout actionPanel1Layout = new javax.swing.GroupLayout(actionPanel1);
         actionPanel1.setLayout(actionPanel1Layout);
@@ -102,8 +119,20 @@ public class actionPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void apBasketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apBasketButtonActionPerformed
-        
+        presenter.displayCategory(IMatView.CART);
     }//GEN-LAST:event_apBasketButtonActionPerformed
+
+    private void apUserinfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apUserinfoButtonActionPerformed
+        presenter.displayCategory(IMatView.USERINFO);
+    }//GEN-LAST:event_apUserinfoButtonActionPerformed
+
+    private void apCashregisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apCashregisterButtonActionPerformed
+        presenter.displayCategory(IMatView.CASH);
+    }//GEN-LAST:event_apCashregisterButtonActionPerformed
+
+    private void apReceiptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apReceiptButtonActionPerformed
+        presenter.displayCategory(IMatView.PURCHASES);
+    }//GEN-LAST:event_apReceiptButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

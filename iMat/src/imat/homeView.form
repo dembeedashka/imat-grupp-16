@@ -85,6 +85,9 @@
         <Property name="text" type="java.lang.String" resourceKey="homeUserInfoButton.text"/>
         <Property name="name" type="java.lang.String" value="homeUserInfoButton" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeUserInfoButtonActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <Properties>
@@ -116,6 +119,9 @@
         <Property name="text" type="java.lang.String" resourceKey="homeHelpButton.text"/>
         <Property name="name" type="java.lang.String" value="homeHelpButton" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeHelpButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="imat.HeaderPanel2" name="homeViewHeaderPanel">
       <Properties>

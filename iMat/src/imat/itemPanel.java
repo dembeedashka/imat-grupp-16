@@ -215,13 +215,13 @@ public class itemPanel extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(handler.isFavorite(product))
         {
-            handler.addFavorite(product);
-            jButton1.setIcon(star2);
+            handler.removeFavorite(product);
+            jButton1.setIcon(star);
         }
         else
         {
-            handler.removeFavorite(product);
-            jButton1.setIcon(star);
+            handler.addFavorite(product);
+            jButton1.setIcon(star2);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

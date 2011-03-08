@@ -82,7 +82,8 @@ public class IMatView extends FrameView {
         // make window size static
         //getFrame().setResizable(false);
 
-        presenter  = new IMatPresenter(
+        presenter = IMatPresenter.getInstance();
+        presenter.init(
             backButton,
             forwardButton,
             navigationSearchPanel,

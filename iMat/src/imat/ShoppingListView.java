@@ -39,21 +39,18 @@ public class ShoppingListView extends javax.swing.JPanel {
 
         shoppingBreadcrumbPanel.setName("shoppingBreadcrumbPanel"); // NOI18N
 
-        headerPanel21.setName("headerPanel21"); // NOI18N
-
         javax.swing.GroupLayout shoppingBreadcrumbPanelLayout = new javax.swing.GroupLayout(shoppingBreadcrumbPanel);
         shoppingBreadcrumbPanel.setLayout(shoppingBreadcrumbPanelLayout);
         shoppingBreadcrumbPanelLayout.setHorizontalGroup(
             shoppingBreadcrumbPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(headerPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
+            .addGap(0, 732, Short.MAX_VALUE)
         );
         shoppingBreadcrumbPanelLayout.setVerticalGroup(
             shoppingBreadcrumbPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(shoppingBreadcrumbPanelLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+            .addGap(0, 101, Short.MAX_VALUE)
         );
+
+        headerPanel21.setName("headerPanel21"); // NOI18N
 
         shoppingListDisplayPanel.setName("shoppingListDisplayPanel"); // NOI18N
 
@@ -61,25 +58,33 @@ public class ShoppingListView extends javax.swing.JPanel {
         shoppingListDisplayPanel.setLayout(shoppingListDisplayPanelLayout);
         shoppingListDisplayPanelLayout.setHorizontalGroup(
             shoppingListDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 766, Short.MAX_VALUE)
+            .addGap(0, 732, Short.MAX_VALUE)
         );
         shoppingListDisplayPanelLayout.setVerticalGroup(
             shoppingListDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 39, Short.MAX_VALUE)
+            .addGap(0, 418, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(shoppingBreadcrumbPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(shoppingBreadcrumbPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(shoppingBreadcrumbPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(353, 353, 353)
+                .addGap(18, 18, 18)
+                .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents

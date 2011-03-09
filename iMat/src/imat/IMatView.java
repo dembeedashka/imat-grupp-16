@@ -223,6 +223,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         homeButton.setIcon(resourceMap.getIcon("homeButton.icon")); // NOI18N
         homeButton.setText(resourceMap.getString("homeButton.text")); // NOI18N
+        homeButton.setToolTipText(resourceMap.getString("homeButton.toolTipText")); // NOI18N
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
         homeButton.setName("homeButton"); // NOI18N
@@ -234,6 +235,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         fruitButton.setIcon(resourceMap.getIcon("fruitButton.icon")); // NOI18N
         fruitButton.setText(resourceMap.getString("fruitButton.text")); // NOI18N
+        fruitButton.setToolTipText(resourceMap.getString("fruitButton.toolTipText")); // NOI18N
         fruitButton.setBorderPainted(false);
         fruitButton.setName("fruitButton"); // NOI18N
         fruitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -244,6 +246,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         meatButton.setIcon(resourceMap.getIcon("meatButton.icon")); // NOI18N
         meatButton.setText(resourceMap.getString("meatButton.text")); // NOI18N
+        meatButton.setToolTipText(resourceMap.getString("meatButton.toolTipText")); // NOI18N
         meatButton.setBorderPainted(false);
         meatButton.setContentAreaFilled(false);
         meatButton.setName("meatButton"); // NOI18N
@@ -255,6 +258,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         dairyButton.setIcon(resourceMap.getIcon("dairyButton.icon")); // NOI18N
         dairyButton.setText(resourceMap.getString("dairyButton.text")); // NOI18N
+        dairyButton.setToolTipText(resourceMap.getString("dairyButton.toolTipText")); // NOI18N
         dairyButton.setBorderPainted(false);
         dairyButton.setContentAreaFilled(false);
         dairyButton.setDefaultCapable(false);
@@ -267,6 +271,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         pantryButton.setIcon(resourceMap.getIcon("pantryButton.icon")); // NOI18N
         pantryButton.setText(resourceMap.getString("pantryButton.text")); // NOI18N
+        pantryButton.setToolTipText(resourceMap.getString("pantryButton.toolTipText")); // NOI18N
         pantryButton.setBorderPainted(false);
         pantryButton.setContentAreaFilled(false);
         pantryButton.setName("pantryButton"); // NOI18N
@@ -278,6 +283,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         snacksButton.setIcon(resourceMap.getIcon("snacksButton.icon")); // NOI18N
         snacksButton.setText(resourceMap.getString("snacksButton.text")); // NOI18N
+        snacksButton.setToolTipText(resourceMap.getString("snacksButton.toolTipText")); // NOI18N
         snacksButton.setContentAreaFilled(false);
         snacksButton.setDefaultCapable(false);
         snacksButton.setName("snacksButton"); // NOI18N
@@ -289,6 +295,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         favouritesButton.setIcon(resourceMap.getIcon("favouritesButton.icon")); // NOI18N
         favouritesButton.setText(resourceMap.getString("favouritesButton.text")); // NOI18N
+        favouritesButton.setToolTipText(resourceMap.getString("favouritesButton.toolTipText")); // NOI18N
         favouritesButton.setContentAreaFilled(false);
         favouritesButton.setDefaultCapable(false);
         favouritesButton.setName("favouritesButton"); // NOI18N
@@ -339,6 +346,7 @@ public class IMatView extends FrameView implements WindowListener {
         backButton.setFont(resourceMap.getFont("backButton.font")); // NOI18N
         backButton.setIcon(resourceMap.getIcon("backButton.icon")); // NOI18N
         backButton.setText(resourceMap.getString("backButton.text")); // NOI18N
+        backButton.setToolTipText(resourceMap.getString("backButton.toolTipText")); // NOI18N
         backButton.setName("backButton"); // NOI18N
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -349,6 +357,7 @@ public class IMatView extends FrameView implements WindowListener {
         forwardButton.setFont(resourceMap.getFont("forwardButton.font")); // NOI18N
         forwardButton.setIcon(resourceMap.getIcon("forwardButton.icon")); // NOI18N
         forwardButton.setText(resourceMap.getString("forwardButton.text")); // NOI18N
+        forwardButton.setToolTipText(resourceMap.getString("forwardButton.toolTipText")); // NOI18N
         forwardButton.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         forwardButton.setName("forwardButton"); // NOI18N
         forwardButton.addActionListener(new java.awt.event.ActionListener() {
@@ -359,6 +368,7 @@ public class IMatView extends FrameView implements WindowListener {
 
         searchTextField.setFont(resourceMap.getFont("searchTextField.font")); // NOI18N
         searchTextField.setText(resourceMap.getString("searchTextField.text")); // NOI18N
+        searchTextField.setToolTipText(resourceMap.getString("searchTextField.toolTipText")); // NOI18N
         searchTextField.setName("searchTextField"); // NOI18N
         searchTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,6 +387,7 @@ public class IMatView extends FrameView implements WindowListener {
         searchButton.setFont(resourceMap.getFont("searchButton.font")); // NOI18N
         searchButton.setIcon(resourceMap.getIcon("searchButton.icon")); // NOI18N
         searchButton.setText(resourceMap.getString("searchButton.text")); // NOI18N
+        searchButton.setToolTipText(resourceMap.getString("searchButton.toolTipText")); // NOI18N
         searchButton.setName("searchButton"); // NOI18N
         searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -387,6 +398,7 @@ public class IMatView extends FrameView implements WindowListener {
         helpButton.setFont(resourceMap.getFont("helpButton.font")); // NOI18N
         helpButton.setIcon(resourceMap.getIcon("helpButton.icon")); // NOI18N
         helpButton.setText(resourceMap.getString("helpButton.text")); // NOI18N
+        helpButton.setToolTipText(resourceMap.getString("helpButton.toolTipText")); // NOI18N
         helpButton.setName("helpButton"); // NOI18N
         helpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,16 +480,14 @@ public class IMatView extends FrameView implements WindowListener {
         actionPanel.setLayout(actionPanelLayout);
         actionPanelLayout.setHorizontalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, actionPanelLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(actionPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .add(actionPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 230, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(9, 9, 9))
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(actionPanelLayout.createSequentialGroup()
-                .add(actionPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+            .add(actionPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
         );
 
         framePanel.setBackground(resourceMap.getColor("framePanel.background")); // NOI18N

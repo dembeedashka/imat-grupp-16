@@ -432,7 +432,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 301, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 299, Short.MAX_VALUE)
                 .add(helpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(25, 25, 25))
         );
@@ -499,7 +499,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         actionPanelLayout.setVerticalGroup(
             actionPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(actionPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+            .add(actionPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         framePanel.setBackground(resourceMap.getColor("framePanel.background")); // NOI18N
@@ -1211,7 +1211,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         framePanelLayout.setVerticalGroup(
             framePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+            .add(mainScrollPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
         );
 
         org.jdesktop.layout.GroupLayout bottomContentsPanelLayout = new org.jdesktop.layout.GroupLayout(bottomContentsPanel);
@@ -1234,9 +1234,9 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(navigationSearchPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+                    .add(actionPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
                     .add(bottomContentsPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                        .add(framePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE)
+                        .add(framePanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
                         .add(shoppingListPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -1251,7 +1251,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         bottomBorderPanelLayout.setVerticalGroup(
             bottomBorderPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 16, Short.MAX_VALUE)
+            .add(0, 14, Short.MAX_VALUE)
         );
 
         org.jdesktop.layout.GroupLayout mainPanelLayout = new org.jdesktop.layout.GroupLayout(mainPanel);
@@ -1334,10 +1334,17 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         searchView1.getResultsPanel().removeAll();
         String text = searchTextField.getText();
-        for (Product p : IMatDataHandler.getInstance().findProducts(text)){
-            searchView1.addProduct(p);
+        if(text.equals("Till exempel: fralla eller mjölk"))
+        {
+            return;
         }
-        presenter.displayCategory(SEARCH);
+        else
+        {
+            for (Product p : IMatDataHandler.getInstance().findProducts(text)){
+                searchView1.addProduct(p);
+            }
+            presenter.displayCategory(SEARCH);
+        }
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void showShoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showShoppingListButtonActionPerformed
@@ -1542,14 +1549,14 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     }//GEN-LAST:event_sweetsButtonActionPerformed
 
     private void searchTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchTextFieldFocusGained
-        if(searchTextField.getText().equals("Till exempel: päron eller mjölk")) {
+        if(searchTextField.getText().equals("Till exempel: fralla eller mjölk")) {
             searchTextField.setText("");
         }
     }//GEN-LAST:event_searchTextFieldFocusGained
 
     private void searchTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_searchTextFieldFocusLost
         if(searchTextField.getText().equals("")) {
-            searchTextField.setText("Till exempel: päron eller mjölk");
+            searchTextField.setText("Till exempel: fralla eller mjölk");
         }
     }//GEN-LAST:event_searchTextFieldFocusLost
 

@@ -8,11 +8,11 @@
       </Border>
     </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[775, 50]"/>
+      <Dimension value="[750, 50]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="Form" noResource="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[775, 50]"/>
+      <Dimension value="[750, 50]"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -31,35 +31,38 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="iconLabel" min="-2" pref="60" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="productName" min="-2" pref="130" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Component id="productAmount" min="-2" pref="76" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="unitLabel" min="-2" pref="54" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="removeProduct" min="-2" pref="123" max="-2" attributes="0"/>
+              <Component id="iconLabel" pref="58" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <Component id="productName" pref="123" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="unitLabel" pref="85" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="productPrice" min="-2" pref="129" max="-2" attributes="0"/>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Component id="removeProduct" pref="121" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Component id="productAmount" min="-2" pref="62" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="unitSuffixLabel" pref="38" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Component id="productPrice" pref="84" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Component id="iconLabel" alignment="1" pref="53" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="productPrice" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="productName" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="removeProduct" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="productAmount" alignment="3" max="32767" attributes="0"/>
                   <Component id="unitLabel" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                  <Component id="productAmount" alignment="3" max="32767" attributes="0"/>
+                  <Component id="productPrice" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="removeProduct" alignment="3" pref="26" max="32767" attributes="0"/>
+                  <Component id="unitSuffixLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
           </Group>
-          <Component id="iconLabel" alignment="1" pref="50" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -109,9 +112,17 @@
         <Property name="name" type="java.lang.String" value="iconLabel" noResource="true"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.JLabel" name="unitSuffixLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="unitSuffixLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="unitSuffixLabel.text"/>
+        <Property name="name" type="java.lang.String" value="unitSuffixLabel" noResource="true"/>
+      </Properties>
+    </Component>
     <Component class="javax.swing.JLabel" name="unitLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" resourceKey="unitLabel.font"/>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" resourceKey="unitLabel.text"/>
         <Property name="name" type="java.lang.String" value="unitLabel" noResource="true"/>
       </Properties>

@@ -11,6 +11,7 @@
 
 package imat;
 
+import java.awt.Color;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,6 +29,8 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
  * @author David
  */
 public class itemPanel extends javax.swing.JPanel {
+
+    
 
     private Product product;
     private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
@@ -91,6 +94,8 @@ public class itemPanel extends javax.swing.JPanel {
     public void setStar(String path) {
         jButton1.setIcon(star);
     }
+
+
 
     /** Creates new form itemPanel */
     public itemPanel() {
@@ -255,10 +260,13 @@ public class itemPanel extends javax.swing.JPanel {
  
         if(item.getTotal() != 0) {
 
+        
+
         presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
 
         }
 
+        
         
 
 

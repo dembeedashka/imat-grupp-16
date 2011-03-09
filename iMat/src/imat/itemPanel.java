@@ -253,11 +253,9 @@ public class itemPanel extends javax.swing.JPanel {
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
         ShoppingItem item = new ShoppingItem(product,(Integer) productAmount.getValue()*1.0);
 
-
-
-        
-
         presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
+
+
 
 
 }//GEN-LAST:event_addToCartButtonActionPerformed

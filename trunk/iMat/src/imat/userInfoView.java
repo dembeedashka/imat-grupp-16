@@ -26,10 +26,70 @@ public class userInfoView extends javax.swing.JPanel {
     /** Creates new form userInfoView */
     public userInfoView() {
         initComponents();
+        initUserInfo();
     }
 
     public HeaderPanel2 getUiHeaderPanel() {
         return uiHeaderPanel;
+    }
+
+    public void initUserInfo()
+    {
+        if(!customer.getAddress().equals(""))
+        {
+            uiAddressTextField.setText(customer.getAddress());
+        }
+        if(!customer.getFirstName().equals(""))
+        {
+            uiFirstNameTextField.setText(customer.getFirstName());
+        }
+        if(!customer.getLastName().equals(""))
+        {
+            uiLastNameTextField.setText(customer.getLastName());
+        }
+        if(!customer.getPhoneNumber().equals(""))
+        {
+            uiPhoneNumberTextField.setText(customer.getPhoneNumber());
+        }
+        if(!customer.getPostCode().equals(""))
+        {
+            uiZipCodeTextField.setText(customer.getPostCode());
+        }
+        if(!customer.getPostAddress().equals(""))
+        {
+            uiCityTextField.setText(customer.getPostAddress());
+        }
+        if(!customer.getLastName().equals(""))
+        {
+            uiLastNameTextField.setText(customer.getLastName());
+        }
+        if(!card.getCardNumber().equals(""))
+        {
+            uiCardNumerTextField.setText(card.getCardNumber());
+        }
+        if(!card.getCardType().equals(""))
+        {
+            //TODO display card type in the combobox
+        }
+        if(!card.getHoldersName().equals(""))
+        {
+            int nextName = card.getHoldersName().indexOf(" ");
+            uiChFirstNameTextField.setText(card.getHoldersName().substring(0,nextName));
+            uiChLastNameTextField.setText(card.getHoldersName().substring(nextName+1));
+        }
+        if(card.getValidMonth()!=0)
+        {
+            //TODO display month in the combobox
+        }
+        if(card.getValidYear()!=0)
+        {
+            //TODO display year in the combobox
+        }
+        if(card.getVerificationCode() !=0)
+        {
+            uiCvvCodeTextField.setText(card.getVerificationCode()+"");
+        }
+
     }
 
     /** This method is called from within the constructor to
@@ -197,6 +257,11 @@ public class userInfoView extends javax.swing.JPanel {
 
         uiCardNumerTextField.setText(resourceMap.getString("uiCardNumerTextField.text")); // NOI18N
         uiCardNumerTextField.setName("uiCardNumerTextField"); // NOI18N
+        uiCardNumerTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uiCardNumerTextFieldActionPerformed(evt);
+            }
+        });
 
         uiCvvCodeTextField.setText(resourceMap.getString("uiCvvCodeTextField.text")); // NOI18N
         uiCvvCodeTextField.setName("uiCvvCodeTextField"); // NOI18N
@@ -277,8 +342,8 @@ public class userInfoView extends javax.swing.JPanel {
                                 .addComponent(uiIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel1)
-                                .addGap(4, 4, 4)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -386,7 +451,7 @@ public class userInfoView extends javax.swing.JPanel {
                     .addComponent(uiMonthComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(uiYearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -395,27 +460,31 @@ public class userInfoView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      customer.setAddress(uiAddressTextField.toString());
-      customer.setFirstName(uiFirstNameTextField.toString());
-      customer.setLastName(uiLastNameTextField.toString());
-      customer.setPhoneNumber(uiPhoneNumberTextField.toString());
-      customer.setPostCode(uiZipCodeTextField.toString());
-      customer.setPostAddress(uiCityTextField.toString());
-      card.setCardNumber(uiCardNumerTextField.toString());
-      card.setCardType(uiCardTypeComboBox.toString());
-      card.setHoldersName(uiChFirstNameTextField.toString()+" "+uiChLastNameTextField.toString());
-      card.setValidMonth(Integer.parseInt(uiMonthComboBox.toString()));
-      card.setValidYear(Integer.parseInt(uiYearComboBox.toString()));
+      customer.setAddress(uiAddressTextField.getText());
+      customer.setFirstName(uiFirstNameTextField.getText());
+      customer.setLastName(uiLastNameTextField.getText());
+      customer.setPhoneNumber(uiPhoneNumberTextField.getText());
+      customer.setPostCode(uiZipCodeTextField.getText());
+      customer.setPostAddress(uiCityTextField.getText());
+      card.setCardNumber(uiCardNumerTextField.getText());
+      card.setCardType(uiCardTypeComboBox.getItemAt(0).toString());
+      card.setHoldersName(uiChFirstNameTextField.getText()+" "+uiChLastNameTextField.getText());
+      card.setValidMonth(Integer.parseInt(uiMonthComboBox.getItemAt(0).toString()));
+      card.setValidYear(Integer.parseInt(uiYearComboBox.getItemAt(0).toString()));
 
       try  
       {
-          card.setVerificationCode(Integer.parseInt(uiCvvCodeTextField.toString()));
+          card.setVerificationCode(Integer.parseInt(uiCvvCodeTextField.getText().toString()));
       }
       catch(NumberFormatException e)
       {
           // TODO Add same page error message
       }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void uiCardNumerTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uiCardNumerTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_uiCardNumerTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

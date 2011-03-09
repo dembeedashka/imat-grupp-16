@@ -23,16 +23,27 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
 public class shoppingCartList extends javax.swing.JPanel {
 
     private ShoppingCart handler = IMatDataHandler.getInstance().getShoppingCart();
+    private ShoppingItem item;
 
     /** Creates new form shoppingCartList */
     public shoppingCartList() {
+        
         initComponents();
+    }
+
+    public shoppingCartList(ShoppingItem item) {
+        this.item = item;
+
     }
 
     public void addToShoppingCart()
     {
            productPanel.add(new cartItem());
 
+    }
+
+    public ShoppingItem getShoppingItem () {
+        return item;
     }
 
     public JPanel getProductPanel () {

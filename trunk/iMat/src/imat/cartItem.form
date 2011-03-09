@@ -34,11 +34,11 @@
               <Component id="iconLabel" min="-2" pref="60" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="productName" min="-2" pref="130" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Component id="productAmount" min="-2" pref="76" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="unitLabel" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Component id="unitLabel" min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Component id="removeProduct" min="-2" pref="123" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="productPrice" min="-2" pref="129" max="-2" attributes="0"/>
@@ -89,6 +89,9 @@
         <Property name="text" type="java.lang.String" resourceKey="removeProduct.text"/>
         <Property name="name" type="java.lang.String" value="removeProduct" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeProductActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="productPrice">
       <Properties>

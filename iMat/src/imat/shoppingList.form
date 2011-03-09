@@ -24,7 +24,7 @@
               <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
               <Component id="shoppingListBottomPanel" max="32767" attributes="1"/>
           </Group>
-          <Component id="shoppingListRowScrollPane" alignment="0" pref="255" max="32767" attributes="0"/>
+          <Component id="shoppingListRowScrollPane" alignment="0" pref="267" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               <Component id="shoppingListAddRow" min="-2" pref="205" max="-2" attributes="0"/>
@@ -67,7 +67,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="shoppingListName" alignment="0" pref="249" max="32767" attributes="0"/>
+              <Component id="shoppingListName" alignment="0" pref="261" max="32767" attributes="0"/>
               <Group type="102" alignment="1" attributes="0">
                   <Component id="shoppingListHeader" pref="146" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -114,6 +114,9 @@
             <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
             <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -12,6 +12,7 @@
 package imat;
 
 import java.awt.Container;
+import javax.swing.JTextField;
 
 /**
  *
@@ -91,6 +92,9 @@ public class ShoppingListRow extends javax.swing.JPanel {
         parent.repaint();
     }//GEN-LAST:event_trashButtonActionPerformed
 
+    public String getRowItemTextField(){
+        return rowItemTextField.getText();
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox rowCheckBox;
     private javax.swing.JTextField rowItemTextField;

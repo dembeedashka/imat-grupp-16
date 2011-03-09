@@ -21,30 +21,28 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
  */
 public class cartItem extends javax.swing.JPanel {
 
-    
-
-    private ShoppingItem lol;
+    private ShoppingItem item;
 
     /** Creates new form cartItem */
     public cartItem() {
         initComponents();
     }
 
-
-    
-    public cartItem(ShoppingItem lol) {
-
-
-
-
+    public cartItem(ShoppingItem item) {
         initComponents();
+        this.item=item;
+    }
+
+
+
+    public void setTexts(ShoppingItem lol)
+    {
         productName.setText(lol.getProduct().getName());
         productPrice.setText(lol.getTotal() + " :-");
         productAmount.setValue(lol.getAmount());
         iconLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(lol.getProduct()));
         unitSuffixLabel.setText(lol.getProduct().getUnitSuffix());
         unitLabel.setText(lol.getProduct().getPrice()+ " " + lol.getProduct().getUnit());
-
     }
 
 

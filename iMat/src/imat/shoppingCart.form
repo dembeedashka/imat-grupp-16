@@ -78,7 +78,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Component id="shoppingCartList1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="97" max="32767" attributes="0"/>
+                  <EmptySpace pref="89" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="clearCartButton" max="32767" attributes="1"/>
                       <Component id="cashInButton" alignment="1" max="32767" attributes="1"/>
@@ -102,6 +102,7 @@
         <Component class="javax.swing.JButton" name="cashInButton">
           <Properties>
             <Property name="font" type="java.awt.Font" resourceKey="cashInButton.font"/>
+            <Property name="icon" type="javax.swing.Icon" resourceKey="cashInButton.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="cashInButton.text"/>
             <Property name="name" type="java.lang.String" value="cashInButton" noResource="true"/>
           </Properties>

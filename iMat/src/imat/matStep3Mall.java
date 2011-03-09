@@ -11,6 +11,7 @@
 
 package imat;
 
+import imat.cartItem;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
@@ -255,9 +256,12 @@ public class matStep3Mall extends javax.swing.JPanel {
         ShoppingItem item = new ShoppingItem(product,(Integer) detailAmountSpinner.getValue()*1.0);
         if(item.getTotal() != 0) {
 
-        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
+            cartItem cartItem = new cartItem();
+            cartItem.setTexts(item);
+        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(cartItem);
 
         }
+        cart.fireShoppingCartChanged();
     }//GEN-LAST:event_detailBasketButtonActionPerformed
 
     private void detailFavoriteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailFavoriteButtonActionPerformed

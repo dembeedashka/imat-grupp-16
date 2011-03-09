@@ -137,6 +137,7 @@ public class itemPanel extends javax.swing.JPanel {
             }
         });
 
+        addToCartButton.setFont(resourceMap.getFont("addToCartButton.font")); // NOI18N
         addToCartButton.setText(resourceMap.getString("addToCartButton.text")); // NOI18N
         addToCartButton.setName("addToCartButton"); // NOI18N
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +146,7 @@ public class itemPanel extends javax.swing.JPanel {
             }
         });
 
+        productTotalPrice.setFont(resourceMap.getFont("productTotalPrice.font")); // NOI18N
         productTotalPrice.setText(resourceMap.getString("productTotalPrice.text")); // NOI18N
         productTotalPrice.setName("productTotalPrice"); // NOI18N
 

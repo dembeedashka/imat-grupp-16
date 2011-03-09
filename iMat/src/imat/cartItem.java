@@ -11,6 +11,8 @@
 
 package imat;
 
+import java.awt.Color;
+import java.awt.Container;
 import javax.swing.JLabel;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.ShoppingItem;
@@ -20,7 +22,7 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
  * @author David
  */
 public class cartItem extends javax.swing.JPanel {
-
+    private static boolean rowStripe;
     private ShoppingItem item;
 
     /** Creates new form cartItem */
@@ -31,7 +33,12 @@ public class cartItem extends javax.swing.JPanel {
     public cartItem(ShoppingItem item) {
         initComponents();
         this.item=item;
+        rowStripe = !rowStripe;
+        if(rowStripe) {
+            this.setBackground(Color.GREEN);
+        }
     }
+
 
 
 
@@ -44,6 +51,8 @@ public class cartItem extends javax.swing.JPanel {
         unitSuffixLabel.setText(lol.getProduct().getUnitSuffix());
         unitLabel.setText(lol.getProduct().getPrice()+ " " + lol.getProduct().getUnit());
     }
+
+
 
 
    
@@ -152,11 +161,15 @@ public class cartItem extends javax.swing.JPanel {
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
         
-       //productPrice.setText(lol.getTotal() +" :-");
+       //productPrice.setText(lol.getTotal() +t" :-");
     }//GEN-LAST:event_productAmountStateChanged
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed
-      
+        Container parent = this.getParent();
+        parent.remove(this);
+        parent.validate();
+        parent.repaint();
+        
     }//GEN-LAST:event_removeProductActionPerformed
 
 

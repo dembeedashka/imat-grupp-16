@@ -20,6 +20,7 @@ import org.jdesktop.application.FrameView;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 import se.chalmers.ait.dat215.project.ShoppingCartListener;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
@@ -80,6 +81,8 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     public static Category        subSnacks               = new SubcategorySnacks("subCategory", null, null);
 
     private IMatPresenter         presenter;
+
+    private ShoppingCart handler = IMatDataHandler.getInstance().getShoppingCart();
 
     
     public IMatView(SingleFrameApplication app) {
@@ -1664,6 +1667,11 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     }
 
     public void shoppingCartChanged() {
+        int nrOfItems = 0;
+
+
+
+
         shoppingCart1.getShoppingCartList().getProductPanel().removeAll();
         cashRegister1.getShoppingCartList().getProductPanel().removeAll();
         for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems())
@@ -1671,5 +1679,10 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             shoppingCart1.getShoppingCartList().addShoppingItem(item);
             cashRegister1.getShoppingCartList().addShoppingItem(item);
         }
+
+        for(ShoppingItem p : handler.getItems()) {
+           nrOfItems += p.getAmount();
+        }
+        actionPanel1.updateCartButtonText(nrOfItems, handler.getTotal());
     }
 }

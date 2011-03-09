@@ -769,6 +769,9 @@
                   <Dimension value="[115, 29]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cashCompletepurchaseButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="imat.shoppingCartList" name="shoppingCartList1">
               <Properties>

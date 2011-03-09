@@ -23,6 +23,7 @@ public class cashRegister extends javax.swing.JPanel {
 
     private Customer customer = IMatDataHandler.getInstance().getCustomer();
     private CreditCard card   = IMatDataHandler.getInstance().getCreditCard();
+    private IMatDataHandler handler = IMatDataHandler.getInstance();
 
     /** Creates new form cashRegister */
     public cashRegister() {
@@ -493,6 +494,11 @@ public class cashRegister extends javax.swing.JPanel {
         cashCompletepurchaseButton.setText(resourceMap.getString("cashCompletepurchaseButton.text")); // NOI18N
         cashCompletepurchaseButton.setName("cashCompletepurchaseButton"); // NOI18N
         cashCompletepurchaseButton.setPreferredSize(new java.awt.Dimension(115, 29));
+        cashCompletepurchaseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cashCompletepurchaseButtonActionPerformed(evt);
+            }
+        });
 
         shoppingCartList1.setName("shoppingCartList1"); // NOI18N
 
@@ -614,6 +620,12 @@ public class cashRegister extends javax.swing.JPanel {
            // TODO Add same page error message
        }
 }//GEN-LAST:event_cashSaveUserInfo
+
+    private void cashCompletepurchaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashCompletepurchaseButtonActionPerformed
+        handler.placeOrder();
+        handler.getShoppingCart().clear();
+        handler.getShoppingCart().fireShoppingCartChanged();
+    }//GEN-LAST:event_cashCompletepurchaseButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -625,6 +625,7 @@ public class cashRegister extends javax.swing.JPanel {
         handler.placeOrder();
         handler.getShoppingCart().clear();
         handler.getShoppingCart().fireShoppingCartChanged();
+        IMatPresenter.getInstance().displayCategory(IMatView.ORDERPLACED);
     }//GEN-LAST:event_cashCompletepurchaseButtonActionPerformed
 
 

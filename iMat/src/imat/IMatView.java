@@ -215,6 +215,8 @@ public class IMatView extends FrameView implements WindowListener {
         cardPreviousPurchasesPanel = new javax.swing.JPanel();
         cardOrderPlaced = new javax.swing.JPanel();
         orderPlacedView1 = new imat.OrderPlacedView();
+        cardShoppingListPanel = new javax.swing.JPanel();
+        shoppingListView2 = new imat.ShoppingListView();
         bottomBorderPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
@@ -422,7 +424,7 @@ public class IMatView extends FrameView implements WindowListener {
                 .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 299, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 301, Short.MAX_VALUE)
                 .add(helpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(25, 25, 25))
         );
@@ -469,7 +471,7 @@ public class IMatView extends FrameView implements WindowListener {
                 .add(shoppingList1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 462, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(showShoppingListButton)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         actionPanel.setMaximumSize(null);
@@ -1168,6 +1170,29 @@ public class IMatView extends FrameView implements WindowListener {
 
         centerStagePanel.add(cardOrderPlaced, "orderPlaced");
 
+        cardShoppingListPanel.setName("cardShoppingListPanel"); // NOI18N
+
+        shoppingListView2.setName("shoppingListView2"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout cardShoppingListPanelLayout = new org.jdesktop.layout.GroupLayout(cardShoppingListPanel);
+        cardShoppingListPanel.setLayout(cardShoppingListPanelLayout);
+        cardShoppingListPanelLayout.setHorizontalGroup(
+            cardShoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, cardShoppingListPanelLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .add(shoppingListView2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        cardShoppingListPanelLayout.setVerticalGroup(
+            cardShoppingListPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cardShoppingListPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(shoppingListView2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1166, Short.MAX_VALUE))
+        );
+
+        centerStagePanel.add(cardShoppingListPanel, "shop");
+
         mainScrollPane.setViewportView(centerStagePanel);
 
         org.jdesktop.layout.GroupLayout framePanelLayout = new org.jdesktop.layout.GroupLayout(framePanel);
@@ -1543,6 +1568,7 @@ public class IMatView extends FrameView implements WindowListener {
     private javax.swing.JPanel cardPreviousPurchasesPanel;
     private javax.swing.JPanel cardSearchPanel;
     private javax.swing.JPanel cardShoppingCartPanel;
+    private javax.swing.JPanel cardShoppingListPanel;
     private javax.swing.JPanel cardShoppingPanel;
     private javax.swing.JPanel cardSubCategoryPanel;
     private javax.swing.JPanel cardUserInfoPanel;
@@ -1594,6 +1620,7 @@ public class IMatView extends FrameView implements WindowListener {
     private imat.shoppingList shoppingList1;
     private javax.swing.JPanel shoppingListPanel;
     private imat.ShoppingListView shoppingListView1;
+    private imat.ShoppingListView shoppingListView2;
     private javax.swing.JButton showShoppingListButton;
     private javax.swing.JButton snacksButton;
     private imat.matStep2Mall subCategoryMall;

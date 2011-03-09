@@ -11,10 +11,9 @@
 
 package imat;
 
-import java.awt.Component;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 
 /**
@@ -93,9 +92,16 @@ public class SearchView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     public void addProduct(Product p){
-        itemPanel pa = new itemPanel();
+itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
+        pa.setProduct(p);
+
+        if(IMatDataHandler.getInstance().isFavorite(p))
+        {
+            pa.setStar("src/imat/resources/images/buttons/star.gif");
+        }
+
         pa.setProductPrice(p.getPrice());
         pa.setProductUnitLabel(p.getUnit());
         resultsPanel.add(pa);

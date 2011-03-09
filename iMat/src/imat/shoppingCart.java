@@ -145,6 +145,10 @@ public class shoppingCart extends javax.swing.JPanel {
 
     private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
         handler.clear();
+        shoppingCartList1.getProductPanel().removeAll();
+        shoppingCartList1.getProductPanel().revalidate();
+        shoppingCartList1.getProductPanel().repaint();
+
     }//GEN-LAST:event_clearCartButtonActionPerformed
 
     private void keepShoppingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keepShoppingButtonActionPerformed

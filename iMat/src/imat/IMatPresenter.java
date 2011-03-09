@@ -57,6 +57,11 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         historyManager.init(this, new NavigationHistoryState());
     }
 
+
+    public void addToCart () {
+
+    }
+
     public static synchronized IMatPresenter getInstance() {
         if(instance == null) {
             instance = new IMatPresenter();

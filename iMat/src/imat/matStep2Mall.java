@@ -81,9 +81,11 @@ public class matStep2Mall extends javax.swing.JPanel {
         productPanel = new javax.swing.JPanel();
         matMallHeaderPanel = new imat.HeaderPanel2();
 
+        setMaximumSize(new java.awt.Dimension(795, 600));
         setName("Form"); // NOI18N
         setPreferredSize(new java.awt.Dimension(790, 600));
 
+        productPanel.setMaximumSize(new java.awt.Dimension(770, 500));
         productPanel.setName("productPanel"); // NOI18N
         productPanel.setPreferredSize(new java.awt.Dimension(770, 500));
         productPanel.setLayout(new java.awt.GridLayout(0, 2, 3, 3));

@@ -11,7 +11,7 @@
 
 package imat;
 
-import java.awt.Color;
+import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -124,8 +124,6 @@ public class itemPanel extends javax.swing.JPanel {
         productUnitLabel2 = new javax.swing.JLabel();
         productTotalPriceDisplay = new javax.swing.JLabel();
 
-        setName("Form"); // NOI18N
-
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setMaximumSize(new java.awt.Dimension(398, 184));
         jPanel1.setName("jPanel1"); // NOI18N
@@ -155,10 +153,12 @@ public class itemPanel extends javax.swing.JPanel {
         productName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productName.setText(resourceMap.getString("productName.text")); // NOI18N
         productName.setBorder(new javax.swing.border.MatteBorder(null));
+        productName.setMaximumSize(new java.awt.Dimension(337, 61));
         productName.setName("productName"); // NOI18N
 
         productAmount.setFont(resourceMap.getFont("productAmount.font")); // NOI18N
         productAmount.setName("productAmount"); // NOI18N
+        productAmount.setRequestFocusEnabled(false);
         productAmount.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 productAmountStateChanged(evt);
@@ -201,7 +201,7 @@ public class itemPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(productName, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(productIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -256,14 +256,29 @@ public class itemPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
-        ShoppingItem item = new ShoppingItem(product,(Integer) productAmount.getValue()*1.0);
- 
-        if(item.getTotal() != 0) {
-
+        ShoppingItem item = new ShoppingItem(product, (Integer) productAmount.getValue());
+        List<ShoppingItem> itemsInCart = cart.getItems();
+        ShoppingItem sItem = null; 
+        int i;
         
+        if(item.getTotal() > 0) {
+            for(i = 0; i < itemsInCart.size(); i++) {
+                sItem = itemsInCart.get(i);
+                System.out.println("p: " + i + " : " + (sItem.getProduct()));
+                if(sItem.getProduct().equals(product)) {
+                    sItem.setAmount(sItem.getAmount() + (Integer) productAmount.getValue());
+                    break;
+                }
+            }
+            
+            if(itemsInCart.isEmpty() || i == itemsInCart.size()) {
+                cart.addItem(item);
 
-        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
+        }
+            
 
+            //TODO update cart view
+            //presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
         }
 
         

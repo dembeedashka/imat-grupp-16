@@ -50,6 +50,15 @@ public class shoppingCartList extends javax.swing.JPanel {
         return productPanel;
     }
 
+    public void addShoppingItem(ShoppingItem Item)
+    {
+        cartItem cartItem = new cartItem();
+        cartItem.setTexts(Item);
+        productPanel.add(cartItem);
+        productPanel.repaint();
+        productPanel.revalidate();
+    }
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is

@@ -20,11 +20,13 @@ import org.jdesktop.application.FrameView;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ProductCategory;
+import se.chalmers.ait.dat215.project.ShoppingCartListener;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  * The application's main frame.
  */
-public class IMatView extends FrameView implements WindowListener {
+public class IMatView extends FrameView implements WindowListener, ShoppingCartListener {
 
 
     /* header icons */
@@ -85,6 +87,8 @@ public class IMatView extends FrameView implements WindowListener {
         
         initComponents();
         initHeaders();
+
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(this);
 
         // make window size static
         getFrame().setResizable(false);
@@ -1657,5 +1661,15 @@ public class IMatView extends FrameView implements WindowListener {
 
     public void windowDeactivated(WindowEvent e) {
         
+    }
+
+    public void shoppingCartChanged() {
+        shoppingCart1.getShoppingCartList().getProductPanel().removeAll();
+        cashRegister1.getShoppingCartList().getProductPanel().removeAll();
+        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems())
+        {
+            shoppingCart1.getShoppingCartList().addShoppingItem(item);
+            cashRegister1.getShoppingCartList().addShoppingItem(item);
+        }
     }
 }

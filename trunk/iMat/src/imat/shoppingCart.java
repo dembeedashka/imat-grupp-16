@@ -20,7 +20,7 @@ import se.chalmers.ait.dat215.project.ShoppingCart;
  */
 public class shoppingCart extends javax.swing.JPanel {
 
-    private ShoppingCart handler = IMatDataHandler.getInstance().getShoppingCart();
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
 
     private IMatPresenter presenter = IMatPresenter.getInstance();
     /** Creates new form shoppingCart */
@@ -70,6 +70,7 @@ public class shoppingCart extends javax.swing.JPanel {
         });
 
         cashInButton.setFont(resourceMap.getFont("cashInButton.font")); // NOI18N
+        cashInButton.setIcon(resourceMap.getIcon("cashInButton.icon")); // NOI18N
         cashInButton.setText(resourceMap.getString("cashInButton.text")); // NOI18N
         cashInButton.setName("cashInButton"); // NOI18N
         cashInButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +112,7 @@ public class shoppingCart extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(shoppingCartList1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(clearCartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cashInButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -144,7 +145,7 @@ public class shoppingCart extends javax.swing.JPanel {
     }//GEN-LAST:event_cashInButtonActionPerformed
 
     private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
-        handler.clear();
+        cart.clear();
         shoppingCartList1.getProductPanel().removeAll();
         shoppingCartList1.getProductPanel().revalidate();
         shoppingCartList1.getProductPanel().repaint();

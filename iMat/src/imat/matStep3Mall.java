@@ -17,6 +17,7 @@ import javax.swing.JTextPane;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  *
@@ -24,11 +25,14 @@ import se.chalmers.ait.dat215.project.ShoppingCart;
  */
 public class matStep3Mall extends javax.swing.JPanel {
 
+
+
     private IMatDataHandler handler = IMatDataHandler.getInstance();
     private ImageIcon star = new ImageIcon("src/imat/resources/images/buttons/star.gif");
     private ImageIcon star2 = new ImageIcon("src/imat/resources/images/buttons/star2.gif");
     private Product product;
     private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
+    private IMatPresenter presenter = IMatPresenter.getInstance();
 
     /** Creates new form matStep2Mall */
     public matStep3Mall() {
@@ -248,7 +252,12 @@ public class matStep3Mall extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void detailBasketButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailBasketButtonActionPerformed
-        cart.addProduct(product,(Integer) detailAmountSpinner.getValue()*1.0);
+        ShoppingItem item = new ShoppingItem(product,(Integer) detailAmountSpinner.getValue()*1.0);
+        if(item.getTotal() != 0) {
+
+        presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(new cartItem(item));
+
+        }
     }//GEN-LAST:event_detailBasketButtonActionPerformed
 
     private void detailFavoriteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailFavoriteButtonActionPerformed

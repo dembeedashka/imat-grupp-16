@@ -59,10 +59,6 @@ public class userInfoView extends javax.swing.JPanel {
         {
             uiCityTextField.setText(customer.getPostAddress());
         }
-        if(!customer.getLastName().equals(""))
-        {
-            uiLastNameTextField.setText(customer.getLastName());
-        }
         if(!card.getCardNumber().equals(""))
         {
             uiCardNumerTextField.setText(card.getCardNumber());

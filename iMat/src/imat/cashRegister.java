@@ -27,6 +27,7 @@ public class cashRegister extends javax.swing.JPanel {
     /** Creates new form cashRegister */
     public cashRegister() {
         initComponents();
+        initCashUserInfo();
     }
 
     public HeaderPanel2 getMatMallHeaderPanel() {
@@ -39,6 +40,59 @@ public class cashRegister extends javax.swing.JPanel {
 
     }
 
+    public void initCashUserInfo()
+    {
+       if(!customer.getAddress().equals(""))
+       {
+           cashStAddressTF.setText(customer.getAddress());
+       }
+       if(!customer.getFirstName().equals(""))
+       {
+           cashFNameTF.setText(customer.getFirstName());
+       }
+       if(!customer.getLastName().equals(""))
+       {
+           cashLNameTF.setText(customer.getLastName());
+       }
+       if(!customer.getPhoneNumber().equals(""))
+       {
+           cashPhoneNumberTF.setText(customer.getPhoneNumber());
+       }
+       if(!customer.getPostCode().equals(""))
+       {
+           cashPcodeTF.setText(customer.getPostCode());
+       }
+       if(!customer.getPostAddress().equals(""))
+       {
+           cashPlaceTF.setText(customer.getPostAddress());
+       }
+       if(!card.getCardNumber().equals(""))
+       {
+           cashCardnumberTfield.setText(card.getCardNumber());
+       }
+       if(!card.getCardType().equals(""))
+       {
+           //TODO display card type in the combobox
+       }
+       if(!card.getHoldersName().equals(""))
+       {
+           int nextName = card.getHoldersName().indexOf(" ");
+           cashCardFNameTField.setText(card.getHoldersName().substring(0,nextName));
+           cashCardLNameTField.setText(card.getHoldersName().substring(nextName+1));
+       }
+       if(card.getValidMonth()!=0)
+       {
+           //TODO display month in the combobox
+       }
+       if(card.getValidYear()!=0)
+       {
+           //TODO display year in the combobox
+       }
+       if(card.getVerificationCode() !=0)
+       {
+           cashCvcTField.setText(card.getVerificationCode()+"");
+       }
+    }
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -73,6 +127,8 @@ public class cashRegister extends javax.swing.JPanel {
         cashSlash = new javax.swing.JLabel();
         cashMonth = new javax.swing.JComboBox();
         cashYear = new javax.swing.JComboBox();
+        cashLastNumbersTextField = new javax.swing.JTextField();
+        cashSaperatorLabel = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         cashPaymentLabel = new javax.swing.JLabel();
         cashPaymentPanel = new javax.swing.JPanel();
@@ -164,6 +220,12 @@ public class cashRegister extends javax.swing.JPanel {
         cashYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2011", "2012", "2013" }));
         cashYear.setName("cashYear"); // NOI18N
 
+        cashLastNumbersTextField.setText(resourceMap.getString("cashLastNumbersTextField.text")); // NOI18N
+        cashLastNumbersTextField.setName("cashLastNumbersTextField"); // NOI18N
+
+        cashSaperatorLabel.setText(resourceMap.getString("cashSaperatorLabel.text")); // NOI18N
+        cashSaperatorLabel.setName("cashSaperatorLabel"); // NOI18N
+
         javax.swing.GroupLayout cashUserInfoPanelLayout = new javax.swing.GroupLayout(cashUserInfoPanel);
         cashUserInfoPanel.setLayout(cashUserInfoPanelLayout);
         cashUserInfoPanelLayout.setHorizontalGroup(
@@ -177,11 +239,16 @@ public class cashRegister extends javax.swing.JPanel {
                     .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(cashLNameTF, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(cashFNameTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
-                    .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(cashPhoneNumberTF, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(cashPNumberTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                    .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
+                        .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(cashPhoneNumberTF, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cashPNumberTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                        .addGap(4, 4, 4)
+                        .addComponent(cashSaperatorLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cashLastNumbersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cashFNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(258, 258, 258)
+                .addGap(186, 186, 186)
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
                         .addComponent(cashDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,7 +295,10 @@ public class cashRegister extends javax.swing.JPanel {
                     .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
                         .addComponent(cashPNumberLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cashPNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cashPNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cashLastNumbersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cashSaperatorLabel))))
                 .addGap(18, 18, 18)
                 .addGroup(cashUserInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cashUserInfoPanelLayout.createSequentialGroup()
@@ -406,7 +476,7 @@ public class cashRegister extends javax.swing.JPanel {
                     .addGroup(cashPaymentPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         cashPaymentPanelLayout.setVerticalGroup(
             cashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,7 +519,7 @@ public class cashRegister extends javax.swing.JPanel {
             .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cashUserInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
             .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
                 .addComponent(cashPaymentLabel)
                 .addContainerGap(718, Short.MAX_VALUE))
@@ -527,23 +597,22 @@ public class cashRegister extends javax.swing.JPanel {
     }//GEN-LAST:event_dontShowDebitCardButton
 
     private void cashSaveUserInfo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashSaveUserInfo
-        customer.setAddress(cashStAddressTF.toString());
-        customer.setFirstName(cashFNameTF.toString());
-        customer.setLastName(cashLNameTF.toString());
-        customer.setPhoneNumber(cashPhoneNumberTF.toString());
-        customer.setPostCode(cashPcodeTF.toString());
-        customer.setPostAddress(cashPlaceTF.toString());
-        card.setCardNumber(cashCardnumberTfield.toString());
-        card.setCardType(cashCardtypeCBox.toString());
-        card.setHoldersName(cashCardFNameTField.toString()+" "+cashCardLNameTField.toString());
-        card.setValidMonth(Integer.parseInt(cashMonthCBox.toString()));
-        card.setValidYear(Integer.parseInt(cashYearCBox.toString()));
-
-        try {
-            card.setVerificationCode(Integer.parseInt(cashCvcTField.toString()));
-        } catch(NumberFormatException e) {
-            // TODO Add same page error message
-        }
+       customer.setAddress(cashStAddressTF.getText());
+       customer.setFirstName(cashFNameTF.getText());
+       customer.setLastName(cashLNameTF.getText());
+       customer.setPhoneNumber(cashPhoneNumberTF.getText());
+       customer.setPostCode(cashPcodeTF.getText());
+       customer.setPostAddress(cashPlaceTF.getText());
+       card.setCardNumber(cashCardnumberTfield.getText());
+       card.setCardType(cashCardtypeCBox.getItemAt(0).toString());
+       card.setHoldersName(cashCardFNameTField.getText()+" "+cashCardLNameTField.getText());
+       card.setValidMonth(Integer.parseInt(cashMonthCBox.getItemAt(0).toString()));
+       card.setValidYear(Integer.parseInt(cashYearCBox.getItemAt(0).toString()));
+       try {
+           card.setVerificationCode(Integer.parseInt(cashCvcTField.toString()));
+       } catch(NumberFormatException e) {
+           // TODO Add same page error message
+       }
 }//GEN-LAST:event_cashSaveUserInfo
 
 
@@ -572,6 +641,7 @@ public class cashRegister extends javax.swing.JPanel {
     private javax.swing.JRadioButton cashInvoiceRButton;
     private javax.swing.JLabel cashLNameLabel;
     private javax.swing.JTextField cashLNameTF;
+    private javax.swing.JTextField cashLastNumbersTextField;
     private javax.swing.JComboBox cashMonth;
     private javax.swing.JComboBox cashMonthCBox;
     private javax.swing.JLabel cashPCodeLabel;
@@ -585,6 +655,7 @@ public class cashRegister extends javax.swing.JPanel {
     private javax.swing.JLabel cashPlaceLabel;
     private javax.swing.JTextField cashPlaceTF;
     private javax.swing.JPanel cashRegisterPanel1;
+    private javax.swing.JLabel cashSaperatorLabel;
     private javax.swing.JLabel cashSlash;
     private javax.swing.JLabel cashStAddressLabel;
     private javax.swing.JTextField cashStAddressTF;

@@ -68,6 +68,7 @@ public class IMatView extends FrameView implements WindowListener {
     public static final Category  CASH                    = new SubcategoryOther("cash",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Kassa");
     public static final Category  PURCHASES               = new SubcategoryOther("purchases",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Tidigare inköp");
     public static final Category  ORDERPLACED             = new SubcategoryOther("orderPlaced",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Köp slutfört");
+    public static final Category  LISTVIEW                = new SubcategoryOther("listview",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Lista över inköpslistor");
 
     /* subcategories */
     public static Category        subPantry               = new SubcategoryPantry("subCategory", null, null);
@@ -1191,7 +1192,7 @@ public class IMatView extends FrameView implements WindowListener {
                 .addContainerGap(1166, Short.MAX_VALUE))
         );
 
-        centerStagePanel.add(cardShoppingListPanel, "shop");
+        centerStagePanel.add(cardShoppingListPanel, "listview");
 
         mainScrollPane.setViewportView(centerStagePanel);
 

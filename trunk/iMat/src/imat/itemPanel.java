@@ -80,6 +80,7 @@ public class itemPanel extends javax.swing.JPanel {
     
     public void setProductPrice(double productPrice) {
         this.productPrice.setText(productPrice+"");
+        productTotalPriceDisplay.setText(productPrice+"");
         this.price=productPrice;
     }
 

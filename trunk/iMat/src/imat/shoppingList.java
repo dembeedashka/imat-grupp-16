@@ -11,6 +11,8 @@
 
 package imat;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.ScrollPaneConstants;
 
 /**
@@ -75,12 +77,17 @@ public class shoppingList extends javax.swing.JPanel {
         jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout shoppingListTopPanelLayout = new javax.swing.GroupLayout(shoppingListTopPanel);
         shoppingListTopPanel.setLayout(shoppingListTopPanelLayout);
         shoppingListTopPanelLayout.setHorizontalGroup(
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+            .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shoppingListTopPanelLayout.createSequentialGroup()
                 .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -93,7 +100,7 @@ public class shoppingList extends javax.swing.JPanel {
                     .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingListName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE))
+                .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
         );
 
         shoppingListBottomPanel.setName("shoppingListBottomPanel"); // NOI18N
@@ -133,7 +140,7 @@ public class shoppingList extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(247, 247, 247)
                 .addComponent(shoppingListBottomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(shoppingListRowScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+            .addComponent(shoppingListRowScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(shoppingListAddRow, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,6 +180,31 @@ public class shoppingList extends javax.swing.JPanel {
             shoppingListName.setText("Skriv listans namn här");
         }
     }//GEN-LAST:event_shoppingListNameFocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int i=0;
+        boolean stop=false;
+        String eol = System.getProperty("line.separator");
+        while(!stop){
+            try{
+                FileWriter file = new FileWriter(shoppingListName.getText()+".txt",true);
+                ShoppingListRow temp = (ShoppingListRow) shoppingListRowPanel.getComponent(i);
+                file.write(temp.getRowItemTextField()+eol);
+                file.close();
+            }
+            catch(Exception e){
+                stop=true;
+            }
+            i++;
+        }
+        try{
+            FileWriter fw = new FileWriter("lists.txt",true);
+            fw.write(shoppingListName.getText()+eol);
+            fw.close();
+        }
+        catch (IOException e){
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

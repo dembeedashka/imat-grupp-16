@@ -116,7 +116,7 @@ public class itemPanel extends javax.swing.JPanel {
         addToCartButton = new javax.swing.JButton();
         productTotalPrice = new javax.swing.JLabel();
         productName = new javax.swing.JLabel();
-        SpinnerModel model = new SpinnerNumberModel(0, 0, 1000, 1);
+        SpinnerModel model = new SpinnerNumberModel(1, 1, 1000, 1);
         productAmount = new javax.swing.JSpinner(model);
         productUnitLabel = new javax.swing.JLabel();
         productPrice = new javax.swing.JLabel();

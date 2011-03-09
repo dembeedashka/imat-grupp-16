@@ -11,10 +11,11 @@
 
 package imat;
 
-import imat.cartItem;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
@@ -94,7 +95,8 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailBasketAmountLabel1 = new javax.swing.JLabel();
         detailBasketAmountLabel2 = new javax.swing.JLabel();
         detailPriceLabel = new javax.swing.JLabel();
-        detailAmountSpinner = new javax.swing.JSpinner();
+        SpinnerModel model = new SpinnerNumberModel(1, 1, 1000, 1);
+        detailAmountSpinner = new javax.swing.JSpinner(model);
         detailAmountLabel = new javax.swing.JLabel();
         detailUnitLabel = new javax.swing.JLabel();
         detailCostLabel = new javax.swing.JLabel();

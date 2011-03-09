@@ -33,6 +33,12 @@ public class cashRegister extends javax.swing.JPanel {
         return matMallHeaderPanel;
     }
 
+    public shoppingCartList getShoppingCartList () {
+
+        return shoppingCartList1;
+
+    }
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is

@@ -39,7 +39,7 @@ public class cartItem extends javax.swing.JPanel {
         productPrice.setText(lol.getTotal() + " :-");
         productAmount.setValue(lol.getAmount());
         iconLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(lol.getProduct()));
-        
+        unitLabel.setText(lol.getProduct().getUnit());
 
     }
 
@@ -60,12 +60,15 @@ public class cartItem extends javax.swing.JPanel {
         removeProduct = new javax.swing.JButton();
         productPrice = new javax.swing.JTextField();
         iconLabel = new javax.swing.JLabel();
+        unitLabel = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setMaximumSize(new java.awt.Dimension(775, 50));
         setName("Form"); // NOI18N
         setPreferredSize(new java.awt.Dimension(775, 50));
 
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(cartItem.class);
+        productAmount.setFont(resourceMap.getFont("productAmount.font")); // NOI18N
         productAmount.setName("productAmount"); // NOI18N
         productAmount.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -73,7 +76,6 @@ public class cartItem extends javax.swing.JPanel {
             }
         });
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(cartItem.class);
         productName.setFont(resourceMap.getFont("productName.font")); // NOI18N
         productName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         productName.setText(resourceMap.getString("productName.text")); // NOI18N
@@ -81,6 +83,7 @@ public class cartItem extends javax.swing.JPanel {
         productName.setEnabled(false);
         productName.setName("productName"); // NOI18N
 
+        removeProduct.setFont(resourceMap.getFont("removeProduct.font")); // NOI18N
         removeProduct.setText(resourceMap.getString("removeProduct.text")); // NOI18N
         removeProduct.setName("removeProduct"); // NOI18N
 
@@ -94,33 +97,40 @@ public class cartItem extends javax.swing.JPanel {
         iconLabel.setText(resourceMap.getString("iconLabel.text")); // NOI18N
         iconLabel.setName("iconLabel"); // NOI18N
 
+        unitLabel.setFont(resourceMap.getFont("unitLabel.font")); // NOI18N
+        unitLabel.setText(resourceMap.getString("unitLabel.text")); // NOI18N
+        unitLabel.setName("unitLabel"); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(50, 50, 50)
                 .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
                 .addComponent(removeProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(39, 39, 39)
+                .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(removeProduct)
-                    .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
+                    .addComponent(productAmount)
+                    .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14))
-            .addComponent(iconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+            .addComponent(iconLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -137,6 +147,7 @@ public class cartItem extends javax.swing.JPanel {
     private javax.swing.JTextField productName;
     private javax.swing.JTextField productPrice;
     private javax.swing.JButton removeProduct;
+    private javax.swing.JLabel unitLabel;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -17,6 +17,8 @@ package imat;
  */
 public class shoppingListPanel1 extends javax.swing.JPanel {
 
+    private IMatPresenter presenter = IMatPresenter.getInstance();
+
     /** Creates new form shoppingListPanel2 */
     public shoppingListPanel1() {
         initComponents();
@@ -64,7 +66,9 @@ public class shoppingListPanel1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewEditShoppingListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewEditShoppingListActionPerformed
-        // TODO add your handling code here:
+        presenter.displayCategory(IMatView.LISTVIEW);
+        //ShoppingListView.add();
+
     }//GEN-LAST:event_viewEditShoppingListActionPerformed
 
 

@@ -77,6 +77,14 @@ public class ShoppingListView extends javax.swing.JPanel {
         return headerPanel21;
     }
 
+    public void add(){
+        ShoppingListLoadingRow s = new ShoppingListLoadingRow();
+        s.setRowItemTextField("fqewrqwerfqwerwq");
+        shoppingListDisplayPanel.add(new ShoppingListLoadingRow());
+        shoppingListDisplayPanel.revalidate();
+        shoppingListDisplayPanel.repaint();
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private imat.HeaderPanel2 headerPanel21;

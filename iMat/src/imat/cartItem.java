@@ -23,7 +23,7 @@ public class cartItem extends javax.swing.JPanel {
 
     
 
-        private ShoppingItem lol;
+    private ShoppingItem lol;
 
     /** Creates new form cartItem */
     public cartItem() {
@@ -86,6 +86,11 @@ public class cartItem extends javax.swing.JPanel {
         removeProduct.setFont(resourceMap.getFont("removeProduct.font")); // NOI18N
         removeProduct.setText(resourceMap.getString("removeProduct.text")); // NOI18N
         removeProduct.setName("removeProduct"); // NOI18N
+        removeProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeProductActionPerformed(evt);
+            }
+        });
 
         productPrice.setFont(resourceMap.getFont("productPrice.font")); // NOI18N
         productPrice.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -109,11 +114,11 @@ public class cartItem extends javax.swing.JPanel {
                 .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(44, 44, 44)
                 .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(removeProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,8 +140,13 @@ public class cartItem extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
-        //productPrice.setText(lol.getTotal() +" :-");
+        
+       //productPrice.setText(lol.getTotal() +" :-");
     }//GEN-LAST:event_productAmountStateChanged
+
+    private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed
+      
+    }//GEN-LAST:event_removeProductActionPerformed
 
 
 

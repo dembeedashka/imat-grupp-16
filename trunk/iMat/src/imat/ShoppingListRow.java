@@ -35,6 +35,8 @@ public class ShoppingListRow extends javax.swing.JPanel {
     private void initComponents() {
 
         rowItemTextField = new javax.swing.JTextField();
+        rowCheckBox = new javax.swing.JCheckBox();
+        trashButton = new javax.swing.JButton();
 
         setName("Form"); // NOI18N
 
@@ -43,29 +45,60 @@ public class ShoppingListRow extends javax.swing.JPanel {
         rowItemTextField.setText(resourceMap.getString("rowItemTextField.text")); // NOI18N
         rowItemTextField.setName("rowItemTextField"); // NOI18N
 
+        rowCheckBox.setText(resourceMap.getString("rowCheckBox.text")); // NOI18N
+        rowCheckBox.setName("rowCheckBox"); // NOI18N
+
+        trashButton.setIcon(resourceMap.getIcon("trashButton.icon")); // NOI18N
+        trashButton.setText(resourceMap.getString("trashButton.text")); // NOI18N
+        trashButton.setName("trashButton"); // NOI18N
+        trashButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trashButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(rowItemTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(trashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rowItemTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rowCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rowItemTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addComponent(trashButton))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(rowCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                    .addGap(14, 14, 14)
+                    .addComponent(rowItemTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void trashButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trashButtonActionPerformed
+        Container parent = this.getParent();
+        parent.remove(this);
+        parent.validate();
+        parent.repaint();
+    }//GEN-LAST:event_trashButtonActionPerformed
 
     public String getRowItemTextField(){
         return rowItemTextField.getText();
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox rowCheckBox;
     private javax.swing.JTextField rowItemTextField;
+    private javax.swing.JButton trashButton;
     // End of variables declaration//GEN-END:variables
 
 }

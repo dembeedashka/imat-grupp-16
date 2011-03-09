@@ -103,6 +103,20 @@ public class itemPanel extends javax.swing.JPanel {
         initComponents();
     }
 
+    public void updateFavourite()
+    {
+        if(handler.isFavorite(product))
+        {
+            handler.removeFavorite(product);
+            jButton1.setIcon(star2);
+        }
+        else
+        {
+            handler.addFavorite(product);
+            jButton1.setIcon(star);
+        }
+    }
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -290,16 +304,7 @@ public class itemPanel extends javax.swing.JPanel {
 }//GEN-LAST:event_addToCartButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(handler.isFavorite(product))
-        {
-            handler.removeFavorite(product);
-            jButton1.setIcon(star2);
-        }
-        else
-        {
-            handler.addFavorite(product);
-            jButton1.setIcon(star);
-        }
+        updateFavourite();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged

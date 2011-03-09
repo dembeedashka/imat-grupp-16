@@ -81,6 +81,19 @@ public class matStep3Mall extends javax.swing.JPanel {
         return detailProductNameLabel;
     }
 
+        public void updateFavourite()
+    {
+        if(handler.isFavorite(product))
+        {
+            handler.removeFavorite(product);
+            detailFavoriteButton.setIcon(star2);
+        }
+        else
+        {
+            handler.addFavorite(product);
+            detailFavoriteButton.setIcon(star);
+        }
+    }
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -288,20 +301,12 @@ public class matStep3Mall extends javax.swing.JPanel {
         presenter.getShoppingCartPanel().getShoppingCartList().getProductPanel().add(cartItem);
 
         }
+        cart.addProduct(product);
         cart.fireShoppingCartChanged();
     }//GEN-LAST:event_detailBasketButtonActionPerformed
 
     private void detailFavoriteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_detailFavoriteButtonActionPerformed
-        if(handler.isFavorite(product))
-        {
-            handler.removeFavorite(product);
-            detailFavoriteButton.setIcon(star2);
-        }
-        else
-        {
-            handler.addFavorite(product);
-            detailFavoriteButton.setIcon(star);
-        }
+        updateFavourite();
     }//GEN-LAST:event_detailFavoriteButtonActionPerformed
 
     private void detailAmountSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_detailAmountSpinnerStateChanged

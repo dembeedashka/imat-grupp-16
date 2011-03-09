@@ -13,8 +13,8 @@ package imat;
 
 import java.awt.Color;
 import java.awt.Container;
-import javax.swing.JLabel;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
@@ -24,6 +24,7 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
 public class cartItem extends javax.swing.JPanel {
     private static boolean rowStripe;
     private ShoppingItem item;
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
 
     /** Creates new form cartItem */
     public cartItem() {
@@ -50,6 +51,7 @@ public class cartItem extends javax.swing.JPanel {
         iconLabel.setIcon(IMatDataHandler.getInstance().getImageIcon(lol.getProduct()));
         unitSuffixLabel.setText(lol.getProduct().getUnitSuffix());
         unitLabel.setText(lol.getProduct().getPrice()+ " " + lol.getProduct().getUnit());
+        item=lol;
     }
 
 
@@ -166,6 +168,7 @@ public class cartItem extends javax.swing.JPanel {
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed
         Container parent = this.getParent();
+        cart.removeProduct(item.getProduct());
         parent.remove(this);
         parent.validate();
         parent.repaint();

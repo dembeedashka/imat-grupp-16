@@ -125,7 +125,7 @@ public class IMatView extends FrameView implements WindowListener {
         helpView1.getHelpViewHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/help.gif"));
         shoppingCart1.getMatMallHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/cart.gif"));
         userInfoView1.getUiHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/user.gif"));
-
+        orderPlacedView1.getOrderPlacedHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/kat0big.gif"));
     }
     /** This method is called from within the constructor to
      * initialize the form.
@@ -214,6 +214,7 @@ public class IMatView extends FrameView implements WindowListener {
         cashRegister1 = new imat.cashRegister();
         cardPreviousPurchasesPanel = new javax.swing.JPanel();
         cardOrderPlaced = new javax.swing.JPanel();
+        orderPlacedView1 = new imat.OrderPlacedView();
         bottomBorderPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
@@ -1150,15 +1151,19 @@ public class IMatView extends FrameView implements WindowListener {
 
         cardOrderPlaced.setName("cardOrderPlaced"); // NOI18N
 
+        orderPlacedView1.setName("orderPlacedView1"); // NOI18N
+
         org.jdesktop.layout.GroupLayout cardOrderPlacedLayout = new org.jdesktop.layout.GroupLayout(cardOrderPlaced);
         cardOrderPlaced.setLayout(cardOrderPlacedLayout);
         cardOrderPlacedLayout.setHorizontalGroup(
             cardOrderPlacedLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 800, Short.MAX_VALUE)
+            .add(orderPlacedView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         cardOrderPlacedLayout.setVerticalGroup(
             cardOrderPlacedLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 2000, Short.MAX_VALUE)
+            .add(cardOrderPlacedLayout.createSequentialGroup()
+                .add(orderPlacedView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 797, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1203, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardOrderPlaced, "orderPlaced");
@@ -1575,6 +1580,7 @@ public class IMatView extends FrameView implements WindowListener {
     private javax.swing.JButton melonButton;
     private javax.swing.JPanel navigationSearchPanel;
     private javax.swing.JButton nutsSeedsButton;
+    private imat.OrderPlacedView orderPlacedView1;
     private javax.swing.JButton pantryButton;
     private imat.matMall pantryMall;
     private javax.swing.JButton pastaButton;

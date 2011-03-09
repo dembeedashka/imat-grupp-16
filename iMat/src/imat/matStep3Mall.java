@@ -33,6 +33,7 @@ public class matStep3Mall extends javax.swing.JPanel {
     private ImageIcon star = new ImageIcon("src/imat/resources/images/buttons/star.gif");
     private ImageIcon star2 = new ImageIcon("src/imat/resources/images/buttons/star2.gif");
     private Product product;
+    private double price;
     private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
     private IMatPresenter presenter = IMatPresenter.getInstance();
 
@@ -42,11 +43,15 @@ public class matStep3Mall extends javax.swing.JPanel {
     }
 
     public void showProduct(Product product) {
-        detailCostLabel.setText(product.getPrice()+"");
+        detailPriceLabel.setText(product.getPrice()+"");
+        detailTotalCostLabel.setText(product.getPrice()+"");
+        detailUnitLabel.setText(product.getUnit().substring(3));
+        detailUnitLabel2.setText(product.getUnit());
         detailDescriptionTextPane.setText(product.getName()+" är gott!");
         detailPictureLabel.setIcon(new ImageIcon("src/imat/resources/imat/images/"+product.getImageName()));
         detailPriceLabel.setText(product.getPrice()+"");
         detailProductNameLabel.setText(product.getName());
+        price=product.getPrice();
         this.product=product;
 
         if(IMatDataHandler.getInstance().isFavorite(product))
@@ -103,6 +108,8 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailBasketButton = new javax.swing.JButton();
         detailFavoriteLabel = new javax.swing.JLabel();
         detailBasketAmountLabel = new javax.swing.JLabel();
+        detailUnitLabel2 = new javax.swing.JLabel();
+        detailTotalCostLabel = new javax.swing.JLabel();
 
         setName("Form"); // NOI18N
         setPreferredSize(new java.awt.Dimension(795, 784));
@@ -148,6 +155,11 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailPriceLabel.setName("detailPriceLabel"); // NOI18N
 
         detailAmountSpinner.setName("detailAmountSpinner"); // NOI18N
+        detailAmountSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                detailAmountSpinnerStateChanged(evt);
+            }
+        });
 
         detailAmountLabel.setText(resourceMap.getString("detailAmountLabel.text")); // NOI18N
         detailAmountLabel.setName("detailAmountLabel"); // NOI18N
@@ -172,6 +184,12 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailBasketAmountLabel.setText(resourceMap.getString("detailBasketAmountLabel.text")); // NOI18N
         detailBasketAmountLabel.setName("detailBasketAmountLabel"); // NOI18N
 
+        detailUnitLabel2.setText(resourceMap.getString("detailUnitLabel2.text")); // NOI18N
+        detailUnitLabel2.setName("detailUnitLabel2"); // NOI18N
+
+        detailTotalCostLabel.setText(resourceMap.getString("detailTotalCostLabel.text")); // NOI18N
+        detailTotalCostLabel.setName("detailTotalCostLabel"); // NOI18N
+
         javax.swing.GroupLayout detailPanelLayout = new javax.swing.GroupLayout(detailPanel);
         detailPanel.setLayout(detailPanelLayout);
         detailPanelLayout.setHorizontalGroup(
@@ -183,7 +201,10 @@ public class matStep3Mall extends javax.swing.JPanel {
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(detailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(detailPriceLabel)
+                            .addGroup(detailPanelLayout.createSequentialGroup()
+                                .addComponent(detailPriceLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(detailUnitLabel2))
                             .addGroup(detailPanelLayout.createSequentialGroup()
                                 .addComponent(detailBasketAmountLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -201,7 +222,9 @@ public class matStep3Mall extends javax.swing.JPanel {
                         .addComponent(detailUnitLabel)
                         .addGap(18, 18, 18)
                         .addComponent(detailCostLabel)
-                        .addGap(65, 65, 65)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(detailTotalCostLabel)
+                        .addGap(25, 25, 25)
                         .addComponent(detailBasketButton))
                     .addGroup(detailPanelLayout.createSequentialGroup()
                         .addComponent(detailProductNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,7 +261,9 @@ public class matStep3Mall extends javax.swing.JPanel {
                     .addComponent(detailUnitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(detailCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                     .addComponent(detailPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
-                    .addComponent(detailBasketButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
+                    .addComponent(detailBasketButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(detailUnitLabel2)
+                    .addComponent(detailTotalCostLabel))
                 .addContainerGap())
         );
 
@@ -279,6 +304,10 @@ public class matStep3Mall extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_detailFavoriteButtonActionPerformed
 
+    private void detailAmountSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_detailAmountSpinnerStateChanged
+        detailTotalCostLabel.setText(price * (Integer)detailAmountSpinner.getValue()+"");
+    }//GEN-LAST:event_detailAmountSpinnerStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel detailAmountLabel;
@@ -296,7 +325,9 @@ public class matStep3Mall extends javax.swing.JPanel {
     private javax.swing.JLabel detailPriceLabel;
     private javax.swing.JLabel detailProductNameLabel;
     private javax.swing.JScrollPane detailScrollPanel;
+    private javax.swing.JLabel detailTotalCostLabel;
     private javax.swing.JLabel detailUnitLabel;
+    private javax.swing.JLabel detailUnitLabel2;
     // End of variables declaration//GEN-END:variables
 
 }

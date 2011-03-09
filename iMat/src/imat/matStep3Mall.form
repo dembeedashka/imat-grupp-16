@@ -56,7 +56,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="detailPriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="detailPriceLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="detailUnitLabel2" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="detailBasketAmountLabel1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -78,7 +82,9 @@
                           <Component id="detailUnitLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="detailCostLabel" min="-2" max="-2" attributes="1"/>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="detailTotalCostLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="detailBasketButton" min="-2" max="-2" attributes="3"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -127,6 +133,8 @@
                       <Component id="detailCostLabel" alignment="3" pref="37" max="32767" attributes="0"/>
                       <Component id="detailPriceLabel" alignment="3" pref="74" max="32767" attributes="0"/>
                       <Component id="detailBasketButton" alignment="3" pref="31" max="32767" attributes="0"/>
+                      <Component id="detailUnitLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="detailTotalCostLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -204,6 +212,9 @@
           <Properties>
             <Property name="name" type="java.lang.String" value="detailAmountSpinner" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="detailAmountSpinnerStateChanged"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner(model)"/>
             <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="SpinnerModel model = new SpinnerNumberModel(1, 1, 1000, 1);"/>
@@ -246,6 +257,18 @@
           <Properties>
             <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailBasketAmountLabel" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailUnitLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailUnitLabel2.text"/>
+            <Property name="name" type="java.lang.String" value="detailUnitLabel2" noResource="true"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="detailTotalCostLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="detailTotalCostLabel.text"/>
+            <Property name="name" type="java.lang.String" value="detailTotalCostLabel" noResource="true"/>
           </Properties>
         </Component>
       </SubComponents>

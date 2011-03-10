@@ -11,7 +11,8 @@
 
 package imat;
 
-import javax.swing.JLabel;
+import se.chalmers.ait.dat215.project.Order;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 public class Receipt extends javax.swing.JPanel {
 
@@ -22,6 +23,21 @@ public class Receipt extends javax.swing.JPanel {
         initComponents();
     }
 
+    public void addReceiptRow(ShoppingItem item)
+    {
+       ReceiptRow row = new ReceiptRow();
+       row.setReceiptRowAmountLabel(item.getAmount());
+       row.setReceiptRowNameLabel(item.getProduct());
+       row.setReceiptRowPriceLabel(item.getTotal()*item.getAmount());
+       receiptRowPanel.add(row);
+       receiptRowPanel.repaint();
+       receiptRowPanel.revalidate();
+    }
+
+    public void setReceiptDate(Order order)
+    {
+        dateLabel.setText("Datum: "+order.getDate().getYear()+"-"+order.getDate().getMonth()+"-"+order.getDate().getDay());
+    }
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -32,36 +48,42 @@ public class Receipt extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        headerPanel21 = new imat.HeaderPanel2();
         dateLabel = new javax.swing.JLabel();
+        receiptRowPanel = new javax.swing.JPanel();
 
         setName("Form"); // NOI18N
-
-        headerPanel21.setName("headerPanel21"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(Receipt.class);
         dateLabel.setFont(resourceMap.getFont("dateLabel.font")); // NOI18N
         dateLabel.setText(resourceMap.getString("dateLabel.text")); // NOI18N
         dateLabel.setName("dateLabel"); // NOI18N
 
+        receiptRowPanel.setName("receiptRowPanel"); // NOI18N
+
+        javax.swing.GroupLayout receiptRowPanelLayout = new javax.swing.GroupLayout(receiptRowPanel);
+        receiptRowPanel.setLayout(receiptRowPanelLayout);
+        receiptRowPanelLayout.setHorizontalGroup(
+            receiptRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 331, Short.MAX_VALUE)
+        );
+        receiptRowPanelLayout.setVerticalGroup(
+            receiptRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 354, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dateLabel)
-                    .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
+            .addComponent(receiptRowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dateLabel)
-                .addContainerGap(943, Short.MAX_VALUE))
+                .addComponent(receiptRowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -69,7 +91,7 @@ public class Receipt extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dateLabel;
-    private imat.HeaderPanel2 headerPanel21;
+    private javax.swing.JPanel receiptRowPanel;
     // End of variables declaration//GEN-END:variables
 
 }

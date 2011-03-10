@@ -11,6 +11,9 @@
 
 package imat;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.ScrollPaneConstants;
@@ -172,6 +175,9 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListRowPanel.revalidate();
         shoppingListRowPanel.repaint();
     }
+    public void addName(String s){
+        shoppingListName.setText(s);
+    }
     private void shoppingListAddRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListAddRowActionPerformed
         shoppingListRowPanel.add(new ShoppingListRow());
         shoppingListRowPanel.revalidate();
@@ -194,9 +200,28 @@ public class shoppingList extends javax.swing.JPanel {
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(!shoppingListName.getText().equals("")){
-            int i=0;
-            boolean stop=false;
-            String eol = System.getProperty("line.separator");
+                int i=0;
+                boolean stop=false;
+                String eol = System.getProperty("line.separator");
+                try {
+                FileInputStream fis = new FileInputStream("lists.txt");
+                BufferedInputStream bis = new BufferedInputStream(fis);
+                DataInputStream dis = new DataInputStream(bis);
+                while (dis.available() != 0) {
+                    if(shoppingListName.getText().equals(dis.readLine())){
+                       stop=true;
+                       shoppingListName.setText("Det finns lista med samma namn");
+                       this.revalidate();
+                       this.repaint();
+                    }
+                }
+                fis.close();
+                bis.close();
+                dis.close();
+            }
+            catch(Exception e){
+
+            }
             while(!stop){
                 try{
                     FileWriter file = new FileWriter(shoppingListName.getText()+".txt",true);

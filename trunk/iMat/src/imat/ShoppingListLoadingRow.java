@@ -82,6 +82,7 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
                 sr.setRowItemTextField(dis.readLine());
                 s.addRow(sr);
             }
+            s.addName(getShoppingListButton());
             fis.close();
             bis.close();
             dis.close();

@@ -97,6 +97,7 @@ public class userInfoView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         uiBreadcrumbsPanel = new javax.swing.JPanel();
         uiFirstNameLabel = new javax.swing.JLabel();
         uiFirstNameTextField = new javax.swing.JTextField();
@@ -105,6 +106,8 @@ public class userInfoView extends javax.swing.JPanel {
         uiAddressTextField = new javax.swing.JTextField();
         uiAddressLabel = new javax.swing.JLabel();
         uiCoLabel = new javax.swing.JLabel();
+        invoiceRadioButton = new javax.swing.JRadioButton();
+        creditCardRadioButton = new javax.swing.JRadioButton();
         uiZipCodeLabel = new javax.swing.JLabel();
         uiCityLabel = new javax.swing.JLabel();
         uiCoTextField = new javax.swing.JTextField();
@@ -115,8 +118,6 @@ public class userInfoView extends javax.swing.JPanel {
         uiPhoneNumberTextField = new javax.swing.JTextField();
         uiIdTextField = new javax.swing.JTextField();
         uiPaymentOptionLabel = new javax.swing.JLabel();
-        invoiceRadioButton = new javax.swing.JRadioButton();
-        creditCardRadioButton = new javax.swing.JRadioButton();
         uiChFirstNameLabel = new javax.swing.JLabel();
         uiChFirstNameTextField = new javax.swing.JTextField();
         uiChLastNameLabel = new javax.swing.JLabel();
@@ -183,6 +184,16 @@ public class userInfoView extends javax.swing.JPanel {
         uiCoLabel.setText(resourceMap.getString("uiCoLabel.text")); // NOI18N
         uiCoLabel.setName("uiCoLabel"); // NOI18N
 
+        buttonGroup1.add(invoiceRadioButton);
+        invoiceRadioButton.setText(resourceMap.getString("invoiceRadioButton.text")); // NOI18N
+        invoiceRadioButton.setEnabled(false);
+        invoiceRadioButton.setName("invoiceRadioButton"); // NOI18N
+
+        buttonGroup1.add(creditCardRadioButton);
+        creditCardRadioButton.setText(resourceMap.getString("creditCardRadioButton.text")); // NOI18N
+        creditCardRadioButton.setEnabled(false);
+        creditCardRadioButton.setName("creditCardRadioButton"); // NOI18N
+
         uiZipCodeLabel.setFont(resourceMap.getFont("uiZipCodeLabel.font")); // NOI18N
         uiZipCodeLabel.setText(resourceMap.getString("uiZipCodeLabel.text")); // NOI18N
         uiZipCodeLabel.setName("uiZipCodeLabel"); // NOI18N
@@ -222,14 +233,6 @@ public class userInfoView extends javax.swing.JPanel {
         uiPaymentOptionLabel.setFont(resourceMap.getFont("uiPaymentOptionLabel.font")); // NOI18N
         uiPaymentOptionLabel.setText(resourceMap.getString("uiPaymentOptionLabel.text")); // NOI18N
         uiPaymentOptionLabel.setName("uiPaymentOptionLabel"); // NOI18N
-
-        invoiceRadioButton.setText(resourceMap.getString("invoiceRadioButton.text")); // NOI18N
-        invoiceRadioButton.setEnabled(false);
-        invoiceRadioButton.setName("invoiceRadioButton"); // NOI18N
-
-        creditCardRadioButton.setText(resourceMap.getString("creditCardRadioButton.text")); // NOI18N
-        creditCardRadioButton.setEnabled(false);
-        creditCardRadioButton.setName("creditCardRadioButton"); // NOI18N
 
         uiChFirstNameLabel.setFont(resourceMap.getFont("uiChFirstNameLabel.font")); // NOI18N
         uiChFirstNameLabel.setText(resourceMap.getString("uiChFirstNameLabel.text")); // NOI18N
@@ -359,39 +362,40 @@ public class userInfoView extends javax.swing.JPanel {
                             .addComponent(uiValidThroughLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(uiZipCodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiPhoneNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(uiIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(uiIdHelpTextLabel))
                             .addComponent(invoiceRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(creditCardRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiChFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiLastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiAddressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiCoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(uiMonthComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(uiYearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(uiCardTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(uiCvvCodeTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(uiChLastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uiCardNumerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(uiCardTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(uiCvvCodeTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiPhoneNumberTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiCityTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiZipCodeTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiCoTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiAddressTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiFirstNameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiLastNameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiChFirstNameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiChLastNameTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(uiCardNumerTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(uiIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(uiIdHelpTextLabel)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -429,11 +433,11 @@ public class userInfoView extends javax.swing.JPanel {
                     .addComponent(uiZipCodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(uiCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(uiCityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(uiCityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(uiCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uiPhoneNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -458,8 +462,8 @@ public class userInfoView extends javax.swing.JPanel {
                     .addComponent(uiChFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(uiChLastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(uiChLastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uiChLastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uiChLastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uiCardNumerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -479,8 +483,8 @@ public class userInfoView extends javax.swing.JPanel {
                     .addComponent(uiYearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -535,10 +539,16 @@ public class userInfoView extends javax.swing.JPanel {
         creditCardRadioButton.setEnabled(bool);
         invoiceRadioButton.setEnabled(bool);
         uiLastNameTextField.setEnabled(bool);
+        jTextField1.setEnabled(bool);
+        uiChFirstNameTextField.setEnabled(bool);
+        uiChLastNameTextField.setEnabled(bool);
+        uiCardNumerTextField.setEnabled(bool);
+        uiCvvCodeTextField.setEnabled(bool);
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton creditCardRadioButton;
     private javax.swing.JRadioButton invoiceRadioButton;
     private javax.swing.JButton jButton1;

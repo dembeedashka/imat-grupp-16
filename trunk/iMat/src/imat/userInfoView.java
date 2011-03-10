@@ -11,6 +11,10 @@
 
 package imat;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 import se.chalmers.ait.dat215.project.CreditCard;
 import se.chalmers.ait.dat215.project.Customer;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
@@ -23,10 +27,16 @@ public class userInfoView extends javax.swing.JPanel {
 
     private Customer customer = IMatDataHandler.getInstance().getCustomer();
     private CreditCard card   = IMatDataHandler.getInstance().getCreditCard();
+
+    
     /** Creates new form userInfoView */
     public userInfoView() {
         initComponents();
         initUserInfo();
+
+
+
+
     }
 
     public HeaderPanel2 getUiHeaderPanel() {

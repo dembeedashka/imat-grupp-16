@@ -180,10 +180,12 @@ public class actionPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_apBasketButtonActionPerformed
 
     private void apUserinfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apUserinfoButtonActionPerformed
+        IMatPresenter.getInstance().getView().getUserInfoView1().initUserInfo();
         presenter.displayCategory(IMatView.USERINFO);
     }//GEN-LAST:event_apUserinfoButtonActionPerformed
 
     private void apCashregisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apCashregisterButtonActionPerformed
+        IMatPresenter.getInstance().getView().getCashRegister1().initCashUserInfo();
         presenter.displayCategory(IMatView.CASH);
     }//GEN-LAST:event_apCashregisterButtonActionPerformed
 

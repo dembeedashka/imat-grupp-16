@@ -38,7 +38,7 @@ public class shoppingCartList extends javax.swing.JPanel {
 
     public void addToShoppingCart()
     {
-           productPanel.add(new cartItem());
+       productPanel.add(new cartItem());
 
     }
 
@@ -62,6 +62,10 @@ public class shoppingCartList extends javax.swing.JPanel {
 
     public void setSum(double price) {
         totalPrice.setText(price + " kr");
+    }
+
+    public double getPrice() {
+        return handler.getTotal();
     }
 
     /** This method is called from within the constructor to

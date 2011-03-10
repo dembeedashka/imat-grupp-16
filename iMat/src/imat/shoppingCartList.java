@@ -86,6 +86,7 @@ public class shoppingCartList extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
 
         setName("Form"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(817, 600));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setName("jPanel1"); // NOI18N

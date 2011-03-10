@@ -28,10 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="cashBreadcrumb" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="cashBreadcrumb" min="-2" pref="1635" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -44,7 +41,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="cashRegisterPanel1" min="-2" pref="786" max="-2" attributes="0"/>
               </Group>
@@ -54,8 +51,8 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="cashRegisterPanel1" min="-2" pref="1760" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cashRegisterPanel1" min="-2" pref="1622" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -92,26 +89,23 @@
                       <EmptySpace pref="590" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cashUserInfoPanel" min="-2" max="-2" attributes="1"/>
-                      <EmptySpace pref="65" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="718" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cashUserInfoPanel" max="32767" attributes="1"/>
+                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="cashCompletepurchaseButton" min="-2" pref="179" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                              <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="1"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="601" max="32767" attributes="0"/>
-                                  <Component id="jButton4" min="-2" pref="171" max="-2" attributes="0"/>
-                              </Group>
+                          <Component id="cashPaymentPanel" alignment="0" max="32767" attributes="1"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="601" max="32767" attributes="0"/>
+                              <Component id="jButton4" min="-2" pref="171" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -138,7 +132,7 @@
                       <Component id="cashPaymentPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="cashCompletepurchaseButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -210,7 +204,7 @@
                               <Component id="cashDeliveryDateLabel" alignment="0" max="32767" attributes="1"/>
                               <Component id="cashPlaceTF" alignment="0" max="32767" attributes="1"/>
                           </Group>
-                          <EmptySpace pref="128" max="32767" attributes="0"/>
+                          <EmptySpace pref="179" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -776,6 +770,9 @@
             <Component class="imat.shoppingCartList" name="shoppingCartList1">
               <Properties>
                 <Property name="name" type="java.lang.String" value="shoppingCartList1" noResource="true"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[817, 350]"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="imat.HeaderPanel2" name="matMallHeaderPanel">

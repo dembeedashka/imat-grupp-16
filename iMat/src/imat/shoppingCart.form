@@ -58,17 +58,11 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
                       <Component id="shoppingCartList1" alignment="0" pref="775" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="clearCartButton" linkSize="1" min="-2" pref="179" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                          <Component id="keepShoppingButton" linkSize="1" min="-2" pref="214" max="-2" attributes="0"/>
-                          <EmptySpace pref="68" max="32767" attributes="0"/>
-                          <Component id="cashInButton" linkSize="1" min="-2" pref="202" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -76,54 +70,88 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <Component id="shoppingCartList1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="89" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="clearCartButton" max="32767" attributes="1"/>
-                      <Component id="cashInButton" alignment="1" max="32767" attributes="1"/>
-                      <Component id="keepShoppingButton" alignment="0" pref="131" max="32767" attributes="1"/>
-                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="72" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="clearCartButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="clearCartButton.text"/>
-            <Property name="name" type="java.lang.String" value="clearCartButton" noResource="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearCartButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="cashInButton">
-          <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="cashInButton.font"/>
-            <Property name="icon" type="javax.swing.Icon" resourceKey="cashInButton.icon"/>
-            <Property name="text" type="java.lang.String" resourceKey="cashInButton.text"/>
-            <Property name="name" type="java.lang.String" value="cashInButton" noResource="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cashInButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="keepShoppingButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="keepShoppingButton.text"/>
-            <Property name="name" type="java.lang.String" value="keepShoppingButton" noResource="true"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keepShoppingButtonActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="imat.shoppingCartList" name="shoppingCartList1">
           <Properties>
             <Property name="name" type="java.lang.String" value="shoppingCartList1" noResource="true"/>
           </Properties>
         </Component>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="jPanel2" noResource="true"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="clearCartButton" linkSize="1" min="-2" pref="179" max="-2" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
+                      <Component id="keepShoppingButton" linkSize="1" min="-2" pref="214" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="cashInButton" linkSize="1" min="-2" pref="214" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="cashInButton" linkSize="2" alignment="1" max="32767" attributes="1"/>
+                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                              <Component id="clearCartButton" linkSize="2" alignment="3" min="-2" pref="139" max="-2" attributes="1"/>
+                              <Component id="keepShoppingButton" linkSize="2" alignment="3" pref="139" max="32767" attributes="1"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="clearCartButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="clearCartButton.text"/>
+                <Property name="name" type="java.lang.String" value="clearCartButton" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearCartButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="keepShoppingButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" resourceKey="keepShoppingButton.text"/>
+                <Property name="name" type="java.lang.String" value="keepShoppingButton" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keepShoppingButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="cashInButton">
+              <Properties>
+                <Property name="font" type="java.awt.Font" resourceKey="cashInButton.font"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="cashInButton.icon"/>
+                <Property name="text" type="java.lang.String" resourceKey="cashInButton.text"/>
+                <Property name="name" type="java.lang.String" value="cashInButton" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cashInButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

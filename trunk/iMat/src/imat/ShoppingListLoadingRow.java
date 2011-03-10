@@ -31,41 +31,40 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rowItemTextField = new javax.swing.JTextField();
+        shoppingListButton = new javax.swing.JButton();
 
         setName("Form"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(ShoppingListLoadingRow.class);
-        rowItemTextField.setFont(resourceMap.getFont("rowItemTextField.font")); // NOI18N
-        rowItemTextField.setText(resourceMap.getString("rowItemTextField.text")); // NOI18N
-        rowItemTextField.setName("rowItemTextField"); // NOI18N
+        shoppingListButton.setText(resourceMap.getString("shoppingListButton.text")); // NOI18N
+        shoppingListButton.setName("shoppingListButton"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rowItemTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                .addComponent(shoppingListButton, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(rowItemTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(shoppingListButton)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    public String getRowItemTextField(){
-        return rowItemTextField.getText();
+    public String getShoppingListButton(){
+        return shoppingListButton.getText();
     }
-    public void setRowItemTextField(String s){
-        rowItemTextField.setText(s);
+    public void setShoppingListButton(String s){
+        shoppingListButton.setText(s);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField rowItemTextField;
+    private javax.swing.JButton shoppingListButton;
     // End of variables declaration//GEN-END:variables
 
 }

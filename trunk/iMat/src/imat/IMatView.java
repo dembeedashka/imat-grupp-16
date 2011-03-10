@@ -61,7 +61,6 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     public static final Category  PANTRY                  = new Category(Category.PANTRY_YELLOW,    "pantry", new ImageIcon("src/imat/resources/images/headers/kat4big.gif"), "HELLO WORLD");
     public static final Category  SNACKS                  = new Category(Category.SNACKS_ORANGE,    "drinks", new ImageIcon("src/imat/resources/images/headers/kat5big.gif"), "HELLO WORLD");
     public static final Category  FAVOURITES              = new Category(Category.FAVOURITES_BROWN, "fav",    new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "HELLO WORLD");
-
     /* pseudo-categories used as main categories */
     public static final Category  HELP                    = new SubcategoryOther("help",   new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Help");
     public static final Category  SEARCH                  = new SubcategoryOther("search", new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "SEARCH");
@@ -72,6 +71,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     public static final Category  PURCHASES               = new SubcategoryOther("purchases",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Tidigare inköp");
     public static final Category  ORDERPLACED             = new SubcategoryOther("orderPlaced",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Köp slutfört");
     public static final Category  LISTVIEW                = new SubcategoryOther("listview",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Lista över inköpslistor");
+    public static final Category  RECEIPT                 = new SubcategoryOther("receipt",new ImageIcon("src/imat/resources/images/headers/kat6big.gif"), "Kvitto");
 
     /* subcategories */
     public static Category        subPantry               = new SubcategoryPantry("subCategory", null, null);
@@ -226,6 +226,8 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         orderPlacedView1 = new imat.OrderPlacedView();
         cardShoppingListPanel = new javax.swing.JPanel();
         shoppingListView2 = new imat.ShoppingListView();
+        cardReceiptPabel = new javax.swing.JPanel();
+        receipt1 = new imat.Receipt();
         bottomBorderPanel = new javax.swing.JPanel();
 
         mainPanel.setName("mainPanel"); // NOI18N
@@ -1210,6 +1212,29 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
         centerStagePanel.add(cardShoppingListPanel, "listview");
 
+        cardReceiptPabel.setName("cardReceiptPabel"); // NOI18N
+
+        receipt1.setName("receipt1"); // NOI18N
+
+        org.jdesktop.layout.GroupLayout cardReceiptPabelLayout = new org.jdesktop.layout.GroupLayout(cardReceiptPabel);
+        cardReceiptPabel.setLayout(cardReceiptPabelLayout);
+        cardReceiptPabelLayout.setHorizontalGroup(
+            cardReceiptPabelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cardReceiptPabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(receipt1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
+        );
+        cardReceiptPabelLayout.setVerticalGroup(
+            cardReceiptPabelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(cardReceiptPabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(receipt1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(694, Short.MAX_VALUE))
+        );
+
+        centerStagePanel.add(cardReceiptPabel, "card20");
+
         mainScrollPane.setViewportView(centerStagePanel);
 
         org.jdesktop.layout.GroupLayout framePanelLayout = new org.jdesktop.layout.GroupLayout(framePanel);
@@ -1590,6 +1615,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     private javax.swing.JPanel cardOrderPlaced;
     private javax.swing.JPanel cardPantryPanel;
     private javax.swing.JPanel cardPreviousPurchasesPanel;
+    private javax.swing.JPanel cardReceiptPabel;
     private javax.swing.JPanel cardSearchPanel;
     private javax.swing.JPanel cardShoppingCartPanel;
     private javax.swing.JPanel cardShoppingListPanel;
@@ -1637,6 +1663,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     private javax.swing.JButton podButton;
     private javax.swing.JButton potatoButton;
     private imat.Purchases purchases1;
+    private imat.Receipt receipt1;
     private javax.swing.JButton rootVegetableButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchTextField;

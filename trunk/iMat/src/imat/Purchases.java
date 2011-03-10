@@ -15,10 +15,6 @@ import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
-/**
- *
- * @author GoldenMew
- */
 public class Purchases extends javax.swing.JPanel {
 
     /** Creates new form Purchases */
@@ -27,6 +23,7 @@ public class Purchases extends javax.swing.JPanel {
         for(Order o : IMatDataHandler.getInstance().getOrders()){
             double temp=0;
             purchaseRow p = new purchaseRow();
+            p.setOrderNumber(o.getOrderNumber());
             p.setDateLabel(o.getDate().getYear()+"-"+o.getDate().getMonth()+"-"+o.getDate().getDay());
             java.util.List<ShoppingItem> itemlist = o.getItems();
             for(ShoppingItem i : itemlist){

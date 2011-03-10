@@ -13,11 +13,9 @@ package imat;
 
 import javax.swing.JLabel;
 
-/**
- *
- * @author GoldenMew
- */
 public class purchaseRow extends javax.swing.JPanel {
+    private int ordernumber;
+    private IMatPresenter presenter = IMatPresenter.getInstance();
 
     /** Creates new form purchaseRow */
     public purchaseRow() {
@@ -42,6 +40,11 @@ public class purchaseRow extends javax.swing.JPanel {
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(purchaseRow.class);
         picButton.setText(resourceMap.getString("picButton.text")); // NOI18N
         picButton.setName("picButton"); // NOI18N
+        picButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                picButtonActionPerformed(evt);
+            }
+        });
 
         dateLabel.setFont(resourceMap.getFont("dateLabel.font")); // NOI18N
         dateLabel.setText(resourceMap.getString("dateLabel.text")); // NOI18N
@@ -72,12 +75,19 @@ public class purchaseRow extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void picButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picButtonActionPerformed
+        presenter.displayCategory(IMatView.RECEIPT);
+    }//GEN-LAST:event_picButtonActionPerformed
+
     public void setDateLabel(String dateLabel) {
         this.dateLabel.setText(dateLabel);
     }
 
     public void setSumLabel(String sumLabel) {
         this.sumLabel.setText(sumLabel);
+    }
+    public void setOrderNumber(int ordernumber){
+        this.ordernumber=ordernumber;
     }
 
 

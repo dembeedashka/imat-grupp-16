@@ -629,6 +629,9 @@ public class cashRegister extends javax.swing.JPanel {
         IMatPresenter.getInstance().displayCategory(IMatView.ORDERPLACED);
     }//GEN-LAST:event_cashCompletepurchaseButtonActionPerformed
 
+    public void updateTotal(double total){
+        shoppingCartList1.setSum(total);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

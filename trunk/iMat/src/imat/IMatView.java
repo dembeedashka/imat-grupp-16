@@ -1724,10 +1724,6 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
     public void shoppingCartChanged() {
         int nrOfItems = 0;
-
-
-
-
         shoppingCart1.getShoppingCartList().getProductPanel().removeAll();
         cashRegister1.getShoppingCartList().getProductPanel().removeAll();
         for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems())
@@ -1735,11 +1731,11 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             shoppingCart1.getShoppingCartList().addShoppingItem(item);
             cashRegister1.getShoppingCartList().addShoppingItem(item);
         }
-
         for(ShoppingItem p : handler.getItems()) {
            nrOfItems += p.getAmount();
         }
         actionPanel1.updateCartButtonText(nrOfItems, handler.getTotal());
+        cashRegister1.updateTotal(handler.getTotal());
     }
     public shoppingList getShoppingList(){
         return shoppingList1;

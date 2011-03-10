@@ -19,16 +19,20 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="dateLabel" alignment="0" pref="331" max="32767" attributes="0"/>
-          <Component id="receiptRowPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="dateLabel" alignment="0" pref="279" max="32767" attributes="0"/>
+          <Component id="receiptPriceLabel" alignment="0" pref="279" max="32767" attributes="0"/>
+          <Component id="receiptScrollPane" alignment="0" pref="279" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="dateLabel" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="receiptScrollPane" min="-2" pref="267" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="receiptRowPanel" max="32767" attributes="0"/>
+              <Component id="receiptPriceLabel" pref="47" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -41,23 +45,32 @@
         <Property name="name" type="java.lang.String" value="dateLabel" noResource="true"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JPanel" name="receiptRowPanel">
+    <Container class="javax.swing.JScrollPane" name="receiptScrollPane">
       <Properties>
-        <Property name="name" type="java.lang.String" value="receiptRowPanel" noResource="true"/>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+        <Property name="verticalScrollBarPolicy" type="int" value="22"/>
+        <Property name="name" type="java.lang.String" value="receiptScrollPane" noResource="true"/>
       </Properties>
 
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="331" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="354" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="receiptRowPanel">
+          <Properties>
+            <Property name="name" type="java.lang.String" value="receiptRowPanel" noResource="true"/>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
+            <Property name="axis" type="int" value="1"/>
+          </Layout>
+        </Container>
+      </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="receiptPriceLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" resourceKey="receiptPriceLabel.font"/>
+        <Property name="text" type="java.lang.String" resourceKey="receiptPriceLabel.text"/>
+        <Property name="name" type="java.lang.String" value="receiptPriceLabel" noResource="true"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

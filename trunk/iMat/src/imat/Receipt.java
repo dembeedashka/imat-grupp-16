@@ -11,6 +11,7 @@
 
 package imat;
 
+import javax.swing.JLabel;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
@@ -25,6 +26,7 @@ public class Receipt extends javax.swing.JPanel {
 
     public void addReceiptRow(ShoppingItem item)
     {
+       receiptRowPanel.removeAll();
        ReceiptRow row = new ReceiptRow();
        row.setReceiptRowAmountLabel(item.getAmount());
        row.setReceiptRowNameLabel(item.getProduct());
@@ -36,8 +38,17 @@ public class Receipt extends javax.swing.JPanel {
 
     public void setReceiptDate(Order order)
     {
-        dateLabel.setText("Datum: "+order.getDate().getYear()+"-"+order.getDate().getMonth()+"-"+order.getDate().getDay());
+        int year = order.getDate().getYear()+1900;
+        int month= order.getDate().getMonth()+1;
+        int day= order.getDate().getDay()+6;
+        dateLabel.setText("Datum: "+year+"-"+month+"-"+day);
     }
+
+    public void setReceiptPriceLabel(double price) {
+        receiptPriceLabel.setText("Summa: "+price+"kr");
+    }
+
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -49,7 +60,9 @@ public class Receipt extends javax.swing.JPanel {
     private void initComponents() {
 
         dateLabel = new javax.swing.JLabel();
+        receiptScrollPane = new javax.swing.JScrollPane();
         receiptRowPanel = new javax.swing.JPanel();
+        receiptPriceLabel = new javax.swing.JLabel();
 
         setName("Form"); // NOI18N
 
@@ -58,32 +71,35 @@ public class Receipt extends javax.swing.JPanel {
         dateLabel.setText(resourceMap.getString("dateLabel.text")); // NOI18N
         dateLabel.setName("dateLabel"); // NOI18N
 
-        receiptRowPanel.setName("receiptRowPanel"); // NOI18N
+        receiptScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        receiptScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        receiptScrollPane.setName("receiptScrollPane"); // NOI18N
 
-        javax.swing.GroupLayout receiptRowPanelLayout = new javax.swing.GroupLayout(receiptRowPanel);
-        receiptRowPanel.setLayout(receiptRowPanelLayout);
-        receiptRowPanelLayout.setHorizontalGroup(
-            receiptRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 331, Short.MAX_VALUE)
-        );
-        receiptRowPanelLayout.setVerticalGroup(
-            receiptRowPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 354, Short.MAX_VALUE)
-        );
+        receiptRowPanel.setName("receiptRowPanel"); // NOI18N
+        receiptRowPanel.setLayout(new javax.swing.BoxLayout(receiptRowPanel, javax.swing.BoxLayout.Y_AXIS));
+        receiptScrollPane.setViewportView(receiptRowPanel);
+
+        receiptPriceLabel.setFont(resourceMap.getFont("receiptPriceLabel.font")); // NOI18N
+        receiptPriceLabel.setText(resourceMap.getString("receiptPriceLabel.text")); // NOI18N
+        receiptPriceLabel.setName("receiptPriceLabel"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
-            .addComponent(receiptRowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addComponent(receiptPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addComponent(receiptScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(dateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(receiptScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(receiptRowPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(receiptPriceLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -91,7 +107,9 @@ public class Receipt extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel dateLabel;
+    private javax.swing.JLabel receiptPriceLabel;
     private javax.swing.JPanel receiptRowPanel;
+    private javax.swing.JScrollPane receiptScrollPane;
     // End of variables declaration//GEN-END:variables
 
 }

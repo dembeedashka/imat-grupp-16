@@ -518,7 +518,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
         centerStagePanel.setBackground(resourceMap.getColor("centerStagePanel.background")); // NOI18N
         centerStagePanel.setName("centerStagePanel"); // NOI18N
-        centerStagePanel.setPreferredSize(new java.awt.Dimension(800, 1200));
+        centerStagePanel.setPreferredSize(new java.awt.Dimension(800, 1350));
         centerStagePanel.setLayout(new java.awt.CardLayout());
 
         cardPantryPanel.setName("cardPantryPanel"); // NOI18N
@@ -604,7 +604,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         cardHomePanelLayout.setVerticalGroup(
             cardHomePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(homeView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .add(homeView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(cardHomePanel, "home");
@@ -621,7 +621,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         cardHelpPanelLayout.setVerticalGroup(
             cardHelpPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(helpView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .add(helpView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(cardHelpPanel, "help");
@@ -638,7 +638,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         cardSearchPanelLayout.setVerticalGroup(
             cardSearchPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(searchView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .add(searchView1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(cardSearchPanel, "search");
@@ -659,7 +659,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             cardShoppingPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardShoppingPanelLayout.createSequentialGroup()
                 .add(shoppingListView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addContainerGap(527, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardShoppingPanel, "shop");
@@ -680,7 +680,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             cardShoppingCartPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardShoppingCartPanelLayout.createSequentialGroup()
                 .add(shoppingCart1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardShoppingCartPanel, "cart");
@@ -865,7 +865,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                     .add(rootVegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(vegetableButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(359, Short.MAX_VALUE))
+                .addContainerGap(509, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardFruitPanel, "fruit");
@@ -900,7 +900,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(dairyMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 335, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
                 .add(dairySubButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(785, Short.MAX_VALUE))
+                .addContainerGap(935, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardDairyPanel, "dairy");
@@ -950,7 +950,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(cardMeatPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(fishButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(meatSubButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(770, Short.MAX_VALUE))
+                .addContainerGap(920, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardMeatPanel, "meat");
@@ -977,11 +977,11 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             cardFavouritesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardFavouritesLayout.createSequentialGroup()
                 .add(favMall, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 346, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(854, Short.MAX_VALUE))
+                .addContainerGap(1004, Short.MAX_VALUE))
             .add(cardFavouritesLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                 .add(cardFavouritesLayout.createSequentialGroup()
                     .add(352, 352, 352)
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 837, Short.MAX_VALUE)
+                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -1062,7 +1062,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(cardDrinksPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(nutsSeedsButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(sweetsButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(698, Short.MAX_VALUE))
+                .addContainerGap(848, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardDrinksPanel, "drinks");
@@ -1079,7 +1079,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
         cardSubCategoryPanelLayout.setVerticalGroup(
             cardSubCategoryPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(subCategoryMall, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .add(subCategoryMall, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 1350, Short.MAX_VALUE)
         );
 
         centerStagePanel.add(cardSubCategoryPanel, "subCategory");
@@ -1102,7 +1102,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             .add(cardDetailedViewPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(matStep3Mall1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 348, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(841, Short.MAX_VALUE))
+                .addContainerGap(991, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardDetailedViewPanel, "detailedView");
@@ -1123,7 +1123,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             cardUserInfoPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardUserInfoPanelLayout.createSequentialGroup()
                 .add(userInfoView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardUserInfoPanel, "user");
@@ -1167,7 +1167,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             .add(cardPreviousPurchasesPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(purchases1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardPreviousPurchasesPanel, "purchases");
@@ -1186,7 +1186,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             cardOrderPlacedLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(cardOrderPlacedLayout.createSequentialGroup()
                 .add(orderPlacedView1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 797, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(403, Short.MAX_VALUE))
+                .addContainerGap(553, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardOrderPlaced, "orderPlaced");
@@ -1209,7 +1209,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             .add(cardShoppingListPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(shoppingListView2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(516, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardShoppingListPanel, "listview");
@@ -1232,7 +1232,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
             .add(cardReceiptPabelLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(receipt1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardReceiptPabel, "receipt");

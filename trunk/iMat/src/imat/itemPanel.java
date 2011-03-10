@@ -150,9 +150,9 @@ public class itemPanel extends javax.swing.JPanel {
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(itemPanel.class);
         productIconButton.setText(resourceMap.getString("productIconButton.text")); // NOI18N
+        productIconButton.setToolTipText(resourceMap.getString("productIconButton.toolTipText")); // NOI18N
         productIconButton.setAlignmentY(0.0F);
         productIconButton.setName("productIconButton"); // NOI18N
-        productIconButton.setSize(new java.awt.Dimension(104, 93));
         productIconButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productIconButtonActionPerformed(evt);
@@ -161,7 +161,6 @@ public class itemPanel extends javax.swing.JPanel {
 
         addToCartButton.setFont(resourceMap.getFont("addToCartButton.font")); // NOI18N
         addToCartButton.setText(resourceMap.getString("addToCartButton.text")); // NOI18N
-        addToCartButton.setToolTipText(resourceMap.getString("addToCartButton.toolTipText")); // NOI18N
         addToCartButton.setName("addToCartButton"); // NOI18N
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

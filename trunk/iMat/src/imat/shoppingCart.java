@@ -67,6 +67,7 @@ public class shoppingCart extends javax.swing.JPanel {
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(shoppingCart.class);
         clearCartButton.setText(resourceMap.getString("clearCartButton.text")); // NOI18N
+        clearCartButton.setToolTipText(resourceMap.getString("clearCartButton.toolTipText")); // NOI18N
         clearCartButton.setName("clearCartButton"); // NOI18N
         clearCartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +76,7 @@ public class shoppingCart extends javax.swing.JPanel {
         });
 
         keepShoppingButton.setText(resourceMap.getString("keepShoppingButton.text")); // NOI18N
+        keepShoppingButton.setToolTipText(resourceMap.getString("keepShoppingButton.toolTipText")); // NOI18N
         keepShoppingButton.setName("keepShoppingButton"); // NOI18N
         keepShoppingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +87,7 @@ public class shoppingCart extends javax.swing.JPanel {
         cashInButton.setFont(resourceMap.getFont("cashInButton.font")); // NOI18N
         cashInButton.setIcon(resourceMap.getIcon("cashInButton.icon")); // NOI18N
         cashInButton.setText(resourceMap.getString("cashInButton.text")); // NOI18N
+        cashInButton.setToolTipText(resourceMap.getString("cashInButton.toolTipText")); // NOI18N
         cashInButton.setName("cashInButton"); // NOI18N
         cashInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

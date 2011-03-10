@@ -117,6 +117,7 @@
           <Properties>
             <Property name="font" type="java.awt.Font" resourceKey="addToCartButton.font"/>
             <Property name="text" type="java.lang.String" resourceKey="addToCartButton.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="addToCartButton.toolTipText"/>
             <Property name="name" type="java.lang.String" value="addToCartButton" noResource="true"/>
           </Properties>
           <Events>
@@ -180,6 +181,7 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" resourceKey="jButton1.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="jButton1.toolTipText"/>
             <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
           </Properties>
           <Events>

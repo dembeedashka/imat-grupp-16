@@ -67,6 +67,7 @@
       <Properties>
         <Property name="icon" type="javax.swing.Icon" resourceKey="trashButton.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="trashButton.text"/>
+        <Property name="toolTipText" type="java.lang.String" resourceKey="trashButton.toolTipText"/>
         <Property name="name" type="java.lang.String" value="trashButton" noResource="true"/>
       </Properties>
       <Events>

@@ -91,6 +91,7 @@ public class actionPanel extends javax.swing.JPanel {
         apBasketButton.setFont(resourceMap.getFont("apBasketButton.font")); // NOI18N
         apBasketButton.setIcon(resourceMap.getIcon("apBasketButton.icon")); // NOI18N
         apBasketButton.setText(resourceMap.getString("apBasketButton.text")); // NOI18N
+        apBasketButton.setToolTipText(resourceMap.getString("apBasketButton.toolTipText")); // NOI18N
         apBasketButton.setName("apBasketButton"); // NOI18N
         apBasketButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +101,7 @@ public class actionPanel extends javax.swing.JPanel {
 
         apUserinfoButton.setIcon(resourceMap.getIcon("apUserinfoButton.icon")); // NOI18N
         apUserinfoButton.setText(resourceMap.getString("apUserinfoButton.text")); // NOI18N
+        apUserinfoButton.setToolTipText(resourceMap.getString("apUserinfoButton.toolTipText")); // NOI18N
         apUserinfoButton.setName("apUserinfoButton"); // NOI18N
         apUserinfoButton.setPreferredSize(new java.awt.Dimension(200, 65));
         apUserinfoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +112,7 @@ public class actionPanel extends javax.swing.JPanel {
 
         apReceiptButton.setIcon(resourceMap.getIcon("apReceiptButton.icon")); // NOI18N
         apReceiptButton.setText(resourceMap.getString("apReceiptButton.text")); // NOI18N
+        apReceiptButton.setToolTipText(resourceMap.getString("apReceiptButton.toolTipText")); // NOI18N
         apReceiptButton.setName("apReceiptButton"); // NOI18N
         apReceiptButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +122,7 @@ public class actionPanel extends javax.swing.JPanel {
 
         apCashregisterButton.setIcon(resourceMap.getIcon("apCashregisterButton.icon")); // NOI18N
         apCashregisterButton.setText(resourceMap.getString("apCashregisterButton.text")); // NOI18N
+        apCashregisterButton.setToolTipText(resourceMap.getString("apCashregisterButton.toolTipText")); // NOI18N
         apCashregisterButton.setName("apCashregisterButton"); // NOI18N
         apCashregisterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,7 +146,7 @@ public class actionPanel extends javax.swing.JPanel {
                         .addGroup(actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(apCashregisterButton, 0, 0, Short.MAX_VALUE)
                             .addComponent(apBasketButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(13, Short.MAX_VALUE))))
         );
         actionPanel1Layout.setVerticalGroup(
             actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

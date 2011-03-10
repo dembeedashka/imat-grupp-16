@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="homeViewHeaderPanel" alignment="0" pref="811" max="32767" attributes="1"/>
+                  <Component id="homeViewHeaderPanel" alignment="0" pref="775" max="32767" attributes="1"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
                       <Component id="homeUserInfoButton" min="-2" pref="206" max="-2" attributes="1"/>
@@ -36,12 +36,12 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="811" max="32767" attributes="1"/>
+              <Component id="jScrollPane2" pref="775" max="32767" attributes="1"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
-              <Component id="homeHelpButton" pref="206" max="32767" attributes="1"/>
+              <Component id="homeHelpButton" pref="170" max="32767" attributes="1"/>
               <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -72,7 +72,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="831" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -87,6 +87,7 @@
         <Property name="font" type="java.awt.Font" resourceKey="homeUserInfoButton.font"/>
         <Property name="icon" type="javax.swing.Icon" resourceKey="homeUserInfoButton.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="homeUserInfoButton.text"/>
+        <Property name="toolTipText" type="java.lang.String" resourceKey="homeUserInfoButton.toolTipText"/>
         <Property name="name" type="java.lang.String" value="homeUserInfoButton" noResource="true"/>
       </Properties>
       <Events>
@@ -121,6 +122,7 @@
         <Property name="font" type="java.awt.Font" resourceKey="homeHelpButton.font"/>
         <Property name="icon" type="javax.swing.Icon" resourceKey="homeHelpButton.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="homeHelpButton.text"/>
+        <Property name="toolTipText" type="java.lang.String" resourceKey="homeHelpButton.toolTipText"/>
         <Property name="name" type="java.lang.String" value="homeHelpButton" noResource="true"/>
       </Properties>
       <Events>

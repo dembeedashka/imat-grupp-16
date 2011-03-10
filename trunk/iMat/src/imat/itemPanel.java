@@ -154,6 +154,7 @@ public class itemPanel extends javax.swing.JPanel {
 
         addToCartButton.setFont(resourceMap.getFont("addToCartButton.font")); // NOI18N
         addToCartButton.setText(resourceMap.getString("addToCartButton.text")); // NOI18N
+        addToCartButton.setToolTipText(resourceMap.getString("addToCartButton.toolTipText")); // NOI18N
         addToCartButton.setName("addToCartButton"); // NOI18N
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,6 +194,7 @@ public class itemPanel extends javax.swing.JPanel {
 
         jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
+        jButton1.setToolTipText(resourceMap.getString("jButton1.toolTipText")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

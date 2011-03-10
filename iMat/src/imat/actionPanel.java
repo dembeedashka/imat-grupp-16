@@ -114,7 +114,7 @@ public class actionPanel extends javax.swing.JPanel {
                         .addGroup(actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(apCashregisterButton, 0, 0, Short.MAX_VALUE)
                             .addComponent(apBasketButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(12, Short.MAX_VALUE))))
         );
         actionPanel1Layout.setVerticalGroup(
             actionPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

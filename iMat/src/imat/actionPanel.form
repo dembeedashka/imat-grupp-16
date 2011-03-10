@@ -55,7 +55,7 @@
                               <Component id="apCashregisterButton" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
                               <Component id="apBasketButton" alignment="0" min="-2" pref="207" max="-2" attributes="1"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

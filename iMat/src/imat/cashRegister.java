@@ -215,7 +215,7 @@ public class cashRegister extends javax.swing.JPanel {
         cashSlash.setText(resourceMap.getString("cashSlash.text")); // NOI18N
         cashSlash.setName("cashSlash"); // NOI18N
 
-        cashMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "070", "8", "09", "10", "11", "12" }));
+        cashMonth.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         cashMonth.setName("cashMonth"); // NOI18N
 
         cashYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2011", "2012", "2013" }));
@@ -477,7 +477,7 @@ public class cashRegister extends javax.swing.JPanel {
                     .addGroup(cashPaymentPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cashDebitCardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         cashPaymentPanelLayout.setVerticalGroup(
             cashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -525,7 +525,7 @@ public class cashRegister extends javax.swing.JPanel {
             .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cashUserInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
             .addGroup(cashRegisterPanel1Layout.createSequentialGroup()
                 .addComponent(cashPaymentLabel)
                 .addContainerGap(718, Short.MAX_VALUE))

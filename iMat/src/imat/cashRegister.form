@@ -94,7 +94,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cashUserInfoPanel" min="-2" max="-2" attributes="1"/>
-                      <EmptySpace pref="56" max="32767" attributes="0"/>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="cashPaymentLabel" min="-2" max="-2" attributes="0"/>
@@ -416,8 +416,8 @@
                         <StringItem index="3" value="04"/>
                         <StringItem index="4" value="05"/>
                         <StringItem index="5" value="06"/>
-                        <StringItem index="6" value="070"/>
-                        <StringItem index="7" value="8"/>
+                        <StringItem index="6" value="07"/>
+                        <StringItem index="7" value="08"/>
                         <StringItem index="8" value="09"/>
                         <StringItem index="9" value="10"/>
                         <StringItem index="10" value="11"/>
@@ -494,7 +494,7 @@
                                   <Component id="cashDebitCardPanel" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="24" max="32767" attributes="0"/>
+                          <EmptySpace pref="26" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

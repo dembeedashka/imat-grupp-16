@@ -92,7 +92,7 @@ public class SearchView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     public void addProduct(Product p){
-itemPanel pa = new itemPanel();
+        itemPanel pa = new itemPanel();
         pa.setProductName(p.getName());
         pa.setProductIcon(new ImageIcon("src/imat/resources/imat/images/"+p.getImageName()));
         pa.setProduct(p);

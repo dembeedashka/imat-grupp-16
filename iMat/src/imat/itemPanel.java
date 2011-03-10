@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.SwingConstants;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 
@@ -87,6 +88,12 @@ public class itemPanel extends javax.swing.JPanel {
     /** Creates new form itemPanel */
     public itemPanel() {
         initComponents();
+        productIconButton.setVerticalTextPosition(SwingConstants.CENTER);
+        productIconButton.setHorizontalTextPosition(SwingConstants.CENTER);
+
+        String textNamn = "Detaljer";
+
+        productIconButton.setText("<html><p><p><p><p>" + textNamn + "</p></p></p></p></p></html>");
     }
 
     public void updateFavourite()
@@ -129,6 +136,8 @@ public class itemPanel extends javax.swing.JPanel {
         jPanel1.setName("jPanel1"); // NOI18N
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(itemPanel.class);
+        productIconButton.setFont(resourceMap.getFont("productIconButton.font")); // NOI18N
+        productIconButton.setForeground(resourceMap.getColor("productIconButton.foreground")); // NOI18N
         productIconButton.setText(resourceMap.getString("productIconButton.text")); // NOI18N
         productIconButton.setToolTipText(resourceMap.getString("productIconButton.toolTipText")); // NOI18N
         productIconButton.setAlignmentY(0.0F);

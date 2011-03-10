@@ -95,6 +95,8 @@ public class cashRegister extends javax.swing.JPanel {
 
         String userText = "";
         String cardText = "";
+        String cartText = "";
+        
 
         for(int i= 0; i < labelList.size(); i++) {
             warningText.setText("");
@@ -102,8 +104,8 @@ public class cashRegister extends javax.swing.JPanel {
 
             if(textList.get(i).getText().equals("")) {
                 labelList.get(i).setText("fel!");
-                userText = "Fel i användaruppgiter";
-                warningText.setText(userText + " " + cardText);
+                userText = "Fel i användaruppgifter";
+                warningText.setText(userText + cardText);
                 isChecked=false;
             }
           
@@ -112,8 +114,8 @@ public class cashRegister extends javax.swing.JPanel {
 
         if(textList.get(7).getText().equals("")) {
                 labelList.get(2).setText("fel!");
-                userText = "Fel i användaruppgiter";
-                warningText.setText(userText + " " + cardText);
+                userText = "användaruppgiter";
+                warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
             }
 
@@ -122,13 +124,21 @@ public class cashRegister extends javax.swing.JPanel {
             cardLabelList.get(j).setText("");
 
             if(cardTextList.get(j).getText().equals("")) {
+
+
+                
                 cardLabelList.get(j).setText("fel!");
-                cardText = " och i kontouppgifter";
-                warningText.setText(userText + " " + cardText);
+                cardText = "kontouppgifter";
+                warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
             }
 
         }
+            if(shoppingCartList1.getPrice() !=0) {
+                isChecked=false;
+                cartText = "kundvagnen är tom";
+                warningText.setText("Fel i: " + userText + " " + cardText + " " + cartText);
+            }
 
         
 
@@ -831,6 +841,8 @@ public class cashRegister extends javax.swing.JPanel {
 
         checkEmptyText();
         if(isChecked) {
+
+
         
             Receipt receipt = IMatPresenter.getInstance().getView().getReceipt2();
             double price=0;
@@ -846,6 +858,8 @@ public class cashRegister extends javax.swing.JPanel {
             handler.getShoppingCart().clear();
             handler.getShoppingCart().fireShoppingCartChanged();
             IMatPresenter.getInstance().displayCategory(IMatView.ORDERPLACED);
+
+
 
         }
 

@@ -22,27 +22,29 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="homeBreadcrumbsPanel" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="homeViewHeaderPanel" alignment="0" pref="775" max="32767" attributes="1"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
-                      <Component id="homeUserInfoButton" min="-2" pref="206" max="-2" attributes="1"/>
+              <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
+              <Component id="homeUserInfoButton" min="-2" pref="206" max="-2" attributes="1"/>
+              <EmptySpace pref="265" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" attributes="1">
+                      <EmptySpace min="20" pref="20" max="20" attributes="0"/>
+                      <Component id="jScrollPane2" max="32767" attributes="1"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="1">
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="homeViewHeaderPanel" max="32767" attributes="1"/>
+                  </Group>
+                  <Component id="homeBreadcrumbsPanel" alignment="0" min="-2" max="-2" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" pref="775" max="32767" attributes="1"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
-              <Component id="homeHelpButton" pref="170" max="32767" attributes="1"/>
-              <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
+              <Component id="homeHelpButton" pref="106" max="32767" attributes="1"/>
+              <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,15 +52,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="homeBreadcrumbsPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="homeViewHeaderPanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="homeUserInfoButton" min="-2" pref="66" max="-2" attributes="1"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="99" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="homeHelpButton" min="-2" pref="78" max="-2" attributes="2"/>
-              <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+              <Component id="homeHelpButton" min="-2" pref="58" max="-2" attributes="2"/>
+              <EmptySpace min="-2" pref="582" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,7 +74,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="701" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">

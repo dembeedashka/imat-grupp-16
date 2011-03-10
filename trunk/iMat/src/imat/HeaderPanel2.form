@@ -20,11 +20,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="headerPanelScrollPane" alignment="1" pref="609" max="32767" attributes="0"/>
-                  <Component id="headerPanelPicLabel" alignment="1" pref="609" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="headerPanelPicLabel" alignment="0" pref="564" max="32767" attributes="1"/>
+                  <Component id="headerPanelScrollPane" alignment="0" pref="564" max="32767" attributes="1"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>

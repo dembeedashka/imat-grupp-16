@@ -11,8 +11,11 @@
 
 package imat;
 
-import java.text.DecimalFormat;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 
 /**
  *
@@ -20,7 +23,31 @@ import javax.swing.SwingConstants;
  */
 public class actionPanel extends javax.swing.JPanel {
 
-    private IMatPresenter presenter = IMatPresenter.getInstance();
+    private IMatPresenter presenter  = IMatPresenter.getInstance();
+
+    private int           blinkCount = 0;
+    private Color         blinkColor = Color.WHITE;
+    private Timer         blinkTimer =
+        new Timer(300,
+                  new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        apBasketButton.setForeground(blinkColor);
+
+                        if(blinkColor == Color.WHITE) {
+                            blinkColor = Color.BLACK;
+                        }
+                        else {
+                            blinkColor = Color.WHITE;
+                            blinkCount++;
+                        }
+
+                        if(blinkCount >= 2) {
+                            blinkTimer.stop();
+                            blinkCount = 0;
+                        }
+                    }
+                  }
+    );
 
     /** Creates new form actionPanel */
     public actionPanel() {
@@ -37,6 +64,7 @@ public class actionPanel extends javax.swing.JPanel {
         String pad    = intDec < 10 ? "0" : "";
         
         apBasketButton.setText("<html><p><p><p><p>Antal varor: " + nrOfItems + " st<p>Summa: " + intSum + "," + intDec + pad + " kr</p></p></p></p></p></html>");
+        blinkTimer.start();
     }
 
 

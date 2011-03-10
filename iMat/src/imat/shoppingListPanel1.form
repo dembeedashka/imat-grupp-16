@@ -42,6 +42,7 @@
     <Component class="javax.swing.JButton" name="viewEditShoppingList">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="viewEditShoppingList.text"/>
+        <Property name="toolTipText" type="java.lang.String" resourceKey="viewEditShoppingList.toolTipText"/>
         <Property name="name" type="java.lang.String" value="viewEditShoppingList" noResource="true"/>
       </Properties>
       <Events>

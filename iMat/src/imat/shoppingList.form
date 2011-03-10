@@ -100,6 +100,7 @@
           <Properties>
             <Property name="font" type="java.awt.Font" resourceKey="shoppingListName.font"/>
             <Property name="text" type="java.lang.String" resourceKey="shoppingListName.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="shoppingListName.toolTipText"/>
             <Property name="name" type="java.lang.String" value="shoppingListName" noResource="true"/>
           </Properties>
           <Events>
@@ -112,6 +113,7 @@
             <Property name="font" type="java.awt.Font" resourceKey="jButton1.font"/>
             <Property name="icon" type="javax.swing.Icon" resourceKey="jButton1.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="jButton1.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="jButton1.toolTipText"/>
             <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
           </Properties>
           <Events>
@@ -161,6 +163,7 @@
         <Property name="font" type="java.awt.Font" resourceKey="shoppingListAddRow.font"/>
         <Property name="icon" type="javax.swing.Icon" resourceKey="shoppingListAddRow.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="shoppingListAddRow.text"/>
+        <Property name="toolTipText" type="java.lang.String" resourceKey="shoppingListAddRow.toolTipText"/>
         <Property name="name" type="java.lang.String" value="shoppingListAddRow" noResource="true"/>
       </Properties>
       <Events>

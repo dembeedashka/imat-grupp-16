@@ -66,6 +66,7 @@ public class shoppingList extends javax.swing.JPanel {
 
         shoppingListName.setFont(resourceMap.getFont("shoppingListName.font")); // NOI18N
         shoppingListName.setText(resourceMap.getString("shoppingListName.text")); // NOI18N
+        shoppingListName.setToolTipText(resourceMap.getString("shoppingListName.toolTipText")); // NOI18N
         shoppingListName.setName("shoppingListName"); // NOI18N
         shoppingListName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -79,6 +80,7 @@ public class shoppingList extends javax.swing.JPanel {
         jButton1.setFont(resourceMap.getFont("jButton1.font")); // NOI18N
         jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
+        jButton1.setToolTipText(resourceMap.getString("jButton1.toolTipText")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +114,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListBottomPanel.setLayout(shoppingListBottomPanelLayout);
         shoppingListBottomPanelLayout.setHorizontalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
+            .addGap(0, 20, Short.MAX_VALUE)
         );
         shoppingListBottomPanelLayout.setVerticalGroup(
             shoppingListBottomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,6 +130,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListAddRow.setFont(resourceMap.getFont("shoppingListAddRow.font")); // NOI18N
         shoppingListAddRow.setIcon(resourceMap.getIcon("shoppingListAddRow.icon")); // NOI18N
         shoppingListAddRow.setText(resourceMap.getString("shoppingListAddRow.text")); // NOI18N
+        shoppingListAddRow.setToolTipText(resourceMap.getString("shoppingListAddRow.toolTipText")); // NOI18N
         shoppingListAddRow.setName("shoppingListAddRow"); // NOI18N
         shoppingListAddRow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +150,7 @@ public class shoppingList extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(shoppingListAddRow, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

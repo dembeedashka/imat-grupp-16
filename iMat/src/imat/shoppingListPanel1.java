@@ -42,6 +42,7 @@ public class shoppingListPanel1 extends javax.swing.JPanel {
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(shoppingListPanel1.class);
         viewEditShoppingList.setText(resourceMap.getString("viewEditShoppingList.text")); // NOI18N
+        viewEditShoppingList.setToolTipText(resourceMap.getString("viewEditShoppingList.toolTipText")); // NOI18N
         viewEditShoppingList.setName("viewEditShoppingList"); // NOI18N
         viewEditShoppingList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

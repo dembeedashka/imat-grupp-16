@@ -158,7 +158,8 @@ public class cartItem extends javax.swing.JPanel {
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
         
-       //productPrice.setText(lol.getTotal() +t" :-");
+       double amount = (Double) productAmount.getValue();
+       cart.addProduct(item.getProduct(), amount);
     }//GEN-LAST:event_productAmountStateChanged
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed

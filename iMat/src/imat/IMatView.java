@@ -136,6 +136,16 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         userInfoView1.getUiHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/user.gif"));
         orderPlacedView1.getOrderPlacedHeaderPanel().getHeaderPanelPicLabel().setIcon(new ImageIcon("src/imat/resources/images/headers/kat0big.gif"));
     }
+
+    public cashRegister getCashRegister1() {
+        return cashRegister1;
+    }
+
+    public userInfoView getUserInfoView1() {
+        return userInfoView1;
+    }
+
+    
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is

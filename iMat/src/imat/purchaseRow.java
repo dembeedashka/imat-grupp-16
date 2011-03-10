@@ -80,10 +80,12 @@ public class purchaseRow extends javax.swing.JPanel {
     private void picButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picButtonActionPerformed
         double price=0;
         Receipt receipt = IMatPresenter.getInstance().getView().getReceipt1();
+        receipt.getReceiptRowPanel().removeAll();
         for(ShoppingItem item: order.getItems())
         {
             receipt.addReceiptRow(item);
             price+=item.getTotal();
+            System.out.println("price: " + price);
         }
         receipt.setReceiptPriceLabel(price);
         receipt.setReceiptDate(order);

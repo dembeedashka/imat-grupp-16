@@ -30,6 +30,7 @@ public class Purchases extends javax.swing.JPanel {
                 temp=temp+i.getTotal();
             }
             p.setSumLabel(temp+"");
+            p.setOrder(o);
             listAreaPanel.add(p);
         }
     }

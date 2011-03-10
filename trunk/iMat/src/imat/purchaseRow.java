@@ -11,11 +11,12 @@
 
 package imat;
 
-import javax.swing.JLabel;
+import se.chalmers.ait.dat215.project.Order;
 
 public class purchaseRow extends javax.swing.JPanel {
     private int ordernumber;
     private IMatPresenter presenter = IMatPresenter.getInstance();
+    private Order order;
 
     /** Creates new form purchaseRow */
     public purchaseRow() {
@@ -76,6 +77,7 @@ public class purchaseRow extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void picButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picButtonActionPerformed
+        //TODO add rows to receipt
         presenter.displayCategory(IMatView.RECEIPT);
     }//GEN-LAST:event_picButtonActionPerformed
 
@@ -88,6 +90,11 @@ public class purchaseRow extends javax.swing.JPanel {
     }
     public void setOrderNumber(int ordernumber){
         this.ordernumber=ordernumber;
+    }
+
+    public void setOrder(Order o)
+    {
+        order=o;
     }
 
 

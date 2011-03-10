@@ -49,7 +49,7 @@ public class homeView extends javax.swing.JPanel {
         homeBreadcrumbsPanel.setLayout(homeBreadcrumbsPanelLayout);
         homeBreadcrumbsPanelLayout.setHorizontalGroup(
             homeBreadcrumbsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 831, Short.MAX_VALUE)
+            .addGap(0, 795, Short.MAX_VALUE)
         );
         homeBreadcrumbsPanelLayout.setVerticalGroup(
             homeBreadcrumbsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -60,6 +60,7 @@ public class homeView extends javax.swing.JPanel {
         homeUserInfoButton.setFont(resourceMap.getFont("homeUserInfoButton.font")); // NOI18N
         homeUserInfoButton.setIcon(resourceMap.getIcon("homeUserInfoButton.icon")); // NOI18N
         homeUserInfoButton.setText(resourceMap.getString("homeUserInfoButton.text")); // NOI18N
+        homeUserInfoButton.setToolTipText(resourceMap.getString("homeUserInfoButton.toolTipText")); // NOI18N
         homeUserInfoButton.setName("homeUserInfoButton"); // NOI18N
         homeUserInfoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +82,7 @@ public class homeView extends javax.swing.JPanel {
         homeHelpButton.setFont(resourceMap.getFont("homeHelpButton.font")); // NOI18N
         homeHelpButton.setIcon(resourceMap.getIcon("homeHelpButton.icon")); // NOI18N
         homeHelpButton.setText(resourceMap.getString("homeHelpButton.text")); // NOI18N
+        homeHelpButton.setToolTipText(resourceMap.getString("homeHelpButton.toolTipText")); // NOI18N
         homeHelpButton.setName("homeHelpButton"); // NOI18N
         homeHelpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,18 +100,18 @@ public class homeView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeViewHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE)
+                    .addComponent(homeViewHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(284, 284, 284)
                         .addComponent(homeUserInfoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 811, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(298, 298, 298)
-                .addComponent(homeHelpButton, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(homeHelpButton, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                 .addGap(327, 327, 327))
         );
         layout.setVerticalGroup(

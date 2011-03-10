@@ -150,6 +150,7 @@ public class matStep3Mall extends javax.swing.JPanel {
 
         detailFavoriteButton.setIcon(resourceMap.getIcon("detailFavoriteButton.icon")); // NOI18N
         detailFavoriteButton.setText(resourceMap.getString("detailFavoriteButton.text")); // NOI18N
+        detailFavoriteButton.setToolTipText(resourceMap.getString("detailFavoriteButton.toolTipText")); // NOI18N
         detailFavoriteButton.setName("detailFavoriteButton"); // NOI18N
         detailFavoriteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +185,7 @@ public class matStep3Mall extends javax.swing.JPanel {
         detailCostLabel.setName("detailCostLabel"); // NOI18N
 
         detailBasketButton.setText(resourceMap.getString("detailBasketButton.text")); // NOI18N
+        detailBasketButton.setToolTipText(resourceMap.getString("detailBasketButton.toolTipText")); // NOI18N
         detailBasketButton.setName("detailBasketButton"); // NOI18N
         detailBasketButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,8 +222,8 @@ public class matStep3Mall extends javax.swing.JPanel {
                                 .addComponent(detailUnitLabel2))
                             .addGroup(detailPanelLayout.createSequentialGroup()
                                 .addComponent(detailBasketAmountLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(detailBasketAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(detailBasketAmountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(3, 3, 3)
                                 .addComponent(detailBasketAmountLabel2)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

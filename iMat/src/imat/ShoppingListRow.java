@@ -50,6 +50,7 @@ public class ShoppingListRow extends javax.swing.JPanel {
 
         trashButton.setIcon(resourceMap.getIcon("trashButton.icon")); // NOI18N
         trashButton.setText(resourceMap.getString("trashButton.text")); // NOI18N
+        trashButton.setToolTipText(resourceMap.getString("trashButton.toolTipText")); // NOI18N
         trashButton.setName("trashButton"); // NOI18N
         trashButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

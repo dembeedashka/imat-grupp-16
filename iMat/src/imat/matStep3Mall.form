@@ -63,8 +63,8 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="detailBasketAmountLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="detailBasketAmountLabel" min="-2" pref="17" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="detailBasketAmountLabel" min="-2" pref="13" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                   <Component id="detailBasketAmountLabel2" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -183,6 +183,7 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" resourceKey="detailFavoriteButton.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="detailFavoriteButton.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="detailFavoriteButton.toolTipText"/>
             <Property name="name" type="java.lang.String" value="detailFavoriteButton" noResource="true"/>
           </Properties>
           <Events>
@@ -241,6 +242,7 @@
         <Component class="javax.swing.JButton" name="detailBasketButton">
           <Properties>
             <Property name="text" type="java.lang.String" resourceKey="detailBasketButton.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="detailBasketButton.toolTipText"/>
             <Property name="name" type="java.lang.String" value="detailBasketButton" noResource="true"/>
           </Properties>
           <Events>

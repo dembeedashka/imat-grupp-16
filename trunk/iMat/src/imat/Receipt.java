@@ -12,6 +12,7 @@
 package imat;
 
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import se.chalmers.ait.dat215.project.Order;
 import se.chalmers.ait.dat215.project.ShoppingItem;
 
@@ -26,11 +27,10 @@ public class Receipt extends javax.swing.JPanel {
 
     public void addReceiptRow(ShoppingItem item)
     {
-       receiptRowPanel.removeAll();
        ReceiptRow row = new ReceiptRow();
        row.setReceiptRowAmountLabel(item.getAmount());
        row.setReceiptRowNameLabel(item.getProduct());
-       row.setReceiptRowPriceLabel(item.getTotal()*item.getAmount());
+       row.setReceiptRowPriceLabel(item.getTotal());
        receiptRowPanel.add(row);
        receiptRowPanel.repaint();
        receiptRowPanel.revalidate();
@@ -47,6 +47,12 @@ public class Receipt extends javax.swing.JPanel {
     public void setReceiptPriceLabel(double price) {
         receiptPriceLabel.setText("Summa: "+price+"kr");
     }
+
+    public JPanel getReceiptRowPanel() {
+        return receiptRowPanel;
+    }
+
+    
 
 
     /** This method is called from within the constructor to

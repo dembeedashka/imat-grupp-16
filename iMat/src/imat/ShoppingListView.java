@@ -11,6 +11,10 @@
 
 package imat;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+
 /**
  *
  * @author Boel_
@@ -20,6 +24,24 @@ public class ShoppingListView extends javax.swing.JPanel {
     /** Creates new form ShoppingListView */
     public ShoppingListView() {
         initComponents();
+        try {
+            FileInputStream fis = new FileInputStream("lists.txt");
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            DataInputStream dis = new DataInputStream(bis);
+            while (dis.available() != 0) {
+                ShoppingListLoadingRow s = new ShoppingListLoadingRow();
+                s.setShoppingListButton(dis.readLine());
+                shoppingListDisplayPanel.add(s);
+                shoppingListDisplayPanel.revalidate();
+                shoppingListDisplayPanel.repaint();
+            }
+            fis.close();
+            bis.close();
+            dis.close();
+        }
+        catch(Exception e){
+
+        }
     }
 
     /** This method is called from within the constructor to
@@ -40,27 +62,16 @@ public class ShoppingListView extends javax.swing.JPanel {
 
         shoppingListDisplayPanel.setName("shoppingListDisplayPanel"); // NOI18N
 
-        javax.swing.GroupLayout shoppingListDisplayPanelLayout = new javax.swing.GroupLayout(shoppingListDisplayPanel);
-        shoppingListDisplayPanel.setLayout(shoppingListDisplayPanelLayout);
-        shoppingListDisplayPanelLayout.setHorizontalGroup(
-            shoppingListDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 732, Short.MAX_VALUE)
-        );
-        shoppingListDisplayPanelLayout.setVerticalGroup(
-            shoppingListDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 418, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(22, 22, 22))
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(headerPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(headerPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE))
+                    .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -68,21 +79,13 @@ public class ShoppingListView extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(headerPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(shoppingListDisplayPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     public HeaderPanel2 getHeaderPanel21() {
         return headerPanel21;
-    }
-
-    public void add(){
-        ShoppingListLoadingRow s = new ShoppingListLoadingRow();
-        s.setRowItemTextField("fqewrqwerfqwerwq");
-        shoppingListDisplayPanel.add(new ShoppingListLoadingRow());
-        shoppingListDisplayPanel.revalidate();
-        shoppingListDisplayPanel.repaint();
     }
 
 

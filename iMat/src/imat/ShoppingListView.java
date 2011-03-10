@@ -88,7 +88,6 @@ public class ShoppingListView extends javax.swing.JPanel {
         return headerPanel21;
     }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private imat.HeaderPanel2 headerPanel21;
     private javax.swing.JPanel shoppingListDisplayPanel;

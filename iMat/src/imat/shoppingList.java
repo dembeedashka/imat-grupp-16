@@ -162,7 +162,16 @@ public class shoppingList extends javax.swing.JPanel {
                         .addContainerGap())))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    public void shoppingListLoad(){
+        shoppingListAddRowActionPerformed(null);
+    }
+    public void addRow(ShoppingListRow s){
+        ShoppingListRow q = new ShoppingListRow();
+        q.setRowItemTextField(s.getRowItemTextField());
+        shoppingListRowPanel.add(q);
+        shoppingListRowPanel.revalidate();
+        shoppingListRowPanel.repaint();
+    }
     private void shoppingListAddRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListAddRowActionPerformed
         shoppingListRowPanel.add(new ShoppingListRow());
         shoppingListRowPanel.revalidate();
@@ -180,7 +189,9 @@ public class shoppingList extends javax.swing.JPanel {
             shoppingListName.setText("Skriv listans namn här");
         }
     }//GEN-LAST:event_shoppingListNameFocusLost
-
+    public void clearAll(){
+        shoppingListRowPanel.removeAll();
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(!shoppingListName.getText().equals("")){
             int i=0;

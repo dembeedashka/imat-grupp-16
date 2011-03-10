@@ -103,6 +103,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
         presenter = IMatPresenter.getInstance();
         presenter.init(
+            this,
             backButton,
             forwardButton,
             navigationSearchPanel,
@@ -1729,5 +1730,11 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
            nrOfItems += p.getAmount();
         }
         actionPanel1.updateCartButtonText(nrOfItems, handler.getTotal());
+    }
+    public shoppingList getShoppingList(){
+        return shoppingList1;
+    }
+    public void setShoppingList(shoppingList shopping){
+        shoppingList1=shopping;
     }
 }

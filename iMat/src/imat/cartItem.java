@@ -46,7 +46,7 @@ public class cartItem extends javax.swing.JPanel {
     public void setTexts(ShoppingItem lol)
     {
         productName.setText(lol.getProduct().getName());
-        productPrice.setText(lol.getTotal() + " :-");
+        productPrice.setText(lol.getTotal() + " kr");
         productAmount.setValue(lol.getAmount());
        
         unitSuffixLabel.setText(lol.getProduct().getUnitSuffix());
@@ -158,8 +158,8 @@ public class cartItem extends javax.swing.JPanel {
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
         
-       double amount = (Double) productAmount.getValue();
-       cart.addProduct(item.getProduct(), amount);
+       //double amount = (Double) productAmount.getValue();
+       //cart.addProduct(item.getProduct(), amount);
     }//GEN-LAST:event_productAmountStateChanged
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed

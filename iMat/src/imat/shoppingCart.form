@@ -124,6 +124,7 @@
             <Component class="javax.swing.JButton" name="clearCartButton">
               <Properties>
                 <Property name="text" type="java.lang.String" resourceKey="clearCartButton.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="clearCartButton.toolTipText"/>
                 <Property name="name" type="java.lang.String" value="clearCartButton" noResource="true"/>
               </Properties>
               <Events>
@@ -133,6 +134,7 @@
             <Component class="javax.swing.JButton" name="keepShoppingButton">
               <Properties>
                 <Property name="text" type="java.lang.String" resourceKey="keepShoppingButton.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="keepShoppingButton.toolTipText"/>
                 <Property name="name" type="java.lang.String" value="keepShoppingButton" noResource="true"/>
               </Properties>
               <Events>
@@ -144,6 +146,7 @@
                 <Property name="font" type="java.awt.Font" resourceKey="cashInButton.font"/>
                 <Property name="icon" type="javax.swing.Icon" resourceKey="cashInButton.icon"/>
                 <Property name="text" type="java.lang.String" resourceKey="cashInButton.text"/>
+                <Property name="toolTipText" type="java.lang.String" resourceKey="cashInButton.toolTipText"/>
                 <Property name="name" type="java.lang.String" value="cashInButton" noResource="true"/>
               </Properties>
               <Events>

@@ -157,7 +157,7 @@ public class cartItem extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
-        
+       
        //double amount = (Double) productAmount.getValue();
        //cart.addProduct(item.getProduct(), amount);
     }//GEN-LAST:event_productAmountStateChanged

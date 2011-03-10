@@ -24,7 +24,7 @@ public class Purchases extends javax.swing.JPanel {
             double temp=0;
             purchaseRow p = new purchaseRow();
             p.setOrderNumber(o.getOrderNumber());
-            p.setDateLabel(o.getDate().getYear()+"-"+o.getDate().getMonth()+"-"+o.getDate().getDay());
+            p.setDateLabel((o.getDate().getYear()+1900)+"-"+(o.getDate().getMonth()+1)+"-"+(o.getDate().getDay()+6));
             java.util.List<ShoppingItem> itemlist = o.getItems();
             for(ShoppingItem i : itemlist){
                 temp=temp+i.getTotal();

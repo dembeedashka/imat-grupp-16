@@ -96,6 +96,10 @@ public class ShoppingListRow extends javax.swing.JPanel {
     public String getRowItemTextField(){
         return rowItemTextField.getText();
     }
+
+    public void setRowItemTextField(String s){
+        rowItemTextField.setText(s);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox rowCheckBox;
     private javax.swing.JTextField rowItemTextField;

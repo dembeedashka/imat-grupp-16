@@ -20,7 +20,9 @@ import se.chalmers.ait.dat215.project.ShoppingCart;
  */
 public class IMatPresenter implements NavigationHistoryUpdater {
 
-    private static IMatPresenter instance;
+    private static IMatPresenter     instance;
+
+    private IMatView                 view;
 
     private NavigationHistoryManager historyManager;
 
@@ -42,7 +44,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
     private IMatPresenter() {
     }
 
-    public void init(JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane, shoppingCart shoppingCartPanel, String productDetailsCard) {
+    public void init(IMatView view, JButton backButton, JButton forwardButton, JPanel navigationSearchPanel, JPanel bottomContentsPanel, JPanel bottomBorderPanel, JPanel centerStagePanel, matStep2Mall subCategoryMall, matStep3Mall productDetails, JScrollPane mainScrollPane, shoppingCart shoppingCartPanel, String productDetailsCard) {
+        this.view                  = view;
         this.navigationSearchPanel = navigationSearchPanel;
         this.bottomContentsPanel   = bottomContentsPanel;
         this.bottomBorderPanel     = bottomBorderPanel;
@@ -154,5 +157,9 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
     public Category getCurrentCategory() {
         return historyManager.getCurrentState().getSelectedCategory();
+    }
+
+    public IMatView getView() {
+        return view;
     }
 }

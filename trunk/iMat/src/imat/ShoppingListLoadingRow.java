@@ -11,11 +11,20 @@
 
 package imat;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+
 /**
  *
  * @author Boel_
  */
 public class ShoppingListLoadingRow extends javax.swing.JPanel {
+
+    private IMatPresenter presenter = IMatPresenter.getInstance();
+    private IMatView i;
+
+    public String name;
 
     /** Creates new form ShoppingListRow */
     public ShoppingListLoadingRow() {
@@ -35,9 +44,12 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
 
         setName("Form"); // NOI18N
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(imat.IMatApp.class).getContext().getResourceMap(ShoppingListLoadingRow.class);
-        shoppingListButton.setText(resourceMap.getString("shoppingListButton.text")); // NOI18N
         shoppingListButton.setName("shoppingListButton"); // NOI18N
+        shoppingListButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shoppingListButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -57,11 +69,36 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void shoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListButtonActionPerformed
+        i = presenter.getView();
+        shoppingList s = i.getShoppingList();
+        try {
+            FileInputStream fis = new FileInputStream(getShoppingListButton()+".txt");
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            DataInputStream dis = new DataInputStream(bis);
+            s.clearAll();
+            while (dis.available() != 0) {
+                ShoppingListRow sr = new ShoppingListRow();
+                sr.setRowItemTextField(dis.readLine());
+                s.addRow(sr);
+            }
+            fis.close();
+            bis.close();
+            dis.close();
+            i.setShoppingList(s);
+            presenter.displayCategory(IMatView.HOME);
+        }
+        catch(Exception e){
+
+        }
+    }//GEN-LAST:event_shoppingListButtonActionPerformed
+
     public String getShoppingListButton(){
         return shoppingListButton.getText();
     }
     public void setShoppingListButton(String s){
         shoppingListButton.setText(s);
+        name=s;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton shoppingListButton;

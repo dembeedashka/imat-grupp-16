@@ -82,7 +82,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
     private IMatPresenter         presenter;
 
-    private ShoppingCart handler = IMatDataHandler.getInstance().getShoppingCart();
+    private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
 
     
     public IMatView(SingleFrameApplication app) {
@@ -1723,20 +1723,18 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     }
 
     public void shoppingCartChanged() {
-        int nrOfItems = 0;
         shoppingCart1.getShoppingCartList().getProductPanel().removeAll();
         cashRegister1.getShoppingCartList().getProductPanel().removeAll();
-        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems())
+
+        for(ShoppingItem item : cart.getItems())
         {
             shoppingCart1.getShoppingCartList().addShoppingItem(item);
             cashRegister1.getShoppingCartList().addShoppingItem(item);
         }
-        for(ShoppingItem p : handler.getItems()) {
-           nrOfItems += p.getAmount();
-        }
-        actionPanel1.updateCartButtonText(nrOfItems, handler.getTotal());
-        cashRegister1.updateTotal(handler.getTotal());
+        actionPanel1.updateCartButtonText(cart.getItems().size(), cart.getTotal());
+        cashRegister1.updateTotal(cart.getTotal());
     }
+    
     public shoppingList getShoppingList(){
         return shoppingList1;
     }

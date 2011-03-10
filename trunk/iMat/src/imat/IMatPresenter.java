@@ -6,12 +6,15 @@ import imat.navigationhistory.NavigationHistoryManager;
 import imat.categories.Category;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.Product;
 import se.chalmers.ait.dat215.project.ShoppingCart;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 
 /**
@@ -60,10 +63,6 @@ public class IMatPresenter implements NavigationHistoryUpdater {
         historyManager.init(this, new NavigationHistoryState());
     }
 
-
-    public void addToCart () {
-
-    }
 
     public static synchronized IMatPresenter getInstance() {
         if(instance == null) {
@@ -161,5 +160,41 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
     public IMatView getView() {
         return view;
+    }
+
+    public String doublePad(double d) {
+        int    intSum = (int) d,
+               intDec = (int) ((d - intSum) * 100);
+
+        return "" + intSum + "," + intDec + (intDec < 10 ? "0" : "");
+    }
+
+    public void addToCart(Product product, int amount) {
+        if(amount < 0) {
+            throw new IllegalArgumentException("Adding negative quantities to cart not allowed!");
+        }
+
+        ShoppingItem       item        = new ShoppingItem(product, amount);
+        ShoppingCart       cart        = IMatDataHandler.getInstance().getShoppingCart();
+        List<ShoppingItem> itemsInCart = cart.getItems();
+        ShoppingItem       sItem       = null;
+        int                i;
+
+        if(item.getTotal() > 0) {
+            for(i = 0; i < itemsInCart.size(); i++) {
+                sItem = itemsInCart.get(i);
+                if(sItem.getProduct().equals(product)) {
+                    sItem.setAmount(sItem.getAmount() + amount);
+                    break;
+                }
+            }
+
+            if(itemsInCart.isEmpty() || i == itemsInCart.size()) {
+                cart.addItem(item);
+
+            }
+        }
+
+        cart.fireShoppingCartChanged();
     }
 }

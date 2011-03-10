@@ -16,6 +16,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
+import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.ShoppingCart;
 
 /**
  *
@@ -55,15 +57,13 @@ public class actionPanel extends javax.swing.JPanel {
 
         apBasketButton.setVerticalTextPosition(SwingConstants.CENTER);
         apBasketButton.setHorizontalTextPosition(SwingConstants.CENTER);
-        updateCartButtonText(0, 0);
+
+        ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
+        updateCartButtonText(cart.getItems().size(), cart.getTotal());
     }
 
-    public void updateCartButtonText(int nrOfItems, double sum) {
-        int    intSum = (int) sum,
-               intDec = (int) ((sum - intSum) * 100);
-        String pad    = intDec < 10 ? "0" : "";
-        
-        apBasketButton.setText("<html><p><p><p><p>Antal varor: " + nrOfItems + " st<p>Summa: " + intSum + "," + intDec + pad + " kr</p></p></p></p></p></html>");
+    public void updateCartButtonText(int nrOfItems, double sum) {       
+        apBasketButton.setText("<html><p><p><p><p>Antal varor: " + nrOfItems + " st<p>Summa: " + presenter.doublePad(sum) + " kr</p></p></p></p></p></html>");
         blinkTimer.start();
     }
 

@@ -22,12 +22,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="detailPanel" alignment="0" pref="795" max="32767" attributes="0"/>
+          <Component id="detailPanel" alignment="0" pref="639" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="detailPanel" alignment="0" pref="784" max="32767" attributes="0"/>
+          <Component id="detailPanel" min="-2" pref="324" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -49,50 +49,43 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="detailPictureLabel" min="-2" pref="159" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="detailBasketAmountLabel" alignment="0" max="32767" attributes="1"/>
+                      <Component id="detailPictureLabel" alignment="0" pref="159" max="32767" attributes="1"/>
+                      <Component id="detailProductNameLabel" alignment="0" pref="159" max="32767" attributes="1"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="detailPriceLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="detailUnitLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="detailBasketAmountLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="detailBasketAmountLabel" min="-2" pref="13" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                  <Component id="detailBasketAmountLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="detailPriceLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="detailUnitLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="detailScrollPanel" pref="608" max="32767" attributes="0"/>
+                      <Component id="detailScrollPanel" pref="405" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="detailAmountLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="detailAmountSpinner" min="-2" pref="56" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="detailUnitLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="detailCostLabel" min="-2" max="-2" attributes="1"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="detailTotalCostLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="detailFavoriteLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="detailFavoriteButton" min="-2" pref="51" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="detailAmountLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="detailAmountSpinner" min="-2" pref="56" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="detailUnitLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                  <Component id="detailTotalCostLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="detailCostLabel" alignment="0" min="-2" max="-2" attributes="1"/>
+                          </Group>
+                          <EmptySpace pref="60" max="32767" attributes="0"/>
                           <Component id="detailBasketButton" min="-2" max="-2" attributes="3"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="detailProductNameLabel" min="-2" pref="159" max="-2" attributes="0"/>
-                          <EmptySpace pref="311" max="32767" attributes="0"/>
-                          <Component id="detailFavoriteLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="detailFavoriteButton" min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -104,37 +97,49 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="detailFavoriteButton" min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="detailProductNameLabel" alignment="3" min="-2" pref="57" max="-2" attributes="1"/>
-                                  <Component id="detailFavoriteLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="detailFavoriteButton" min="-2" pref="50" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="detailScrollPanel" min="-2" pref="182" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="1">
-                          <Component id="detailPictureLabel" min="-2" pref="141" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="detailBasketAmountLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="detailBasketAmountLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="detailBasketAmountLabel" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                              <Component id="detailFavoriteLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="detailProductNameLabel" alignment="0" min="-2" pref="35" max="-2" attributes="1"/>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="detailAmountLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="detailAmountSpinner" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="detailUnitLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="detailCostLabel" alignment="3" pref="37" max="32767" attributes="0"/>
-                      <Component id="detailPriceLabel" alignment="3" pref="74" max="32767" attributes="0"/>
-                      <Component id="detailBasketButton" alignment="3" pref="31" max="32767" attributes="0"/>
-                      <Component id="detailUnitLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="detailTotalCostLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="detailScrollPanel" max="32767" attributes="1"/>
+                      <Component id="detailPictureLabel" alignment="0" pref="141" max="32767" attributes="1"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                          <Component id="detailBasketAmountLabel" min="-2" pref="14" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="detailAmountLabel" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="detailPriceLabel" alignment="3" min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Component id="detailUnitLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="detailAmountSpinner" min="-2" pref="46" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="detailUnitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="detailBasketButton" alignment="3" pref="31" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="detailTotalCostLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="detailCostLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -190,21 +195,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="detailFavoriteButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="detailBasketAmountLabel1">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel1.text"/>
-            <Property name="name" type="java.lang.String" value="detailBasketAmountLabel1" noResource="true"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="detailBasketAmountLabel2">
-          <Properties>
-            <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel2.text"/>
-            <Property name="name" type="java.lang.String" value="detailBasketAmountLabel2" noResource="true"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="detailPriceLabel">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="detailPriceLabel.font"/>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailPriceLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailPriceLabel" noResource="true"/>
           </Properties>
@@ -223,18 +216,21 @@
         </Component>
         <Component class="javax.swing.JLabel" name="detailAmountLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailAmountLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailAmountLabel" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="detailUnitLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailUnitLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailUnitLabel" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="detailCostLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailCostLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailCostLabel" noResource="true"/>
           </Properties>
@@ -251,24 +247,28 @@
         </Component>
         <Component class="javax.swing.JLabel" name="detailFavoriteLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailFavoriteLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailFavoriteLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailFavoriteLabel" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="detailBasketAmountLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailBasketAmountLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailBasketAmountLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailBasketAmountLabel" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="detailUnitLabel2">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailUnitLabel2.text"/>
             <Property name="name" type="java.lang.String" value="detailUnitLabel2" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="detailTotalCostLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" resourceKey="detailTotalCostLabel.font"/>
             <Property name="text" type="java.lang.String" resourceKey="detailTotalCostLabel.text"/>
             <Property name="name" type="java.lang.String" value="detailTotalCostLabel" noResource="true"/>
           </Properties>

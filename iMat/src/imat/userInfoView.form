@@ -61,13 +61,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jTextField1" min="-2" pref="42" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="uiIdHelpTextLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="uiIdHelpTextLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="invoiceRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
                           <Component id="creditCardRadioButton" min="-2" pref="110" max="-2" attributes="0"/>
@@ -91,7 +85,10 @@
                           <Component id="uiCardNumerTextField" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton1" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="jButton2" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -108,10 +105,18 @@
                       <Component id="uiHeaderPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="uiFirstNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                  <Component id="uiFirstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="uiFirstNameLabel" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="uiFirstNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="1">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButton1" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -198,10 +203,7 @@
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="129" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton2" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" pref="63" max="-2" attributes="0"/>
-              </Group>
+              <Component id="jButton2" min="-2" pref="63" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -236,6 +238,7 @@
     <Component class="javax.swing.JTextField" name="uiFirstNameTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiFirstNameTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiFirstNameTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -249,12 +252,14 @@
     <Component class="javax.swing.JTextField" name="uiLastNameTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiLastNameTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiLastNameTextField" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="uiAddressTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiAddressTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiAddressTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -289,18 +294,21 @@
     <Component class="javax.swing.JTextField" name="uiCoTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiCoTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiCoTextField" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="uiZipCodeTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiZipCodeTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiZipCodeTextField" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="uiCityTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiCityTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiCityTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -321,12 +329,14 @@
     <Component class="javax.swing.JTextField" name="uiPhoneNumberTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiPhoneNumberTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiPhoneNumberTextField" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="uiIdTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiIdTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiIdTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -340,12 +350,14 @@
     <Component class="javax.swing.JRadioButton" name="invoiceRadioButton">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="invoiceRadioButton.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="invoiceRadioButton" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="creditCardRadioButton">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="creditCardRadioButton.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="creditCardRadioButton" noResource="true"/>
       </Properties>
     </Component>
@@ -359,6 +371,7 @@
     <Component class="javax.swing.JTextField" name="uiChFirstNameTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiChFirstNameTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiChFirstNameTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -372,6 +385,7 @@
     <Component class="javax.swing.JTextField" name="uiChLastNameTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiChLastNameTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiChLastNameTextField" noResource="true"/>
       </Properties>
     </Component>
@@ -406,6 +420,7 @@
     <Component class="javax.swing.JTextField" name="uiCardNumerTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiCardNumerTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiCardNumerTextField" noResource="true"/>
       </Properties>
       <Events>
@@ -415,22 +430,26 @@
     <Component class="javax.swing.JTextField" name="uiCvvCodeTextField">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="uiCvvCodeTextField.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiCvvCodeTextField" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="uiCardTypeComboBox">
       <Properties>
+        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
             <StringItem index="0" value="VISA"/>
             <StringItem index="1" value="Mastercard"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiCardTypeComboBox" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="uiMonthComboBox">
       <Properties>
+        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="12">
             <StringItem index="0" value="01"/>
@@ -447,11 +466,13 @@
             <StringItem index="11" value="12"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiMonthComboBox" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="uiYearComboBox">
       <Properties>
+        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="11">
             <StringItem index="0" value="2010"/>
@@ -467,6 +488,7 @@
             <StringItem index="10" value="2020"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="uiYearComboBox" noResource="true"/>
       </Properties>
     </Component>
@@ -484,6 +506,9 @@
         <Property name="toolTipText" type="java.lang.String" resourceKey="jButton1.toolTipText"/>
         <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
@@ -513,6 +538,7 @@
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
         <Property name="text" type="java.lang.String" resourceKey="jTextField1.text"/>
+        <Property name="enabled" type="boolean" value="false"/>
         <Property name="name" type="java.lang.String" value="jTextField1" noResource="true"/>
       </Properties>
     </Component>

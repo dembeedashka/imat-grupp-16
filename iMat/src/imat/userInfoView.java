@@ -160,6 +160,7 @@ public class userInfoView extends javax.swing.JPanel {
         uiFirstNameLabel.setName("uiFirstNameLabel"); // NOI18N
 
         uiFirstNameTextField.setText(resourceMap.getString("uiFirstNameTextField.text")); // NOI18N
+        uiFirstNameTextField.setEnabled(false);
         uiFirstNameTextField.setName("uiFirstNameTextField"); // NOI18N
 
         uiLastNameLabel.setFont(resourceMap.getFont("uiLastNameLabel.font")); // NOI18N
@@ -167,9 +168,11 @@ public class userInfoView extends javax.swing.JPanel {
         uiLastNameLabel.setName("uiLastNameLabel"); // NOI18N
 
         uiLastNameTextField.setText(resourceMap.getString("uiLastNameTextField.text")); // NOI18N
+        uiLastNameTextField.setEnabled(false);
         uiLastNameTextField.setName("uiLastNameTextField"); // NOI18N
 
         uiAddressTextField.setText(resourceMap.getString("uiAddressTextField.text")); // NOI18N
+        uiAddressTextField.setEnabled(false);
         uiAddressTextField.setName("uiAddressTextField"); // NOI18N
 
         uiAddressLabel.setFont(resourceMap.getFont("uiAddressLabel.font")); // NOI18N
@@ -189,12 +192,15 @@ public class userInfoView extends javax.swing.JPanel {
         uiCityLabel.setName("uiCityLabel"); // NOI18N
 
         uiCoTextField.setText(resourceMap.getString("uiCoTextField.text")); // NOI18N
+        uiCoTextField.setEnabled(false);
         uiCoTextField.setName("uiCoTextField"); // NOI18N
 
         uiZipCodeTextField.setText(resourceMap.getString("uiZipCodeTextField.text")); // NOI18N
+        uiZipCodeTextField.setEnabled(false);
         uiZipCodeTextField.setName("uiZipCodeTextField"); // NOI18N
 
         uiCityTextField.setText(resourceMap.getString("uiCityTextField.text")); // NOI18N
+        uiCityTextField.setEnabled(false);
         uiCityTextField.setName("uiCityTextField"); // NOI18N
 
         uiPhoneNumberLabel.setFont(resourceMap.getFont("uiPhoneNumberLabel.font")); // NOI18N
@@ -206,9 +212,11 @@ public class userInfoView extends javax.swing.JPanel {
         uiIdLabel.setName("uiIdLabel"); // NOI18N
 
         uiPhoneNumberTextField.setText(resourceMap.getString("uiPhoneNumberTextField.text")); // NOI18N
+        uiPhoneNumberTextField.setEnabled(false);
         uiPhoneNumberTextField.setName("uiPhoneNumberTextField"); // NOI18N
 
         uiIdTextField.setText(resourceMap.getString("uiIdTextField.text")); // NOI18N
+        uiIdTextField.setEnabled(false);
         uiIdTextField.setName("uiIdTextField"); // NOI18N
 
         uiPaymentOptionLabel.setFont(resourceMap.getFont("uiPaymentOptionLabel.font")); // NOI18N
@@ -216,9 +224,11 @@ public class userInfoView extends javax.swing.JPanel {
         uiPaymentOptionLabel.setName("uiPaymentOptionLabel"); // NOI18N
 
         invoiceRadioButton.setText(resourceMap.getString("invoiceRadioButton.text")); // NOI18N
+        invoiceRadioButton.setEnabled(false);
         invoiceRadioButton.setName("invoiceRadioButton"); // NOI18N
 
         creditCardRadioButton.setText(resourceMap.getString("creditCardRadioButton.text")); // NOI18N
+        creditCardRadioButton.setEnabled(false);
         creditCardRadioButton.setName("creditCardRadioButton"); // NOI18N
 
         uiChFirstNameLabel.setFont(resourceMap.getFont("uiChFirstNameLabel.font")); // NOI18N
@@ -226,6 +236,7 @@ public class userInfoView extends javax.swing.JPanel {
         uiChFirstNameLabel.setName("uiChFirstNameLabel"); // NOI18N
 
         uiChFirstNameTextField.setText(resourceMap.getString("uiChFirstNameTextField.text")); // NOI18N
+        uiChFirstNameTextField.setEnabled(false);
         uiChFirstNameTextField.setName("uiChFirstNameTextField"); // NOI18N
 
         uiChLastNameLabel.setFont(resourceMap.getFont("uiChLastNameLabel.font")); // NOI18N
@@ -233,6 +244,7 @@ public class userInfoView extends javax.swing.JPanel {
         uiChLastNameLabel.setName("uiChLastNameLabel"); // NOI18N
 
         uiChLastNameTextField.setText(resourceMap.getString("uiChLastNameTextField.text")); // NOI18N
+        uiChLastNameTextField.setEnabled(false);
         uiChLastNameTextField.setName("uiChLastNameTextField"); // NOI18N
 
         uiCardNumerLabel.setFont(resourceMap.getFont("uiCardNumerLabel.font")); // NOI18N
@@ -252,6 +264,7 @@ public class userInfoView extends javax.swing.JPanel {
         uiValidThroughLabel.setName("uiValidThroughLabel"); // NOI18N
 
         uiCardNumerTextField.setText(resourceMap.getString("uiCardNumerTextField.text")); // NOI18N
+        uiCardNumerTextField.setEnabled(false);
         uiCardNumerTextField.setName("uiCardNumerTextField"); // NOI18N
         uiCardNumerTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,15 +273,22 @@ public class userInfoView extends javax.swing.JPanel {
         });
 
         uiCvvCodeTextField.setText(resourceMap.getString("uiCvvCodeTextField.text")); // NOI18N
+        uiCvvCodeTextField.setEnabled(false);
         uiCvvCodeTextField.setName("uiCvvCodeTextField"); // NOI18N
 
+        uiCardTypeComboBox.setEditable(true);
         uiCardTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VISA", "Mastercard" }));
+        uiCardTypeComboBox.setEnabled(false);
         uiCardTypeComboBox.setName("uiCardTypeComboBox"); // NOI18N
 
+        uiMonthComboBox.setEditable(true);
         uiMonthComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        uiMonthComboBox.setEnabled(false);
         uiMonthComboBox.setName("uiMonthComboBox"); // NOI18N
 
+        uiYearComboBox.setEditable(true);
         uiYearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020" }));
+        uiYearComboBox.setEnabled(false);
         uiYearComboBox.setName("uiYearComboBox"); // NOI18N
 
         uiIdHelpTextLabel.setFont(resourceMap.getFont("uiIdHelpTextLabel.font")); // NOI18N
@@ -279,6 +299,11 @@ public class userInfoView extends javax.swing.JPanel {
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
         jButton1.setToolTipText(resourceMap.getString("jButton1.toolTipText")); // NOI18N
         jButton1.setName("jButton1"); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(resourceMap.getFont("jButton2.font")); // NOI18N
         jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
@@ -297,6 +322,7 @@ public class userInfoView extends javax.swing.JPanel {
         jLabel1.setName("jLabel1"); // NOI18N
 
         jTextField1.setText(resourceMap.getString("jTextField1.text")); // NOI18N
+        jTextField1.setEnabled(false);
         jTextField1.setName("jTextField1"); // NOI18N
 
         jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
@@ -343,11 +369,7 @@ public class userInfoView extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(69, 69, 69)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(uiIdHelpTextLabel)))
+                                .addComponent(uiIdHelpTextLabel))
                             .addComponent(invoiceRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(creditCardRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(uiChFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -367,7 +389,9 @@ public class userInfoView extends javax.swing.JPanel {
                             .addComponent(uiChLastNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(uiCardNumerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -378,10 +402,15 @@ public class userInfoView extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(uiHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(uiFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(uiFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(uiFirstNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uiFirstNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(uiLastNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -450,14 +479,13 @@ public class userInfoView extends javax.swing.JPanel {
                     .addComponent(uiYearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      setUiEnabled(false);
       customer.setAddress(uiAddressTextField.getText());
       customer.setFirstName(uiFirstNameTextField.getText());
       customer.setLastName(uiLastNameTextField.getText());
@@ -484,6 +512,31 @@ public class userInfoView extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_uiCardNumerTextFieldActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        setUiEnabled(true);
+        
+
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+    public void setUiEnabled (boolean bool) {
+
+        uiAddressTextField.setEnabled(bool);
+        uiCardNumerTextField.setEnabled(bool);
+        uiCardTypeComboBox.setEnabled(bool);
+        uiChLastNameTextField.setEnabled(bool);
+        uiCityTextField.setEnabled(bool);
+        uiFirstNameTextField.setEnabled(bool);
+        uiCoTextField.setEnabled(bool);
+        uiIdTextField.setEnabled(bool);
+        uiMonthComboBox.setEnabled(bool);
+        uiPhoneNumberTextField.setEnabled(bool);
+        uiZipCodeTextField.setEnabled(bool);
+        uiYearComboBox.setEnabled(bool);
+        creditCardRadioButton.setEnabled(bool);
+        invoiceRadioButton.setEnabled(bool);
+        uiLastNameTextField.setEnabled(bool);
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton creditCardRadioButton;

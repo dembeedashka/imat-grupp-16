@@ -36,46 +36,28 @@ public class SearchView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        searchBreadcrumbPanel = new javax.swing.JPanel();
         searchHeaderPanel = new imat.HeaderPanel2();
         resultsPanel = new javax.swing.JPanel();
 
         setName("Form"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1295, 599));
+        setPreferredSize(new java.awt.Dimension(800, 599));
 
-        searchBreadcrumbPanel.setName("searchBreadcrumbPanel"); // NOI18N
-
-        javax.swing.GroupLayout searchBreadcrumbPanelLayout = new javax.swing.GroupLayout(searchBreadcrumbPanel);
-        searchBreadcrumbPanel.setLayout(searchBreadcrumbPanelLayout);
-        searchBreadcrumbPanelLayout.setHorizontalGroup(
-            searchBreadcrumbPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 751, Short.MAX_VALUE)
-        );
-        searchBreadcrumbPanelLayout.setVerticalGroup(
-            searchBreadcrumbPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 57, Short.MAX_VALUE)
-        );
-
+        searchHeaderPanel.setMinimumSize(new java.awt.Dimension(790, 329));
         searchHeaderPanel.setName("searchHeaderPanel"); // NOI18N
 
         resultsPanel.setName("resultsPanel"); // NOI18N
-        resultsPanel.setLayout(new java.awt.GridLayout(10, 2));
+        resultsPanel.setLayout(new java.awt.GridLayout(0, 2));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(resultsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(524, 524, 524)
-                        .addComponent(searchBreadcrumbPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(searchHeaderPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
-                        .addGap(865, 865, 865))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(searchHeaderPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
+                    .addComponent(resultsPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,12 +65,8 @@ public class SearchView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(searchHeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchBreadcrumbPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(resultsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addComponent(resultsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
     public void addProduct(Product p){
@@ -123,7 +101,6 @@ public class SearchView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel resultsPanel;
-    private javax.swing.JPanel searchBreadcrumbPanel;
     private imat.HeaderPanel2 searchHeaderPanel;
     // End of variables declaration//GEN-END:variables
 

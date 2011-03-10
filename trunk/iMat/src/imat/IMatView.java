@@ -221,6 +221,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         cardCashPanel = new javax.swing.JPanel();
         cashRegister1 = new imat.cashRegister();
         cardPreviousPurchasesPanel = new javax.swing.JPanel();
+        purchases1 = new imat.Purchases();
         cardOrderPlaced = new javax.swing.JPanel();
         orderPlacedView1 = new imat.OrderPlacedView();
         cardShoppingListPanel = new javax.swing.JPanel();
@@ -432,7 +433,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(searchTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 401, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(searchButton)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 299, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 301, Short.MAX_VALUE)
                 .add(helpButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(25, 25, 25))
         );
@@ -479,7 +480,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
                 .add(shoppingList1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 462, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(showShoppingListButton)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         actionPanel.setMaximumSize(null);
@@ -1146,15 +1147,23 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
 
         cardPreviousPurchasesPanel.setName("cardPreviousPurchasesPanel"); // NOI18N
 
+        purchases1.setName("purchases1"); // NOI18N
+
         org.jdesktop.layout.GroupLayout cardPreviousPurchasesPanelLayout = new org.jdesktop.layout.GroupLayout(cardPreviousPurchasesPanel);
         cardPreviousPurchasesPanel.setLayout(cardPreviousPurchasesPanelLayout);
         cardPreviousPurchasesPanelLayout.setHorizontalGroup(
             cardPreviousPurchasesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 800, Short.MAX_VALUE)
+            .add(cardPreviousPurchasesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(purchases1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         cardPreviousPurchasesPanelLayout.setVerticalGroup(
             cardPreviousPurchasesPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 2000, Short.MAX_VALUE)
+            .add(cardPreviousPurchasesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(purchases1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(694, Short.MAX_VALUE))
         );
 
         centerStagePanel.add(cardPreviousPurchasesPanel, "purchases");
@@ -1627,6 +1636,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     private javax.swing.JButton pastaButton;
     private javax.swing.JButton podButton;
     private javax.swing.JButton potatoButton;
+    private imat.Purchases purchases1;
     private javax.swing.JButton rootVegetableButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchTextField;

@@ -182,27 +182,29 @@ public class shoppingList extends javax.swing.JPanel {
     }//GEN-LAST:event_shoppingListNameFocusLost
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int i=0;
-        boolean stop=false;
-        String eol = System.getProperty("line.separator");
-        while(!stop){
+        if(!shoppingListName.getText().equals("")){
+            int i=0;
+            boolean stop=false;
+            String eol = System.getProperty("line.separator");
+            while(!stop){
+                try{
+                    FileWriter file = new FileWriter(shoppingListName.getText()+".txt",true);
+                    ShoppingListRow temp = (ShoppingListRow) shoppingListRowPanel.getComponent(i);
+                    file.write(temp.getRowItemTextField()+eol);
+                    file.close();
+                }
+                catch(Exception e){
+                    stop=true;
+                }
+                i++;
+            }
             try{
-                FileWriter file = new FileWriter(shoppingListName.getText()+".txt",true);
-                ShoppingListRow temp = (ShoppingListRow) shoppingListRowPanel.getComponent(i);
-                file.write(temp.getRowItemTextField()+eol);
-                file.close();
+                FileWriter fw = new FileWriter("lists.txt",true);
+                fw.write(shoppingListName.getText()+eol);
+                fw.close();
             }
-            catch(Exception e){
-                stop=true;
+            catch (IOException e){
             }
-            i++;
-        }
-        try{
-            FileWriter fw = new FileWriter("lists.txt",true);
-            fw.write(shoppingListName.getText()+eol);
-            fw.close();
-        }
-        catch (IOException e){
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

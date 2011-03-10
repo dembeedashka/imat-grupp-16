@@ -145,6 +145,10 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         return userInfoView1;
     }
 
+    public Receipt getReceipt1() {
+        return receipt1;
+    }
+
     
     /** This method is called from within the constructor to
      * initialize the form.

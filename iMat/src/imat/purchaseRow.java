@@ -12,6 +12,7 @@
 package imat;
 
 import se.chalmers.ait.dat215.project.Order;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 public class purchaseRow extends javax.swing.JPanel {
     private int ordernumber;
@@ -77,6 +78,15 @@ public class purchaseRow extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void picButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_picButtonActionPerformed
+        double price=0;
+        Receipt receipt = IMatPresenter.getInstance().getView().getReceipt1();
+        for(ShoppingItem item: order.getItems())
+        {
+            receipt.addReceiptRow(item);
+            price+=item.getTotal();
+        }
+        receipt.setReceiptPriceLabel(price);
+        receipt.setReceiptDate(order);
         //TODO add rows to receipt
         presenter.displayCategory(IMatView.RECEIPT);
     }//GEN-LAST:event_picButtonActionPerformed

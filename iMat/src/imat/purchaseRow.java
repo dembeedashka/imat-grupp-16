@@ -87,7 +87,7 @@ public class purchaseRow extends javax.swing.JPanel {
         }
         receipt.setReceiptPriceLabel(price);
         receipt.setReceiptDate(order);
-        //TODO add rows to receipt
+
         presenter.displayCategory(IMatView.RECEIPT);
     }//GEN-LAST:event_picButtonActionPerformed
 

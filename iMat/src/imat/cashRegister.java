@@ -14,6 +14,7 @@ package imat;
 import se.chalmers.ait.dat215.project.CreditCard;
 import se.chalmers.ait.dat215.project.Customer;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
+import se.chalmers.ait.dat215.project.ShoppingItem;
 
 /**
  *
@@ -623,7 +624,18 @@ public class cashRegister extends javax.swing.JPanel {
 }//GEN-LAST:event_cashSaveUserInfo
 
     private void cashCompletepurchaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashCompletepurchaseButtonActionPerformed
-        handler.placeOrder();
+
+        Receipt receipt = IMatPresenter.getInstance().getView().getReceipt2();
+        double price=0;
+
+        for(ShoppingItem item: handler.getShoppingCart().getItems())
+        {
+            receipt.addReceiptRow(item);
+            price+=item.getTotal();
+        }
+        receipt.setReceiptPriceLabel(price);
+
+        handler.placeOrder(); 
         handler.getShoppingCart().clear();
         handler.getShoppingCart().fireShoppingCartChanged();
         IMatPresenter.getInstance().displayCategory(IMatView.ORDERPLACED);

@@ -145,14 +145,16 @@ public class cartItem extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
-        //int newAmount = ((Integer) productAmount.getValue());
-/*        if((Integer) productAmount.getValue() <= 0) {
+        double newAmount = Double.valueOf(productAmount.getValue().toString());
+        if(newAmount <= 0) {
             removeProductActionPerformed(null);
             return;
         }
 
-        item.setAmount((Integer) productAmount.getValue());
-        productPrice.setText(item.getTotal() + " kr");*/
+        item.setAmount(newAmount);
+        productPrice.setText(item.getTotal() + " kr");
+        IMatPresenter.getInstance().getView().getCashRegister1().getShoppingCartList().updateTotalPrice();
+        IMatPresenter.getInstance().getView().getShoppignCart().getShoppingCartList().updateTotalPrice();
     }//GEN-LAST:event_productAmountStateChanged
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed

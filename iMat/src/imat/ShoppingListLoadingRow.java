@@ -14,6 +14,7 @@ package imat;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
+import javax.swing.JButton;
 
 /**
  *
@@ -22,7 +23,7 @@ import java.io.FileInputStream;
 public class ShoppingListLoadingRow extends javax.swing.JPanel {
 
     private IMatPresenter presenter = IMatPresenter.getInstance();
-    private IMatView i;
+    private IMatView      view;
 
     public String name;
 
@@ -70,8 +71,8 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void shoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListButtonActionPerformed
-        i = presenter.getView();
-        shoppingList s = i.getShoppingList();
+        view = presenter.getView();
+        shoppingList s = view.getShoppingList();
         try {
             FileInputStream fis = new FileInputStream(getShoppingListButton()+".txt");
             BufferedInputStream bis = new BufferedInputStream(fis);
@@ -86,7 +87,7 @@ public class ShoppingListLoadingRow extends javax.swing.JPanel {
             fis.close();
             bis.close();
             dis.close();
-            i.setShoppingList(s);
+            view.setShoppingList(s);
             presenter.displayCategory(IMatView.HOME);
         }
         catch(Exception e){

@@ -33,17 +33,17 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="productName" min="-2" pref="183" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="unitLabel" pref="86" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="unitLabel" pref="65" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="removeProduct" pref="122" max="32767" attributes="0"/>
+              <Component id="removeProduct" pref="101" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Component id="productAmount" min="-2" pref="62" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="unitSuffixLabel" pref="41" max="32767" attributes="0"/>
+              <Component id="unitSuffixLabel" pref="20" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="productPrice" pref="85" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="productPrice" pref="62" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,13 +53,15 @@
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="productName" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="unitLabel" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="productAmount" alignment="3" max="32767" attributes="0"/>
-                  <Component id="productPrice" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="removeProduct" alignment="3" pref="26" max="32767" attributes="0"/>
-                  <Component id="unitSuffixLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                      <Component id="unitLabel" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="productAmount" alignment="3" max="32767" attributes="0"/>
+                      <Component id="productPrice" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="removeProduct" alignment="3" pref="26" max="32767" attributes="0"/>
+                      <Component id="unitSuffixLabel" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -87,6 +89,7 @@
     <Component class="javax.swing.JButton" name="removeProduct">
       <Properties>
         <Property name="font" type="java.awt.Font" resourceKey="removeProduct.font"/>
+        <Property name="icon" type="javax.swing.Icon" resourceKey="removeProduct.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="removeProduct.text"/>
         <Property name="toolTipText" type="java.lang.String" resourceKey="removeProduct.toolTipText"/>
         <Property name="name" type="java.lang.String" value="removeProduct" noResource="true"/>

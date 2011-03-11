@@ -197,4 +197,8 @@ public class IMatPresenter implements NavigationHistoryUpdater {
 
         cart.fireShoppingCartChanged();
     }
+
+    public JButton getShoppingListSaveButton() {
+        return view.getShoppingList().getSaveButton();
+    }
 }

@@ -14,6 +14,7 @@ package imat;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
+import javax.swing.JButton;
 
 /**
  *
@@ -25,9 +26,8 @@ public class ShoppingListView extends javax.swing.JPanel {
     public ShoppingListView() {
         initComponents();
         try {
-            FileInputStream fis = new FileInputStream("lists.txt");
-            BufferedInputStream bis = new BufferedInputStream(fis);
-            DataInputStream dis = new DataInputStream(bis);
+            DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream("lists.txt")));
+
             while (dis.available() != 0) {
                 ShoppingListLoadingRow s = new ShoppingListLoadingRow();
                 s.setShoppingListButton(dis.readLine());
@@ -35,12 +35,9 @@ public class ShoppingListView extends javax.swing.JPanel {
                 shoppingListDisplayPanel.revalidate();
                 shoppingListDisplayPanel.repaint();
             }
-            fis.close();
-            bis.close();
             dis.close();
         }
-        catch(Exception e){
-
+        catch(Exception e) {
         }
     }
 

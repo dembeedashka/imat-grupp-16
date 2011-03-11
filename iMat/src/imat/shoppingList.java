@@ -16,7 +16,10 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import javax.swing.JButton;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 /**
  *
@@ -34,6 +37,28 @@ public class shoppingList extends javax.swing.JPanel {
         for(int i = 0; i < 5; i++) {
             shoppingListAddRowActionPerformed(null);
         }
+        saveButton.setEnabled(false);
+
+        shoppingListName.getDocument().addDocumentListener(
+            new DocumentListener() {
+                public void changedUpdate(DocumentEvent e) {
+                    if(!shoppingListName.getText().equals("")) {
+                        saveButton.setEnabled(true);
+                    }
+                }
+
+                public void removeUpdate(DocumentEvent e) {
+                    if(!shoppingListName.getText().equals("")) {
+                        saveButton.setEnabled(true);
+                    }
+                }
+                public void insertUpdate(DocumentEvent e) {
+                    if(!shoppingListName.getText().equals("")) {
+                        saveButton.setEnabled(true);
+                    }
+                }
+            }
+        );
     }
 
     /** This method is called from within the constructor to
@@ -48,7 +73,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListTopPanel = new javax.swing.JPanel();
         shoppingListHeader = new javax.swing.JLabel();
         shoppingListName = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        saveButton = new javax.swing.JButton();
         shoppingListBottomPanel = new javax.swing.JPanel();
         shoppingListRowScrollPane = new javax.swing.JScrollPane();
         shoppingListRowPanel = new javax.swing.JPanel();
@@ -77,14 +102,14 @@ public class shoppingList extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setFont(resourceMap.getFont("jButton1.font")); // NOI18N
-        jButton1.setIcon(resourceMap.getIcon("jButton1.icon")); // NOI18N
-        jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
-        jButton1.setToolTipText(resourceMap.getString("jButton1.toolTipText")); // NOI18N
-        jButton1.setName("jButton1"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        saveButton.setFont(resourceMap.getFont("saveButton.font")); // NOI18N
+        saveButton.setIcon(resourceMap.getIcon("saveButton.icon")); // NOI18N
+        saveButton.setText(resourceMap.getString("saveButton.text")); // NOI18N
+        saveButton.setToolTipText(resourceMap.getString("saveButton.toolTipText")); // NOI18N
+        saveButton.setName("saveButton"); // NOI18N
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                saveButtonActionPerformed(evt);
             }
         });
 
@@ -94,18 +119,18 @@ public class shoppingList extends javax.swing.JPanel {
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shoppingListTopPanelLayout.createSequentialGroup()
-                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
+                .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1))
+                .addComponent(saveButton))
         );
         shoppingListTopPanelLayout.setVerticalGroup(
             shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(shoppingListTopPanelLayout.createSequentialGroup()
                 .addGroup(shoppingListTopPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(shoppingListHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                    .addComponent(saveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(shoppingListName, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addComponent(shoppingListName, javax.swing.GroupLayout.PREFERRED_SIZE, 28, Short.MAX_VALUE))
         );
 
         shoppingListBottomPanel.setName("shoppingListBottomPanel"); // NOI18N
@@ -172,6 +197,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListAddRowActionPerformed(null);
     }
     public void addRow(ShoppingListRow s){
+        saveButton.setEnabled(true);
         ShoppingListRow q = new ShoppingListRow();
         q.setRowItemTextField(s.getRowItemTextField());
         shoppingListRowPanel.add(q);
@@ -182,6 +208,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListName.setText(s);
     }
     private void shoppingListAddRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoppingListAddRowActionPerformed
+        saveButton.setEnabled(true);
         shoppingListRowPanel.add(new ShoppingListRow());
         shoppingListRowPanel.revalidate();
         shoppingListRowPanel.repaint();
@@ -196,59 +223,60 @@ public class shoppingList extends javax.swing.JPanel {
     private void shoppingListNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_shoppingListNameFocusLost
         if(shoppingListName.getText().equals("")) {
             shoppingListName.setText("Skriv listans namn här");
+            saveButton.setEnabled(false);
         }
     }//GEN-LAST:event_shoppingListNameFocusLost
     public void clearAll(){
         shoppingListRowPanel.removeAll();
     }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        DataInputStream dis;
+        FileWriter      file;
+        String          eol = System.getProperty("line.separator");
+
         if(!shoppingListName.getText().equals("")){
-                int i=0;
-                boolean stop=false;
-                String eol = System.getProperty("line.separator");
-                try {
-                FileInputStream fis = new FileInputStream("lists.txt");
-                BufferedInputStream bis = new BufferedInputStream(fis);
-                DataInputStream dis = new DataInputStream(bis);
+            try {
+                dis = new DataInputStream(new BufferedInputStream(new FileInputStream("lists.txt")));
                 while (dis.available() != 0) {
                     if(shoppingListName.getText().equals(dis.readLine())){
-                       stop=true;
                        shoppingListName.setText("Det finns lista med samma namn");
                        this.revalidate();
                        this.repaint();
+                       dis.close();
+                       return;
                     }
                 }
-                fis.close();
-                bis.close();
                 dis.close();
             }
-            catch(Exception e){
-
-            }
-            while(!stop){
-                try{
-                    FileWriter file = new FileWriter(shoppingListName.getText()+".txt",true);
-                    ShoppingListRow temp = (ShoppingListRow) shoppingListRowPanel.getComponent(i);
-                    file.write(temp.getRowItemTextField()+eol);
-                    file.close();
-                }
-                catch(Exception e){
-                    stop=true;
-                }
-                i++;
-            }
-            try{
-                FileWriter fw = new FileWriter("lists.txt",true);
-                fw.write(shoppingListName.getText()+eol);
-                fw.close();
-            }
-            catch (IOException e){
+            catch(Exception e) {
             }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
+        try {
+            file = new FileWriter(shoppingListName.getText()+".txt",true);
+            ShoppingListRow temp;
+
+            for(int i = 0; i < shoppingListRowPanel.getComponentCount(); i++) {
+                temp = (ShoppingListRow) shoppingListRowPanel.getComponent(i);
+                file.write(temp.getRowItemTextField() + eol);
+            }
+            file.close();
+
+            file = new FileWriter("lists.txt",true);
+            file.write(shoppingListName.getText() + eol);
+            file.close();
+            saveButton.setEnabled(false);
+        }
+        catch (IOException e){
+        }
+    }//GEN-LAST:event_saveButtonActionPerformed
+
+    public JButton getSaveButton() {
+        return saveButton;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton saveButton;
     private javax.swing.JButton shoppingListAddRow;
     private javax.swing.JPanel shoppingListBottomPanel;
     private javax.swing.JLabel shoppingListHeader;

@@ -11,7 +11,6 @@
 
 package imat;
 
-import java.awt.Color;
 import java.awt.Container;
 import se.chalmers.ait.dat215.project.IMatDataHandler;
 import se.chalmers.ait.dat215.project.ShoppingCart;
@@ -22,7 +21,6 @@ import se.chalmers.ait.dat215.project.ShoppingItem;
  * @author David
  */
 public class cartItem extends javax.swing.JPanel {
-    private static boolean rowStripe;
     private ShoppingItem item;
     private ShoppingCart cart = IMatDataHandler.getInstance().getShoppingCart();
 
@@ -34,30 +32,18 @@ public class cartItem extends javax.swing.JPanel {
     public cartItem(ShoppingItem item) {
         initComponents();
         this.item=item;
-        rowStripe = !rowStripe;
-        if(rowStripe) {
-            this.setBackground(Color.GREEN);
-        }
     }
 
-
-
-
-    public void setTexts(ShoppingItem lol)
+    public void setTexts(ShoppingItem item)
     {
-        productName.setText(lol.getProduct().getName());
-        productPrice.setText(lol.getTotal() + " kr");
-        productAmount.setValue(lol.getAmount());
+        this.item = item;
+        productName.setText(item.getProduct().getName());
+        productPrice.setText(item.getTotal() + " kr");
+        productAmount.setValue(item.getAmount());
        
-        unitSuffixLabel.setText(lol.getProduct().getUnitSuffix());
-        unitLabel.setText(lol.getProduct().getPrice()+ " " + lol.getProduct().getUnit());
-        item=lol;
+        unitSuffixLabel.setText(item.getProduct().getUnitSuffix());
+        unitLabel.setText(item.getProduct().getPrice()+ " " + item.getProduct().getUnit());
     }
-
-
-
-
-   
 
     /** This method is rodcalled from within the constructor to
      * initialize the form.
@@ -97,6 +83,7 @@ public class cartItem extends javax.swing.JPanel {
         productName.setName("productName"); // NOI18N
 
         removeProduct.setFont(resourceMap.getFont("removeProduct.font")); // NOI18N
+        removeProduct.setIcon(resourceMap.getIcon("removeProduct.icon")); // NOI18N
         removeProduct.setText(resourceMap.getString("removeProduct.text")); // NOI18N
         removeProduct.setToolTipText(resourceMap.getString("removeProduct.toolTipText")); // NOI18N
         removeProduct.setName("removeProduct"); // NOI18N
@@ -129,17 +116,17 @@ public class cartItem extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(unitLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(unitLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
                 .addGap(39, 39, 39)
-                .addComponent(removeProduct, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                .addComponent(removeProduct, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                 .addGap(44, 44, 44)
                 .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(unitSuffixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(unitSuffixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
                 .addGap(10, 10, 10)
-                .addComponent(productPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+                .addComponent(productPrice, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,19 +134,25 @@ public class cartItem extends javax.swing.JPanel {
                 .addGap(13, 13, 13)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productAmount)
-                    .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(removeProduct, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(unitSuffixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(unitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(productAmount)
+                        .addComponent(productPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(removeProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 26, Short.MAX_VALUE)
+                        .addComponent(unitSuffixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void productAmountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_productAmountStateChanged
-       
-       //double amount = (Double) productAmount.getValue();
-       //cart.addProduct(item.getProduct(), amount);
+        //int newAmount = ((Integer) productAmount.getValue());
+/*        if((Integer) productAmount.getValue() <= 0) {
+            removeProductActionPerformed(null);
+            return;
+        }
+
+        item.setAmount((Integer) productAmount.getValue());
+        productPrice.setText(item.getTotal() + " kr");*/
     }//GEN-LAST:event_productAmountStateChanged
 
     private void removeProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeProductActionPerformed

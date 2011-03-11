@@ -14,6 +14,7 @@ package imat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import se.chalmers.ait.dat215.project.CreditCard;
 import se.chalmers.ait.dat215.project.Customer;
@@ -88,6 +89,14 @@ public class cashRegister extends javax.swing.JPanel {
 
     }
 
+    public JRadioButton getCredit() {
+        return cashDebitCardRButton;
+    }
+
+    public JRadioButton getInvoice() {
+        return cashInvoiceRButton;
+    }
+
 
 
     public void checkEmptyText () {
@@ -96,11 +105,12 @@ public class cashRegister extends javax.swing.JPanel {
         String userText = "";
         String cardText = "";
         String cartText = "";
-        
+        warningText.setText("");
 
         for(int i= 0; i < labelList.size(); i++) {
-            warningText.setText("");
+           
             labelList.get(i).setText("");
+            shoppingCartList1.getPriceLabel().setText("");
 
             if(textList.get(i).getText().equals("")) {
                 labelList.get(i).setText("fel!");
@@ -118,23 +128,24 @@ public class cashRegister extends javax.swing.JPanel {
                 warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
             }
+        if(cashDebitCardRButton.isSelected()) {
+            for(int j =0; j < cardLabelList.size(); j++) {
 
-        for(int j =0; j < cardLabelList.size(); j++) {
-            warningText.setText("");
-            cardLabelList.get(j).setText("");
+                cardLabelList.get(j).setText("");
 
-            if(cardTextList.get(j).getText().equals("")) {
+                if(cardTextList.get(j).getText().equals("")) {
 
 
-                
-                cardLabelList.get(j).setText("fel!");
-                cardText = "kontouppgifter";
-                warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
-                isChecked=false;
+
+                    cardLabelList.get(j).setText("fel!");
+                    cardText = "kontouppgifter";
+                    warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
+                    isChecked=false;
+                }
+
             }
-
         }
-            if(shoppingCartList1.getPrice() !=0) {
+            if(shoppingCartList1.getPrice() ==0) {
                 isChecked=false;
                 shoppingCartList1.getPriceLabel().setText("Kundkorgen är tom!");
                 cartText = "kundvagnen är tom";
@@ -518,6 +529,7 @@ public class cashRegister extends javax.swing.JPanel {
         });
 
         buttonGroup1.add(cashDebitCardRButton);
+        cashDebitCardRButton.setSelected(true);
         cashDebitCardRButton.setText(resourceMap.getString("cashDebitCardRButton.text")); // NOI18N
         cashDebitCardRButton.setName("cashDebitCardRButton"); // NOI18N
         cashDebitCardRButton.addActionListener(new java.awt.event.ActionListener() {

@@ -200,6 +200,7 @@ public class userInfoView extends javax.swing.JPanel {
         invoiceRadioButton.setName("invoiceRadioButton"); // NOI18N
 
         buttonGroup1.add(creditCardRadioButton);
+        creditCardRadioButton.setSelected(true);
         creditCardRadioButton.setText(resourceMap.getString("creditCardRadioButton.text")); // NOI18N
         creditCardRadioButton.setEnabled(false);
         creditCardRadioButton.setName("creditCardRadioButton"); // NOI18N
@@ -499,7 +500,11 @@ public class userInfoView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      setUiEnabled(false);
+      if (creditCardRadioButton.isSelected()) {
+          
+          
+      }
+       setUiEnabled(false);
       customer.setAddress(uiAddressTextField.getText());
       customer.setFirstName(uiFirstNameTextField.getText());
       customer.setLastName(uiLastNameTextField.getText());

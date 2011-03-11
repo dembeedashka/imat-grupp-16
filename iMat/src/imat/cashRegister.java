@@ -198,6 +198,10 @@ public class cashRegister extends javax.swing.JPanel {
            cashCardLNameTField.setText(card.getHoldersName().substring(nextName+1));
        }
        cashMonthCBox.setSelectedIndex(card.getValidMonth());
+       System.out.println(card.getValidYear()+"");
+       System.out.println(card.getValidMonth()+"");
+       System.out.println(card.getCardType()+"");
+
        if(card.getValidYear()!=2010)
        {
            cashYearCBox.setSelectedIndex(card.getValidYear()-2010);

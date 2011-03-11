@@ -94,6 +94,7 @@ public class itemPanel extends javax.swing.JPanel {
         String textNamn = "Detaljer";
 
         productIconButton.setText("<html><p><p><p><p>" + textNamn + "</p></p></p></p></p></html>");
+        productIconButton.setSize(104, 93);
     }
 
     public void updateFavourite()

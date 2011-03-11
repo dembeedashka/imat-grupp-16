@@ -78,7 +78,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="warningText" min="-2" pref="577" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="7" max="32767" attributes="0"/>
                               <Component id="cashCompletepurchaseButton" min="-2" pref="129" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
@@ -87,10 +87,10 @@
                               <Component id="cashBasketNLabel" min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                           <Component id="cashPaymentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="matMallHeaderPanel" alignment="0" pref="748" max="32767" attributes="1"/>
-                          <Component id="shoppingCartList1" alignment="0" pref="748" max="32767" attributes="1"/>
+                          <Component id="matMallHeaderPanel" alignment="0" pref="746" max="32767" attributes="1"/>
+                          <Component id="shoppingCartList1" alignment="0" pref="746" max="32767" attributes="1"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="cashUserInfoPanel" alignment="0" min="0" pref="743" max="32767" attributes="1"/>
+                              <Component id="cashUserInfoPanel" alignment="0" min="0" max="32767" attributes="1"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -184,7 +184,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel3" min="-2" pref="57" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jLabel4" pref="126" max="32767" attributes="0"/>
+                                          <Component id="jLabel4" pref="200" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -194,8 +194,8 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel1" pref="115" max="32767" attributes="1"/>
-                                          <Component id="jLabel2" alignment="0" pref="115" max="32767" attributes="1"/>
+                                          <Component id="jLabel1" pref="195" max="32767" attributes="1"/>
+                                          <Component id="jLabel2" alignment="0" pref="195" max="32767" attributes="1"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -537,7 +537,6 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="font" type="java.awt.Font" resourceKey="jButton4.font"/>
-                <Property name="icon" type="javax.swing.Icon" resourceKey="jButton4.icon"/>
                 <Property name="text" type="java.lang.String" resourceKey="jButton4.text"/>
                 <Property name="toolTipText" type="java.lang.String" resourceKey="jButton4.toolTipText"/>
                 <Property name="name" type="java.lang.String" value="jButton4" noResource="true"/>
@@ -575,7 +574,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cashDebitCardPanel" min="-2" pref="700" max="-2" attributes="0"/>
+                                  <Component id="cashDebitCardPanel" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -645,7 +644,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cashCardnumberTfield" alignment="0" pref="181" max="32767" attributes="1"/>
+                                          <Component id="cashCardnumberTfield" alignment="0" pref="173" max="32767" attributes="1"/>
                                           <Component id="cashCardnumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -658,7 +657,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cashCardFNameTField" pref="181" max="32767" attributes="0"/>
+                                      <Component id="cashCardFNameTField" pref="173" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>

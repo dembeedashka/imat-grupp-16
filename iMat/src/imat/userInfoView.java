@@ -509,10 +509,10 @@ public class userInfoView extends javax.swing.JPanel {
       customer.setPostCode(uiZipCodeTextField.getText());
       customer.setPostAddress(uiCityTextField.getText());
       card.setCardNumber(uiCardNumerTextField.getText());
-      card.setCardType(uiCardTypeComboBox.getItemAt(0).toString());
+      card.setCardType(uiCardTypeComboBox.getSelectedItem().toString());
       card.setHoldersName(uiChFirstNameTextField.getText()+" "+uiChLastNameTextField.getText());
-      card.setValidMonth(Integer.parseInt(uiMonthComboBox.getItemAt(0).toString()));
-      card.setValidYear(Integer.parseInt(uiYearComboBox.getItemAt(0).toString()));
+      card.setValidMonth(Integer.parseInt(uiMonthComboBox.getSelectedItem().toString()));
+      card.setValidYear(Integer.parseInt(uiYearComboBox.getSelectedItem().toString()));
 
       try  
       {

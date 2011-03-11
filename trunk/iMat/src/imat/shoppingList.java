@@ -230,6 +230,7 @@ public class shoppingList extends javax.swing.JPanel {
         shoppingListRowPanel.removeAll();
     }
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        boolean overwrite=false;
         DataInputStream dis;
         FileWriter      file;
         String          eol = System.getProperty("line.separator");
@@ -239,11 +240,7 @@ public class shoppingList extends javax.swing.JPanel {
                 dis = new DataInputStream(new BufferedInputStream(new FileInputStream("lists.txt")));
                 while (dis.available() != 0) {
                     if(shoppingListName.getText().equals(dis.readLine())){
-                       shoppingListName.setText("Det finns lista med samma namn");
-                       this.revalidate();
-                       this.repaint();
-                       dis.close();
-                       return;
+                       overwrite=true;
                     }
                 }
                 dis.close();
@@ -253,7 +250,7 @@ public class shoppingList extends javax.swing.JPanel {
         }
 
         try {
-            file = new FileWriter(shoppingListName.getText()+".txt",true);
+            file = new FileWriter(shoppingListName.getText()+".txt",false);
             ShoppingListRow temp;
 
             for(int i = 0; i < shoppingListRowPanel.getComponentCount(); i++) {
@@ -261,11 +258,11 @@ public class shoppingList extends javax.swing.JPanel {
                 file.write(temp.getRowItemTextField() + eol);
             }
             file.close();
-
-            file = new FileWriter("lists.txt",true);
-            file.write(shoppingListName.getText() + eol);
-            file.close();
-            saveButton.setEnabled(false);
+            if(!overwrite){
+                file = new FileWriter("lists.txt",true);
+                file.write(shoppingListName.getText() + eol);
+                file.close();
+            }
         }
         catch (IOException e){
         }

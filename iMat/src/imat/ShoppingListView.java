@@ -25,6 +25,13 @@ public class ShoppingListView extends javax.swing.JPanel {
     /** Creates new form ShoppingListView */
     public ShoppingListView() {
         initComponents();
+        displayShoppingLists();
+        
+    }
+
+    public void displayShoppingLists()
+    {
+        shoppingListDisplayPanel.removeAll();
         try {
             DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream("lists.txt")));
 

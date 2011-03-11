@@ -1422,6 +1422,7 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void showShoppingListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showShoppingListButtonActionPerformed
+        shoppingListView1.displayShoppingLists();
         presenter.displayCategory(SHOP);
     }//GEN-LAST:event_showShoppingListButtonActionPerformed
 

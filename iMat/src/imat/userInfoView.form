@@ -449,7 +449,6 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="uiCardTypeComboBox">
       <Properties>
-        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
             <StringItem index="0" value="VISA"/>
@@ -462,7 +461,6 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="uiMonthComboBox">
       <Properties>
-        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="12">
             <StringItem index="0" value="01"/>
@@ -485,7 +483,6 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="uiYearComboBox">
       <Properties>
-        <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="11">
             <StringItem index="0" value="2010"/>

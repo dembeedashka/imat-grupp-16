@@ -121,9 +121,6 @@
             <Property name="toolTipText" type="java.lang.String" resourceKey="productIconButton.toolTipText"/>
             <Property name="alignmentY" type="float" value="0.0"/>
             <Property name="name" type="java.lang.String" value="productIconButton" noResource="true"/>
-            <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 93]"/>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productIconButtonActionPerformed"/>
@@ -133,6 +130,7 @@
           <Properties>
             <Property name="font" type="java.awt.Font" resourceKey="addToCartButton.font"/>
             <Property name="text" type="java.lang.String" resourceKey="addToCartButton.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="addToCartButton.toolTipText"/>
             <Property name="name" type="java.lang.String" value="addToCartButton" noResource="true"/>
           </Properties>
           <Events>
@@ -179,9 +177,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="productPriceLabel">
           <Properties>
-            <Property name="font" type="java.awt.Font" resourceKey="productPriceLabel.font"/>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" resourceKey="productPriceLabel.text"/>
             <Property name="name" type="java.lang.String" value="productPriceLabel" noResource="true"/>
           </Properties>
         </Component>
@@ -189,6 +185,7 @@
           <Properties>
             <Property name="icon" type="javax.swing.Icon" resourceKey="favouriteButton.icon"/>
             <Property name="text" type="java.lang.String" resourceKey="favouriteButton.text"/>
+            <Property name="toolTipText" type="java.lang.String" resourceKey="favouriteButton.toolTipText"/>
             <Property name="name" type="java.lang.String" value="favouriteButton" noResource="true"/>
           </Properties>
           <Events>

@@ -95,7 +95,18 @@ public class userInfoView extends javax.swing.JPanel {
         {
             uiCvvCodeTextField.setText(card.getVerificationCode()+"");
         }
-
+        if(card.getValidYear()!=2010)
+        {
+            uiYearComboBox.setSelectedIndex(card.getValidYear()-2010);
+        }
+        if(card.getCardType().equals("Mastercard"))
+        {
+            uiCardTypeComboBox.setSelectedIndex(1);
+        }
+        else{
+            uiCardTypeComboBox.setSelectedIndex(0);
+        }
+        uiMonthComboBox.setSelectedIndex(card.getValidMonth()-1);
     }
 
     /** This method is called from within the constructor to

@@ -199,9 +199,12 @@ public class cashRegister extends javax.swing.JPanel {
        {
            cashCardnumberTfield.setText(card.getCardNumber());
        }
-       if(!card.getCardType().equals("Mastercard"))
+       if(card.getCardType().equals("Mastercard"))
        {
            cashCardtypeCBox.setSelectedIndex(1);
+       }
+       else{
+           cashCardtypeCBox.setSelectedIndex(0);
        }
        if(!card.getHoldersName().equals(""))
        {
@@ -209,11 +212,7 @@ public class cashRegister extends javax.swing.JPanel {
            cashCardFNameTField.setText(card.getHoldersName().substring(0,nextName));
            cashCardLNameTField.setText(card.getHoldersName().substring(nextName+1));
        }
-       cashMonthCBox.setSelectedIndex(card.getValidMonth());
-       System.out.println(card.getValidYear()+"");
-       System.out.println(card.getValidMonth()+"");
-       System.out.println(card.getCardType()+"");
-
+       cashMonthCBox.setSelectedIndex(card.getValidMonth()-1);
        if(card.getValidYear()!=2010)
        {
            cashYearCBox.setSelectedIndex(card.getValidYear()-2010);

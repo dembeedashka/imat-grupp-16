@@ -189,6 +189,7 @@ public class actionPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_apCashregisterButtonActionPerformed
 
     private void apReceiptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apReceiptButtonActionPerformed
+        IMatPresenter.getInstance().getView().getPurchases1().displayPreviousPurchases();
         presenter.displayCategory(IMatView.PURCHASES);
     }//GEN-LAST:event_apReceiptButtonActionPerformed
 

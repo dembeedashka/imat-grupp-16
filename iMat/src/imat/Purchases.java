@@ -20,6 +20,11 @@ public class Purchases extends javax.swing.JPanel {
     /** Creates new form Purchases */
     public Purchases() {
         initComponents();
+        displayPreviousPurchases();
+    }
+
+    public void displayPreviousPurchases()
+    {
         for(Order o : IMatDataHandler.getInstance().getOrders()){
             double temp=0;
             purchaseRow p = new purchaseRow();

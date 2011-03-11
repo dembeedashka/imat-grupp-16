@@ -290,17 +290,14 @@ public class userInfoView extends javax.swing.JPanel {
         uiCvvCodeTextField.setEnabled(false);
         uiCvvCodeTextField.setName("uiCvvCodeTextField"); // NOI18N
 
-        uiCardTypeComboBox.setEditable(true);
         uiCardTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VISA", "Mastercard" }));
         uiCardTypeComboBox.setEnabled(false);
         uiCardTypeComboBox.setName("uiCardTypeComboBox"); // NOI18N
 
-        uiMonthComboBox.setEditable(true);
         uiMonthComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
         uiMonthComboBox.setEnabled(false);
         uiMonthComboBox.setName("uiMonthComboBox"); // NOI18N
 
-        uiYearComboBox.setEditable(true);
         uiYearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020" }));
         uiYearComboBox.setEnabled(false);
         uiYearComboBox.setName("uiYearComboBox"); // NOI18N

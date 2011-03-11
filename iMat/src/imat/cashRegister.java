@@ -36,6 +36,8 @@ public class cashRegister extends javax.swing.JPanel {
     private List <JTextField> cardTextList = new ArrayList();
     private List <JLabel> cardLabelList = new ArrayList();
 
+    private String [] inputText = {"Fyll i förnamn", "Fyll i efternamn", "Fyll i personnummer", "Fyll i telefonnummer"," Fyll i Adress","Fyll i postkod", "Fyll i ort", "Fyll 4 sista i personnr"};
+
     private boolean isChecked = true;
 
     /** Creates new form cashRegister */
@@ -47,6 +49,10 @@ public class cashRegister extends javax.swing.JPanel {
         cardTextList.add(cashCardLNameTField);
         cardTextList.add(cashCardnumberTfield);
         cardTextList.add(cashCvcTField);
+
+
+
+
 
 
         cardLabelList.add(jLabel8);
@@ -113,7 +119,7 @@ public class cashRegister extends javax.swing.JPanel {
             shoppingCartList1.getPriceLabel().setText("");
 
             if(textList.get(i).getText().equals("")) {
-                labelList.get(i).setText("fel!");
+                labelList.get(i).setText(inputText[i]);
                 userText = "Fel i användaruppgifter";
                 warningText.setText(userText + cardText);
                 isChecked=false;
@@ -123,11 +129,17 @@ public class cashRegister extends javax.swing.JPanel {
         }
 
         if(textList.get(7).getText().equals("")) {
-                labelList.get(2).setText("fel!");
+            if(inputText[2].equals("")) {
+                labelList.get(2).setText(inputText[2]);
+            }
+            else {
+                labelList.get(2).setText(inputText[7]);
+            }
                 userText = "användaruppgiter";
                 warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
             }
+
         if(cashDebitCardRButton.isSelected()) {
             for(int j =0; j < cardLabelList.size(); j++) {
 
@@ -507,6 +519,7 @@ public class cashRegister extends javax.swing.JPanel {
 
         jButton4.setFont(resourceMap.getFont("jButton4.font")); // NOI18N
         jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
+        jButton4.setToolTipText(resourceMap.getString("jButton4.toolTipText")); // NOI18N
         jButton4.setName("jButton4"); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -637,10 +650,10 @@ public class cashRegister extends javax.swing.JPanel {
                         .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(cashCvcTField, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cashCvcLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cashCardtypeCBox, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(79, 79, 79))
+                .addGap(75, 75, 75))
         );
         cashDebitCardPanelLayout.setVerticalGroup(
             cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -674,15 +687,16 @@ public class cashRegister extends javax.swing.JPanel {
                 .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
-                            .addComponent(cashCvcLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cashCvcTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
                             .addComponent(cashCardnumberLabel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(cashCardnumberTfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cashCardnumberTfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(cashDebitCardPanelLayout.createSequentialGroup()
+                            .addComponent(cashCvcLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(cashDebitCardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cashCvcTField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18))
         );
 
@@ -716,6 +730,7 @@ public class cashRegister extends javax.swing.JPanel {
 
         cashCompletepurchaseButton.setFont(resourceMap.getFont("jButton4.font")); // NOI18N
         cashCompletepurchaseButton.setText(resourceMap.getString("cashCompletepurchaseButton.text")); // NOI18N
+        cashCompletepurchaseButton.setToolTipText(resourceMap.getString("cashCompletepurchaseButton.toolTipText")); // NOI18N
         cashCompletepurchaseButton.setName("cashCompletepurchaseButton"); // NOI18N
         cashCompletepurchaseButton.setPreferredSize(new java.awt.Dimension(115, 29));
         cashCompletepurchaseButton.addActionListener(new java.awt.event.ActionListener() {

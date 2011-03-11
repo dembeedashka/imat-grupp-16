@@ -36,8 +36,8 @@ public class cashRegister extends javax.swing.JPanel {
     private List <JTextField> cardTextList = new ArrayList();
     private List <JLabel> cardLabelList = new ArrayList();
 
-    private String [] inputText = {"Fyll i förnamn", "Fyll i efternamn", "Fyll i personnummer", "Fyll i telefonnummer"," Fyll i Adress","Fyll i postkod", "Fyll i ort", "Fyll 4 sista i personnr"};
-
+    private String [] inputText = {"Fyll i förnamn", "Fyll i efternamn", "Fyll i personnummer", "Fyll i telefonnummer"," Fyll i Adress","Fyll i postkod", "Fyll i ort", "Fyll i 4 sista i personnr"};
+    private String [] inputCardText = {"Fyll i förnamn", "Fyll i efternamn", "Fyll i kortnummer", "Fyll i CVC/CCC kod"};
     private boolean isChecked = true;
 
     /** Creates new form cashRegister */
@@ -51,7 +51,7 @@ public class cashRegister extends javax.swing.JPanel {
         cardTextList.add(cashCvcTField);
 
 
-
+        
 
 
 
@@ -121,7 +121,7 @@ public class cashRegister extends javax.swing.JPanel {
             if(textList.get(i).getText().equals("")) {
                 labelList.get(i).setText(inputText[i]);
                 userText = "Fel i användaruppgifter";
-                warningText.setText(userText + cardText);
+                warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
             }
           
@@ -129,16 +129,15 @@ public class cashRegister extends javax.swing.JPanel {
         }
 
         if(textList.get(7).getText().equals("")) {
-            if(inputText[2].equals("")) {
+            labelList.get(2).setText("Fyll i 4 sista i personnr");
+            if(textList.get(2).getText().equals("")) {
                 labelList.get(2).setText(inputText[2]);
             }
-            else {
-                labelList.get(2).setText(inputText[7]);
-            }
+            
                 userText = "användaruppgiter";
                 warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                 isChecked=false;
-            }
+        }
 
         if(cashDebitCardRButton.isSelected()) {
             for(int j =0; j < cardLabelList.size(); j++) {
@@ -149,7 +148,7 @@ public class cashRegister extends javax.swing.JPanel {
 
 
 
-                    cardLabelList.get(j).setText("Fyll i!");
+                    cardLabelList.get(j).setText(inputCardText[j]);
                     cardText = "kontouppgifter";
                     warningText.setText("Fel i: " + userText +" "+ cardText + " " + cartText);
                     isChecked=false;

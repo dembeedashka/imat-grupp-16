@@ -866,6 +866,7 @@ public class cashRegister extends javax.swing.JPanel {
                 price+=item.getTotal();
             }
             receipt.setReceiptPriceLabel(price);
+            receipt.setDateLabel("Tack för ditt köp!");
 
             handler.placeOrder();
             handler.getShoppingCart().clear();

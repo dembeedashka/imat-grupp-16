@@ -37,8 +37,8 @@ public class HeaderPanel2 extends javax.swing.JPanel {
         return headerPanelTextPane;
     }
 
-    public void setHeaderPanelTextPane(JTextPane headerPanelTextPane) {
-        this.headerPanelTextPane = headerPanelTextPane;
+    public void setHeaderPanelTextPane(String text) {
+        headerPanelTextPane.setText(text);
     }
 
 

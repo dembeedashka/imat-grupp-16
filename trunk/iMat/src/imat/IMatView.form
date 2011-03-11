@@ -1441,9 +1441,9 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="orderPlacedView1" alignment="0" pref="800" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="377" max="-2" attributes="0"/>
+                                      <EmptySpace min="218" pref="218" max="218" attributes="0"/>
                                       <Component id="receipt2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="144" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>

@@ -19,19 +19,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="dateLabel" alignment="0" pref="279" max="32767" attributes="0"/>
           <Component id="receiptPriceLabel" alignment="0" pref="279" max="32767" attributes="0"/>
           <Component id="receiptScrollPane" alignment="0" pref="279" max="32767" attributes="0"/>
+          <Component id="dateLabel" alignment="0" pref="279" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="dateLabel" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="dateLabel" min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="receiptScrollPane" min="-2" pref="267" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="receiptPriceLabel" pref="47" max="32767" attributes="0"/>
+              <Component id="receiptPriceLabel" pref="27" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>

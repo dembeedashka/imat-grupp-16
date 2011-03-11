@@ -25,6 +25,8 @@ public class Purchases extends javax.swing.JPanel {
 
     public void displayPreviousPurchases()
     {
+        listAreaPanel.removeAll();
+        
         for(Order o : IMatDataHandler.getInstance().getOrders()){
             double temp=0;
             purchaseRow p = new purchaseRow();

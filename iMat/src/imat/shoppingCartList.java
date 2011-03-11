@@ -58,7 +58,7 @@ public class shoppingCartList extends javax.swing.JPanel {
         productPanel.add(cartItem);
         productPanel.repaint();
         productPanel.revalidate();
-        totalPrice.setText(handler.getTotal() + " kr" );
+        updateTotalPrice();
     }
 
     public void setSum(double price) {
@@ -72,6 +72,11 @@ public class shoppingCartList extends javax.swing.JPanel {
     public JLabel getPriceLabel () {
         return jLabel7;
     }
+
+    public void updateTotalPrice() {
+        totalPrice.setText(handler.getTotal() + " kr" );
+    }
+
 
     /** This method is called from within the constructor to
      * initialize the form.

@@ -846,6 +846,7 @@ public class cashRegister extends javax.swing.JPanel {
     }//GEN-LAST:event_dontShowDebitCardButton
 
     private void cashSaveUserInfo(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashSaveUserInfo
+       //checkEmptyText();
        customer.setAddress(cashStAddressTF.getText());
        customer.setFirstName(cashFNameTF.getText());
        customer.setLastName(cashLNameTF.getText());

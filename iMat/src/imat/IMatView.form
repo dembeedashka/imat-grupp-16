@@ -192,9 +192,9 @@
                       <Component id="navigationSearchPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="actionPanel" pref="577" max="32767" attributes="1"/>
+                          <Component id="actionPanel" pref="579" max="32767" attributes="1"/>
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="framePanel" alignment="0" pref="577" max="32767" attributes="1"/>
+                              <Component id="framePanel" alignment="0" pref="579" max="32767" attributes="1"/>
                               <Component id="shoppingListPanel" alignment="0" max="32767" attributes="1"/>
                           </Group>
                       </Group>
@@ -378,7 +378,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="actionPanel1" alignment="0" pref="577" max="32767" attributes="0"/>
+                      <Component id="actionPanel1" alignment="0" pref="579" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -408,7 +408,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="mainScrollPane" alignment="0" pref="577" max="32767" attributes="0"/>
+                      <Component id="mainScrollPane" alignment="0" pref="579" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -561,7 +561,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="homeView1" pref="780" max="32767" attributes="0"/>
+                                      <Component id="homeView1" pref="760" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -570,7 +570,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="homeView1" pref="1589" max="32767" attributes="0"/>
+                                      <Component id="homeView1" pref="1580" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1577,7 +1577,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

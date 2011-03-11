@@ -136,6 +136,7 @@ public class cashRegister extends javax.swing.JPanel {
         }
             if(shoppingCartList1.getPrice() !=0) {
                 isChecked=false;
+                shoppingCartList1.getPriceLabel().setText("Kundkorgen är tom!");
                 cartText = "kundvagnen är tom";
                 warningText.setText("Fel i: " + userText + " " + cardText + " " + cartText);
             }

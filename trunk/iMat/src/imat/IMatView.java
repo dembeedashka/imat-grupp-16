@@ -118,6 +118,8 @@ public class IMatView extends FrameView implements WindowListener, ShoppingCartL
         );
 
         getFrame().addWindowListener(this);
+
+        cart.fireShoppingCartChanged();
     }
 
     private void initHeaders()

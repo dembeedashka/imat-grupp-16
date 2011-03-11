@@ -847,10 +847,10 @@ public class cashRegister extends javax.swing.JPanel {
        customer.setPostCode(cashPcodeTF.getText());
        customer.setPostAddress(cashPlaceTF.getText());
        card.setCardNumber(cashCardnumberTfield.getText());
-       card.setCardType(cashCardtypeCBox.getItemAt(0).toString());
+       card.setCardType(cashCardtypeCBox.getSelectedItem().toString());
        card.setHoldersName(cashCardFNameTField.getText()+" "+cashCardLNameTField.getText());
-       card.setValidMonth(Integer.parseInt(cashMonthCBox.getItemAt(0).toString()));
-       card.setValidYear(Integer.parseInt(cashYearCBox.getItemAt(0).toString()));
+       card.setValidMonth(Integer.parseInt(cashMonthCBox.getSelectedItem().toString()));
+       card.setValidYear(Integer.parseInt(cashYearCBox.getSelectedItem().toString()));
        try {
            card.setVerificationCode(Integer.parseInt(cashCvcTField.toString()));
        } catch(NumberFormatException e) {
